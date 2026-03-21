@@ -2,13 +2,34 @@
 <html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TechTeoremas - Quizzes</title>
 <style>
-body{font-family:Arial,sans-serif;max-width:900px;margin:40px auto;padding:20px;background:#0f1a30;color:#eef4ff}
-header{display:flex;align-items:center;gap:16px;margin-bottom:24px} img{width:72px;height:72px;object-fit:contain}
+body{font-family:Arial,sans-serif;max-width:980px;margin:40px auto;padding:20px;background:#0f1a30;color:#eef4ff}
+header{display:flex;align-items:center;gap:16px;margin-bottom:24px;flex-wrap:wrap} img{width:72px;height:72px;object-fit:contain}
 .card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px;margin-bottom:18px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 a{color:#a7c2ff;text-decoration:none;font-weight:bold}
 p{color:#c4cfef}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);margin-bottom:10px;font-size:12px}
+@media (max-width:700px){.grid{grid-template-columns:1fr}}
 </style></head><body>
-<header><img src="logo.png" alt="Logo TechTeoremas"><div><h1>TechTeoremas</h1><p>Portal de quizzes leves para estudo.</p></div></header>
-<div class="card"><h2>Gerência e Qualidade de Software</h2><p>Quiz por semana com justificativas, slides e opção de impressão com gabarito.</p><a href="./gqs/">Abrir quiz de GQS</a></div>
-<div class="card"><h2>Sistemas de Informação</h2><p>Quiz por semana com justificativas, slides e opção de impressão com gabarito.</p><a href="./si/">Abrir quiz de SI</a></div>
+<header><img src="logo.png" alt="Logo TechTeoremas"><div><h1>TechTeoremas</h1><p>Portal de estudo com Questões por Semana e Simulado.</p></div></header>
+
+<div class="card">
+  <div class="badge">Gerência e Qualidade de Software</div>
+  <h2>GQS</h2>
+  <p>Escolha entre o treino por semanas ou o simulado completo.</p>
+  <div class="grid">
+    <a href="./gqs/">Abrir Quiz por Semana de GQS</a>
+    <a href="./gqs/simulado.html">Abrir Simulado de GQS</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="badge">Sistemas da Informação</div>
+  <h2>SI</h2>
+  <p>Escolha entre o treino por semanas ou o simulado completo.</p>
+  <div class="grid">
+    <a href="./si/">Abrir Quiz por Semana de SI</a>
+    <a href="./si/simulado.html">Abrir Simulado de SI</a>
+  </div>
+</div>
 </body></html>

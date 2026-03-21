@@ -1,0 +1,784 @@
+[
+  {
+    "id": 1,
+    "week": 1,
+    "question": "Qual comando da ferramenta Git é usado para atualizar um repositório local com as versões mais atualizadas (com commits) de um repositório remoto?",
+    "options": [
+      "Commit",
+      "Clone",
+      "Push",
+      "Pull",
+      "Add"
+    ],
+    "correct": 3,
+    "justification": "O comando correto é git pull, usado para trazer do repositório remoto as alterações mais recentes para o repositório local.",
+    "slidePage": 12,
+    "slideTitle": "Guia Rápido: Comandos Essenciais do Git",
+    "slideImage": "slides/slide_12.png"
+  },
+  {
+    "id": 2,
+    "week": 1,
+    "question": "No contexto de Git, qual é o conceito do local que permite o armazenamento das versões de arquivos e o controle de mudanças realizadas no projeto?",
+    "options": [
+      "Commit",
+      "Repositório",
+      "Branch",
+      "Pull",
+      "Clone"
+    ],
+    "correct": 1,
+    "justification": "Repositório é o local onde as versões do projeto ficam armazenadas e organizadas, permitindo controle de mudanças e colaboração entre os integrantes.",
+    "slidePage": 11,
+    "slideTitle": "Versionamento com Git: O Fluxo Essencial",
+    "slideImage": "slides/slide_11.png"
+  },
+  {
+    "id": 3,
+    "week": 1,
+    "question": "Em um sistema de logística, a equipe extraiu lógica duplicada para uma única função reutilizável, reorganizou arquivos por responsabilidade e criou testes automatizados. Sobre as asserções: I. Centralizar a lógica em uma função refatorada melhora a qualidade, evitando comportamentos divergentes e facilitando atualizações. II. Refatorar código duplicado em pontos críticos melhora previsibilidade e reduz o tempo para localizar e corrigir erros.",
+    "options": [
+      "As asserções I e II são verdadeiras, e a II é uma justificativa da I",
+      "A asserção I é falsa, e a II é verdadeira",
+      "As duas são verdadeiras, mas II não justifica I",
+      "Ambas são falsas",
+      "I é verdadeira e II é falsa"
+    ],
+    "correct": 0,
+    "justification": "As duas asserções são verdadeiras, e a segunda explica a primeira: eliminar duplicação e organizar melhor o código reduz inconsistências e facilita manutenção e correção.",
+    "slidePage": 5,
+    "slideTitle": "Pilares Essenciais para a Produção de Software de Alta Qualidade",
+    "slideImage": "slides/slide_5.png"
+  },
+  {
+    "id": 4,
+    "week": 1,
+    "question": "Durante um git merge, dois desenvolvedores editaram a mesma linha de config.py e surgiu conflito. Avalie as asserções: I. Ao detectar conflito, deve-se usar git reset --hard para voltar ao estado anterior e recomeçar. II. O comando git diff pode ser usado durante a resolução para visualizar diferenças entre versões.",
+    "options": [
+      "I verdadeira e II falsa",
+      "I falsa e II verdadeira",
+      "Ambas verdadeiras e II justifica I",
+      "Ambas falsas",
+      "Ambas verdadeiras, mas II não justifica I"
+    ],
+    "correct": 1,
+    "justification": "A primeira afirmação é falsa, porque o correto é analisar e resolver o conflito. A segunda é verdadeira: git diff ajuda a comparar versões durante a resolução.",
+    "slidePage": 13,
+    "slideTitle": "Dominando o Git: Conflitos e Fluxos de Trabalho Avançados",
+    "slideImage": "slides/slide_13.png"
+  },
+  {
+    "id": 5,
+    "week": 2,
+    "question": "Depois da execução do makefile, que cria os scripts de compilação, qual comando deve ser executado para compilar o código e gerar o código binário executável?",
+    "options": [
+      "cmake compile",
+      "cmake",
+      "cmake run",
+      "make",
+      "compile"
+    ],
+    "correct": 3,
+    "justification": "Depois que o CMake gera os arquivos de build, o comando make é usado para compilar o projeto e gerar o executável binário.",
+    "slidePage": 16,
+    "slideTitle": "Guia Essencial do CMake: O Coração do Build Multiplataforma",
+    "slideImage": "slides/slide_16.png"
+  },
+  {
+    "id": 6,
+    "week": 2,
+    "question": "Qual é o objetivo do arquivo CMakeLists.txt?",
+    "options": [
+      "Conter os scripts de integração da aplicação a serem executados pela ferramenta cmake",
+      "Conter o roteiro de teste para criação de scripts de teste a serem executados pela ferramenta cmake",
+      "Conter o roteiro usado pela ferramenta cmake para criar os scripts de compilação da aplicação",
+      "Conter scripts de teste automatizados para serem executados pela ferramenta cmake",
+      "Conter os scripts de compilação da aplicação a serem executados pela ferramenta cmake"
+    ],
+    "correct": 2,
+    "justification": "O arquivo CMakeLists.txt descreve como o projeto deve ser construído. O CMake lê esse roteiro para gerar os scripts de compilação adequados ao ambiente.",
+    "slidePage": 16,
+    "slideTitle": "Guia Essencial do CMake: O Coração do Build Multiplataforma",
+    "slideImage": "slides/slide_16.png"
+  },
+  {
+    "id": 7,
+    "week": 2,
+    "question": "Qual alternativa mostra apenas diretórios usados pela estrutura padrão de projetos criada pela ferramenta Maven?",
+    "options": [
+      "src/main/java, src/test/java, src/test/resources, src/pom e target",
+      "src/main/java, src/test/java, src/main/resources, src/pom e target",
+      "src/main/java, src/main/resources, src/test/java, src/pom e target",
+      "src/test/java, src/main/resources, src/test/resources, src/pom e target",
+      "src/main/java, src/test/java, src/main/resources, src/test/resources e target"
+    ],
+    "correct": 4,
+    "justification": "A estrutura padrão do Maven inclui diretórios como src/main/java, src/test/java, src/main/resources, src/test/resources e o diretório target para artefatos gerados.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 8,
+    "week": 2,
+    "question": "João configurou dependências no pom.xml, mas encontrou erros ao baixar bibliotecas. Analise: I. O Maven permite configurar dependências no pom.xml, mas se a versão estiver incorreta ou não existir no repositório, o build falha. II. O Maven resolve dependências transitivas automaticamente, podendo gerar conflitos de versão.",
+    "options": [
+      "Ambas verdadeiras, mas II não justifica I",
+      "I verdadeira e II falsa",
+      "Ambas verdadeiras e II justifica I",
+      "I falsa e II verdadeira",
+      "Ambas falsas"
+    ],
+    "correct": 2,
+    "justification": "As duas afirmações são verdadeiras. O Maven resolve dependências e transitivas automaticamente, e conflitos ou versões inexistentes podem levar à falha do build.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 9,
+    "week": 2,
+    "question": "Qual é a principal função do Maven?",
+    "options": [
+      "Realizar controle de acesso de usuários",
+      "Gerenciar dependências e automatizar compilação, testes e empacotamento",
+      "Compilar apenas quando um branch é criado",
+      "Criar arquivos JAR com interface gráfica",
+      "Gerar código automaticamente"
+    ],
+    "correct": 1,
+    "justification": "O Maven centraliza o gerenciamento de dependências e automatiza o ciclo de build, incluindo compilação, testes e empacotamento.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 10,
+    "week": 3,
+    "question": "Associe os itens sobre Selenium: I. Selenium IDE II. Testes com múltiplos navegadores III. Integração com outros recursos IV. Gravação e execução de scripts. A. Facilita gravação e execução de testes sem conhecimento profundo B. Permite execução em diferentes navegadores C. Interface gráfica fácil para criação de testes D. Permite gravar ações no navegador gerando scripts.",
+    "options": [
+      "I-C, II-B, III-A, IV-D",
+      "I-A, II-B, III-C, IV-D",
+      "I-D, II-A, III-B, IV-C",
+      "I-B, II-C, III-A, IV-D",
+      "I-C, II-B, III-D, IV-A"
+    ],
+    "correct": 0,
+    "justification": "A correspondência correta destaca o Selenium IDE como interface amigável, múltiplos navegadores como execução cross-browser, integração com outros recursos como facilidade de uso e a gravação de scripts como captura de ações no navegador.",
+    "slidePage": 27,
+    "slideTitle": "Guia de Ferramentas e Processos: Automação de Testes",
+    "slideImage": "slides/slide_27.png"
+  },
+  {
+    "id": 11,
+    "week": 3,
+    "question": "Marque a alternativa que apresenta um exemplo de comando da ferramenta Selenium IDE:",
+    "options": [
+      "WaitTo",
+      "ClickAndGo",
+      "Assert",
+      "Validate",
+      "WaitAndType"
+    ],
+    "correct": 2,
+    "justification": "Assert é um comando típico do Selenium IDE, usado para verificar se determinado resultado esperado foi atingido.",
+    "slidePage": 26,
+    "slideTitle": "Guia Essencial: Automação de Testes com Selenium",
+    "slideImage": "slides/slide_26.png"
+  },
+  {
+    "id": 12,
+    "week": 3,
+    "question": "Para que é usado o método fail() do JUnit?",
+    "options": [
+      "Para buscar o erro",
+      "Para fazer com que o teste falhe",
+      "Para encontrar o erro automaticamente",
+      "Para depurar o teste",
+      "Para penalizar o programador"
+    ],
+    "correct": 1,
+    "justification": "O método fail() força a falha do teste, sendo útil quando o fluxo deveria ter entrado em outra condição ou quando se quer indicar falha explícita.",
+    "slidePage": 24,
+    "slideTitle": "Guia Essencial: Testes de Unidade e o Framework JUnit",
+    "slideImage": "slides/slide_24.png"
+  },
+  {
+    "id": 13,
+    "week": 3,
+    "question": "Qual alternativa apresenta a ordem correta dos itens usados para definir exemplos concretos de comportamento seguindo BDD?",
+    "options": [
+      "Dado > Cenário > Então > Quando",
+      "Cenário > Quando > Dado > Então",
+      "Dado > Cenário > Quando > Então",
+      "Cenário > Dado > Quando > Então",
+      "Cenário > Dado > Então > Quando"
+    ],
+    "correct": 3,
+    "justification": "No BDD, a estrutura começa pelo cenário e segue com Dado, Quando e Então para descrever o comportamento esperado de forma compreensível.",
+    "slidePage": 25,
+    "slideTitle": "Guia Prático: BDD e Automação com Cucumber",
+    "slideImage": "slides/slide_25.png"
+  },
+  {
+    "id": 14,
+    "week": 3,
+    "question": "Em um sistema de validação de dados, analise: I. O uso de @Test(expected = ...) ou assertThrows() no JUnit garante que comportamentos inválidos sejam tratados. II. Verificar exceções em testes evita que erros passem despercebidos.",
+    "options": [
+      "I verdadeira e II falsa",
+      "Ambas falsas",
+      "Ambas verdadeiras, mas II não justifica I",
+      "I falsa e II verdadeira",
+      "Ambas verdadeiras e II justifica I"
+    ],
+    "correct": 4,
+    "justification": "As duas afirmações são verdadeiras, e a segunda justifica a primeira: testar exceções garante que cenários inválidos sejam tratados e não passem despercebidos.",
+    "slidePage": 24,
+    "slideTitle": "Guia Essencial: Testes de Unidade e o Framework JUnit",
+    "slideImage": "slides/slide_24.png"
+  },
+  {
+    "id": 15,
+    "week": 3,
+    "question": "Durante o desenvolvimento de um sistema, a equipe utiliza JUnit. Analise: I. Testes podem verificar se métodos retornam valores corretos II. Testes podem validar exceções em casos inválidos III. Testes substituem completamente testes manuais.",
+    "options": [
+      "I e II, apenas",
+      "I, apenas",
+      "I e III",
+      "II e III",
+      "I, II e III"
+    ],
+    "correct": 0,
+    "justification": "As afirmações I e II são verdadeiras. Já a III é falsa, porque testes automatizados complementam, mas não substituem totalmente os testes manuais.",
+    "slidePage": 24,
+    "slideTitle": "Guia Essencial: Testes de Unidade e o Framework JUnit",
+    "slideImage": "slides/slide_24.png"
+  },
+  {
+    "id": 16,
+    "week": 3,
+    "question": "Qual alternativa apresenta a ordem correta das etapas para uso da ferramenta Cucumber?",
+    "options": [
+      "Seu projeto > Cenários > Passos > Características > Definições > Biblioteca > Código > Sistema",
+      "Seu projeto > Cenários > Passos > Características > Código > Definições > Biblioteca > Sistema",
+      "Seu projeto > Cenários > Características > Passos > Código > Biblioteca > Definições > Sistema",
+      "Seu projeto > Características > Cenários > Passos > Definições > Código > Biblioteca > Sistema",
+      "Seu projeto > Características > Passos > Cenários > Código > Biblioteca > Definições > Sistema"
+    ],
+    "correct": 3,
+    "justification": "No fluxo do Cucumber, parte-se do projeto, define-se o arquivo de características, depois cenários e passos, seguidos das definições e integração com código e biblioteca.",
+    "slidePage": 25,
+    "slideTitle": "Guia Prático: BDD e Automação com Cucumber",
+    "slideImage": "slides/slide_25.png"
+  },
+  {
+    "id": 17,
+    "week": 3,
+    "question": "Marque a alternativa que apresenta apenas métodos existentes do JUnit 3.8:",
+    "options": [
+      "assertTrue, assertNotTrue, assertEquals, assertNotEquals...",
+      "assertTrue, assertNotTrue, assertEquals...",
+      "assertTrue, assertFalse, assertEquals, assertNull, assertNotNull, assertSame, assertNotSame",
+      "assertTrue, assertNotTrue, assertEquals, assertNotEquals...",
+      "assertTrue, assertFalse, assertEquals, assertNotEquals..."
+    ],
+    "correct": 2,
+    "justification": "O conjunto clássico inclui métodos como assertTrue, assertFalse, assertEquals, assertNull, assertNotNull, assertSame e assertNotSame.",
+    "slidePage": 24,
+    "slideTitle": "Guia Essencial: Testes de Unidade e o Framework JUnit",
+    "slideImage": "slides/slide_24.png"
+  },
+  {
+    "id": 18,
+    "week": 4,
+    "question": "Joana está desenvolvendo um sistema em C++ utilizando CMake. Analise: I. O arquivo CMakeLists.txt define quais arquivos serão compilados e o nome do executável. II. O comando make funciona após o CMake porque ele gera um Makefile. III. O CMake substitui o compilador, compilando o projeto sozinho.",
+    "options": [
+      "I, II e III",
+      "I, apenas",
+      "I e II, apenas",
+      "II e III, apenas",
+      "I e III, apenas"
+    ],
+    "correct": 2,
+    "justification": "As afirmações I e II são verdadeiras. A III é falsa porque o CMake não substitui o compilador; ele gera os arquivos de build usados por ferramentas como make.",
+    "slidePage": 16,
+    "slideTitle": "Guia Essencial do CMake: O Coração do Build Multiplataforma",
+    "slideImage": "slides/slide_16.png"
+  },
+  {
+    "id": 19,
+    "week": 4,
+    "question": "Durante o desenvolvimento com Gradle, ele utiliza uma abordagem baseada em: [1] ______ para definir tarefas [2] ______ para resolução de dependências",
+    "options": [
+      "scripts; remotos",
+      "bibliotecas; temporários",
+      "linha de comando; privados",
+      "interface gráfica; código-fonte",
+      "arquivos XML; internos da IDE"
+    ],
+    "correct": 0,
+    "justification": "O Gradle usa scripts para declarar tarefas e resolução de dependências em repositórios remotos.",
+    "slidePage": 18,
+    "slideTitle": "Gradle: Performance e Flexibilidade na Automação de Builds",
+    "slideImage": "slides/slide_18.png"
+  },
+  {
+    "id": 20,
+    "week": 4,
+    "question": "Qual alternativa mostra apenas diretórios usados pela estrutura padrão de projetos Maven?",
+    "options": [
+      "src/main/java, src/test/java, src/main/resources, src/test/resources e target",
+      "src/main/java, src/test/java, src/test/resources, src/pom e target",
+      "src/test/java, src/main/resources, src/test/resources, src/pom e target",
+      "src/main/java, src/test/java, src/main/resources, src/pom e target",
+      "src/main/java, src/main/resources, src/test/java, src/pom e target"
+    ],
+    "correct": 0,
+    "justification": "A estrutura padrão do Maven utiliza esses diretórios de código, recursos e testes, além do target para saídas do build.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 21,
+    "week": 4,
+    "question": "Associe os termos do Gradle: I. build.gradle II. Task III. Gradle Wrapper IV. Plugin. A. Unidade de trabalho (compilar, empacotar) B. Script que define dependências e tarefas C. Extensão de integração (ex: IDE) D. Ferramenta que baixa a versão correta do Gradle",
+    "options": [
+      "I-C; II-D; III-A; IV-B",
+      "I-A; II-B; III-C; IV-D",
+      "I-D; II-C; III-B; IV-A",
+      "I-A; II-B; III-C; IV-B",
+      "I-B; II-A; III-D; IV-C"
+    ],
+    "correct": 4,
+    "justification": "build.gradle define dependências e tarefas, task é uma unidade de trabalho, wrapper gerencia a versão correta do Gradle e plugin estende funcionalidades com integrações.",
+    "slidePage": 18,
+    "slideTitle": "Gradle: Performance e Flexibilidade na Automação de Builds",
+    "slideImage": "slides/slide_18.png"
+  },
+  {
+    "id": 22,
+    "week": 4,
+    "question": "Sobre o uso do Maven em projetos Java: I. Maven automatiza o build (compilar, testar, empacotar) II. Todas dependências devem ser adicionadas manualmente III. O arquivo principal é o pom.xml",
+    "options": [
+      "I, apenas",
+      "I, II e III",
+      "I e III, apenas",
+      "I e II, apenas",
+      "II e III, apenas"
+    ],
+    "correct": 2,
+    "justification": "I e III são verdadeiras. A II é falsa porque o Maven também resolve dependências transitivas automaticamente.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 23,
+    "week": 5,
+    "question": "Uma equipe precisa garantir que testes automatizados sejam executados rapidamente a cada nova funcionalidade implementada, evitando que funcionalidades anteriores sejam quebradas. Assinale a prática correta:",
+    "options": [
+      "Entrega contínua apenas ao final da sprint",
+      "Teste de aceitação antes da codificação",
+      "Programação em par com revisão manual",
+      "Refatoração com testes após produção",
+      "Integração contínua com execução automática de testes"
+    ],
+    "correct": 4,
+    "justification": "A prática descrita é integração contínua, que executa builds e testes automaticamente a cada nova integração no repositório.",
+    "slidePage": 42,
+    "slideTitle": "Guia Prático de Integração Contínua (CI): Automação e Ferramentas",
+    "slideImage": "slides/slide_42.png"
+  },
+  {
+    "id": 24,
+    "week": 5,
+    "question": "Após refatoração de código, analise: I. A refatoração melhora a legibilidade II. Nomes claros ajudam na autodocumentação III. Uso de operador ternário sempre piora legibilidade IV. Código refatorado facilita testes automatizados",
+    "options": [
+      "I e IV",
+      "I, III e IV",
+      "I, II, III e IV",
+      "I, II e IV",
+      "II e III"
+    ],
+    "correct": 3,
+    "justification": "As afirmações I, II e IV são verdadeiras. A III é falsa porque o operador ternário não piora sempre a legibilidade; depende do contexto e da simplicidade do uso.",
+    "slidePage": 38,
+    "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 25,
+    "week": 5,
+    "question": "Durante revisão de código, um método chamado f1() e uma classe C1 foram considerados ruins. Qual a melhor prática?",
+    "options": [
+      "Renomear para nomes descritivos (ex: calcularValorFinalPedido, ProcessadorDePagamento)",
+      "Criar documento explicando os nomes",
+      "Adicionar comentários detalhados",
+      "Manter nomes curtos",
+      "Dividir código sem melhorar nomes"
+    ],
+    "correct": 0,
+    "justification": "Clean Code recomenda nomes claros e descritivos para aumentar legibilidade, compreensão e manutenção do código.",
+    "slidePage": 38,
+    "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 26,
+    "week": 5,
+    "question": "Qual alternativa apresenta corretamente o fluxo padrão da Integração Contínua (CI)?",
+    "options": [
+      "Commit → Build → Docs → Relatório → Integração",
+      "Commit → Monitoramento → Build → Docs → Testes → Relatório → Integração",
+      "Commit → Monitoramento → Build → Testes → Relatório → Integração → Notificação",
+      "Commit → Build → Relatório → Integração → Notificação",
+      "Commit → Monitoramento → Relatório → Integração"
+    ],
+    "correct": 2,
+    "justification": "O fluxo padrão envolve monitoramento do repositório, build, testes, relatório, integração e notificação da equipe.",
+    "slidePage": 42,
+    "slideTitle": "Guia Prático de Integração Contínua (CI): Automação e Ferramentas",
+    "slideImage": "slides/slide_42.png"
+  },
+  {
+    "id": 27,
+    "week": 5,
+    "question": "Segundo Clean Code, o ideal é que uma função receba no máximo:",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "4",
+      "3"
+    ],
+    "correct": 1,
+    "justification": "Uma boa prática de Clean Code é manter funções com poucos parâmetros, idealmente até 2, para reduzir complexidade e facilitar leitura e teste.",
+    "slidePage": 38,
+    "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 28,
+    "week": 5,
+    "question": "No processo de integração contínua, qual o papel do servidor de CI?",
+    "options": [
+      "Papel ativo e passivo ao mesmo tempo",
+      "Nenhum papel",
+      "Monitorar servidor de testes",
+      "Papel passivo (aguarda notificação)",
+      "Papel ativo (monitora repositório por mudanças)"
+    ],
+    "correct": 4,
+    "justification": "O servidor de CI monitora o repositório e reage a mudanças, iniciando automaticamente o processo de build e testes.",
+    "slidePage": 42,
+    "slideTitle": "Guia Prático de Integração Contínua (CI): Automação e Ferramentas",
+    "slideImage": "slides/slide_42.png"
+  },
+  {
+    "id": 29,
+    "week": 5,
+    "question": "Qual alternativa apresenta uma boa prática de Clean Code?",
+    "options": [
+      "Nomes de métodos devem ter adjetivos",
+      "Nomes de classes devem ter verbos",
+      "Esconder propósito ao nomear",
+      "Evitar efeitos colaterais",
+      "Funções devem fazer várias coisas"
+    ],
+    "correct": 3,
+    "justification": "Evitar efeitos colaterais é um princípio importante de Clean Code, pois torna o comportamento do código mais previsível e fácil de testar.",
+    "slidePage": 38,
+    "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 30,
+    "week": 5,
+    "question": "Uma equipe usa CI com testes automatizados, mas erros ainda chegam à produção. Analise: I. Testes de integração poderiam evitar II. Testes unitários são suficientes III. Qualidade dos testes impacta a CI",
+    "options": [
+      "II e III",
+      "I e II",
+      "I, II e III",
+      "I apenas",
+      "I e III"
+    ],
+    "correct": 4,
+    "justification": "Testes de integração e a qualidade dos testes influenciam diretamente a efetividade da CI. Testes unitários sozinhos nem sempre são suficientes.",
+    "slidePage": 42,
+    "slideTitle": "Guia Prático de Integração Contínua (CI): Automação e Ferramentas",
+    "slideImage": "slides/slide_42.png"
+  },
+  {
+    "id": 31,
+    "week": 6,
+    "question": "A revisão de código contribui para melhoria da ______ do código e redução de ______ no futuro.",
+    "options": [
+      "compactação; erros sintáticos",
+      "legibilidade; retrabalho",
+      "performance; refatorações",
+      "estrutura; testes unitários",
+      "velocidade; redundâncias"
+    ],
+    "correct": 1,
+    "justification": "Revisão de código melhora a legibilidade e reduz retrabalho futuro, pois antecipa problemas e promove padrões melhores de implementação.",
+    "slidePage": 49,
+    "slideTitle": "Guia Profissional: Processos de Revisão de Código",
+    "slideImage": "slides/slide_49.png"
+  },
+  {
+    "id": 32,
+    "week": 6,
+    "question": "De acordo com Everson Mauda, qual alternativa descreve corretamente um tipo de dívida técnica?",
+    "options": [
+      "Imprudente e negligente: sem preocupação com qualidade",
+      "Prudente e involuntário: erro de design por falta de tempo",
+      "Imprudente e proposital: reconhece erro depois",
+      "Prudente e negligente: não tem consciência do problema",
+      "Prudente e proposital: assume dívida para entregar mais rápido"
+    ],
+    "correct": 4,
+    "justification": "Dívida técnica prudente e proposital ocorre quando a equipe conscientemente aceita um atalho para entregar mais rápido, assumindo o custo futuro.",
+    "slidePage": 47,
+    "slideTitle": "Dívida Técnica: O Custo Invisível da Agilidade sem Qualidade",
+    "slideImage": "slides/slide_47.png"
+  },
+  {
+    "id": 33,
+    "week": 6,
+    "question": "Sobre programação em pares: I. Ajuda a identificar falhas durante a implementação II. Ambos programadores fazem tarefas diferentes ao mesmo tempo III. Ajuda no aprendizado de membros menos experientes",
+    "options": [
+      "I, apenas",
+      "I e III, apenas",
+      "I, II e III",
+      "I e II, apenas",
+      "II e III, apenas"
+    ],
+    "correct": 1,
+    "justification": "Programação em pares ajuda a detectar falhas cedo e facilita aprendizado. A dupla atua colaborativamente no mesmo problema, não em tarefas separadas ao mesmo tempo.",
+    "slidePage": 45,
+    "slideTitle": "Guia Visual: O Poder da Programação em Par",
+    "slideImage": "slides/slide_45.png"
+  },
+  {
+    "id": 34,
+    "week": 6,
+    "question": "Durante o desenvolvimento, a equipe registra como dívida técnica problemas como código duplicado e ausência de testes. Analise: I. Falta de testes é dívida técnica II. Comentários desatualizados prejudicam manutenção III. Código duplicado aumenta complexidade IV. Registrar no backlog ajuda no controle",
+    "options": [
+      "I, II, III e IV",
+      "I, II e III",
+      "I, III e IV",
+      "I e III",
+      "II, III e IV"
+    ],
+    "correct": 0,
+    "justification": "Todos os itens estão corretos: falta de testes, comentários desatualizados e duplicação de código são formas de dívida técnica, e registrá-las no backlog ajuda a controlá-las.",
+    "slidePage": 48,
+    "slideTitle": "Dívida Técnica: O Mapa para não se Perder no Código",
+    "slideImage": "slides/slide_48.png"
+  },
+  {
+    "id": 35,
+    "week": 6,
+    "question": "Sobre dívida técnica:",
+    "options": [
+      "Deve ser evitada sempre",
+      "Dívida proposital deve ser evitada",
+      "Não precisa ser paga com urgência",
+      "Dívida negligente é mais fácil de resolver",
+      "Escolher solução rápida e de baixa qualidade é um exemplo"
+    ],
+    "correct": 4,
+    "justification": "Escolher uma solução rápida de baixa qualidade é um exemplo clássico de dívida técnica, especialmente quando isso gera custos futuros de manutenção.",
+    "slidePage": 47,
+    "slideTitle": "Dívida Técnica: O Custo Invisível da Agilidade sem Qualidade",
+    "slideImage": "slides/slide_47.png"
+  },
+  {
+    "id": 36,
+    "week": 6,
+    "question": "Associe as práticas de revisão de código: I. Revisão Técnica II. Revisão de Estilo III. Revisão de Funcionalidade IV. Revisão de Performance. A. Clareza e legibilidade B. Problemas de lógica e comportamento C. Desempenho e eficiência D. Erros de implementação",
+    "options": [
+      "I-B; II-D; III-C; IV-A",
+      "I-C; II-B; III-D; IV-A",
+      "I-A; II-B; III-C; IV-D",
+      "I-D; II-B; III-A; IV-C",
+      "I-B; II-A; III-D; IV-C"
+    ],
+    "correct": 3,
+    "justification": "A revisão técnica busca erros de implementação, a de funcionalidade verifica lógica e comportamento, a de estilo olha clareza e legibilidade e a de performance avalia eficiência.",
+    "slidePage": 49,
+    "slideTitle": "Guia Profissional: Processos de Revisão de Código",
+    "slideImage": "slides/slide_49.png"
+  },
+  {
+    "id": 37,
+    "week": 6,
+    "question": "Sobre programação em pares:",
+    "options": [
+      "Especialistas não têm paciência com novatos",
+      "Novato não questiona práticas",
+      "Especialistas sempre questionam práticas",
+      "Novatos desenvolvem bons hábitos juntos",
+      "Novatos têm melhor resultado juntos"
+    ],
+    "correct": 2,
+    "justification": "O material destaca que especialistas tendem a questionar práticas e decisões, elevando a qualidade técnica e a reflexão durante o desenvolvimento.",
+    "slidePage": 46,
+    "slideTitle": "Variações de Pareamento: Qual Dupla Escolher?",
+    "slideImage": "slides/slide_46.png"
+  },
+  {
+    "id": 38,
+    "week": 6,
+    "question": "Qual é a principal motivação para revisão de código segundo estudos?",
+    "options": [
+      "Aumentar qualidade",
+      "Soluções alternativas",
+      "Transferir conhecimento",
+      "Melhorar código",
+      "Detectar bugs"
+    ],
+    "correct": 2,
+    "justification": "Embora revisão de código também ajude a detectar bugs e melhorar qualidade, o estudo citado nos slides destaca a transferência de conhecimento como motivação principal.",
+    "slidePage": 49,
+    "slideTitle": "Guia Profissional: Processos de Revisão de Código",
+    "slideImage": "slides/slide_49.png"
+  },
+  {
+    "id": 39,
+    "week": 7,
+    "question": "Na AWS, complete corretamente: O recurso de ______ é usado para monitorar o ambiente e acessos. Os(as) ______ controlam o tráfego da rede. A ______ protege os dados durante a transmissão.",
+    "options": [
+      "Criptografia, firewalls, criptografia",
+      "IAM, tabelas de rota, criptografia",
+      "IAM, servidores de gerenciamento, confiabilidade",
+      "Fluxo de tráfego, gateways, criptografia",
+      "Fluxo de tráfego, tabelas de rota, VPC"
+    ],
+    "correct": 3,
+    "justification": "A alternativa correta associa o monitoramento de tráfego e acessos ao fluxo de tráfego, o controle da rede a gateways e a proteção durante transmissão à criptografia.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 40,
+    "week": 7,
+    "question": "Sobre cobrança na Google Cloud Platform (GCP):",
+    "options": [
+      "Todos pagam valor fixo",
+      "Custos são definidos pelo provedor",
+      "IA sempre é cara",
+      "Taxas são antecipadas",
+      "Usuários recebem créditos iniciais"
+    ],
+    "correct": 4,
+    "justification": "A GCP costuma oferecer créditos iniciais para novos usuários, permitindo experimentar a plataforma antes de custos mais significativos.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 41,
+    "week": 7,
+    "question": "Sobre os pilares da AWS: I. Eficiência operacional envolve desempenho e escalabilidade II. Confiabilidade trata de disponibilidade III. Segurança é responsabilidade apenas da organização",
+    "options": [
+      "F – V – V",
+      "V – F – V",
+      "F – F – V",
+      "V – F – F",
+      "V – V – F"
+    ],
+    "correct": 4,
+    "justification": "As duas primeiras estão corretas e a terceira está errada, porque segurança na nuvem segue modelo de responsabilidade compartilhada.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 42,
+    "week": 7,
+    "question": "Para criar uma conta AWS, qual passo é necessário?",
+    "options": [
+      "Inserir cartão de crédito",
+      "Criar email e senha",
+      "Fornecer email válido e senha",
+      "Fazer login",
+      "Escolher serviços"
+    ],
+    "correct": 2,
+    "justification": "O passo essencial inicial é fornecer um e-mail válido e criar uma senha para registro na plataforma.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 43,
+    "week": 7,
+    "question": "Sobre a plataforma Azure: I. Permite escalar aplicações conforme demanda II. Permite gerenciar serviços facilmente via APIs",
+    "options": [
+      "Ambas verdadeiras e II justifica I",
+      "I falsa e II verdadeira",
+      "I verdadeira e II falsa",
+      "Ambas falsas",
+      "Ambas verdadeiras, mas II não justifica I"
+    ],
+    "correct": 0,
+    "justification": "As duas afirmações são verdadeiras, e o gerenciamento via APIs é um dos fatores que apoia a escalabilidade e automação da plataforma.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 44,
+    "week": 7,
+    "question": "Sobre IoT e segurança: I. Dispositivos conectados devem ser seguros II. É necessário criptografia leve para dispositivos com pouco processamento",
+    "options": [
+      "Ambas falsas",
+      "I falsa e II verdadeira",
+      "Ambas verdadeiras, mas II não justifica I",
+      "I verdadeira e II falsa",
+      "Ambas verdadeiras e II justifica I"
+    ],
+    "correct": 4,
+    "justification": "As duas afirmações são verdadeiras, e a segunda justifica a primeira, pois dispositivos IoT têm restrições de energia e processamento que exigem mecanismos leves de segurança.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 45,
+    "week": 7,
+    "question": "Qual o propósito da tecnologia lightweight em IoT?",
+    "options": [
+      "Oferecer soluções eficientes com baixo consumo de recursos",
+      "Aceitar mudanças no fim do projeto",
+      "Entregar software mais rápido",
+      "Trabalhar com prazos curtos",
+      "Melhorar comunicação entre equipes"
+    ],
+    "correct": 0,
+    "justification": "Tecnologias lightweight são pensadas para operar com pouco consumo de memória, energia e processamento, algo essencial em muitos dispositivos IoT.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 46,
+    "week": 7,
+    "question": "Sobre segurança lightweight em IoT: I. Busca equilíbrio entre segurança e baixo consumo II. Oferece mesmo nível de segurança sempre III. É útil para dispositivos com pouca energia",
+    "options": [
+      "I e III, apenas",
+      "I, apenas",
+      "II e III",
+      "I, II e III",
+      "III, apenas"
+    ],
+    "correct": 0,
+    "justification": "A segurança lightweight busca equilibrar proteção com baixo consumo de recursos, sendo especialmente útil para dispositivos com energia e capacidade limitadas.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  }
+]

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz de Sistemas de Informação - Semanas 1 a 7 | TechTeoremas</title>
+  <style>
+    :root {
+      --bg1:#071120; --bg2:#12233e; --panel:rgba(255,255,255,.09); --line:rgba(255,255,255,.14);
+      --muted:#c4cfef; --text:#eef4ff; --primary:#7c9cff; --primary2:#67e2c7;
+      --ok:#44d59d; --bad:#ff6b81; --okbg:rgba(68,213,157,.14); --badbg:rgba(255,107,129,.14);
+      --shadow:0 22px 56px rgba(0,0,0,.34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,156,255,.24), transparent 28%),
+        radial-gradient(circle at top right, rgba(103,226,199,.18), transparent 22%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    .container { max-width:1240px; margin:0 auto; padding:28px 18px 52px; }
+    .hero,.panel {
+      background:var(--panel); border:1px solid var(--line); border-radius:28px;
+      box-shadow:var(--shadow); backdrop-filter:blur(10px);
+    }
+    .hero { padding:26px; margin-bottom:22px; }
+    .brand { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .brand img { width:64px; height:64px; object-fit:contain; }
+    .brand-tag { padding:7px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.14); color:var(--muted); font-size:13px; }
+    h1 { margin:12px 0 10px; font-size:clamp(30px,4vw,46px); line-height:1.04; }
+    .hero p { margin:0; color:var(--muted); line-height:1.6; max-width:980px; }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .chip { border-radius:999px; padding:9px 14px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); font-size:14px; }
+    .layout { display:grid; grid-template-columns:320px 1fr; gap:22px; }
+    @media (max-width:980px) { .layout { grid-template-columns:1fr; } }
+    .sidebar,.quiz { padding:20px; }
+    .sidebar h2 { margin:0 0 8px; font-size:18px; }
+    .selector { display:grid; gap:10px; margin-top:14px; }
+    .selector label { font-size:14px; color:var(--muted); }
+    select {
+      width:100%; background:rgba(255,255,255,.08); color:var(--text); border:1px solid rgba(255,255,255,.12);
+      border-radius:14px; padding:12px 14px; font-size:15px; outline:none;
+    }
+    option { color:#111; }
+    .progress-text { color:var(--muted); margin:18px 0 10px; }
+    .bar { height:12px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden; }
+    .bar > div { height:100%; width:0%; background:linear-gradient(90deg, var(--primary), var(--primary2)); transition:width .35s ease; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+    .stat { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:14px; }
+    .stat small { display:block; color:var(--muted); margin-bottom:6px; }
+    .stat strong { font-size:24px; }
+    .tips { margin:18px 0 0; padding-left:18px; color:var(--muted); line-height:1.65; }
+    .week-tag {
+      display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px;
+      background:rgba(103,226,199,.12); border:1px solid rgba(103,226,199,.45); font-size:13px; font-weight:700; margin-bottom:10px;
+    }
+    .qnum { color:#9de7d6; font-weight:700; margin-bottom:8px; letter-spacing:.02em; }
+    .qtext { font-size:clamp(22px,2.4vw,30px); line-height:1.35; margin:0 0 20px; }
+    .options { display:grid; gap:12px; }
+    .opt {
+      width:100%; text-align:left; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05);
+      color:var(--text); border-radius:18px; padding:15px 16px; cursor:pointer;
+      transition:transform .18s ease, background .18s ease, border-color .18s ease;
+    }
+    .opt:hover { transform:translateY(-1px); background:rgba(124,156,255,.12); border-color:rgba(124,156,255,.72); }
+    .opt.disabled { cursor:default; opacity:.95; }
+    .opt.correct { background:var(--okbg); border-color:var(--ok); }
+    .opt.wrong { background:var(--badbg); border-color:var(--bad); }
+    .opt.reveal { background:rgba(68,213,157,.08); border-color:rgba(68,213,157,.8); }
+    .opt-row { display:flex; align-items:flex-start; gap:12px; }
+    .letter {
+      width:34px; height:34px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center;
+      background:rgba(255,255,255,.09); font-weight:800; flex-shrink:0;
+    }
+    .feedback { display:none; margin-top:18px; border-radius:22px; border:1px solid var(--line); background:rgba(7,14,28,.55); padding:18px; }
+    .feedback.show { display:block; }
+    .feedback.ok { border-color:var(--ok); background:rgba(18,55,45,.84); }
+    .feedback.bad { border-color:var(--bad); background:rgba(70,29,37,.84); }
+    .feedback-head { font-weight:800; font-size:18px; margin-bottom:8px; }
+    .feedback p { margin:0 0 14px; line-height:1.65; }
+    .slide-card { margin-top:14px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:20px; overflow:hidden; }
+    .slide-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:14px 16px 0; }
+    .slide-title { font-weight:700; }
+    .slide-page { color:var(--muted); font-size:14px; }
+    .slide-image { padding:14px 16px 16px; }
+    .slide-image img { width:100%; display:block; border-radius:16px; border:1px solid rgba(255,255,255,.1); box-shadow:0 12px 30px rgba(0,0,0,.28); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .btn {
+      border:0; border-radius:16px; padding:13px 18px; font-weight:800; cursor:pointer;
+      transition:transform .15s ease, opacity .15s ease;
+    }
+    .btn:hover { transform:translateY(-1px); }
+    .btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+    .btn-primary { color:white; background:linear-gradient(90deg, var(--primary), #9b84ff); }
+    .btn-secondary { color:var(--text); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
+    .btn-outline { color:white; background:rgba(124,156,255,.12); border:1px solid rgba(124,156,255,.45); }
+    .empty { text-align:center; padding:32px 12px; color:var(--muted); line-height:1.7; }
+    .finish { text-align:center; padding:26px 8px 8px; }
+    .finish-badge { display:inline-block; padding:8px 14px; border-radius:999px; border:1px solid rgba(103,226,199,.45); background:rgba(103,226,199,.12); margin-bottom:14px; font-weight:800; }
+    .finish h2 { margin:0 0 10px; font-size:clamp(28px,4vw,40px); }
+    .finish p { margin:0; color:var(--muted); line-height:1.6; }
+    .modal {
+      position:fixed; inset:0; background:rgba(5,10,20,.84); display:none; align-items:center; justify-content:center;
+      padding:20px; z-index:1000;
+    }
+    .modal.show { display:flex; }
+    .modal-content {
+      width:min(1100px,96vw); max-height:92vh; overflow:auto; border-radius:24px; background:#0c1528;
+      border:1px solid rgba(255,255,255,.12); box-shadow:0 24px 70px rgba(0,0,0,.5); padding:16px;
+    }
+    .modal-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .modal-title { font-weight:800; }
+    .close-btn {
+      background:rgba(255,255,255,.08); color:white; border:1px solid rgba(255,255,255,.12);
+      border-radius:14px; padding:10px 14px; cursor:pointer; font-weight:700;
+    }
+    .modal img { width:100%; border-radius:16px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="brand">
+        <img src="../logo.png" alt="Logo TechTeoremas" />
+        <div class="brand-tag">TechTeoremas</div>
+        <div class="brand-tag">ISI001</div>
+      </div>
+      <h1>Questões de Sistemas de Informação - Semanas 1 a 7</h1>
+      <p>Questões com treino por semana, justificativa após resposta, slides relacionados e opção de imprimir questões com gabarito na última página.</p>
+      <div class="chips">
+        <span class="chip">30 questões</span>
+        <span class="chip">Filtro por semana</span>
+        <span class="chip">Slides externos leves</span>
+        <span class="chip">Botão de impressão</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="panel sidebar">
+        <h2>Treino por semana</h2>
+        <div class="selector">
+          <label for="weekSelect">Escolha a semana para praticar:</label>
+          <select id="weekSelect">
+            <option value="all">Todas as semanas</option>
+            <option value="1">Semana 1</option>
+            <option value="2">Semana 2</option>
+            <option value="3">Semana 3</option>
+            <option value="4">Semana 4</option>
+            <option value="5">Semana 5</option>
+            <option value="6">Semana 6</option>
+            <option value="7">Semana 7</option>
+          </select>
+        </div>
+
+        <div class="progress-text" id="progressText">Questão 1 de 30</div>
+        <div class="bar"><div id="progressBar"></div></div>
+
+        <div class="stats">
+          <div class="stat"><small>Acertos</small><strong id="score">0</strong></div>
+          <div class="stat"><small>Respondidas</small><strong id="answered">0</strong></div>
+        </div>
+
+        <ul class="tips">
+          <li>Selecione uma semana para treinar somente aquele conteúdo.</li>
+          <li>A justificativa aparece logo depois da resposta.</li>
+          <li>Os slides aparecem no quiz, mas não entram na versão de impressão.</li>
+          <li>O gabarito sai na última página da impressão.</li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn btn-secondary" id="restartTop">Reiniciar treino</button>
+          <button class="btn btn-primary" id="printBtn">Imprimir questões</button>
+        </div>
+      </aside>
+
+      <main class="panel quiz">
+        <div id="app"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal" id="slideModal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-top">
+        <div>
+          <div class="modal-title" id="modalTitle">Slide ampliado</div>
+          <div class="slide-page" id="modalPage"></div>
+        </div>
+        <button class="close-btn" id="closeModal">Fechar</button>
+      </div>
+      <img id="modalImg" src="" alt="Slide ampliado" />
+    </div>
+  </div>
+
+  <script>
+    const allQuestions = [{"id": 1, "week": 1, "question": "Embora os conceitos de dados, informação e conhecimento sejam parecidos, eles não representam a mesma coisa. Identifique se são (V) verdadeiras ou (F) falsas: I. A informação representa fatos brutos e não tratados. II. O conhecimento, obtido por meio da informação, apresenta-se como compreensão e aplicabilidade do valor contido na informação. III. É por meio dos dados que geramos automaticamente o conhecimento. A partir do conhecimento, geramos a informação. IV. A informação é um conjunto de dados que contém significado, pertinência e propósito dentro de um contexto.", "options": ["V - V - F - F", "F - V - V - V", "V - F - V - F", "V - V - V - V", "F - V - F - V"], "correct": 4, "justification": "A sequência correta é F - V - F - V. Dados são fatos brutos; informação é dado com contexto e significado; conhecimento surge da interpretação e aplicação da informação, não de uma transformação automática direta.", "slidePage": 5, "slideTitle": "A Hierarquia do Valor: De Dados a Conhecimento", "slideImage": "slides/slide_5.png"}, {"id": 2, "week": 1, "question": "Com relação aos conceitos de sistemas e sistemas de informação: I. Se um sistema de informação é formado por módulos interligados que atendem a departamentos distintos, esses módulos são subsistemas. II. Sistemas de informação utilizam dados, informação e conhecimento. III. A informação é um ativo tangível e é utilizada apenas como entrada. IV. Coletar, processar, armazenar e distribuir dados são funções de um sistema de informação.", "options": ["I e II, apenas", "I, III e IV, apenas", "II, apenas", "I, II e III, apenas", "I, II e IV, apenas"], "correct": 4, "justification": "A alternativa correta é I, II e IV, apenas. Os slides mostram o ciclo do sistema de informação com entrada, processamento, saída e retroalimentação, além do uso de dados, informação e conhecimento. A afirmação III está errada porque informação não é um ativo tangível nem é usada apenas como entrada.", "slidePage": 4, "slideTitle": "Fundamentos dos Sistemas de Informação", "slideImage": "slides/slide_4.png"}, {"id": 3, "week": 2, "question": "Os elementos ou recursos tecnológicos que sustentam os sistemas de informação incluem hardware, software, banco de dados e redes. Associe: 1- Hardware 2- Software 3- Banco de dados 4- Redes de computadores. I- Conjunto de programas executados (parte lógica) II- Parte física do computador III- Transmissão eletrônica de sinais IV- Coleção de arquivos inter-relacionados.", "options": ["1-III, 2-I, 3-II e 4-IV", "1-II, 2-I, 3-IV e 4-III", "1-IV, 2-II, 3-I e 4-III", "1-II, 2-III, 3-I e 4-IV", "1-IV, 2-II, 3-III e 4-I"], "correct": 1, "justification": "A associação correta é 1-II, 2-I, 3-IV e 4-III. Hardware é a parte física, software é a parte lógica, banco de dados é a coleção estruturada de dados e redes fazem a transmissão eletrônica de sinais.", "slidePage": 15, "slideTitle": "Fundamentos da Tecnologia da Informação: Do Dado ao Conhecimento", "slideImage": "slides/slide_15.png"}, {"id": 4, "week": 2, "question": "Sobre hardware: I. Hardware é elemento lógico e físico II. CPU é o cérebro do computador III. Memória pode ser volátil ou não volátil IV. Periféricos permitem comunicação com o exterior.", "options": ["I, II, III e IV", "II, apenas", "II, III e IV, apenas", "I, II e III, apenas", "I e II, apenas"], "correct": 2, "justification": "A alternativa correta é II, III e IV, apenas. Hardware é a parte física, não lógica. A CPU aparece como o centro de processamento, a memória pode ser volátil ou não volátil, e periféricos fazem a comunicação com o ambiente externo.", "slidePage": 16, "slideTitle": "Fundamentos de Hardware e Arquitetura de Computadores", "slideImage": "slides/slide_16.png"}, {"id": 5, "week": 2, "question": "Sobre banco de dados:", "options": ["SQL serve apenas para leitura", "SGBD é dispositivo físico", "Bancos possuem dados redundantes", "Banco de dados é coleção de tabelas estruturadas", "Mantém dados inconsistentes"], "correct": 3, "justification": "A definição correta é que banco de dados é uma coleção estruturada de tabelas e dados relacionados. O SGBD é o software de gerenciamento, e SQL não serve apenas para leitura: também faz inserção, atualização e outras operações.", "slidePage": 19, "slideTitle": "Pilares da Gestão de Dados: Banco de Dados, Procedimentos e Pessoas", "slideImage": "slides/slide_19.png"}, {"id": 6, "week": 2, "question": "Sobre software: os softwares podem ser classificados em:", "options": ["Software Básico e Software Aplicativo processador de transações", "Software de Aplicativos e Software de Controle", "Software Básico e Firmware", "Software de Sistema e Software de Aplicativos", "Firmware e Software de Sistema"], "correct": 3, "justification": "A classificação correta apresentada no material é Software de Sistema e Software de Aplicativos. O slide diferencia o software que apoia o funcionamento da máquina daquele voltado às tarefas do usuário.", "slidePage": 18, "slideTitle": "Guia Essencial: Software e Linguagens de Programação", "slideImage": "slides/slide_18.png"}, {"id": 7, "week": 2, "question": "Sobre redes de computadores e meios de transmissão: I. Cabo de par trançado tem limitação de velocidade II. Cabo coaxial é o mais rápido III. Fibra óptica é cara e usa filamentos de vidro IV. Ondas de rádio são usadas em meios sem fio.", "options": ["I, III e IV, apenas", "II, apenas", "I, II, III e IV", "I e II, apenas", "I, II e III, apenas"], "correct": 0, "justification": "A alternativa correta é I, III e IV, apenas. Par trançado tem limitações, fibra óptica usa filamentos de vidro e costuma ter maior custo, e ondas de rádio são usadas em meios sem fio. A afirmação de que coaxial é o mais rápido está incorreta.", "slidePage": 20, "slideTitle": "Guia Essencial: Redes e Telecomunicações nos Sistemas de Informação", "slideImage": "slides/slide_20.png"}, {"id": 8, "week": 3, "question": "Uma organização possui vários sistemas isolados para diferentes áreas (financeira, pedagógica, administrativa e secretaria). Qual a melhor solução para integrar esses sistemas?", "options": ["Associar SIG com SIE", "Criar novos sistemas separados", "Implantar um sistema ERP", "Implantar apenas um sistema gerencial", "Usar SAD + MRP"], "correct": 2, "justification": "A melhor solução é implantar um ERP, porque ele integra departamentos e informações em uma base comum, reduzindo ilhas de informação e melhorando o fluxo organizacional.", "slidePage": 25, "slideTitle": "Guia Estratégico ERP: Integrando o Coração da Empresa", "slideImage": "slides/slide_25.png"}, {"id": 9, "week": 3, "question": "Classificação dos sistemas: 1- SPT 2- SIG 3- SIE. I- Decisão estratégica (alta gestão) II- Operacional (rotina) III- Decisão tática (relatórios).", "options": ["1-II, 2-I e 3-III", "1-III, 2-II e 3-I", "1-III, 2-I e 3-II", "1-I, 2-II e 3-III", "1-II, 2-III e 3-I"], "correct": 4, "justification": "A associação correta é 1-II, 2-III e 3-I. SPT atua na operação, SIG apoia o nível tático com relatórios e SIE apoia a alta gestão em decisões estratégicas.", "slidePage": 31, "slideTitle": "Sistemas de Informação: O Coração Estratégico das Organizações", "slideImage": "slides/slide_31.png"}, {"id": 10, "week": 3, "question": "Sobre ERP: I. Integra processos e informações da empresa II. Primeira fase envolve seleção do pacote III. Não há customização IV. Implementação pode ser iterativa.", "options": ["F - V - V - V", "V - F - V - F", "V - V - F - V", "V - V - F - F", "F - F - F - V"], "correct": 2, "justification": "A sequência correta é V - V - F - V. ERP integra processos e informações, começa com decisão e seleção do pacote, pode exigir parametrização ou customização, e sua implementação pode ocorrer de forma iterativa.", "slidePage": 26, "slideTitle": "Guia do Ecossistema ERP: Ciclo de Vida e Mercado", "slideImage": "slides/slide_26.png"}, {"id": 11, "week": 3, "question": "Sobre vantagens do ERP: I. Melhora fluxo de dados II. Alinha áreas da empresa III. Tem custo muito baixo IV. Implementação rápida e sem falhas.", "options": ["I e II, apenas", "I, III e IV", "I, II e III", "II, apenas", "I, II, III e IV"], "correct": 0, "justification": "As vantagens corretas são I e II, apenas. ERP melhora o fluxo de dados e alinha áreas da empresa, mas não é uma solução de custo muito baixo nem tem implementação necessariamente rápida e sem falhas.", "slidePage": 25, "slideTitle": "Guia Estratégico ERP: Integrando o Coração da Empresa", "slideImage": "slides/slide_25.png"}, {"id": 12, "week": 3, "question": "Uma empresa possui sistemas isolados por departamento, sem integração. Esse tipo de sistema é classificado como:", "options": ["Sistema de Informação Gerencial", "Sistema de Processamento de Transações", "Sistema de Apoio à Decisão", "Sistema ERP", "Sistema Estratégico"], "correct": 1, "justification": "Nesse contexto, a alternativa correta é Sistema de Processamento de Transações, que opera tarefas rotineiras e transacionais em áreas específicas. O ERP é justamente a resposta para integrar essas ilhas operacionais.", "slidePage": 24, "slideTitle": "SPT: A Base das Operações Empresariais", "slideImage": "slides/slide_24.png"}, {"id": 13, "week": 3, "question": "Uma empresa deseja melhorar decisões de nível tático com base em relatórios e indicadores. Qual sistema é mais adequado?", "options": ["Sistema de Apoio à Decisão operacional", "Sistema de Processamento de Transações", "ERP + TPS", "ERP", "Sistema de Informação Gerencial"], "correct": 4, "justification": "Para o nível tático, o sistema mais adequado é o Sistema de Informação Gerencial, que consolida dados e gera relatórios e indicadores para apoiar supervisores e gerentes.", "slidePage": 31, "slideTitle": "Sistemas de Informação: O Coração Estratégico das Organizações", "slideImage": "slides/slide_31.png"}, {"id": 14, "week": 4, "question": "Com base nos princípios da segurança da informação: 1- Confidencialidade 2- Integridade 3- Disponibilidade. I- Garantia de que a informação não foi alterada indevidamente II- Informação disponível quando necessário III- Nível de sigilo da informação.", "options": ["1-III; 2-I; 3-II", "1-III; 2-II; 3-I", "1-II; 2-I; 3-III", "1-I; 2-II; 3-III", "1-II; 2-III; 3-I"], "correct": 0, "justification": "A associação correta da tríade CIA é: confidencialidade com sigilo, integridade com não alteração indevida, e disponibilidade com acesso quando necessário.", "slidePage": 44, "slideTitle": "Pilares e Ativos: Fundamentos da Segurança da Informação", "slideImage": "slides/slide_44.png"}, {"id": 15, "week": 4, "question": "Sobre ameaças à segurança da informação: I. O desafio é proteger dados e conhecimento II. Ameaças sempre são externas III. Controles reduzem ameaças IV. Ameaças exploram vulnerabilidades.", "options": ["IV, apenas", "I, II e III", "I, II, III e IV", "I e II", "I, III e IV"], "correct": 4, "justification": "A alternativa correta é I, III e IV. As ameaças podem ser internas ou externas, controles ajudam a reduzir riscos, e as ameaças exploram vulnerabilidades existentes.", "slidePage": 45, "slideTitle": "Guia Essencial: Gestão de Riscos e Segurança da Informação", "slideImage": "slides/slide_45.png"}, {"id": 16, "week": 4, "question": "Complete: Segurança da informação está ligada à ________, integridade e disponibilidade. As ______ representam o que pode causar danos. As ameaças exploram uma ______.", "options": ["inteireza; neutralidades; influência", "confidencialidade; ameaças; oportunidade", "inteireza; neutralidades; vulnerabilidade", "confidencialidade; neutralidades; oportunidade", "confidencialidade; ameaças; vulnerabilidade"], "correct": 4, "justification": "A alternativa correta é confidencialidade; ameaças; vulnerabilidade. A tríade clássica usa confidencialidade, integridade e disponibilidade, e o risco surge quando uma ameaça encontra uma vulnerabilidade.", "slidePage": 45, "slideTitle": "Guia Essencial: Gestão de Riscos e Segurança da Informação", "slideImage": "slides/slide_45.png"}, {"id": 17, "week": 4, "question": "Sobre mecanismos de segurança: I. Controles lógicos usam barreiras físicas II. Controles físicos limitam acesso físico III. Criptografia é controle lógico IV. Certificação valida documentos.", "options": ["I e II", "I, II, III e IV", "I, II e III", "II, apenas", "II, III e IV"], "correct": 4, "justification": "A alternativa correta é II, III e IV. Controles físicos limitam acesso ao ambiente, criptografia é um controle lógico e certificação ou assinatura digital ajudam a validar autenticidade. A afirmação I está incorreta porque controles lógicos não são barreiras físicas.", "slidePage": 46, "slideTitle": "Escudo de Segurança: Protegendo Ativos Lógicos e Físicos", "slideImage": "slides/slide_46.png"}, {"id": 18, "week": 4, "question": "Sobre política de segurança da informação:", "options": ["Foca apenas em dados de clientes", "Não define responsabilidades", "Existem filosofias proibitiva e permissiva", "Não se relaciona com gestão de segurança", "Deve ser secreta até para funcionários"], "correct": 2, "justification": "A política de segurança define regras, responsabilidades e diretrizes organizacionais. Uma distinção comum é entre abordagens proibitiva e permissiva, conforme o nível de restrição adotado.", "slidePage": 45, "slideTitle": "Guia Essencial: Gestão de Riscos e Segurança da Informação", "slideImage": "slides/slide_45.png"}, {"id": 19, "week": 5, "question": "A governança corporativa pode ser considerada um _________ que dirige e monitora uma empresa. Ela também pode ser considerada uma estrutura de ______, trazendo personagens importantes, como conselho de administração e alta direção, com o objetivo de aumentar __________.", "options": ["área; riscos; o valor", "sistema; poder; a sua dívida", "sistema; poder; o valor", "área; poder; a sua dívida", "sistema; riscos; o valor"], "correct": 2, "justification": "A formulação correta é sistema; poder; o valor. A governança organiza poder e responsabilidades para dirigir e monitorar a organização, buscando aumentar valor e confiabilidade.", "slidePage": 54, "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional", "slideImage": "slides/slide_54.png"}, {"id": 20, "week": 5, "question": "Sobre governança de TI:", "options": ["Criar escala de suporte técnico é governança", "Executar tarefas de curto prazo é governança", "Definir relatórios operacionais é governança", "Planejar entregas de TI é governança", "Definir princípios norteadores da TI"], "correct": 4, "justification": "A governança de TI define princípios, diretrizes e mecanismos de decisão. Atividades operacionais do dia a dia pertencem mais à gestão de TI do que à governança.", "slidePage": 53, "slideTitle": "Governança de TI: Transformando Tecnologia em Valor Estratégico", "slideImage": "slides/slide_53.png"}, {"id": 21, "week": 5, "question": "Ciclo da governança de TI: 1- Alinhamento estratégico 2- Decisão e priorização 3- Estrutura e operação. I- Estruturas organizacionais de TI II- Planejamento estratégico III- Definição de responsabilidades.", "options": ["1-II, 2-III e 3-I", "1-III, 2-II e 3-I", "1-I, 2-II e 3-III", "1-II, 2-I e 3-III", "1-III, 2-I e 3-II"], "correct": 0, "justification": "A associação correta é 1-II, 2-III e 3-I. O alinhamento conecta TI ao planejamento estratégico, a decisão e priorização envolvem responsabilidades e escolhas, e a estrutura e operação tratam das formas organizacionais de execução.", "slidePage": 54, "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional", "slideImage": "slides/slide_54.png"}, {"id": 22, "week": 5, "question": "Sobre governança corporativa e governança de TI: I. Código de Governança abrange todos os níveis II. Governança de TI define políticas e regras III. Objetivo é conformidade com leis IV. Código segue modelo “aplique ou explique”.", "options": ["I e IV", "I, II, III e IV", "I e II", "II, III e IV", "I, II e III"], "correct": 1, "justification": "Todas as afirmações estão corretas. Os slides destacam pilares como transparência, conformidade, alinhamento e estrutura de decisão, compatíveis com esse conjunto de ideias.", "slidePage": 54, "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional", "slideImage": "slides/slide_54.png"}, {"id": 23, "week": 6, "question": "Governar a TI não é o mesmo que fazer a gestão da TI. Qual das alternativas representa corretamente uma ação de governança de TI?", "options": ["Criar escala de trabalho da equipe", "Executar tarefas de curto prazo", "Definir relatórios operacionais", "Planejar entregas de serviços", "Definir princípios norteadores da TI"], "correct": 4, "justification": "A governança de TI está ligada à direção e aos princípios norteadores. Já criar escalas, executar tarefas e operar entregas pertence mais à gestão e à operação de TI.", "slidePage": 55, "slideTitle": "Guia Visual: Modelos de Governança e Gestão de TI", "slideImage": "slides/slide_55.png"}, {"id": 24, "week": 6, "question": "Sobre governança corporativa: a governança corporativa pode ser considerada um ______ que dirige e monitora a empresa e uma estrutura de ______ que busca aumentar o ______.", "options": ["área; riscos; valor", "sistema; poder; dívida", "sistema; poder; valor", "área; poder; dívida", "sistema; riscos; valor"], "correct": 2, "justification": "A construção correta é sistema; poder; valor. A governança define como o poder é distribuído e monitorado para maximizar valor e reduzir conflitos.", "slidePage": 54, "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional", "slideImage": "slides/slide_54.png"}, {"id": 25, "week": 6, "question": "Ciclo da governança de TI: 1- Alinhamento estratégico e compliance 2- Decisão e alocação de recursos 3- Estrutura e operação. I- Relacionado à estrutura organizacional da TI II- Relacionado ao planejamento estratégico III- Relacionado à definição de responsabilidades.", "options": ["1-II, 2-III e 3-I", "1-III, 2-II e 3-I", "1-I, 2-II e 3-III", "1-II, 2-I e 3-III", "1-III, 2-I e 3-II"], "correct": 0, "justification": "A associação correta continua sendo 1-II, 2-III e 3-I. Alinhamento remete ao estratégico, alocação de recursos exige decisão e responsabilidade, e estrutura e operação se conectam ao desenho organizacional.", "slidePage": 55, "slideTitle": "Guia Visual: Modelos de Governança e Gestão de TI", "slideImage": "slides/slide_55.png"}, {"id": 26, "week": 6, "question": "Sobre governança corporativa e governança de TI: I. Código Brasileiro de Governança abrange todos os níveis II. Governança de TI define políticas e regras III. Objetivo é conformidade com leis IV. Segue modelo “aplique ou explique”.", "options": ["I e IV", "I, II, III e IV", "I e II", "II, III e IV", "I, II e III"], "correct": 1, "justification": "A alternativa correta é I, II, III e IV. O material relaciona governança a princípios, regras, conformidade e modelos de prestação de contas.", "slidePage": 58, "slideTitle": "Guia Mestre: Governança de TI e a Evolução para o Governo Digital", "slideImage": "slides/slide_58.png"}, {"id": 27, "week": 7, "question": "Associe as tecnologias: 1- RFID 2- IoT 3- Big Data. I- Interpretação de grandes volumes de dados II- Identificação por radiofrequência III- Conexão de objetos à internet.", "options": ["1-I, 2-II e 3-III", "1-III, 2-II e 3-I", "1-II, 2-I e 3-III", "1-III, 2-I e 3-II", "1-II, 2-III e 3-I"], "correct": 4, "justification": "A associação correta é 1-II, 2-III e 3-I. RFID trata de identificação por radiofrequência, IoT conecta objetos à internet e Big Data lida com grandes volumes de dados.", "slidePage": 66, "slideTitle": "Tecnologias Emergentes: Inovação e Desafios nos Sistemas de Informação", "slideImage": "slides/slide_66.png"}, {"id": 28, "week": 7, "question": "Sobre blockchain: I. Todos os nós validam a transação II. Utiliza centralização para segurança III. Bitcoin é o único uso da tecnologia.", "options": ["II e III", "I, apenas", "II, apenas", "I e III", "I e II"], "correct": 1, "justification": "Apenas a afirmação I está correta. Blockchain se baseia em validação distribuída, não centralização, e vai muito além do uso em Bitcoin.", "slidePage": 66, "slideTitle": "Tecnologias Emergentes: Inovação e Desafios nos Sistemas de Informação", "slideImage": "slides/slide_66.png"}, {"id": 29, "week": 7, "question": "Sobre realidade aumentada: I. Também chamada realidade expandida II. Integra mundo real e virtual III. Pode usar óculos ou câmeras.", "options": ["V - V - V", "F - F - F", "V - V - F", "V - F - V", "F - V - V"], "correct": 0, "justification": "A sequência correta é V - V - V. A realidade aumentada integra elementos virtuais ao mundo real e pode usar câmeras, celulares, óculos e outros dispositivos.", "slidePage": 66, "slideTitle": "Tecnologias Emergentes: Inovação e Desafios nos Sistemas de Informação", "slideImage": "slides/slide_66.png"}, {"id": 30, "week": 7, "question": "Sobre ética em TI, complete: É importante estabelecer ______ sobre postura ética. O profissional não pode alegar falta de ______. Caso contrário, pode perder o exercício da ______.", "options": ["lições; conhecimentos; profissão", "lições; responsabilidade; política", "códigos; responsabilidade; política", "códigos; conhecimentos; profissão", "códigos; conhecimentos; política"], "correct": 3, "justification": "A alternativa correta é códigos; conhecimentos; profissão. O material enfatiza códigos de conduta, responsabilidade profissional e consequências sobre o exercício da profissão quando há violação ética.", "slidePage": 61, "slideTitle": "Guia de Ética Profissional e Comportamento Digital na TI", "slideImage": "slides/slide_61.png"}];
+    const letters = ["A","B","C","D","E"];
+    let selectedWeek = "all";
+    let activeQuestions = [...allQuestions];
+    let current = 0;
+    let score = 0;
+    let answered = 0;
+    let done = [];
+
+    const app = document.getElementById("app");
+    const weekSelect = document.getElementById("weekSelect");
+    const progressText = document.getElementById("progressText");
+    const progressBar = document.getElementById("progressBar");
+    const scoreEl = document.getElementById("score");
+    const answeredEl = document.getElementById("answered");
+    const slideModal = document.getElementById("slideModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPage = document.getElementById("modalPage");
+
+    function esc(text) {
+      return String(text)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+    }
+
+    function applyWeekFilter() {
+      activeQuestions = selectedWeek === "all" ? [...allQuestions] : allQuestions.filter(q => String(q.week) === selectedWeek);
+      current = 0;
+      score = 0;
+      answered = 0;
+      done = new Array(activeQuestions.length).fill(false);
+      render();
+    }
+
+    function updateSidebar() {
+      if (activeQuestions.length === 0) {
+        progressText.textContent = "Nenhuma questão disponível";
+        progressBar.style.width = "0%";
+      } else if (current < activeQuestions.length) {
+        progressText.textContent = `Questão ${current + 1} de ${activeQuestions.length}`;
+        progressBar.style.width = `${(current / activeQuestions.length) * 100}%`;
+      } else {
+        progressText.textContent = "Treino concluído";
+        progressBar.style.width = "100%";
+      }
+      scoreEl.textContent = score;
+      answeredEl.textContent = answered;
+    }
+
+    function openModal(title, page, img) {
+      modalTitle.textContent = title;
+      modalPage.textContent = `Página ${page} do PDF de slides`;
+      modalImg.src = img;
+      slideModal.classList.add("show");
+      slideModal.setAttribute("aria-hidden","false");
+    }
+
+    function closeModal() {
+      slideModal.classList.remove("show");
+      slideModal.setAttribute("aria-hidden","true");
+      modalImg.src = "";
+    }
+
+    function weekLabelValue() {
+      return selectedWeek === "all" ? "Todas as semanas" : `Semana ${selectedWeek}`;
+    }
+
+    function printQuestions() {
+      const win = window.open("", "_blank");
+      if (!win) return;
+
+      const title = document.title.replace(" | TechTeoremas", "");
+      const questionHtml = activeQuestions.map((q, idx) => `
+        <div class="q-block">
+          <h3>${idx + 1}. ${esc(q.question)}</h3>
+          <ol type="A">
+            ${q.options.map(opt => `<li>${esc(opt)}</li>`).join("")}
+          </ol>
+        </div>
+      `).join("");
+
+      const answerHtml = activeQuestions.map((q, idx) => `
+        <li><strong>Questão ${idx + 1}</strong> — ${letters[q.correct]} (${esc(q.slideTitle)})</li>
+      `).join("");
+
+      win.document.write(`
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+          <meta charset="UTF-8">
+          <title>${title} - Impressão</title>
+          <style>
+            body { font-family: Arial, sans-serif; margin: 28px; color: #111; }
+            h1 { margin-bottom: 8px; }
+            .meta { margin-bottom: 24px; color: #444; }
+            .q-block { margin-bottom: 24px; page-break-inside: avoid; }
+            ol { padding-left: 22px; }
+            .gabarito { page-break-before: always; }
+            .gabarito li { margin-bottom: 8px; }
+          </style>
+        </head>
+        <body>
+          <h1>${title}</h1>
+          <div class="meta">Canal TechTeoremas · Filtro: ${weekLabelValue()} · Total de questões: ${activeQuestions.length}</div>
+          ${questionHtml}
+          <div class="gabarito">
+            <h2>Gabarito</h2>
+            <ol>${answerHtml}</ol>
+          </div>
+        </body>
+        </html>
+      `);
+      win.document.close();
+      win.focus();
+      setTimeout(() => win.print(), 300);
+    }
+
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    slideModal.addEventListener("click", (e) => { if (e.target === slideModal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+    document.getElementById("printBtn").addEventListener("click", printQuestions);
+
+    function render() {
+      updateSidebar();
+
+      if (activeQuestions.length === 0) {
+        app.innerHTML = `<div class="empty">Nenhuma questão encontrada para este filtro.</div>`;
+        return;
+      }
+
+      if (current >= activeQuestions.length) {
+        const pct = Math.round((score / activeQuestions.length) * 100);
+        app.innerHTML = `
+          <section class="finish">
+            <div class="finish-badge">Treino finalizado</div>
+            <h2>Você concluiu o treino 🎉</h2>
+            <p>Filtro usado: <strong>${weekLabelValue()}</strong>.</p>
+            <p style="margin-top:8px;">Resultado final: <strong>${score} de ${activeQuestions.length}</strong> questões corretas (${pct}%).</p>
+            <div class="actions" style="justify-content:center;">
+              <button class="btn btn-primary" id="restartInline">Tentar novamente</button>
+              <button class="btn btn-secondary" id="printInline">Imprimir questões</button>
+            </div>
+          </section>
+        `;
+        document.getElementById("restartInline").addEventListener("click", resetCurrentFilter);
+        document.getElementById("printInline").addEventListener("click", printQuestions);
+        return;
+      }
+
+      const q = activeQuestions[current];
+      const weekLabel = `Semana ${q.week}`;
+      const optionsHtml = q.options.map((opt, idx) => `
+        <button class="opt" data-idx="${idx}">
+          <span class="opt-row">
+            <span class="letter">${letters[idx]}</span>
+            <span>${esc(opt)}</span>
+          </span>
+        </button>
+      `).join("");
+
+      app.innerHTML = `
+        <div class="week-tag">${weekLabel}</div>
+        <div class="qnum">Questão ${q.id}</div>
+        <h2 class="qtext">${esc(q.question)}</h2>
+        <div class="options">${optionsHtml}</div>
+        <div class="feedback" id="feedback"></div>
+        <div class="actions">
+          <button class="btn btn-secondary" id="prevBtn" ${current === 0 ? "disabled" : ""}>Anterior</button>
+          <button class="btn btn-primary" id="nextBtn" disabled>Próxima</button>
+        </div>
+      `;
+
+      document.querySelectorAll(".opt").forEach(btn => {
+        btn.addEventListener("click", () => answerQuestion(Number(btn.dataset.idx)));
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        if (current > 0) { current--; render(); }
+      });
+    }
+
+    function answerQuestion(selectedIdx) {
+      const q = activeQuestions[current];
+      if (done[current]) return;
+      done[current] = true;
+      answered++;
+
+      const buttons = [...document.querySelectorAll(".opt")];
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+      buttons.forEach(btn => btn.classList.add("disabled"));
+
+      if (selectedIdx === q.correct) {
+        score++;
+        buttons[selectedIdx].classList.add("correct");
+        feedback.className = "feedback show ok";
+        feedback.innerHTML = `
+          <div class="feedback-head">✅ Resposta correta</div>
+          <p>Você marcou a alternativa <strong>${letters[selectedIdx]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card">
+            <div class="slide-meta">
+              <div class="slide-title">${esc(q.slideTitle)}</div>
+              <div class="slide-page">Página ${q.slidePage} dos slides</div>
+            </div>
+            <div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div>
+          </div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      } else {
+        buttons[selectedIdx].classList.add("wrong");
+        buttons[q.correct].classList.add("reveal");
+        feedback.className = "feedback show bad";
+        feedback.innerHTML = `
+          <div class="feedback-head">❌ Resposta incorreta</div>
+          <p>Você marcou <strong>${letters[selectedIdx]}</strong>, mas a correta é <strong>${letters[q.correct]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card">
+            <div class="slide-meta">
+              <div class="slide-title">${esc(q.slideTitle)}</div>
+              <div class="slide-page">Página ${q.slidePage} dos slides</div>
+            </div>
+            <div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div>
+          </div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      }
+
+      document.getElementById("zoomBtn").addEventListener("click", () => openModal(q.slideTitle, q.slidePage, q.slideImage));
+      nextBtn.disabled = false;
+      nextBtn.addEventListener("click", () => { current++; render(); }, { once: true });
+      updateSidebar();
+    }
+
+    function resetCurrentFilter() {
+      current = 0;
+      score = 0;
+      answered = 0;
+      done = new Array(activeQuestions.length).fill(false);
+      render();
+    }
+
+    document.getElementById("restartTop").addEventListener("click", resetCurrentFilter);
+    weekSelect.addEventListener("change", (e) => { selectedWeek = e.target.value; applyWeekFilter(); });
+
+    applyWeekFilter();
+  </script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+[
+  {
+    "id": 1,
+    "question": "As transformações trazidas pela era da informação impactaram significativamente a maneira como as empresas percebem e utilizam a tecnologia da informação. Qual alternativa descreve corretamente a abordagem contemporânea?",
+    "options": [
+      "A TI é vista apenas como custo.",
+      "Empresas modernas abandonaram investimentos em TI.",
+      "A TI substitui a força de trabalho para reduzir funcionários.",
+      "A TI é usada para automatizar processos sem considerar a estrutura organizacional.",
+      "O investimento em TI é crucial para a competitividade, equilibrando automação com retenção de funcionários especializados."
+    ],
+    "correct": 4,
+    "justification": "A TI é tratada como investimento estratégico para competitividade, e não apenas como custo. A automação deve complementar a atuação humana, não eliminá-la de forma cega.",
+    "slidePage": 8,
+    "slideTitle": "O Poder Estratégico dos Sistemas de Informação",
+    "slideImage": "slides/slide_8.png"
+  },
+  {
+    "id": 2,
+    "question": "Com base no modelo de John von Neumann, qual alternativa descreve corretamente a CPU ou um de seus componentes?",
+    "options": [
+      "Os registradores comunicam-se com impressoras e scanners.",
+      "A ULA executa operações matemáticas e lógicas do computador.",
+      "A unidade de controle aumenta a velocidade da internet.",
+      "A memória principal é usada apenas para gráficos e imagens.",
+      "A CPU armazena dados de longo prazo."
+    ],
+    "correct": 1,
+    "justification": "A ULA é responsável por operações aritméticas e lógicas, sendo um dos componentes centrais da arquitetura clássica de computadores.",
+    "slidePage": 16,
+    "slideTitle": "Fundamentos de Hardware e Arquitetura de Computadores",
+    "slideImage": "slides/slide_16.png"
+  },
+  {
+    "id": 3,
+    "question": "Sobre a implantação de um sistema ERP, qual alternativa descreve corretamente uma etapa crítica?",
+    "options": [
+      "Escolher fornecedor apenas com base no custo.",
+      "Reduzir o quadro de funcionários.",
+      "Customizar primeiro os módulos de marketing.",
+      "Selecionar o pacote após analisar opções do mercado, seguida da implementação dos módulos escolhidos.",
+      "Focar apenas na automação de RH."
+    ],
+    "correct": 3,
+    "justification": "A seleção cuidadosa do pacote e a implementação adequada dos módulos são etapas críticas no ciclo de vida de um ERP.",
+    "slidePage": 26,
+    "slideTitle": "Guia do Ecossistema ERP: Ciclo de Vida e Mercado",
+    "slideImage": "slides/slide_26.png"
+  },
+  {
+    "id": 4,
+    "question": "Qual afirmação melhor descreve o desenvolvimento tradicional em cascata?",
+    "options": [
+      "É iterativo e incremental.",
+      "É linear e sequencial, com cada fase iniciando após a conclusão da anterior.",
+      "Permite alterar fases anteriores a qualquer momento.",
+      "Dispensa planejamento.",
+      "Desenvolvimento e testes ocorrem simultaneamente."
+    ],
+    "correct": 1,
+    "justification": "O modelo em cascata é marcado por sequência rígida e linear entre fases, sem iterações como nas abordagens ágeis.",
+    "slidePage": 38,
+    "slideTitle": "Metodologias de Desenvolvimento: Tradicional vs. Ágil",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 5,
+    "question": "Qual opção descreve corretamente um mecanismo de segurança da informação?",
+    "options": [
+      "Cifração transforma informações em formatos ininteligíveis para não autorizados usando algoritmos e chaves.",
+      "Honeypots bloqueiam ativamente ataques e previnem intrusões diretamente.",
+      "Cifração é um dispositivo físico.",
+      "Hashing altera a informação para protegê-la de acessos não autorizados.",
+      "Biometria valida autenticidade de documentos eletrônicos."
+    ],
+    "correct": 0,
+    "justification": "A cifração é um mecanismo lógico essencial para confidencialidade, tornando os dados incompreensíveis sem a chave correta.",
+    "slidePage": 46,
+    "slideTitle": "Escudo de Segurança: Protegendo Ativos Lógicos e Físicos",
+    "slideImage": "slides/slide_46.png"
+  },
+  {
+    "id": 6,
+    "question": "Relacione os conceitos: 1. Distribuição de poder; 2. Governança corporativa; 3. Transparência organizacional com A. Canais de divulgação de informações relevantes; B. Sistema de valores, processos e regulamentos de direção; C. Mudança que concede poder a partes interessadas.",
+    "options": [
+      "1-C; 2-A; 3-B",
+      "1-C; 2-B; 3-A",
+      "1-A; 2-B; 3-C",
+      "1-B; 2-A; 3-C",
+      "1-B; 2-C; 3-A"
+    ],
+    "correct": 1,
+    "justification": "Transparência corresponde à divulgação de informações; governança corporativa ao sistema de valores e direção; e distribuição de poder à concessão de influência a stakeholders.",
+    "slidePage": 54,
+    "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional",
+    "slideImage": "slides/slide_54.png"
+  },
+  {
+    "id": 7,
+    "question": "Sobre computação em nuvem, quais afirmações estão corretas? I. Permite acesso remoto a aplicações e dados. II. Usuários precisam fazer manutenção local dos softwares. III. Centraliza armazenamento em servidores locais. IV. Office Online é exemplo de aplicação acessível via navegador.",
+    "options": [
+      "Apenas II, III e IV",
+      "I, II, III e IV",
+      "Apenas II e III",
+      "Apenas I, II e III",
+      "Apenas I e IV"
+    ],
+    "correct": 4,
+    "justification": "Na nuvem, aplicações e dados são acessados remotamente, e exemplos como Office Online reforçam esse modelo. Manutenção e armazenamento não ficam, em regra, sob responsabilidade local do usuário.",
+    "slidePage": 13,
+    "slideTitle": "A Empresa Digital: Operando em um Cenário Global e Pós-Pandemia",
+    "slideImage": "slides/slide_13.png"
+  },
+  {
+    "id": 8,
+    "question": "Sobre as iniciativas de Governo Eletrônico no Brasil, quais afirmativas estão corretas? I. O Decreto 8.539/2015 introduz tramitação eletrônica de documentos. II. G2C é interação exclusiva com empresas privadas. III. O Decreto 8.638/2016 adota princípios como transparência e participação. IV. O CEGE não atua na gestão de serviços online.",
+    "options": [
+      "Apenas III e IV",
+      "I, II, III e IV",
+      "Apenas I e II",
+      "Apenas I e III",
+      "Apenas II e IV"
+    ],
+    "correct": 3,
+    "justification": "As assertivas I e III estão corretas. G2C é Government to Citizen, e o CEGE também atuou na coordenação de serviços digitais.",
+    "slidePage": 57,
+    "slideTitle": "Governança Digital no Brasil: O Caminho entre a Lei e a Realidade",
+    "slideImage": "slides/slide_57.png"
+  },
+  {
+    "id": 9,
+    "question": "Indique quais são as bases de um sistema de informação.",
+    "options": [
+      "Bases, informações e conhecimento",
+      "Dados, informação e conhecimento",
+      "Banco de dados, conhecimento e informação",
+      "Dados, informação e sistema",
+      "Sistema, dados e conhecimento"
+    ],
+    "correct": 1,
+    "justification": "As bases conceituais são dados, informação e conhecimento, que formam a hierarquia de valor dos sistemas de informação.",
+    "slidePage": 5,
+    "slideTitle": "A Hierarquia do Valor: De Dados a Conhecimento",
+    "slideImage": "slides/slide_5.png"
+  },
+  {
+    "id": 10,
+    "question": "Quais normas listadas estão totalmente relacionadas às avaliações de processo ou produto de software? (I. ISO 15504; II. MPS.Br; III. ISO 14000; IV. CMMI; V. ISO 9126; VI. ISO 12119; VII. NR14)",
+    "options": [
+      "ISO 15504, MPS.Br, ISO 14000, ISO 9126, ISO 12119",
+      "ISO 15504, MPS.Br, CMMI, ISO 9126, NR14",
+      "ISO 15504, MPS.Br, CMMI, ISO 9126, ISO 12119",
+      "MPS.Br, ISO 14000, CMMI, ISO 9126, ISO 12119",
+      "ISO 15504, MPS.Br, ISO 14000, CMMI, NR14"
+    ],
+    "correct": 2,
+    "justification": "As normas ligadas à avaliação de processos e produtos de software são ISO 15504, MPS.Br, CMMI, ISO 9126 e ISO 12119. ISO 14000 e NR14 não pertencem a esse grupo.",
+    "slidePage": 41,
+    "slideTitle": "Guia Rápido: Normas e Padrões de Qualidade de Software",
+    "slideImage": "slides/slide_41.png"
+  },
+  {
+    "id": 11,
+    "question": "Quais objetivos estão relacionados à governança de TI? I. Facilitar tomadas de decisões de TI. II. Melhorar a qualidade dos serviços de TI. III. Definir aplicação financeira e investimentos bancários. IV. Estabelecer conformidade com leis e regulamentos. V. Promover integração permanente entre meio acadêmico e empresa.",
+    "options": [
+      "Apenas I, II e IV",
+      "Apenas I, III e V",
+      "Apenas II, III e IV",
+      "Apenas I, II e V",
+      "Apenas III, IV e V"
+    ],
+    "correct": 0,
+    "justification": "Governança de TI concentra-se em decisões, qualidade de serviços e conformidade regulatória, não em investimentos bancários ou integração acadêmica.",
+    "slidePage": 53,
+    "slideTitle": "Governança de TI: Transformando Tecnologia em Valor Estratégico",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 12,
+    "question": "Qual sistema converte a previsão de demanda em programação da necessidade de componentes para que não haja falta nem sobra na produção?",
+    "options": [
+      "ERP",
+      "MRP",
+      "MRP II",
+      "SCM",
+      "WMS"
+    ],
+    "correct": 1,
+    "justification": "O MRP calcula necessidades de materiais e componentes a partir da demanda prevista, evitando faltas e excessos.",
+    "slidePage": 28,
+    "slideTitle": "Evolução do Planejamento de Produção: MRP vs. MRP II",
+    "slideImage": "slides/slide_28.png"
+  },
+  {
+    "id": 13,
+    "question": "Qual alternativa melhor define as funções primordiais de um sistema de informação?",
+    "options": [
+      "Digitalização de documentos físicos apenas.",
+      "Uso exclusivo de redes sociais para marketing.",
+      "Coleta, processamento, armazenamento e distribuição de dados para gerar conhecimento, incluindo retroalimentação.",
+      "Substituição integral de gestores humanos por IA.",
+      "Monitoramento de e-mails pessoais de funcionários."
+    ],
+    "correct": 2,
+    "justification": "Um sistema de informação executa o ciclo de entrada, processamento, armazenamento, saída e retroalimentação para apoiar decisões e gerar conhecimento.",
+    "slidePage": 4,
+    "slideTitle": "Fundamentos dos Sistemas de Informação",
+    "slideImage": "slides/slide_4.png"
+  },
+  {
+    "id": 14,
+    "question": "O que define a Internet das Coisas (IoT)?",
+    "options": [
+      "Uma rede social para objetos inanimados.",
+      "Um novo protocolo de internet acima de 1000 Gbps.",
+      "A compra de eletrodomésticos em sites internacionais.",
+      "Uma rede interconectada de objetos físicos com tecnologia embarcada capaz de coletar e transmitir dados pela internet.",
+      "Um sistema de segurança contra roubo em lojas."
+    ],
+    "correct": 3,
+    "justification": "IoT envolve objetos físicos conectados, equipados com sensores e capacidade de comunicação de dados pela internet.",
+    "slidePage": 66,
+    "slideTitle": "Tecnologias Emergentes: Inovação e Desafios nos Sistemas de Informação",
+    "slideImage": "slides/slide_66.png"
+  },
+  {
+    "id": 15,
+    "question": "Preencha as lacunas sobre arquitetura de redes: I - Rede de Área Pessoal: usada para que (1) se comuniquem. II - Rede de Área Metropolitana: conecta diversas Redes (2). III - Rede de Área Expandida: abrange área (3) que a metropolitana. IV - Rede de Área Local: interliga computadores (4) de um mesmo espaço físico.",
+    "options": [
+      "dispositivos, Locais, maior, dentro",
+      "linguagens, Locais, menor, fora",
+      "dispositivos, Expandidas, maior, dentro",
+      "linguagens, Expandidas, menor, dentro",
+      "dispositivos, Locais, maior, fora"
+    ],
+    "correct": 0,
+    "justification": "A sequência correta é dispositivos, Locais, maior e dentro, descrevendo respectivamente PAN, MAN, WAN e LAN.",
+    "slidePage": 20,
+    "slideTitle": "Guia Essencial: Redes e Telecomunicações nos Sistemas de Informação",
+    "slideImage": "slides/slide_20.png"
+  },
+  {
+    "id": 16,
+    "question": "No contexto da política de segurança da informação, além de disponibilidade, integridade e confidencialidade, quais itens estão corretos? III - Autenticidade: garantia de que a informação/identidade é verdadeira. IV - Legalidade: valor legal das informações na comunicação.",
+    "options": [
+      "Todas incorretas",
+      "Todas corretas",
+      "Apenas I e II corretas",
+      "Apenas III e IV corretas",
+      "Apenas a opção V está incorreta"
+    ],
+    "correct": 3,
+    "justification": "Autenticidade e legalidade complementam os pilares clássicos de segurança, reforçando origem confiável e valor jurídico da informação.",
+    "slidePage": 45,
+    "slideTitle": "Guia Essencial: Gestão de Riscos e Segurança da Informação",
+    "slideImage": "slides/slide_45.png"
+  },
+  {
+    "id": 17,
+    "question": "Qual é a norma ISO/IEC intitulada 'Governança Corporativa de Tecnologia de Informação'?",
+    "options": [
+      "39000",
+      "27002",
+      "27001",
+      "31000",
+      "38500"
+    ],
+    "correct": 4,
+    "justification": "A ISO/IEC 38500 é o padrão específico de governança corporativa de TI.",
+    "slidePage": 55,
+    "slideTitle": "Guia Visual: Modelos de Governança e Gestão de TI",
+    "slideImage": "slides/slide_55.png"
+  },
+  {
+    "id": 18,
+    "question": "A máquina proposta por John von Neumann reúne quais componentes fundamentais?",
+    "options": [
+      "Memória cache principal, ULA, CPU com registradores e UC",
+      "Processador principal, ULA e CPU com registradores",
+      "Memória principal, ULA, CPU com registradores e unidade de controle",
+      "Memória principal, unidade matemática, CPU com registradores e UC",
+      "Memória principal, ULA, CPU com registradores e placa-mãe"
+    ],
+    "correct": 2,
+    "justification": "A arquitetura de von Neumann é composta por memória principal, ULA, CPU com registradores e unidade de controle.",
+    "slidePage": 16,
+    "slideTitle": "Fundamentos de Hardware e Arquitetura de Computadores",
+    "slideImage": "slides/slide_16.png"
+  },
+  {
+    "id": 19,
+    "question": "Das normas listadas, quais estão totalmente relacionadas às avaliações de processo ou ao produto de software? (I-ISO 15504; II-MPS.Br; III-ISO 14000; IV-CMMI; V-ISO 9126; VI-ISO 12119; VII-NR14)",
+    "options": [
+      "I, II, IV, V e VI",
+      "I, II, III, V e VI",
+      "I, II, IV, V e VII",
+      "II, III, IV, V e VI",
+      "I, II, III, IV e VII"
+    ],
+    "correct": 0,
+    "justification": "As normas I, II, IV, V e VI são específicas do contexto de software. ISO 14000 e NR14 pertencem a outros domínios.",
+    "slidePage": 41,
+    "slideTitle": "Guia Rápido: Normas e Padrões de Qualidade de Software",
+    "slideImage": "slides/slide_41.png"
+  },
+  {
+    "id": 20,
+    "question": "Qual sistema de informação empresarial converte a previsão de demanda em programação de necessidade de componentes para evitar faltas ou sobras na produção?",
+    "options": [
+      "ERP",
+      "MRP",
+      "MRP II",
+      "SCM",
+      "WMS"
+    ],
+    "correct": 1,
+    "justification": "A descrição corresponde ao MRP, que trata do planejamento de materiais com base na demanda prevista.",
+    "slidePage": 28,
+    "slideTitle": "Evolução do Planejamento de Produção: MRP vs. MRP II",
+    "slideImage": "slides/slide_28.png"
+  }
+]

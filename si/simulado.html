@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulado de Sistemas da Informação | TechTeoremas</title>
+  <style>
+    :root {
+      --bg1:#071120; --bg2:#12233e; --panel:rgba(255,255,255,.09); --line:rgba(255,255,255,.14);
+      --muted:#c4cfef; --text:#eef4ff; --primary:#7c9cff; --primary2:#67e2c7;
+      --ok:#44d59d; --bad:#ff6b81; --okbg:rgba(68,213,157,.14); --badbg:rgba(255,107,129,.14);
+      --shadow:0 22px 56px rgba(0,0,0,.34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,156,255,.24), transparent 28%),
+        radial-gradient(circle at top right, rgba(103,226,199,.18), transparent 22%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    .container { max-width:1240px; margin:0 auto; padding:28px 18px 52px; }
+    .hero,.panel { background:rgba(255,255,255,.09); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); backdrop-filter:blur(10px); }
+    .hero { padding:26px; margin-bottom:22px; }
+    .brand { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .brand img { width:64px; height:64px; object-fit:contain; }
+    .brand-tag { padding:7px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.14); color:var(--muted); font-size:13px; }
+    h1 { margin:12px 0 10px; font-size:clamp(30px,4vw,46px); line-height:1.04; }
+    .hero p { margin:0; color:var(--muted); line-height:1.6; max-width:980px; }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .chip { border-radius:999px; padding:9px 14px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); font-size:14px; }
+    .layout { display:grid; grid-template-columns:320px 1fr; gap:22px; }
+    @media (max-width:980px) { .layout { grid-template-columns:1fr; } }
+    .sidebar,.quiz { padding:20px; }
+    .progress-text { color:var(--muted); margin:18px 0 10px; }
+    .bar { height:12px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden; }
+    .bar > div { height:100%; width:0%; background:linear-gradient(90deg, var(--primary), var(--primary2)); transition:width .35s ease; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+    .stat { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:14px; }
+    .stat small { display:block; color:var(--muted); margin-bottom:6px; }
+    .stat strong { font-size:24px; }
+    .tips { margin:18px 0 0; padding-left:18px; color:var(--muted); line-height:1.65; }
+    .qnum { color:#9de7d6; font-weight:700; margin-bottom:8px; letter-spacing:.02em; }
+    .qtext { font-size:clamp(22px,2.4vw,30px); line-height:1.35; margin:0 0 20px; }
+    .options { display:grid; gap:12px; }
+    .opt { width:100%; text-align:left; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); color:var(--text); border-radius:18px; padding:15px 16px; cursor:pointer; transition:transform .18s ease, background .18s ease, border-color .18s ease; }
+    .opt:hover { transform:translateY(-1px); background:rgba(124,156,255,.12); border-color:rgba(124,156,255,.72); }
+    .opt.disabled { cursor:default; opacity:.95; }
+    .opt.correct { background:var(--okbg); border-color:var(--ok); }
+    .opt.wrong { background:var(--badbg); border-color:var(--bad); }
+    .opt.reveal { background:rgba(68,213,157,.08); border-color:rgba(68,213,157,.8); }
+    .opt-row { display:flex; align-items:flex-start; gap:12px; }
+    .letter { width:34px; height:34px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,.09); font-weight:800; flex-shrink:0; }
+    .feedback { display:none; margin-top:18px; border-radius:22px; border:1px solid var(--line); background:rgba(7,14,28,.55); padding:18px; }
+    .feedback.show { display:block; }
+    .feedback.ok { border-color:var(--ok); background:rgba(18,55,45,.84); }
+    .feedback.bad { border-color:var(--bad); background:rgba(70,29,37,.84); }
+    .feedback-head { font-weight:800; font-size:18px; margin-bottom:8px; }
+    .feedback p { margin:0 0 14px; line-height:1.65; }
+    .slide-card { margin-top:14px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:20px; overflow:hidden; }
+    .slide-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:14px 16px 0; }
+    .slide-title { font-weight:700; }
+    .slide-page { color:var(--muted); font-size:14px; }
+    .slide-image { padding:14px 16px 16px; }
+    .slide-image img { width:100%; display:block; border-radius:16px; border:1px solid rgba(255,255,255,.1); box-shadow:0 12px 30px rgba(0,0,0,.28); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .btn { border:0; border-radius:16px; padding:13px 18px; font-weight:800; cursor:pointer; transition:transform .15s ease, opacity .15s ease; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+    .btn-primary { color:white; background:linear-gradient(90deg, var(--primary), #9b84ff); }
+    .btn-secondary { color:var(--text); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
+    .btn-outline { color:white; background:rgba(124,156,255,.12); border:1px solid rgba(124,156,255,.45); }
+    .finish { text-align:center; padding:26px 8px 8px; }
+    .finish-badge { display:inline-block; padding:8px 14px; border-radius:999px; border:1px solid rgba(103,226,199,.45); background:rgba(103,226,199,.12); margin-bottom:14px; font-weight:800; }
+    .finish h2 { margin:0 0 10px; font-size:clamp(28px,4vw,40px); }
+    .finish p { margin:0; color:var(--muted); line-height:1.6; }
+    .modal { position:fixed; inset:0; background:rgba(5,10,20,.84); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000; }
+    .modal.show { display:flex; }
+    .modal-content { width:min(1100px,96vw); max-height:92vh; overflow:auto; border-radius:24px; background:#0c1528; border:1px solid rgba(255,255,255,.12); box-shadow:0 24px 70px rgba(0,0,0,.5); padding:16px; }
+    .modal-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .modal-title { font-weight:800; }
+    .close-btn { background:rgba(255,255,255,.08); color:white; border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:10px 14px; cursor:pointer; font-weight:700; }
+    .modal img { width:100%; border-radius:16px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="brand">
+        <img src="../logo.png" alt="Logo TechTeoremas" />
+        <div class="brand-tag">TechTeoremas</div>
+      </div>
+      <h1>Simulado de Sistemas da Informação</h1>
+      <p>Simulado completo com correção imediata, justificativa, slides relacionados e opção de imprimir as questões sem os slides, com gabarito na última página.</p>
+      <div class="chips">
+        <span class="chip">20 questões</span>
+        <span class="chip">Versão para treinar</span>
+        <span class="chip">Gabarito para impressão</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="panel sidebar">
+        <h2>Simulado completo</h2>
+        <div class="progress-text" id="progressText">Questão 1 de 20</div>
+        <div class="bar"><div id="progressBar"></div></div>
+
+        <div class="stats">
+          <div class="stat"><small>Acertos</small><strong id="score">0</strong></div>
+          <div class="stat"><small>Respondidas</small><strong id="answered">0</strong></div>
+        </div>
+
+        <ul class="tips">
+          <li>Responda uma questão por vez.</li>
+          <li>A justificativa aparece logo depois da resposta.</li>
+          <li>Os slides não entram na versão de impressão.</li>
+          <li>O gabarito sai na última página ao imprimir.</li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn btn-secondary" id="restartTop">Reiniciar simulado</button>
+          <button class="btn btn-primary" id="printBtn">Imprimir questões</button>
+        </div>
+      </aside>
+
+      <main class="panel quiz">
+        <div id="app"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal" id="slideModal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-top">
+        <div>
+          <div class="modal-title" id="modalTitle">Slide ampliado</div>
+          <div class="slide-page" id="modalPage"></div>
+        </div>
+        <button class="close-btn" id="closeModal">Fechar</button>
+      </div>
+      <img id="modalImg" src="" alt="Slide ampliado" />
+    </div>
+  </div>
+
+  <script>
+    const allQuestions = [{"id": 1, "question": "As transformações trazidas pela era da informação impactaram significativamente a maneira como as empresas percebem e utilizam a tecnologia da informação. Qual alternativa descreve corretamente a abordagem contemporânea?", "options": ["A TI é vista apenas como custo.", "Empresas modernas abandonaram investimentos em TI.", "A TI substitui a força de trabalho para reduzir funcionários.", "A TI é usada para automatizar processos sem considerar a estrutura organizacional.", "O investimento em TI é crucial para a competitividade, equilibrando automação com retenção de funcionários especializados."], "correct": 4, "justification": "A TI é tratada como investimento estratégico para competitividade, e não apenas como custo. A automação deve complementar a atuação humana, não eliminá-la de forma cega.", "slidePage": 8, "slideTitle": "O Poder Estratégico dos Sistemas de Informação", "slideImage": "slides/slide_8.png"}, {"id": 2, "question": "Com base no modelo de John von Neumann, qual alternativa descreve corretamente a CPU ou um de seus componentes?", "options": ["Os registradores comunicam-se com impressoras e scanners.", "A ULA executa operações matemáticas e lógicas do computador.", "A unidade de controle aumenta a velocidade da internet.", "A memória principal é usada apenas para gráficos e imagens.", "A CPU armazena dados de longo prazo."], "correct": 1, "justification": "A ULA é responsável por operações aritméticas e lógicas, sendo um dos componentes centrais da arquitetura clássica de computadores.", "slidePage": 16, "slideTitle": "Fundamentos de Hardware e Arquitetura de Computadores", "slideImage": "slides/slide_16.png"}, {"id": 3, "question": "Sobre a implantação de um sistema ERP, qual alternativa descreve corretamente uma etapa crítica?", "options": ["Escolher fornecedor apenas com base no custo.", "Reduzir o quadro de funcionários.", "Customizar primeiro os módulos de marketing.", "Selecionar o pacote após analisar opções do mercado, seguida da implementação dos módulos escolhidos.", "Focar apenas na automação de RH."], "correct": 3, "justification": "A seleção cuidadosa do pacote e a implementação adequada dos módulos são etapas críticas no ciclo de vida de um ERP.", "slidePage": 26, "slideTitle": "Guia do Ecossistema ERP: Ciclo de Vida e Mercado", "slideImage": "slides/slide_26.png"}, {"id": 4, "question": "Qual afirmação melhor descreve o desenvolvimento tradicional em cascata?", "options": ["É iterativo e incremental.", "É linear e sequencial, com cada fase iniciando após a conclusão da anterior.", "Permite alterar fases anteriores a qualquer momento.", "Dispensa planejamento.", "Desenvolvimento e testes ocorrem simultaneamente."], "correct": 1, "justification": "O modelo em cascata é marcado por sequência rígida e linear entre fases, sem iterações como nas abordagens ágeis.", "slidePage": 38, "slideTitle": "Metodologias de Desenvolvimento: Tradicional vs. Ágil", "slideImage": "slides/slide_38.png"}, {"id": 5, "question": "Qual opção descreve corretamente um mecanismo de segurança da informação?", "options": ["Cifração transforma informações em formatos ininteligíveis para não autorizados usando algoritmos e chaves.", "Honeypots bloqueiam ativamente ataques e previnem intrusões diretamente.", "Cifração é um dispositivo físico.", "Hashing altera a informação para protegê-la de acessos não autorizados.", "Biometria valida autenticidade de documentos eletrônicos."], "correct": 0, "justification": "A cifração é um mecanismo lógico essencial para confidencialidade, tornando os dados incompreensíveis sem a chave correta.", "slidePage": 46, "slideTitle": "Escudo de Segurança: Protegendo Ativos Lógicos e Físicos", "slideImage": "slides/slide_46.png"}, {"id": 6, "question": "Relacione os conceitos: 1. Distribuição de poder; 2. Governança corporativa; 3. Transparência organizacional com A. Canais de divulgação de informações relevantes; B. Sistema de valores, processos e regulamentos de direção; C. Mudança que concede poder a partes interessadas.", "options": ["1-C; 2-A; 3-B", "1-C; 2-B; 3-A", "1-A; 2-B; 3-C", "1-B; 2-A; 3-C", "1-B; 2-C; 3-A"], "correct": 1, "justification": "Transparência corresponde à divulgação de informações; governança corporativa ao sistema de valores e direção; e distribuição de poder à concessão de influência a stakeholders.", "slidePage": 54, "slideTitle": "Pilares e Estrutura da Governança: Do Ético ao Operacional", "slideImage": "slides/slide_54.png"}, {"id": 7, "question": "Sobre computação em nuvem, quais afirmações estão corretas? I. Permite acesso remoto a aplicações e dados. II. Usuários precisam fazer manutenção local dos softwares. III. Centraliza armazenamento em servidores locais. IV. Office Online é exemplo de aplicação acessível via navegador.", "options": ["Apenas II, III e IV", "I, II, III e IV", "Apenas II e III", "Apenas I, II e III", "Apenas I e IV"], "correct": 4, "justification": "Na nuvem, aplicações e dados são acessados remotamente, e exemplos como Office Online reforçam esse modelo. Manutenção e armazenamento não ficam, em regra, sob responsabilidade local do usuário.", "slidePage": 13, "slideTitle": "A Empresa Digital: Operando em um Cenário Global e Pós-Pandemia", "slideImage": "slides/slide_13.png"}, {"id": 8, "question": "Sobre as iniciativas de Governo Eletrônico no Brasil, quais afirmativas estão corretas? I. O Decreto 8.539/2015 introduz tramitação eletrônica de documentos. II. G2C é interação exclusiva com empresas privadas. III. O Decreto 8.638/2016 adota princípios como transparência e participação. IV. O CEGE não atua na gestão de serviços online.", "options": ["Apenas III e IV", "I, II, III e IV", "Apenas I e II", "Apenas I e III", "Apenas II e IV"], "correct": 3, "justification": "As assertivas I e III estão corretas. G2C é Government to Citizen, e o CEGE também atuou na coordenação de serviços digitais.", "slidePage": 57, "slideTitle": "Governança Digital no Brasil: O Caminho entre a Lei e a Realidade", "slideImage": "slides/slide_57.png"}, {"id": 9, "question": "Indique quais são as bases de um sistema de informação.", "options": ["Bases, informações e conhecimento", "Dados, informação e conhecimento", "Banco de dados, conhecimento e informação", "Dados, informação e sistema", "Sistema, dados e conhecimento"], "correct": 1, "justification": "As bases conceituais são dados, informação e conhecimento, que formam a hierarquia de valor dos sistemas de informação.", "slidePage": 5, "slideTitle": "A Hierarquia do Valor: De Dados a Conhecimento", "slideImage": "slides/slide_5.png"}, {"id": 10, "question": "Quais normas listadas estão totalmente relacionadas às avaliações de processo ou produto de software? (I. ISO 15504; II. MPS.Br; III. ISO 14000; IV. CMMI; V. ISO 9126; VI. ISO 12119; VII. NR14)", "options": ["ISO 15504, MPS.Br, ISO 14000, ISO 9126, ISO 12119", "ISO 15504, MPS.Br, CMMI, ISO 9126, NR14", "ISO 15504, MPS.Br, CMMI, ISO 9126, ISO 12119", "MPS.Br, ISO 14000, CMMI, ISO 9126, ISO 12119", "ISO 15504, MPS.Br, ISO 14000, CMMI, NR14"], "correct": 2, "justification": "As normas ligadas à avaliação de processos e produtos de software são ISO 15504, MPS.Br, CMMI, ISO 9126 e ISO 12119. ISO 14000 e NR14 não pertencem a esse grupo.", "slidePage": 41, "slideTitle": "Guia Rápido: Normas e Padrões de Qualidade de Software", "slideImage": "slides/slide_41.png"}, {"id": 11, "question": "Quais objetivos estão relacionados à governança de TI? I. Facilitar tomadas de decisões de TI. II. Melhorar a qualidade dos serviços de TI. III. Definir aplicação financeira e investimentos bancários. IV. Estabelecer conformidade com leis e regulamentos. V. Promover integração permanente entre meio acadêmico e empresa.", "options": ["Apenas I, II e IV", "Apenas I, III e V", "Apenas II, III e IV", "Apenas I, II e V", "Apenas III, IV e V"], "correct": 0, "justification": "Governança de TI concentra-se em decisões, qualidade de serviços e conformidade regulatória, não em investimentos bancários ou integração acadêmica.", "slidePage": 53, "slideTitle": "Governança de TI: Transformando Tecnologia em Valor Estratégico", "slideImage": "slides/slide_53.png"}, {"id": 12, "question": "Qual sistema converte a previsão de demanda em programação da necessidade de componentes para que não haja falta nem sobra na produção?", "options": ["ERP", "MRP", "MRP II", "SCM", "WMS"], "correct": 1, "justification": "O MRP calcula necessidades de materiais e componentes a partir da demanda prevista, evitando faltas e excessos.", "slidePage": 28, "slideTitle": "Evolução do Planejamento de Produção: MRP vs. MRP II", "slideImage": "slides/slide_28.png"}, {"id": 13, "question": "Qual alternativa melhor define as funções primordiais de um sistema de informação?", "options": ["Digitalização de documentos físicos apenas.", "Uso exclusivo de redes sociais para marketing.", "Coleta, processamento, armazenamento e distribuição de dados para gerar conhecimento, incluindo retroalimentação.", "Substituição integral de gestores humanos por IA.", "Monitoramento de e-mails pessoais de funcionários."], "correct": 2, "justification": "Um sistema de informação executa o ciclo de entrada, processamento, armazenamento, saída e retroalimentação para apoiar decisões e gerar conhecimento.", "slidePage": 4, "slideTitle": "Fundamentos dos Sistemas de Informação", "slideImage": "slides/slide_4.png"}, {"id": 14, "question": "O que define a Internet das Coisas (IoT)?", "options": ["Uma rede social para objetos inanimados.", "Um novo protocolo de internet acima de 1000 Gbps.", "A compra de eletrodomésticos em sites internacionais.", "Uma rede interconectada de objetos físicos com tecnologia embarcada capaz de coletar e transmitir dados pela internet.", "Um sistema de segurança contra roubo em lojas."], "correct": 3, "justification": "IoT envolve objetos físicos conectados, equipados com sensores e capacidade de comunicação de dados pela internet.", "slidePage": 66, "slideTitle": "Tecnologias Emergentes: Inovação e Desafios nos Sistemas de Informação", "slideImage": "slides/slide_66.png"}, {"id": 15, "question": "Preencha as lacunas sobre arquitetura de redes: I - Rede de Área Pessoal: usada para que (1) se comuniquem. II - Rede de Área Metropolitana: conecta diversas Redes (2). III - Rede de Área Expandida: abrange área (3) que a metropolitana. IV - Rede de Área Local: interliga computadores (4) de um mesmo espaço físico.", "options": ["dispositivos, Locais, maior, dentro", "linguagens, Locais, menor, fora", "dispositivos, Expandidas, maior, dentro", "linguagens, Expandidas, menor, dentro", "dispositivos, Locais, maior, fora"], "correct": 0, "justification": "A sequência correta é dispositivos, Locais, maior e dentro, descrevendo respectivamente PAN, MAN, WAN e LAN.", "slidePage": 20, "slideTitle": "Guia Essencial: Redes e Telecomunicações nos Sistemas de Informação", "slideImage": "slides/slide_20.png"}, {"id": 16, "question": "No contexto da política de segurança da informação, além de disponibilidade, integridade e confidencialidade, quais itens estão corretos? III - Autenticidade: garantia de que a informação/identidade é verdadeira. IV - Legalidade: valor legal das informações na comunicação.", "options": ["Todas incorretas", "Todas corretas", "Apenas I e II corretas", "Apenas III e IV corretas", "Apenas a opção V está incorreta"], "correct": 3, "justification": "Autenticidade e legalidade complementam os pilares clássicos de segurança, reforçando origem confiável e valor jurídico da informação.", "slidePage": 45, "slideTitle": "Guia Essencial: Gestão de Riscos e Segurança da Informação", "slideImage": "slides/slide_45.png"}, {"id": 17, "question": "Qual é a norma ISO/IEC intitulada 'Governança Corporativa de Tecnologia de Informação'?", "options": ["39000", "27002", "27001", "31000", "38500"], "correct": 4, "justification": "A ISO/IEC 38500 é o padrão específico de governança corporativa de TI.", "slidePage": 55, "slideTitle": "Guia Visual: Modelos de Governança e Gestão de TI", "slideImage": "slides/slide_55.png"}, {"id": 18, "question": "A máquina proposta por John von Neumann reúne quais componentes fundamentais?", "options": ["Memória cache principal, ULA, CPU com registradores e UC", "Processador principal, ULA e CPU com registradores", "Memória principal, ULA, CPU com registradores e unidade de controle", "Memória principal, unidade matemática, CPU com registradores e UC", "Memória principal, ULA, CPU com registradores e placa-mãe"], "correct": 2, "justification": "A arquitetura de von Neumann é composta por memória principal, ULA, CPU com registradores e unidade de controle.", "slidePage": 16, "slideTitle": "Fundamentos de Hardware e Arquitetura de Computadores", "slideImage": "slides/slide_16.png"}, {"id": 19, "question": "Das normas listadas, quais estão totalmente relacionadas às avaliações de processo ou ao produto de software? (I-ISO 15504; II-MPS.Br; III-ISO 14000; IV-CMMI; V-ISO 9126; VI-ISO 12119; VII-NR14)", "options": ["I, II, IV, V e VI", "I, II, III, V e VI", "I, II, IV, V e VII", "II, III, IV, V e VI", "I, II, III, IV e VII"], "correct": 0, "justification": "As normas I, II, IV, V e VI são específicas do contexto de software. ISO 14000 e NR14 pertencem a outros domínios.", "slidePage": 41, "slideTitle": "Guia Rápido: Normas e Padrões de Qualidade de Software", "slideImage": "slides/slide_41.png"}, {"id": 20, "question": "Qual sistema de informação empresarial converte a previsão de demanda em programação de necessidade de componentes para evitar faltas ou sobras na produção?", "options": ["ERP", "MRP", "MRP II", "SCM", "WMS"], "correct": 1, "justification": "A descrição corresponde ao MRP, que trata do planejamento de materiais com base na demanda prevista.", "slidePage": 28, "slideTitle": "Evolução do Planejamento de Produção: MRP vs. MRP II", "slideImage": "slides/slide_28.png"}];
+    const letters = ["A","B","C","D","E"];
+    let current = 0, score = 0, answered = 0;
+    let done = new Array(allQuestions.length).fill(false);
+
+    const app = document.getElementById("app");
+    const progressText = document.getElementById("progressText");
+    const progressBar = document.getElementById("progressBar");
+    const scoreEl = document.getElementById("score");
+    const answeredEl = document.getElementById("answered");
+    const slideModal = document.getElementById("slideModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPage = document.getElementById("modalPage");
+
+    function esc(text) {
+      return String(text).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+    }
+
+    function updateSidebar() {
+      if (current < allQuestions.length) {
+        progressText.textContent = `Questão ${current + 1} de ${allQuestions.length}`;
+        progressBar.style.width = `${(current / allQuestions.length) * 100}%`;
+      } else {
+        progressText.textContent = "Simulado concluído";
+        progressBar.style.width = "100%";
+      }
+      scoreEl.textContent = score;
+      answeredEl.textContent = answered;
+    }
+
+    function openModal(title, page, img) {
+      modalTitle.textContent = title;
+      modalPage.textContent = `Página ${page} do PDF de slides`;
+      modalImg.src = img;
+      slideModal.classList.add("show");
+      slideModal.setAttribute("aria-hidden","false");
+    }
+
+    function closeModal() {
+      slideModal.classList.remove("show");
+      slideModal.setAttribute("aria-hidden","true");
+      modalImg.src = "";
+    }
+
+    function printQuestions() {
+      const win = window.open("", "_blank");
+      if (!win) return;
+      const title = document.title.replace(" | TechTeoremas", "");
+      const questionHtml = allQuestions.map((q, idx) => `
+        <div class="q-block">
+          <h3>${idx + 1}. ${esc(q.question)}</h3>
+          <ol type="A">${q.options.map(opt => `<li>${esc(opt)}</li>`).join("")}</ol>
+        </div>
+      `).join("");
+      const answerHtml = allQuestions.map((q, idx) => `<li><strong>Questão ${idx + 1}</strong> — ${letters[q.correct]}</li>`).join("");
+
+      win.document.write(`
+        <!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>${title} - Impressão</title>
+        <style>
+          body { font-family: Arial, sans-serif; margin: 28px; color: #111; }
+          h1 { margin-bottom: 8px; }
+          .meta { margin-bottom: 24px; color: #444; }
+          .q-block { margin-bottom: 24px; page-break-inside: avoid; }
+          ol { padding-left: 22px; }
+          .gabarito { page-break-before: always; }
+          .gabarito li { margin-bottom: 8px; }
+        </style></head><body>
+        <h1>${title}</h1>
+        <div class="meta">Canal TechTeoremas · Total de questões: ${allQuestions.length}</div>
+        ${questionHtml}
+        <div class="gabarito"><h2>Gabarito</h2><ol>${answerHtml}</ol></div>
+        </body></html>
+      `);
+      win.document.close();
+      win.focus();
+      setTimeout(() => win.print(), 300);
+    }
+
+    document.getElementById("printBtn").addEventListener("click", printQuestions);
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    slideModal.addEventListener("click", (e) => { if (e.target === slideModal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    function render() {
+      updateSidebar();
+
+      if (current >= allQuestions.length) {
+        const pct = Math.round((score / allQuestions.length) * 100);
+        app.innerHTML = `
+          <section class="finish">
+            <div class="finish-badge">Simulado finalizado</div>
+            <h2>Você concluiu o simulado 🎉</h2>
+            <p>Resultado final: <strong>${score} de ${allQuestions.length}</strong> questões corretas (${pct}%).</p>
+            <div class="actions" style="justify-content:center;">
+              <button class="btn btn-primary" id="restartInline">Tentar novamente</button>
+              <button class="btn btn-secondary" id="printInline">Imprimir questões</button>
+            </div>
+          </section>
+        `;
+        document.getElementById("restartInline").addEventListener("click", restart);
+        document.getElementById("printInline").addEventListener("click", printQuestions);
+        return;
+      }
+
+      const q = allQuestions[current];
+      const optionsHtml = q.options.map((opt, idx) => `
+        <button class="opt" data-idx="${idx}">
+          <span class="opt-row"><span class="letter">${letters[idx]}</span><span>${esc(opt)}</span></span>
+        </button>
+      `).join("");
+
+      app.innerHTML = `
+        <div class="qnum">Questão ${q.id}</div>
+        <h2 class="qtext">${esc(q.question)}</h2>
+        <div class="options">${optionsHtml}</div>
+        <div class="feedback" id="feedback"></div>
+        <div class="actions">
+          <button class="btn btn-secondary" id="prevBtn" ${current === 0 ? "disabled" : ""}>Anterior</button>
+          <button class="btn btn-primary" id="nextBtn" disabled>Próxima</button>
+        </div>
+      `;
+
+      document.querySelectorAll(".opt").forEach(btn => {
+        btn.addEventListener("click", () => answerQuestion(Number(btn.dataset.idx)));
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        if (current > 0) { current--; render(); }
+      });
+    }
+
+    function answerQuestion(selectedIdx) {
+      const q = allQuestions[current];
+      if (done[current]) return;
+      done[current] = true;
+      answered++;
+      const buttons = [...document.querySelectorAll(".opt")];
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+      buttons.forEach(btn => btn.classList.add("disabled"));
+
+      if (selectedIdx === q.correct) {
+        score++;
+        buttons[selectedIdx].classList.add("correct");
+        feedback.className = "feedback show ok";
+        feedback.innerHTML = `
+          <div class="feedback-head">✅ Resposta correta</div>
+          <p>Você marcou a alternativa <strong>${letters[selectedIdx]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card"><div class="slide-meta"><div class="slide-title">${esc(q.slideTitle)}</div><div class="slide-page">Página ${q.slidePage} dos slides</div></div><div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div></div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      } else {
+        buttons[selectedIdx].classList.add("wrong");
+        buttons[q.correct].classList.add("reveal");
+        feedback.className = "feedback show bad";
+        feedback.innerHTML = `
+          <div class="feedback-head">❌ Resposta incorreta</div>
+          <p>Você marcou <strong>${letters[selectedIdx]}</strong>, mas a correta é <strong>${letters[q.correct]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card"><div class="slide-meta"><div class="slide-title">${esc(q.slideTitle)}</div><div class="slide-page">Página ${q.slidePage} dos slides</div></div><div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div></div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      }
+
+      document.getElementById("zoomBtn").addEventListener("click", () => openModal(q.slideTitle, q.slidePage, q.slideImage));
+      nextBtn.disabled = false;
+      nextBtn.addEventListener("click", () => { current++; render(); }, { once: true });
+      updateSidebar();
+    }
+
+    function restart() {
+      current = 0; score = 0; answered = 0; done = new Array(allQuestions.length).fill(false); render();
+    }
+
+    document.getElementById("restartTop").addEventListener("click", restart);
+    render();
+  </script>
+</body>
+</html>

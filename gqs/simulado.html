@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulado de Gerência e Qualidade de Software | TechTeoremas</title>
+  <style>
+    :root {
+      --bg1:#071120; --bg2:#12233e; --panel:rgba(255,255,255,.09); --line:rgba(255,255,255,.14);
+      --muted:#c4cfef; --text:#eef4ff; --primary:#7c9cff; --primary2:#67e2c7;
+      --ok:#44d59d; --bad:#ff6b81; --okbg:rgba(68,213,157,.14); --badbg:rgba(255,107,129,.14);
+      --shadow:0 22px 56px rgba(0,0,0,.34);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin:0; min-height:100vh; color:var(--text);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(124,156,255,.24), transparent 28%),
+        radial-gradient(circle at top right, rgba(103,226,199,.18), transparent 22%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+    .container { max-width:1240px; margin:0 auto; padding:28px 18px 52px; }
+    .hero,.panel { background:rgba(255,255,255,.09); border:1px solid var(--line); border-radius:28px; box-shadow:var(--shadow); backdrop-filter:blur(10px); }
+    .hero { padding:26px; margin-bottom:22px; }
+    .brand { display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+    .brand img { width:64px; height:64px; object-fit:contain; }
+    .brand-tag { padding:7px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.14); color:var(--muted); font-size:13px; }
+    h1 { margin:12px 0 10px; font-size:clamp(30px,4vw,46px); line-height:1.04; }
+    .hero p { margin:0; color:var(--muted); line-height:1.6; max-width:980px; }
+    .chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+    .chip { border-radius:999px; padding:9px 14px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.1); font-size:14px; }
+    .layout { display:grid; grid-template-columns:320px 1fr; gap:22px; }
+    @media (max-width:980px) { .layout { grid-template-columns:1fr; } }
+    .sidebar,.quiz { padding:20px; }
+    .progress-text { color:var(--muted); margin:18px 0 10px; }
+    .bar { height:12px; background:rgba(255,255,255,.08); border-radius:999px; overflow:hidden; }
+    .bar > div { height:100%; width:0%; background:linear-gradient(90deg, var(--primary), var(--primary2)); transition:width .35s ease; }
+    .stats { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:18px; }
+    .stat { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:14px; }
+    .stat small { display:block; color:var(--muted); margin-bottom:6px; }
+    .stat strong { font-size:24px; }
+    .tips { margin:18px 0 0; padding-left:18px; color:var(--muted); line-height:1.65; }
+    .qnum { color:#9de7d6; font-weight:700; margin-bottom:8px; letter-spacing:.02em; }
+    .qtext { font-size:clamp(22px,2.4vw,30px); line-height:1.35; margin:0 0 20px; }
+    .options { display:grid; gap:12px; }
+    .opt { width:100%; text-align:left; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.05); color:var(--text); border-radius:18px; padding:15px 16px; cursor:pointer; transition:transform .18s ease, background .18s ease, border-color .18s ease; }
+    .opt:hover { transform:translateY(-1px); background:rgba(124,156,255,.12); border-color:rgba(124,156,255,.72); }
+    .opt.disabled { cursor:default; opacity:.95; }
+    .opt.correct { background:var(--okbg); border-color:var(--ok); }
+    .opt.wrong { background:var(--badbg); border-color:var(--bad); }
+    .opt.reveal { background:rgba(68,213,157,.08); border-color:rgba(68,213,157,.8); }
+    .opt-row { display:flex; align-items:flex-start; gap:12px; }
+    .letter { width:34px; height:34px; border-radius:999px; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,.09); font-weight:800; flex-shrink:0; }
+    .feedback { display:none; margin-top:18px; border-radius:22px; border:1px solid var(--line); background:rgba(7,14,28,.55); padding:18px; }
+    .feedback.show { display:block; }
+    .feedback.ok { border-color:var(--ok); background:rgba(18,55,45,.84); }
+    .feedback.bad { border-color:var(--bad); background:rgba(70,29,37,.84); }
+    .feedback-head { font-weight:800; font-size:18px; margin-bottom:8px; }
+    .feedback p { margin:0 0 14px; line-height:1.65; }
+    .slide-card { margin-top:14px; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.12); border-radius:20px; overflow:hidden; }
+    .slide-meta { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; padding:14px 16px 0; }
+    .slide-title { font-weight:700; }
+    .slide-page { color:var(--muted); font-size:14px; }
+    .slide-image { padding:14px 16px 16px; }
+    .slide-image img { width:100%; display:block; border-radius:16px; border:1px solid rgba(255,255,255,.1); box-shadow:0 12px 30px rgba(0,0,0,.28); }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:18px; }
+    .btn { border:0; border-radius:16px; padding:13px 18px; font-weight:800; cursor:pointer; transition:transform .15s ease, opacity .15s ease; }
+    .btn:hover { transform:translateY(-1px); }
+    .btn:disabled { opacity:.5; cursor:not-allowed; transform:none; }
+    .btn-primary { color:white; background:linear-gradient(90deg, var(--primary), #9b84ff); }
+    .btn-secondary { color:var(--text); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.12); }
+    .btn-outline { color:white; background:rgba(124,156,255,.12); border:1px solid rgba(124,156,255,.45); }
+    .finish { text-align:center; padding:26px 8px 8px; }
+    .finish-badge { display:inline-block; padding:8px 14px; border-radius:999px; border:1px solid rgba(103,226,199,.45); background:rgba(103,226,199,.12); margin-bottom:14px; font-weight:800; }
+    .finish h2 { margin:0 0 10px; font-size:clamp(28px,4vw,40px); }
+    .finish p { margin:0; color:var(--muted); line-height:1.6; }
+    .modal { position:fixed; inset:0; background:rgba(5,10,20,.84); display:none; align-items:center; justify-content:center; padding:20px; z-index:1000; }
+    .modal.show { display:flex; }
+    .modal-content { width:min(1100px,96vw); max-height:92vh; overflow:auto; border-radius:24px; background:#0c1528; border:1px solid rgba(255,255,255,.12); box-shadow:0 24px 70px rgba(0,0,0,.5); padding:16px; }
+    .modal-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .modal-title { font-weight:800; }
+    .close-btn { background:rgba(255,255,255,.08); color:white; border:1px solid rgba(255,255,255,.12); border-radius:14px; padding:10px 14px; cursor:pointer; font-weight:700; }
+    .modal img { width:100%; border-radius:16px; display:block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <div class="brand">
+        <img src="../logo.png" alt="Logo TechTeoremas" />
+        <div class="brand-tag">TechTeoremas</div>
+        <div class="brand-tag">COM480</div>
+      </div>
+      <h1>Simulado de Gerência e Qualidade de Software</h1>
+      <p>Simulado completo com correção imediata, justificativa, slides relacionados e opção de imprimir as questões sem os slides, com gabarito na última página.</p>
+      <div class="chips">
+        <span class="chip">16 questões</span>
+        <span class="chip">Versão para treino</span>
+        <span class="chip">Gabarito para impressão</span>
+      </div>
+    </section>
+
+    <div class="layout">
+      <aside class="panel sidebar">
+        <h2>Simulado completo</h2>
+        <div class="progress-text" id="progressText">Questão 1 de 15</div>
+        <div class="bar"><div id="progressBar"></div></div>
+
+        <div class="stats">
+          <div class="stat"><small>Acertos</small><strong id="score">0</strong></div>
+          <div class="stat"><small>Respondidas</small><strong id="answered">0</strong></div>
+        </div>
+
+        <ul class="tips">
+          <li>Responda uma questão por vez.</li>
+          <li>A justificativa aparece logo depois da resposta.</li>
+          <li>Os slides não entram na versão de impressão.</li>
+          <li>O gabarito sai na última página ao imprimir.</li>
+        </ul>
+
+        <div class="actions">
+          <button class="btn btn-secondary" id="restartTop">Reiniciar simulado</button>
+          <button class="btn btn-primary" id="printBtn">Imprimir questões</button>
+        </div>
+      </aside>
+
+      <main class="panel quiz">
+        <div id="app"></div>
+      </main>
+    </div>
+  </div>
+
+  <div class="modal" id="slideModal" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-top">
+        <div>
+          <div class="modal-title" id="modalTitle">Slide ampliado</div>
+          <div class="slide-page" id="modalPage"></div>
+        </div>
+        <button class="close-btn" id="closeModal">Fechar</button>
+      </div>
+      <img id="modalImg" src="" alt="Slide ampliado" />
+    </div>
+  </div>
+
+  <script>
+   
+const allQuestions = [{"id": 1, "question": "Leia o trecho a seguir e identifique as lacunas a serem preenchidas: Em um projeto de desenvolvimento de software guiado por uma abordagem de Gerenciamento de Configuração de Software (SCM), o gerente de configuração garante a adesão aos procedimentos e políticas para a criação, alteração e teste do código, além de manter as informações do projeto acessíveis. Já os engenheiros de software focam em trabalhar de maneira eficaz, assegurando que as alterações simultâneas em um mesmo componente sejam rastreadas e gerenciadas corretamente. Preencha as lacunas: “O gerente de configuração visa [1] enquanto os engenheiros de software buscam [2]”.", "options": ["maximizar a eficiência; minimizar conflitos", "implementar políticas; desenvolvimento ágil", "supervisionar o projeto; inovação tecnológica", "garantir procedimentos e políticas de gestão de configuração; eficácia operacional", "gerar relatórios; colaboração interativa"], "correct": 3, "justification": "A alternativa correta destaca o papel do gerente de configuração em controlar mudanças e garantir procedimentos e políticas de gestão de configuração, enquanto os engenheiros buscam eficácia operacional no desenvolvimento.", "slidePage": 7, "slideTitle": "Gestão de Configuração de Software (GCS): O Guia Essencial", "slideImage": "slides/slide_7.png"}, {"id": 2, "question": "Em um projeto de desenvolvimento de software, a automação de compilação e integração é crucial para a eficiência e confiabilidade do processo. Considerando a automação proporcionada pelo Maven, qual afirmação descreve corretamente um aspecto essencial do seu funcionamento?", "options": ["A principal função do Maven é a automação de testes, sem impacto na compilação ou no gerenciamento de dependências.", "Maven é incompatível com outras linguagens de programação e serve apenas para Java.", "O Maven utiliza scripts complexos para definir a ordem de compilação dos módulos.", "O Maven automatiza compilação e gerenciamento de dependências, usando o pom.xml para definir como o software é construído, testado e empacotado.", "A integração contínua no Maven depende principalmente de plugins desenvolvidos especificamente para cada projeto."], "correct": 3, "justification": "O Maven usa o arquivo pom.xml para centralizar a configuração do build, dependências, testes e empacotamento, simplificando a automação do projeto.", "slidePage": 17, "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java", "slideImage": "slides/slide_17.png"}, {"id": 3, "question": "O Selenium IDE foi reinventado após sua incompatibilidade com uma atualização do Firefox em 2017. Qual funcionalidade foi introduzida na nova versão?", "options": ["Capacidade de gravar, mas não de exportar scripts de teste.", "A adição de um depurador com execução de etapas e pontos de interrupção.", "Execução de testes limitada exclusivamente ao navegador Firefox.", "Restrição para a criação de scripts somente em Java.", "Ausência de suporte para gravação de interações do usuário no navegador."], "correct": 1, "justification": "A nova versão do Selenium IDE trouxe recursos de depuração, como execução passo a passo e pontos de interrupção, tornando o desenvolvimento e a análise dos testes mais robustos.", "slidePage": 27, "slideTitle": "Guia de Ferramentas e Processos: Automação de Testes", "slideImage": "slides/slide_27.png"}, {"id": 4, "question": "Na empresa SoftDev, a equipe quer melhorar a cobertura dos testes para garantir que todas as partes críticas do código sejam adequadamente testadas. Qual tipo de cobertura deve ser priorizado?", "options": ["Testes de integração, sem preocupação com cobertura de código individual.", "Cobertura de função, garantindo apenas que todas as funções sejam chamadas.", "Cobertura de condição, verificando todos os possíveis valores booleanos isoladamente.", "Cobertura de declaração, assegurando que cada linha seja executada ao menos uma vez.", "Cobertura de ramos (branch coverage), garantindo a execução de todas as possíveis ramificações do código."], "correct": 4, "justification": "A cobertura de ramos é mais abrangente para lógica condicional, pois verifica os diferentes caminhos de execução e ajuda a reduzir bugs que não aparecem apenas com cobertura de linhas.", "slidePage": 31, "slideTitle": "Fundamentos da Cobertura de Código: Por que testar linhas não é suficiente?", "slideImage": "slides/slide_31.png"}, {"id": 5, "question": "Na prática da engenharia de software, a escrita de um código que seja ao mesmo tempo [1] e [2] é essencial. Quais termos completam corretamente a sentença?", "options": ["Complexo; Rápido", "Enigmático; Poderoso", "Criptografado; Compacto", "Legível; Eficiente", "Redundante; Rápido"], "correct": 3, "justification": "Código limpo precisa ser legível para facilitar entendimento e manutenção, e eficiente para cumprir seu papel com qualidade.", "slidePage": 38, "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção", "slideImage": "slides/slide_38.png"}, {"id": 6, "question": "No contexto de revisão de código, qual afirmação é verdadeira sobre uma prática recomendada para tornar a revisão mais produtiva e amigável?", "options": ["Os revisores devem usar linguagem sarcástica para destacar problemas.", "Os revisores devem evitar perguntas e focar apenas em julgamentos.", "É recomendável concentrar a revisão em questões pessoais do autor.", "Emojis podem ser usados para tornar a linguagem mais coloquial e amigável durante a revisão.", "Os revisores devem sempre usar o pronome “você” para responsabilizar o autor."], "correct": 3, "justification": "A revisão de código deve ser construtiva. Uma linguagem mais amigável, inclusive com uso moderado de emojis, pode facilitar a comunicação e evitar atritos desnecessários.", "slidePage": 49, "slideTitle": "Guia Profissional: Processos de Revisão de Código", "slideImage": "slides/slide_49.png"}, {"id": 7, "question": "No desenvolvimento de software, a integração da Engenharia de Software com IHC e UCD exige participação ativa do usuário e pesquisa de design. Quais afirmativas representam estratégias eficazes? I. A participação do usuário é crucial apenas no início. II. Entrevistas face-a-face e questionários ajudam a coletar dados sobre necessidades dos usuários. III. O objetivo principal do UCD é replicar exatamente processos manuais. IV. Entender profundamente atividades do usuário e regras de negócio é essencial para projetar um sistema melhor.", "options": ["I e II apenas", "I e III apenas", "II e III apenas", "II e IV apenas", "III e IV apenas"], "correct": 3, "justification": "Métodos de pesquisa com usuários e compreensão profunda de atividades e regras de negócio ajudam a projetar sistemas funcionais e centrados no usuário. A participação do usuário não deve se limitar ao início do projeto.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}, {"id": 8, "question": "Em um ambiente de desenvolvimento ágil, como os sistemas de controle de versão melhoram o processo de desenvolvimento de software?", "options": ["Facilitam mudanças diretas na base de produção sem testes.", "Reduzem a necessidade de comunicação da equipe.", "Permitem trabalho simultâneo no mesmo código, ajudando a combinar mudanças e resolver conflitos de merge.", "Funcionam como sistema automático de backup criado a cada hora.", "Limitam o acesso aos códigos para evitar conflitos."], "correct": 2, "justification": "Ferramentas de controle de versão como Git permitem trabalho paralelo com branches e ajudam a integrar alterações por merge, suportando colaboração sem bloquear a equipe.", "slidePage": 13, "slideTitle": "Dominando o Git: Conflitos e Fluxos de Trabalho Avançados", "slideImage": "slides/slide_13.png"}, {"id": 9, "question": "Marque a alternativa que define corretamente “usabilidade” de acordo com o padrão ISO.", "options": ["Usabilidade é o grau que a interface permite interação segura e satisfatória para o usuário.", "Usabilidade é o grau que a interface permite interação rápida e bonita para o usuário.", "Usabilidade é o grau que a interface permite interação bonita e segura para o usuário.", "Usabilidade é o grau que a interface permite interação agradável e rápida para o usuário.", "Usabilidade é o grau que a interface permite interação agradável e satisfatória para o usuário."], "correct": 4, "justification": "No contexto de usabilidade, o foco recai na qualidade da interação percebida pelo usuário, incluindo conforto, satisfação e adequação da interface ao uso.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}, {"id": 10, "question": "Marque a alternativa que apresenta corretamente uma forma de aumentar a confiabilidade da estimativa em projetos de desenvolvimento de software.", "options": ["Usar a abordagem de dividir para conquistar, por meio de técnicas de decomposição.", "Adiar o momento de realizar a estimativa.", "Usar modelos conceituais e teóricos tal como análise de pontos de função.", "Basear-se em dados futuros.", "Leitura."], "correct": 0, "justification": "A confiabilidade da estimativa aumenta quando o problema é decomposto em partes menores e comparáveis, além do uso de dados históricos e projetos similares.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}, {"id": 11, "question": "Assinale a alternativa que completa corretamente a sentença: “__________ é um exemplo de método __________ para realizar __________ de software”.", "options": ["revisão por pares, estático, validação", "inspeção, estático, validação", "revisão por pares, dinâmico, verificação", "revisão por pares, estático, verificação", "inspeção, dinâmico, validação"], "correct": 3, "justification": "Revisão por pares é um método estático de verificação, pois avalia artefatos sem executar o software.", "slidePage": 49, "slideTitle": "Guia Profissional: Processos de Revisão de Código", "slideImage": "slides/slide_49.png"}, {"id": 12, "question": "Considere os itens: I) Adaptação. II) Agilidade. III) Gestão. IV) Inspeção. V) Transparência. Quais compõem os três pilares do Scrum?", "options": ["Apenas I, IV e V", "Apenas I, III e IV", "Apenas II, III e IV", "Apenas I, II e V", "Apenas II, III e V"], "correct": 0, "justification": "Os três pilares do Scrum são Transparência, Inspeção e Adaptação.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}, {"id": 13, "question": "No contexto de métricas de produto de software, qual alternativa identifica corretamente um exemplo de métrica dinâmica?", "options": ["Tempo médio de recuperação do sistema após falha", "Número de comentários por arquivo-fonte", "Quantidade de classes em um módulo", "Número de métodos públicos por classe", "Número de dependências estáticas do sistema"], "correct": 0, "justification": "Métricas dinâmicas dependem do sistema em execução. O tempo médio de recuperação após falha é medido durante o comportamento real do software.", "slidePage": 39, "slideTitle": "Métricas Técnicas para WebApps: Desempenho e Navegação", "slideImage": "slides/slide_39.png"}, {"id": 14, "question": "Marque a alternativa que define corretamente “risco” no contexto de gerenciamento de projeto de software.", "options": ["Probabilidade improvável com efeito positivo apenas.", "Evento ou condição possível com efeito negativo apenas.", "Chance provável com efeito positivo ou negativo.", "Evento ou condição incerta que, se ocorrer, provocará efeito positivo ou negativo em objetivos do projeto.", "Probabilidade arriscada com efeito negativo apenas."], "correct": 3, "justification": "Risco é um evento ou condição incerta que pode afetar objetivos do projeto de forma positiva ou negativa, como escopo, prazo, custo e qualidade.", "slidePage": 44, "slideTitle": "Diretrizes Estratégicas: Engenharia de Software Moderna", "slideImage": "slides/slide_44.png"}, {"id": 15, "question": "Considere as afirmações sobre CMMI: I) CMMI significa Capability Maturity Model Integration. II) CMMI sugere um processo ideal único para desenvolvimento de software. III) CMMI possui um framework para melhoria de processos. IV) CMMI 1.3 possui três partes: aquisição, serviço e desenvolvimento. Qual alternativa está correta?", "options": ["Apenas I, II, III, V e VI", "Nenhuma está correta", "Apenas II e VI", "Apenas I, III e IV", "Todas estão corretas"], "correct": 3, "justification": "CMMI significa Capability Maturity Model Integration, oferece um framework de melhoria de processos e, na versão 1.3, reúne modelos voltados a aquisição, serviços e desenvolvimento.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}, {"id": 16, "question": "No contexto de desenvolvimento de software orientado a objetos, o escopo do teste de unidade e do teste de integração pode variar dependendo do que a equipe define como a “unidade” a ser testada. Levando em consideração as abordagens de testes intramétodo, intermétodo, intraclasse e interclasse, assinale a alternativa que descreve corretamente o alvo desses testes:", "options": ["Se a unidade for definida como uma “classe”, o teste de unidade será restrito ao teste intramétodo, deixando o teste intraclasse exclusivamente para a fase de integração.", "Independentemente de a unidade ser um método ou uma classe, o teste de integração sempre será focado apenas no fluxo interno de um único método (teste intramétodo).", "Se a unidade for definida como um “método”, o teste de unidade focará no teste intramétodo, enquanto o teste de integração abrangerá os testes intermétodo, intraclasse e interclasse.", "Se a unidade for definida como uma “classe”, o teste de integração validará a integração de vários métodos dentro da mesma classe (intermétodo), e o teste de unidade focará na comunicação entre várias classes diferentes (interclasse).", "O teste interclasse faz parte do escopo do teste de unidade sempre que a unidade for definida como “método”, pois garante que o método se comunique bem com o resto do sistema."], "correct": 2, "justification": "A alternativa C é a correta. Se a unidade for um método, o teste de unidade cobre o teste intramétodo. Já o teste de integração cobre a interação entre métodos (intermétodo), dentro da classe (intraclasse) e entre classes (interclasse). Se a unidade for uma classe, o teste de unidade cobre a própria classe e suas interações internas, enquanto o teste de integração foca na interação entre classes.", "slidePage": 53, "slideTitle": "Engenharia de Software: Fundamentos da Semana 7", "slideImage": "slides/slide_53.png"}];
+
+    const letters = ["A","B","C","D","E"];
+    let current = 0, score = 0, answered = 0;
+    let done = new Array(allQuestions.length).fill(false);
+
+    const app = document.getElementById("app");
+    const progressText = document.getElementById("progressText");
+    const progressBar = document.getElementById("progressBar");
+    const scoreEl = document.getElementById("score");
+    const answeredEl = document.getElementById("answered");
+    const slideModal = document.getElementById("slideModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalTitle = document.getElementById("modalTitle");
+    const modalPage = document.getElementById("modalPage");
+
+    function esc(text) {
+      return String(text).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+    }
+
+    function updateSidebar() {
+      if (current < allQuestions.length) {
+        progressText.textContent = `Questão ${current + 1} de ${allQuestions.length}`;
+        progressBar.style.width = `${(current / allQuestions.length) * 100}%`;
+      } else {
+        progressText.textContent = "Simulado concluído";
+        progressBar.style.width = "100%";
+      }
+      scoreEl.textContent = score;
+      answeredEl.textContent = answered;
+    }
+
+    function openModal(title, page, img) {
+      modalTitle.textContent = title;
+      modalPage.textContent = `Página ${page} do PDF de slides`;
+      modalImg.src = img;
+      slideModal.classList.add("show");
+      slideModal.setAttribute("aria-hidden","false");
+    }
+
+    function closeModal() {
+      slideModal.classList.remove("show");
+      slideModal.setAttribute("aria-hidden","true");
+      modalImg.src = "";
+    }
+
+    function printQuestions() {
+      const win = window.open("", "_blank");
+      if (!win) return;
+      const title = document.title.replace(" | TechTeoremas", "");
+      const questionHtml = allQuestions.map((q, idx) => `
+        <div class="q-block">
+          <h3>${idx + 1}. ${esc(q.question)}</h3>
+          <ol type="A">${q.options.map(opt => `<li>${esc(opt)}</li>`).join("")}</ol>
+        </div>
+      `).join("");
+      const answerHtml = allQuestions.map((q, idx) => `<li><strong>Questão ${idx + 1}</strong> — ${letters[q.correct]}</li>`).join("");
+
+      win.document.write(`
+        <!DOCTYPE html><html lang="pt-BR"><head><meta charset="UTF-8"><title>${title} - Impressão</title>
+        <style>
+          body { font-family: Arial, sans-serif; margin: 28px; color: #111; }
+          h1 { margin-bottom: 8px; }
+          .meta { margin-bottom: 24px; color: #444; }
+          .q-block { margin-bottom: 24px; page-break-inside: avoid; }
+          ol { padding-left: 22px; }
+          .gabarito { page-break-before: always; }
+          .gabarito li { margin-bottom: 8px; }
+        </style></head><body>
+        <h1>${title}</h1>
+        <div class="meta">Canal TechTeoremas · Total de questões: ${allQuestions.length}</div>
+        ${questionHtml}
+        <div class="gabarito"><h2>Gabarito</h2><ol>${answerHtml}</ol></div>
+        </body></html>
+      `);
+      win.document.close();
+      win.focus();
+      setTimeout(() => win.print(), 300);
+    }
+
+    document.getElementById("printBtn").addEventListener("click", printQuestions);
+    document.getElementById("closeModal").addEventListener("click", closeModal);
+    slideModal.addEventListener("click", (e) => { if (e.target === slideModal) closeModal(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeModal(); });
+
+    function render() {
+      updateSidebar();
+
+      if (current >= allQuestions.length) {
+        const pct = Math.round((score / allQuestions.length) * 100);
+        app.innerHTML = `
+          <section class="finish">
+            <div class="finish-badge">Simulado finalizado</div>
+            <h2>Você concluiu o simulado 🎉</h2>
+            <p>Resultado final: <strong>${score} de ${allQuestions.length}</strong> questões corretas (${pct}%).</p>
+            <div class="actions" style="justify-content:center;">
+              <button class="btn btn-primary" id="restartInline">Tentar novamente</button>
+              <button class="btn btn-secondary" id="printInline">Imprimir questões</button>
+            </div>
+          </section>
+        `;
+        document.getElementById("restartInline").addEventListener("click", restart);
+        document.getElementById("printInline").addEventListener("click", printQuestions);
+        return;
+      }
+
+      const q = allQuestions[current];
+      const optionsHtml = q.options.map((opt, idx) => `
+        <button class="opt" data-idx="${idx}">
+          <span class="opt-row"><span class="letter">${letters[idx]}</span><span>${esc(opt)}</span></span>
+        </button>
+      `).join("");
+
+      app.innerHTML = `
+        <div class="qnum">Questão ${q.id}</div>
+        <h2 class="qtext">${esc(q.question)}</h2>
+        <div class="options">${optionsHtml}</div>
+        <div class="feedback" id="feedback"></div>
+        <div class="actions">
+          <button class="btn btn-secondary" id="prevBtn" ${current === 0 ? "disabled" : ""}>Anterior</button>
+          <button class="btn btn-primary" id="nextBtn" disabled>Próxima</button>
+        </div>
+      `;
+
+      document.querySelectorAll(".opt").forEach(btn => {
+        btn.addEventListener("click", () => answerQuestion(Number(btn.dataset.idx)));
+      });
+
+      document.getElementById("prevBtn").addEventListener("click", () => {
+        if (current > 0) { current--; render(); }
+      });
+    }
+
+    function answerQuestion(selectedIdx) {
+      const q = allQuestions[current];
+      if (done[current]) return;
+      done[current] = true;
+      answered++;
+      const buttons = [...document.querySelectorAll(".opt")];
+      const feedback = document.getElementById("feedback");
+      const nextBtn = document.getElementById("nextBtn");
+      buttons.forEach(btn => btn.classList.add("disabled"));
+
+      if (selectedIdx === q.correct) {
+        score++;
+        buttons[selectedIdx].classList.add("correct");
+        feedback.className = "feedback show ok";
+        feedback.innerHTML = `
+          <div class="feedback-head">✅ Resposta correta</div>
+          <p>Você marcou a alternativa <strong>${letters[selectedIdx]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card"><div class="slide-meta"><div class="slide-title">${esc(q.slideTitle)}</div><div class="slide-page">Página ${q.slidePage} dos slides</div></div><div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div></div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      } else {
+        buttons[selectedIdx].classList.add("wrong");
+        buttons[q.correct].classList.add("reveal");
+        feedback.className = "feedback show bad";
+        feedback.innerHTML = `
+          <div class="feedback-head">❌ Resposta incorreta</div>
+          <p>Você marcou <strong>${letters[selectedIdx]}</strong>, mas a correta é <strong>${letters[q.correct]}</strong>.</p>
+          <p><strong>Justificativa:</strong> ${esc(q.justification)}</p>
+          <div class="slide-card"><div class="slide-meta"><div class="slide-title">${esc(q.slideTitle)}</div><div class="slide-page">Página ${q.slidePage} dos slides</div></div><div class="slide-image"><img src="${q.slideImage}" alt="Slide relacionado à questão ${q.id}" /></div></div>
+          <div class="actions"><button class="btn btn-outline" id="zoomBtn">Ver slide ampliado</button></div>
+        `;
+      }
+
+      document.getElementById("zoomBtn").addEventListener("click", () => openModal(q.slideTitle, q.slidePage, q.slideImage));
+      nextBtn.disabled = false;
+      nextBtn.addEventListener("click", () => { current++; render(); }, { once: true });
+      updateSidebar();
+    }
+
+    function restart() {
+      current = 0; score = 0; answered = 0; done = new Array(allQuestions.length).fill(false); render();
+    }
+
+    document.getElementById("restartTop").addEventListener("click", restart);
+    render();
+  </script>
+</body>
+</html>

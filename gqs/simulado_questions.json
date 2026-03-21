@@ -1,0 +1,259 @@
+[
+  {
+    "id": 1,
+    "question": "Leia o trecho a seguir e identifique as lacunas a serem preenchidas: Em um projeto de desenvolvimento de software guiado por uma abordagem de Gerenciamento de Configuração de Software (SCM), o gerente de configuração garante a adesão aos procedimentos e políticas para a criação, alteração e teste do código, além de manter as informações do projeto acessíveis. Já os engenheiros de software focam em trabalhar de maneira eficaz, assegurando que as alterações simultâneas em um mesmo componente sejam rastreadas e gerenciadas corretamente. Preencha as lacunas: “O gerente de configuração visa [1] enquanto os engenheiros de software buscam [2]”.",
+    "options": [
+      "maximizar a eficiência; minimizar conflitos",
+      "implementar políticas; desenvolvimento ágil",
+      "supervisionar o projeto; inovação tecnológica",
+      "garantir procedimentos e políticas de gestão de configuração; eficácia operacional",
+      "gerar relatórios; colaboração interativa"
+    ],
+    "correct": 3,
+    "justification": "A alternativa correta destaca o papel do gerente de configuração em controlar mudanças e garantir procedimentos e políticas de gestão de configuração, enquanto os engenheiros buscam eficácia operacional no desenvolvimento.",
+    "slidePage": 7,
+    "slideTitle": "Gestão de Configuração de Software (GCS): O Guia Essencial",
+    "slideImage": "slides/slide_7.png"
+  },
+  {
+    "id": 2,
+    "question": "Em um projeto de desenvolvimento de software, a automação de compilação e integração é crucial para a eficiência e confiabilidade do processo. Considerando a automação proporcionada pelo Maven, qual afirmação descreve corretamente um aspecto essencial do seu funcionamento?",
+    "options": [
+      "A principal função do Maven é a automação de testes, sem impacto na compilação ou no gerenciamento de dependências.",
+      "Maven é incompatível com outras linguagens de programação e serve apenas para Java.",
+      "O Maven utiliza scripts complexos para definir a ordem de compilação dos módulos.",
+      "O Maven automatiza compilação e gerenciamento de dependências, usando o pom.xml para definir como o software é construído, testado e empacotado.",
+      "A integração contínua no Maven depende principalmente de plugins desenvolvidos especificamente para cada projeto."
+    ],
+    "correct": 3,
+    "justification": "O Maven usa o arquivo pom.xml para centralizar a configuração do build, dependências, testes e empacotamento, simplificando a automação do projeto.",
+    "slidePage": 17,
+    "slideTitle": "Guia Essencial do Apache Maven: Padronização e Build Java",
+    "slideImage": "slides/slide_17.png"
+  },
+  {
+    "id": 3,
+    "question": "O Selenium IDE foi reinventado após sua incompatibilidade com uma atualização do Firefox em 2017. Qual funcionalidade foi introduzida na nova versão?",
+    "options": [
+      "Capacidade de gravar, mas não de exportar scripts de teste.",
+      "A adição de um depurador com execução de etapas e pontos de interrupção.",
+      "Execução de testes limitada exclusivamente ao navegador Firefox.",
+      "Restrição para a criação de scripts somente em Java.",
+      "Ausência de suporte para gravação de interações do usuário no navegador."
+    ],
+    "correct": 1,
+    "justification": "A nova versão do Selenium IDE trouxe recursos de depuração, como execução passo a passo e pontos de interrupção, tornando o desenvolvimento e a análise dos testes mais robustos.",
+    "slidePage": 27,
+    "slideTitle": "Guia de Ferramentas e Processos: Automação de Testes",
+    "slideImage": "slides/slide_27.png"
+  },
+  {
+    "id": 4,
+    "question": "Na empresa SoftDev, a equipe quer melhorar a cobertura dos testes para garantir que todas as partes críticas do código sejam adequadamente testadas. Qual tipo de cobertura deve ser priorizado?",
+    "options": [
+      "Testes de integração, sem preocupação com cobertura de código individual.",
+      "Cobertura de função, garantindo apenas que todas as funções sejam chamadas.",
+      "Cobertura de condição, verificando todos os possíveis valores booleanos isoladamente.",
+      "Cobertura de declaração, assegurando que cada linha seja executada ao menos uma vez.",
+      "Cobertura de ramos (branch coverage), garantindo a execução de todas as possíveis ramificações do código."
+    ],
+    "correct": 4,
+    "justification": "A cobertura de ramos é mais abrangente para lógica condicional, pois verifica os diferentes caminhos de execução e ajuda a reduzir bugs que não aparecem apenas com cobertura de linhas.",
+    "slidePage": 31,
+    "slideTitle": "Fundamentos da Cobertura de Código: Por que testar linhas não é suficiente?",
+    "slideImage": "slides/slide_31.png"
+  },
+  {
+    "id": 5,
+    "question": "Na prática da engenharia de software, a escrita de um código que seja ao mesmo tempo [1] e [2] é essencial. Quais termos completam corretamente a sentença?",
+    "options": [
+      "Complexo; Rápido",
+      "Enigmático; Poderoso",
+      "Criptografado; Compacto",
+      "Legível; Eficiente",
+      "Redundante; Rápido"
+    ],
+    "correct": 3,
+    "justification": "Código limpo precisa ser legível para facilitar entendimento e manutenção, e eficiente para cumprir seu papel com qualidade.",
+    "slidePage": 38,
+    "slideTitle": "Clean Code: A Arte da Legibilidade e Manutenção",
+    "slideImage": "slides/slide_38.png"
+  },
+  {
+    "id": 6,
+    "question": "No contexto de revisão de código, qual afirmação é verdadeira sobre uma prática recomendada para tornar a revisão mais produtiva e amigável?",
+    "options": [
+      "Os revisores devem usar linguagem sarcástica para destacar problemas.",
+      "Os revisores devem evitar perguntas e focar apenas em julgamentos.",
+      "É recomendável concentrar a revisão em questões pessoais do autor.",
+      "Emojis podem ser usados para tornar a linguagem mais coloquial e amigável durante a revisão.",
+      "Os revisores devem sempre usar o pronome “você” para responsabilizar o autor."
+    ],
+    "correct": 3,
+    "justification": "A revisão de código deve ser construtiva. Uma linguagem mais amigável, inclusive com uso moderado de emojis, pode facilitar a comunicação e evitar atritos desnecessários.",
+    "slidePage": 49,
+    "slideTitle": "Guia Profissional: Processos de Revisão de Código",
+    "slideImage": "slides/slide_49.png"
+  },
+  {
+    "id": 7,
+    "question": "No desenvolvimento de software, a integração da Engenharia de Software com IHC e UCD exige participação ativa do usuário e pesquisa de design. Quais afirmativas representam estratégias eficazes? I. A participação do usuário é crucial apenas no início. II. Entrevistas face-a-face e questionários ajudam a coletar dados sobre necessidades dos usuários. III. O objetivo principal do UCD é replicar exatamente processos manuais. IV. Entender profundamente atividades do usuário e regras de negócio é essencial para projetar um sistema melhor.",
+    "options": [
+      "I e II apenas",
+      "I e III apenas",
+      "II e III apenas",
+      "II e IV apenas",
+      "III e IV apenas"
+    ],
+    "correct": 3,
+    "justification": "Métodos de pesquisa com usuários e compreensão profunda de atividades e regras de negócio ajudam a projetar sistemas funcionais e centrados no usuário. A participação do usuário não deve se limitar ao início do projeto.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 8,
+    "question": "Em um ambiente de desenvolvimento ágil, como os sistemas de controle de versão melhoram o processo de desenvolvimento de software?",
+    "options": [
+      "Facilitam mudanças diretas na base de produção sem testes.",
+      "Reduzem a necessidade de comunicação da equipe.",
+      "Permitem trabalho simultâneo no mesmo código, ajudando a combinar mudanças e resolver conflitos de merge.",
+      "Funcionam como sistema automático de backup criado a cada hora.",
+      "Limitam o acesso aos códigos para evitar conflitos."
+    ],
+    "correct": 2,
+    "justification": "Ferramentas de controle de versão como Git permitem trabalho paralelo com branches e ajudam a integrar alterações por merge, suportando colaboração sem bloquear a equipe.",
+    "slidePage": 13,
+    "slideTitle": "Dominando o Git: Conflitos e Fluxos de Trabalho Avançados",
+    "slideImage": "slides/slide_13.png"
+  },
+  {
+    "id": 9,
+    "question": "Marque a alternativa que define corretamente “usabilidade” de acordo com o padrão ISO.",
+    "options": [
+      "Usabilidade é o grau que a interface permite interação segura e satisfatória para o usuário.",
+      "Usabilidade é o grau que a interface permite interação rápida e bonita para o usuário.",
+      "Usabilidade é o grau que a interface permite interação bonita e segura para o usuário.",
+      "Usabilidade é o grau que a interface permite interação agradável e rápida para o usuário.",
+      "Usabilidade é o grau que a interface permite interação agradável e satisfatória para o usuário."
+    ],
+    "correct": 4,
+    "justification": "No contexto de usabilidade, o foco recai na qualidade da interação percebida pelo usuário, incluindo conforto, satisfação e adequação da interface ao uso.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 10,
+    "question": "Marque a alternativa que apresenta corretamente uma forma de aumentar a confiabilidade da estimativa em projetos de desenvolvimento de software.",
+    "options": [
+      "Usar a abordagem de dividir para conquistar, por meio de técnicas de decomposição.",
+      "Adiar o momento de realizar a estimativa.",
+      "Usar modelos conceituais e teóricos tal como análise de pontos de função.",
+      "Basear-se em dados futuros.",
+      "Leitura."
+    ],
+    "correct": 0,
+    "justification": "A confiabilidade da estimativa aumenta quando o problema é decomposto em partes menores e comparáveis, além do uso de dados históricos e projetos similares.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 11,
+    "question": "Assinale a alternativa que completa corretamente a sentença: “__________ é um exemplo de método __________ para realizar __________ de software”.",
+    "options": [
+      "revisão por pares, estático, validação",
+      "inspeção, estático, validação",
+      "revisão por pares, dinâmico, verificação",
+      "revisão por pares, estático, verificação",
+      "inspeção, dinâmico, validação"
+    ],
+    "correct": 3,
+    "justification": "Revisão por pares é um método estático de verificação, pois avalia artefatos sem executar o software.",
+    "slidePage": 49,
+    "slideTitle": "Guia Profissional: Processos de Revisão de Código",
+    "slideImage": "slides/slide_49.png"
+  },
+  {
+    "id": 12,
+    "question": "Considere os itens: I) Adaptação. II) Agilidade. III) Gestão. IV) Inspeção. V) Transparência. Quais compõem os três pilares do Scrum?",
+    "options": [
+      "Apenas I, IV e V",
+      "Apenas I, III e IV",
+      "Apenas II, III e IV",
+      "Apenas I, II e V",
+      "Apenas II, III e V"
+    ],
+    "correct": 0,
+    "justification": "Os três pilares do Scrum são Transparência, Inspeção e Adaptação.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  },
+  {
+    "id": 13,
+    "question": "No contexto de métricas de produto de software, qual alternativa identifica corretamente um exemplo de métrica dinâmica?",
+    "options": [
+      "Tempo médio de recuperação do sistema após falha",
+      "Número de comentários por arquivo-fonte",
+      "Quantidade de classes em um módulo",
+      "Número de métodos públicos por classe",
+      "Número de dependências estáticas do sistema"
+    ],
+    "correct": 0,
+    "justification": "Métricas dinâmicas dependem do sistema em execução. O tempo médio de recuperação após falha é medido durante o comportamento real do software.",
+    "slidePage": 39,
+    "slideTitle": "Métricas Técnicas para WebApps: Desempenho e Navegação",
+    "slideImage": "slides/slide_39.png"
+  },
+  {
+    "id": 14,
+    "question": "Marque a alternativa que define corretamente “risco” no contexto de gerenciamento de projeto de software.",
+    "options": [
+      "Probabilidade improvável com efeito positivo apenas.",
+      "Evento ou condição possível com efeito negativo apenas.",
+      "Chance provável com efeito positivo ou negativo.",
+      "Evento ou condição incerta que, se ocorrer, provocará efeito positivo ou negativo em objetivos do projeto.",
+      "Probabilidade arriscada com efeito negativo apenas."
+    ],
+    "correct": 3,
+    "justification": "Risco é um evento ou condição incerta que pode afetar objetivos do projeto de forma positiva ou negativa, como escopo, prazo, custo e qualidade.",
+    "slidePage": 44,
+    "slideTitle": "Diretrizes Estratégicas: Engenharia de Software Moderna",
+    "slideImage": "slides/slide_44.png"
+  },
+  {
+    "id": 15,
+    "question": "Considere as afirmações sobre CMMI: I) CMMI significa Capability Maturity Model Integration. II) CMMI sugere um processo ideal único para desenvolvimento de software. III) CMMI possui um framework para melhoria de processos. IV) CMMI 1.3 possui três partes: aquisição, serviço e desenvolvimento. Qual alternativa está correta?",
+    "options": [
+      "Apenas I, II, III, V e VI",
+      "Nenhuma está correta",
+      "Apenas II e VI",
+      "Apenas I, III e IV",
+      "Todas estão corretas"
+    ],
+    "correct": 3,
+    "justification": "CMMI significa Capability Maturity Model Integration, oferece um framework de melhoria de processos e, na versão 1.3, reúne modelos voltados a aquisição, serviços e desenvolvimento.",
+    "slidePage": 53,
+    "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+    "slideImage": "slides/slide_53.png"
+  }
+]
+,
+{
+  "id": 16,
+  "question": "No contexto de desenvolvimento de software orientado a objetos, o escopo do teste de unidade e do teste de integração pode variar dependendo do que a equipe define como a \"unidade\" a ser testada. Levando em consideração as abordagens de testes intramétodo, intermétodo, intraclasse e interclasse, assinale a alternativa que descreve corretamente o alvo desses testes:",
+  "options": [
+    "Se a unidade for definida como uma \"classe\", o teste de unidade será restrito ao teste intramétodo, deixando o teste intraclasse exclusivamente para a fase de integração.",
+    "Independentemente de a unidade ser um método ou uma classe, o teste de integração sempre será focado apenas no fluxo interno de um único método (teste intramétodo).",
+    "Se a unidade for definida como um \"método\", o teste de unidade focará no teste intramétodo, enquanto o teste de integração abrangerá os testes intermétodo, intraclasse e interclasse.",
+    "Se a unidade for definida como uma \"classe\", o teste de integração validará a integração de vários métodos dentro da mesma classe (intermétodo), e o teste de unidade focará na comunicação entre várias classes diferentes (interclasse).",
+    "O teste interclasse faz parte do escopo do teste de unidade sempre que a unidade for definida como \"método\", pois garante que o método se comunique bem com o resto do sistema."
+  ],
+  "correct": 2,
+  "justification": "A alternativa C é a correta. Se a unidade for um método, o teste de unidade cobre o teste intramétodo. Já o teste de integração cobre a interação entre métodos (intermétodo), dentro da classe (intraclasse) e entre classes (interclasse). Se a unidade for uma classe, o teste de unidade cobre a própria classe e suas interações internas, enquanto o teste de integração foca na interação entre classes.",
+  "slidePage": 53,
+  "slideTitle": "Engenharia de Software: Fundamentos da Semana 7",
+  "slideImage": "slides/slide_53.png"
+}

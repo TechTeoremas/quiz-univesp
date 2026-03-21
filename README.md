@@ -41,4 +41,4 @@ Os quizzes não salvam respostas ou pontuação, pois utilizam apenas HTML (site
 
 ## 👨‍💻 Autor
 
-Seu nome aqui
+Anderson

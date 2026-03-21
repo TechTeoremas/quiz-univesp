@@ -12,13 +12,14 @@ Os quizzes foram desenvolvidos em HTML e podem ser acessados diretamente pelo na
 ## 🚀 Acessar os quizzes
 
 👉 Página inicial:
-https://SEU-USUARIO.github.io/quiz-faculdade/
+https://github.com/TechTeoremas/quiz-univesp/
 
 👉 Sistemas de Informação:
-https://SEU-USUARIO.github.io/quiz-faculdade/si/quiz_sistemas_informacao_semanas_com_slides.html
+https://github.com/TechTeoremas/quiz-univesp/si/quiz_sistemas_informacao.html
 
 👉 Gerência e Qualidade de Software:
-https://SEU-USUARIO.github.io/quiz-faculdade/gqs/quiz_gqs_semanas_com_slides.html
+https://github.com/TechTeoremas/quiz-univesp/gqs/quiz_gqs.html
+
 
 ---
 

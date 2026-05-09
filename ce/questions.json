@@ -2,7 +2,6 @@
   {
     "id": 1,
     "week": 1,
-    "question": "Computação paralela pode ser definida como: (Fácil)",
     "options": [
       "Execução de um programa em uma única CPU, sempre uma instrução por vez.",
       "Uso simultâneo de múltiplos recursos computacionais para resolver um problema.",
@@ -10,41 +9,41 @@
       "Técnica exclusiva de supercomputadores comerciais.",
       "Substituição completa da programação sequencial por redes neurais."
     ],
+    "question": "Computação paralela pode ser definida como: (Fácil)",
     "correct": 1,
     "justification": "Computação paralela consiste em dividir um problema em partes que possam ser executadas ao mesmo tempo por múltiplos recursos, como vários núcleos, processadores ou computadores conectados em rede. O objetivo principal é reduzir o tempo de execução ou aumentar a capacidade de processamento. - Fonte(s): Semana 1/s1_videoaula1.pdf; Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
   },
   {
     "id": 2,
     "week": 1,
-    "question": "A fórmula básica de speedup é: (Fácil)",
     "options": [
       "Tempo paralelo / tempo serial.",
-      "Tempo serial / tempo paralelo.",
       "Número de threads / tempo de comunicação.",
+      "Tempo serial / tempo paralelo.",
       "Tempo de sincronização / tempo total.",
       "Eficiência / número de processadores."
     ],
-    "correct": 1,
+    "question": "A fórmula básica de speedup é: (Fácil)",
+    "correct": 2,
     "justification": "Speedup mede o quanto uma execução paralela é mais rápida em relação à execução serial. Se um programa leva 100 segundos serialmente e 25 segundos paralelamente, o speedup é 100/25 = 4. - Fonte(s): Semana 1/s1_videoaula2.pdf"
   },
   {
     "id": 3,
     "week": 1,
-    "question": "Avalie: I) Sistemas distribuídos usam computadores interligados por rede. II) Componentes coordenam ações por mensagens. III) Todo sistema distribuído possui relógio global perfeito. (Fácil)",
     "options": [
       "V, V, V",
-      "V, V, F",
-      "V, F, V",
       "F, V, F",
+      "V, F, V",
+      "V, V, F",
       "F, F, V"
     ],
-    "correct": 1,
+    "question": "Avalie: I) Sistemas distribuídos usam computadores interligados por rede. II) Componentes coordenam ações por mensagens. III) Todo sistema distribuído possui relógio global perfeito. (Fácil)",
+    "correct": 3,
     "justification": "Sistemas distribuídos têm componentes em computadores conectados em rede que se comunicam por troca de mensagens. Uma característica importante é justamente a ausência de um relógio global perfeitamente sincronizado. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
   },
   {
     "id": 4,
     "week": 1,
-    "question": "A principal diferença entre concorrência e paralelismo é: (Média)",
     "options": [
       "Concorrência sempre exige múltiplos processadores; paralelismo nunca exige.",
       "Concorrência lida com múltiplas atividades em progresso; paralelismo executa atividades simultaneamente para desempenho.",
@@ -52,13 +51,13 @@
       "Paralelismo é apenas alternância de tarefas em uma CPU.",
       "Não há diferença conceitual entre os termos."
     ],
+    "question": "A principal diferença entre concorrência e paralelismo é: (Média)",
     "correct": 1,
     "justification": "Concorrência trata da estruturação de um programa com múltiplas atividades que podem progredir de forma intercalada. Paralelismo envolve execução simultânea real, normalmente para reduzir tempo de processamento. - Fonte(s): Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
   },
   {
     "id": 5,
     "week": 1,
-    "question": "Granularidade em programação paralela refere-se: (Média)",
     "options": [
       "Ao tamanho do trabalho atribuído a cada tarefa antes de sincronizar/comunicar.",
       "Ao número total de computadores da Internet.",
@@ -66,27 +65,30 @@
       "Ao tipo de linguagem usada.",
       "Ao tamanho físico do processador."
     ],
+    "question": "Granularidade em programação paralela refere-se: (Média)",
     "correct": 0,
-    "justification": "Granularidade indica quão grandes ou pequenas são as partes em que o problema foi dividido. Granularidade fina gera muitas tarefas pequenas e mais comunicação; granularidade grossa gera tarefas maiores e menos sincronização. - Fonte(s): Semana 1/s1_videoaula2.pdf"
+    "justification": "Granularidade indica quão grandes ou pequenas são as partes em que o problema foi dividido. Granularidade fina gera muitas tarefas pequenas e mais comunicação; granularidade grossa gera tarefas maiores e menos sincronização. - Fonte(s): Semana 1/s1_videoaula2.pdf",
+    "slideImage": "slides/S1-5.png",
+    "slideTitle": "Resumo da Semana 1 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 6,
     "week": 1,
-    "question": "Associe: 1) Decomposição; 2) Race condition; 3) Deadlock; 4) Balanceamento de carga. a) Dividir problema; b) Resultado depende da ordem; c) Tarefas bloqueadas; d) Distribuir trabalho adequadamente. (Média)",
     "options": [
-      "1-a, 2-b, 3-c, 4-d",
+      "1-a, 2-c, 3-b, 4-d",
       "1-b, 2-a, 3-d, 4-c",
       "1-d, 2-c, 3-b, 4-a",
-      "1-a, 2-c, 3-b, 4-d",
+      "1-a, 2-b, 3-c, 4-d",
       "1-c, 2-d, 3-a, 4-b"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Decomposição; 2) Race condition; 3) Deadlock; 4) Balanceamento de carga. a) Dividir problema; b) Resultado depende da ordem; c) Tarefas bloqueadas; d) Distribuir trabalho adequadamente. (Média)",
+    "correct": 3,
     "justification": "Decomposição divide o problema em partes; race condition ocorre quando o resultado depende da ordem de execução; deadlock impede progresso por bloqueios mútuos; balanceamento de carga distribui trabalho entre recursos. - Fonte(s): Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
   },
   {
     "id": 7,
     "week": 1,
-    "question": "Entre os desafios dos sistemas distribuídos, a escalabilidade significa: (Média)",
     "options": [
       "Usar sempre o menor número possível de computadores.",
       "Manter funcionamento adequado quando usuários, carga ou recursos aumentam.",
@@ -94,27 +96,27 @@
       "Eliminar totalmente falhas de rede.",
       "Centralizar todas as decisões em um único relógio global."
     ],
+    "question": "Entre os desafios dos sistemas distribuídos, a escalabilidade significa: (Média)",
     "correct": 1,
     "justification": "Escalabilidade é a capacidade de o sistema continuar operando bem quando cresce em número de usuários, quantidade de dados, volume de requisições ou número de componentes. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
   },
   {
     "id": 8,
     "week": 1,
-    "question": "Por que a ausência de relógio global é um problema importante em sistemas distribuídos? (Difícil)",
     "options": [
       "Porque impede completamente qualquer comunicação.",
-      "Porque dificulta ordenar eventos e coordenar ações com precisão entre máquinas.",
       "Porque obriga todos os computadores a ficarem desligados.",
+      "Porque dificulta ordenar eventos e coordenar ações com precisão entre máquinas.",
       "Porque torna desnecessária a passagem de mensagens.",
       "Porque elimina problemas de concorrência."
     ],
-    "correct": 1,
+    "question": "Por que a ausência de relógio global é um problema importante em sistemas distribuídos? (Difícil)",
+    "correct": 2,
     "justification": "Em sistemas distribuídos, cada máquina possui seu próprio relógio, e sincronizá-los perfeitamente é inviável. Isso dificulta saber a ordem exata dos eventos, coordenar operações e detectar atrasos ou falhas. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
   },
   {
     "id": 9,
     "week": 1,
-    "question": "I) Falhas independentes significam que um nó pode falhar sem todos falharem. II) Transparência busca ocultar complexidades do sistema. III) Heterogeneidade significa que todos os componentes são idênticos. (Difícil)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -122,13 +124,13 @@
       "F, V, V",
       "F, F, F"
     ],
+    "question": "I) Falhas independentes significam que um nó pode falhar sem todos falharem. II) Transparência busca ocultar complexidades do sistema. III) Heterogeneidade significa que todos os componentes são idênticos. (Difícil)",
     "correct": 1,
     "justification": "Falhas independentes são típicas de sistemas distribuídos. Transparência procura esconder detalhes como localização, migração ou replicação. Heterogeneidade significa diversidade de hardware, software, redes e linguagens, não identidade. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
   },
   {
     "id": 10,
     "week": 1,
-    "question": "A eficiência paralela é importante porque: (Difícil)",
     "options": [
       "Mostra se o speedup obtido é proporcional ao número de recursos usados.",
       "Mede apenas o consumo de memória RAM.",
@@ -136,13 +138,16 @@
       "Ignora comunicação e sincronização.",
       "Só se aplica a sistemas sem threads."
     ],
+    "question": "A eficiência paralela é importante porque: (Difícil)",
     "correct": 0,
-    "justification": "A eficiência relaciona o speedup ao número de processadores/cores utilizados. Ela indica se os recursos adicionais estão sendo bem aproveitados ou se comunicação, sincronização e desequilíbrio estão reduzindo o ganho. - Fonte(s): Semana 1/s1_videoaula2.pdf"
+    "justification": "A eficiência relaciona o speedup ao número de processadores/cores utilizados. Ela indica se os recursos adicionais estão sendo bem aproveitados ou se comunicação, sincronização e desequilíbrio estão reduzindo o ganho. - Fonte(s): Semana 1/s1_videoaula2.pdf",
+    "slideImage": "slides/S1-10.png",
+    "slideTitle": "Resumo da Semana 1 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 11,
     "week": 2,
-    "question": "Um processador multicore é: (Fácil)",
     "options": [
       "Um cluster de computadores independentes.",
       "Um chip físico com mais de um núcleo de processamento.",
@@ -150,13 +155,13 @@
       "Uma rede de sensores sem CPU.",
       "Uma técnica exclusiva de armazenamento."
     ],
+    "question": "Um processador multicore é: (Fácil)",
     "correct": 1,
     "justification": "Multicore significa que um único processador físico contém vários núcleos capazes de executar tarefas simultaneamente, aumentando a capacidade de processamento. - Fonte(s): Semana 2/s2-Texto Base 1 - Multicore – Definirtec.pdf"
   },
   {
     "id": 12,
     "week": 2,
-    "question": "Threads são úteis principalmente porque: (Fácil)",
     "options": [
       "Permitem organizar múltiplas atividades dentro de um processo.",
       "Eliminam a necessidade de sistema operacional.",
@@ -164,41 +169,41 @@
       "Nunca compartilham memória.",
       "Só funcionam em clusters."
     ],
+    "question": "Threads são úteis principalmente porque: (Fácil)",
     "correct": 0,
     "justification": "Threads permitem que uma aplicação tenha múltiplos fluxos de execução, como interface, cálculo e entrada/saída, muitas vezes compartilhando o mesmo espaço de endereçamento. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf"
   },
   {
     "id": 13,
     "week": 2,
-    "question": "Na classificação de Flynn, SISD significa: (Fácil)",
     "options": [
-      "Uma instrução, um dado.",
+      "Múltiplas instruções, múltiplos dados.",
       "Uma instrução, múltiplos dados.",
       "Múltiplas instruções, um dado.",
-      "Múltiplas instruções, múltiplos dados.",
+      "Uma instrução, um dado.",
       "Sem instruções e sem dados."
     ],
-    "correct": 0,
+    "question": "Na classificação de Flynn, SISD significa: (Fácil)",
+    "correct": 3,
     "justification": "SISD representa a arquitetura sequencial clássica: um fluxo de instruções operando sobre um fluxo de dados. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf"
   },
   {
     "id": 14,
     "week": 2,
-    "question": "Associe: 1) SISD; 2) SIMD; 3) MISD; 4) MIMD. a) Uma instrução/um dado; b) Uma instrução/múltiplos dados; c) Múltiplas instruções/um dado; d) Múltiplas instruções/múltiplos dados. (Média)",
     "options": [
-      "1-a, 2-b, 3-c, 4-d",
+      "1-c, 2-d, 3-a, 4-b",
       "1-b, 2-a, 3-d, 4-c",
       "1-d, 2-c, 3-b, 4-a",
       "1-a, 2-c, 3-b, 4-d",
-      "1-c, 2-d, 3-a, 4-b"
+      "1-a, 2-b, 3-c, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) SISD; 2) SIMD; 3) MISD; 4) MIMD. a) Uma instrução/um dado; b) Uma instrução/múltiplos dados; c) Múltiplas instruções/um dado; d) Múltiplas instruções/múltiplos dados. (Média)",
+    "correct": 4,
     "justification": "Flynn classifica arquiteturas pelo número de fluxos de instruções e dados. SIMD é comum em vetorização; MIMD é comum em multiprocessadores e clusters. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula3.pdf"
   },
   {
     "id": 15,
     "week": 2,
-    "question": "Em memória compartilhada UMA: (Média)",
     "options": [
       "Todos os processadores acessam a memória com tempo uniforme.",
       "Cada processador só acessa memória local.",
@@ -206,27 +211,30 @@
       "A comunicação ocorre apenas por mensagens de rede.",
       "Não há caches."
     ],
+    "question": "Em memória compartilhada UMA: (Média)",
     "correct": 0,
-    "justification": "UMA significa Uniform Memory Access. Os processadores compartilham um espaço de memória e o tempo de acesso é uniforme, exigindo mecanismos de coerência de cache. - Fonte(s): Semana 2/s2-SO Modernos 4 ed 364-366.pdf"
+    "justification": "UMA significa Uniform Memory Access. Os processadores compartilham um espaço de memória e o tempo de acesso é uniforme, exigindo mecanismos de coerência de cache. - Fonte(s): Semana 2/s2-SO Modernos 4 ed 364-366.pdf",
+    "slideImage": "slides/S2-5.png",
+    "slideTitle": "Resumo da Semana 2 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 16,
     "week": 2,
-    "question": "Multithreading de granularidade fina alterna threads: (Média)",
     "options": [
-      "Com alta frequência, até entre instruções.",
       "Apenas quando o computador reinicia.",
+      "Com alta frequência, até entre instruções.",
       "Somente quando há falha permanente.",
       "Nunca alterna threads.",
       "Somente em sistemas sem cache."
     ],
-    "correct": 0,
+    "question": "Multithreading de granularidade fina alterna threads: (Média)",
+    "correct": 1,
     "justification": "Na granularidade fina, a troca entre threads é frequente para tentar esconder latências. Na granularidade grossa, a troca ocorre em eventos mais caros, como falhas de cache. - Fonte(s): Semana 2/s2-Texto Base 2 - paralelismo_no_nivel_de_threads.pdf"
   },
   {
     "id": 17,
     "week": 2,
-    "question": "I) Threads de um mesmo processo podem compartilhar memória. II) Processos normalmente têm espaços de endereçamento separados. III) Compartilhamento elimina todos os problemas de sincronização. (Média)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -234,13 +242,13 @@
       "F, V, F",
       "F, F, V"
     ],
+    "question": "I) Threads de um mesmo processo podem compartilhar memória. II) Processos normalmente têm espaços de endereçamento separados. III) Compartilhamento elimina todos os problemas de sincronização. (Média)",
     "correct": 1,
     "justification": "Threads podem compartilhar dados, o que facilita comunicação interna, mas também cria riscos de corrida e exige sincronização. Processos são mais isolados por padrão. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf"
   },
   {
     "id": 18,
     "week": 2,
-    "question": "A coerência de cache é necessária em multiprocessadores porque: (Difícil)",
     "options": [
       "Caches diferentes podem conter cópias do mesmo dado compartilhado.",
       "Ela substitui a memória principal.",
@@ -248,41 +256,44 @@
       "Ela impede execução paralela.",
       "Ela transforma MIMD em SISD."
     ],
+    "question": "A coerência de cache é necessária em multiprocessadores porque: (Difícil)",
     "correct": 0,
     "justification": "Quando múltiplos processadores possuem caches, um mesmo dado pode estar copiado em vários lugares. Se um processador altera o dado, os outros precisam ver uma versão coerente, por atualização ou invalidação. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula4.pdf"
   },
   {
     "id": 19,
     "week": 2,
-    "question": "SIMD é especialmente adequado para: (Difícil)",
     "options": [
-      "Aplicar a mesma operação sobre muitos dados, como vetores ou matrizes.",
+      "Substituir completamente sistemas operacionais.",
       "Executar um único programa sem dados.",
       "Sistemas onde cada processador executa instruções completamente diferentes sem relação.",
       "Eliminar paralelismo de dados.",
-      "Substituir completamente sistemas operacionais."
+      "Aplicar a mesma operação sobre muitos dados, como vetores ou matrizes."
     ],
-    "correct": 0,
+    "question": "SIMD é especialmente adequado para: (Difícil)",
+    "correct": 4,
     "justification": "SIMD executa uma mesma instrução sobre múltiplos dados, sendo útil em processamento vetorial, imagens, matrizes e GPUs. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula4.pdf"
   },
   {
     "id": 20,
     "week": 2,
-    "question": "O maior risco de usar threads com memória compartilhada sem controle é: (Difícil)",
     "options": [
-      "Condições de corrida e inconsistência de dados.",
+      "Conversão automática para computação em nuvem.",
       "Impossibilidade de usar processadores multicore.",
       "Ausência de qualquer paralelismo.",
       "Redução obrigatória do número de instruções.",
-      "Conversão automática para computação em nuvem."
+      "Condições de corrida e inconsistência de dados."
     ],
-    "correct": 0,
-    "justification": "Quando threads acessam e alteram os mesmos dados simultaneamente sem sincronização, a ordem das operações pode produzir resultados incorretos ou imprevisíveis. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf"
+    "question": "O maior risco de usar threads com memória compartilhada sem controle é: (Difícil)",
+    "correct": 4,
+    "justification": "Quando threads acessam e alteram os mesmos dados simultaneamente sem sincronização, a ordem das operações pode produzir resultados incorretos ou imprevisíveis. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf",
+    "slideImage": "slides/S2-10.png",
+    "slideTitle": "Resumo da Semana 2 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 21,
     "week": 3,
-    "question": "Um cluster computacional é: (Fácil)",
     "options": [
       "Um grupo de computadores interligados que trabalham como recurso computacional conjunto.",
       "Um único processador com vários registradores.",
@@ -290,41 +301,41 @@
       "Um tipo de arquivo compactado.",
       "Um protocolo exclusivo de e-mail."
     ],
+    "question": "Um cluster computacional é: (Fácil)",
     "correct": 0,
     "justification": "Clusters conectam computadores, geralmente por rede local, para executar tarefas de alto desempenho, alta disponibilidade ou balanceamento de carga. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
   },
   {
     "id": 22,
     "week": 3,
-    "question": "Um cluster Beowulf ficou conhecido por: (Fácil)",
     "options": [
-      "Usar PCs comuns, Linux e rede para obter alto desempenho com baixo custo.",
-      "Usar apenas supercomputadores proprietários caríssimos.",
       "Proibir programação paralela.",
+      "Usar apenas supercomputadores proprietários caríssimos.",
+      "Usar PCs comuns, Linux e rede para obter alto desempenho com baixo custo.",
       "Ser uma tecnologia exclusiva de celulares.",
       "Eliminar a necessidade de hardware."
     ],
-    "correct": 0,
+    "question": "Um cluster Beowulf ficou conhecido por: (Fácil)",
+    "correct": 2,
     "justification": "O cluster Beowulf popularizou a ideia de construir alto desempenho usando componentes de mercado, software livre e bibliotecas de passagem de mensagens. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
   },
   {
     "id": 23,
     "week": 3,
-    "question": "Computação em nuvem caracteriza-se principalmente por: (Fácil)",
     "options": [
-      "Oferta de recursos computacionais sob demanda pela rede.",
+      "Proibição de escalabilidade.",
       "Uso obrigatório de um único computador local.",
       "Ausência total de virtualização.",
-      "Proibição de escalabilidade.",
+      "Oferta de recursos computacionais sob demanda pela rede.",
       "Execução sem servidores físicos."
     ],
-    "correct": 0,
+    "question": "Computação em nuvem caracteriza-se principalmente por: (Fácil)",
+    "correct": 3,
     "justification": "A nuvem fornece recursos como processamento, armazenamento, bancos de dados e plataformas via rede, com elasticidade, provisionamento sob demanda e pagamento conforme uso. - Fonte(s): Semana 3/s3_texto_base_computacao_em_nuvem.pdf"
   },
   {
     "id": 24,
     "week": 3,
-    "question": "Associe: 1) Cluster; 2) Grid; 3) Nuvem; 4) Beowulf. a) Recursos heterogêneos e distribuídos entre organizações; b) PCs comuns em rede para HPC; c) Recursos sob demanda; d) Máquinas próximas cooperando como sistema. (Média)",
     "options": [
       "1-d, 2-a, 3-c, 4-b",
       "1-a, 2-d, 3-b, 4-c",
@@ -332,27 +343,30 @@
       "1-b, 2-c, 3-d, 4-a",
       "1-d, 2-c, 3-a, 4-b"
     ],
+    "question": "Associe: 1) Cluster; 2) Grid; 3) Nuvem; 4) Beowulf. a) Recursos heterogêneos e distribuídos entre organizações; b) PCs comuns em rede para HPC; c) Recursos sob demanda; d) Máquinas próximas cooperando como sistema. (Média)",
     "correct": 0,
     "justification": "Clusters costumam reunir máquinas próximas; grids agregam recursos heterogêneos geograficamente distribuídos; nuvem oferece recursos sob demanda; Beowulf é cluster de baixo custo com PCs comuns. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_grades_computacionais.pdf; Semana 3/s3_texto_base_computacao_em_nuvem.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
   },
   {
     "id": 25,
     "week": 3,
-    "question": "Em clusters, bibliotecas como MPI são importantes porque: (Média)",
     "options": [
-      "Permitem comunicação por passagem de mensagens entre processos/nós.",
       "Substituem o hardware de rede.",
+      "Permitem comunicação por passagem de mensagens entre processos/nós.",
       "Criam automaticamente qualquer algoritmo paralelo.",
       "Eliminam latência de comunicação.",
       "Impedem uso de Linux."
     ],
-    "correct": 0,
-    "justification": "Em memória distribuída, os nós não compartilham memória diretamente. MPI permite enviar e receber mensagens para coordenar partes do cálculo. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf; Semana 3/s3_videoaula5.pdf"
+    "question": "Em clusters, bibliotecas como MPI são importantes porque: (Média)",
+    "correct": 1,
+    "justification": "Em memória distribuída, os nós não compartilham memória diretamente. MPI permite enviar e receber mensagens para coordenar partes do cálculo. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf; Semana 3/s3_videoaula5.pdf",
+    "slideImage": "slides/S3-5.png",
+    "slideTitle": "Resumo da Semana 3 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 26,
     "week": 3,
-    "question": "I) Clusters podem melhorar desempenho. II) Clusters exigem interconexão entre nós. III) Em clusters, comunicação nunca tem custo. (Média)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -360,13 +374,13 @@
       "F, V, F",
       "F, F, F"
     ],
+    "question": "I) Clusters podem melhorar desempenho. II) Clusters exigem interconexão entre nós. III) Em clusters, comunicação nunca tem custo. (Média)",
     "correct": 1,
     "justification": "Clusters podem acelerar aplicações, mas dependem de rede/interconexão. A comunicação tem custo e pode limitar desempenho, especialmente em aplicações com muita troca de dados. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_videoaula5.pdf"
   },
   {
     "id": 27,
     "week": 3,
-    "question": "A principal vantagem da computação em grade é: (Média)",
     "options": [
       "Integrar recursos distribuídos e heterogêneos para resolver grandes problemas.",
       "Substituir todos os computadores por um único chip.",
@@ -374,41 +388,41 @@
       "Eliminar autenticação e políticas de uso.",
       "Impedir cooperação entre instituições."
     ],
+    "question": "A principal vantagem da computação em grade é: (Média)",
     "correct": 0,
     "justification": "Grades computacionais permitem compartilhar recursos de diferentes locais e instituições, coordenando processamento e dados para tarefas científicas ou intensivas. - Fonte(s): Semana 3/s3_texto_base_grades_computacionais.pdf"
   },
   {
     "id": 28,
     "week": 3,
-    "question": "Em um cluster Beowulf, a escolha da rede é crítica porque: (Difícil)",
     "options": [
-      "A comunicação entre nós pode limitar o ganho paralelo.",
-      "A rede substitui completamente os processadores.",
       "O sistema não usa mensagens.",
+      "A rede substitui completamente os processadores.",
+      "A comunicação entre nós pode limitar o ganho paralelo.",
       "O desempenho independe da interconexão.",
       "A rede impede balanceamento de carga."
     ],
-    "correct": 0,
+    "question": "Em um cluster Beowulf, a escolha da rede é crítica porque: (Difícil)",
+    "correct": 2,
     "justification": "Em aplicações paralelas distribuídas, parte do tempo é gasto comunicando dados. Redes lentas ou congestionadas aumentam latência e reduzem eficiência. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
   },
   {
     "id": 29,
     "week": 3,
-    "question": "Uma diferença central entre cluster e nuvem é: (Difícil)",
     "options": [
-      "Cluster costuma ser infraestrutura controlada/local; nuvem oferece recursos abstratos e elásticos como serviço.",
-      "Nuvem nunca usa servidores físicos.",
       "Cluster não pode executar tarefas paralelas.",
+      "Nuvem nunca usa servidores físicos.",
+      "Cluster costuma ser infraestrutura controlada/local; nuvem oferece recursos abstratos e elásticos como serviço.",
       "Nuvem não permite escalabilidade.",
       "Cluster sempre é mundial e heterogêneo."
     ],
-    "correct": 0,
+    "question": "Uma diferença central entre cluster e nuvem é: (Difícil)",
+    "correct": 2,
     "justification": "Embora ambos usem múltiplos recursos, clusters são frequentemente ambientes dedicados. A nuvem abstrai infraestrutura e oferece elasticidade, provisionamento rápido e modelos de serviço. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_computacao_em_nuvem.pdf"
   },
   {
     "id": 30,
     "week": 3,
-    "question": "I) Virtualização favorece consolidação e elasticidade na nuvem. II) Grid envolve coordenação entre domínios administrativos. III) Cluster Beowulf depende apenas de software, sem hardware de rede. (Difícil)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -416,13 +430,16 @@
       "F, V, V",
       "F, F, F"
     ],
+    "question": "I) Virtualização favorece consolidação e elasticidade na nuvem. II) Grid envolve coordenação entre domínios administrativos. III) Cluster Beowulf depende apenas de software, sem hardware de rede. (Difícil)",
     "correct": 1,
-    "justification": "Virtualização permite criar recursos flexíveis; grids cruzam domínios administrativos; Beowulf precisa de hardware real, inclusive computadores e rede. - Fonte(s): Semana 3/s3_texto_base_computacao_em_nuvem.pdf; Semana 3/s3_texto_base_grades_computacionais.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
+    "justification": "Virtualização permite criar recursos flexíveis; grids cruzam domínios administrativos; Beowulf precisa de hardware real, inclusive computadores e rede. - Fonte(s): Semana 3/s3_texto_base_computacao_em_nuvem.pdf; Semana 3/s3_texto_base_grades_computacionais.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf",
+    "slideImage": "slides/S3-10.png",
+    "slideTitle": "Resumo da Semana 3 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 31,
     "week": 4,
-    "question": "OpenMP é usado principalmente para: (Fácil)",
     "options": [
       "Programação paralela em memória compartilhada por diretivas.",
       "Compactar arquivos PDF.",
@@ -430,13 +447,13 @@
       "Enviar mensagens entre empresas.",
       "Substituir placas de vídeo."
     ],
+    "question": "OpenMP é usado principalmente para: (Fácil)",
     "correct": 0,
     "justification": "OpenMP permite paralelizar programas, especialmente em C/C++ e Fortran, usando diretivas para distribuir trabalho entre threads em sistemas de memória compartilhada. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf"
   },
   {
     "id": 32,
     "week": 4,
-    "question": "CUDA está associado principalmente a: (Fácil)",
     "options": [
       "Programação paralela em GPUs NVIDIA.",
       "Programação exclusiva para impressoras.",
@@ -444,27 +461,27 @@
       "Sistemas sem paralelismo.",
       "Protocolos bancários."
     ],
+    "question": "CUDA está associado principalmente a: (Fácil)",
     "correct": 0,
     "justification": "CUDA é uma plataforma/modelo de programação da NVIDIA para executar computação paralela em GPUs, explorando milhares de threads leves. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf"
   },
   {
     "id": 33,
     "week": 4,
-    "question": "Mineração de criptomoedas envolve: (Fácil)",
     "options": [
-      "Realizar cálculos computacionais para validar blocos/transações em certos mecanismos de consenso.",
+      "Evitar completamente gasto de energia.",
       "Imprimir dinheiro físico.",
       "Criar arquivos PDF.",
       "Desligar todos os computadores da rede.",
-      "Evitar completamente gasto de energia."
+      "Realizar cálculos computacionais para validar blocos/transações em certos mecanismos de consenso."
     ],
-    "correct": 0,
-    "justification": "Em sistemas como prova de trabalho, mineradores executam cálculos para encontrar soluções válidas, contribuindo para validação e segurança da rede, recebendo recompensas quando bem-sucedidos. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - [blog.nubank.com.br].pdf"
+    "question": "Mineração de criptomoedas envolve: (Fácil)",
+    "correct": 4,
+    "justification": "Em sistemas como prova de trabalho, mineradores executam cálculos para encontrar soluções válidas, contribuindo para validação e segurança da rede, recebendo recompensas quando bem-sucedidos. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - \\[blog.nubank.com.br].pdf"
   },
   {
     "id": 34,
     "week": 4,
-    "question": "Em OpenMP, a diretiva parallel for serve para: (Média)",
     "options": [
       "Distribuir iterações de um laço entre múltiplas threads.",
       "Apagar todos os arquivos temporários.",
@@ -472,55 +489,58 @@
       "Impedir execução simultânea.",
       "Criar uma GPU virtual."
     ],
+    "question": "Em OpenMP, a diretiva parallel for serve para: (Média)",
     "correct": 0,
     "justification": "A diretiva parallel for cria uma região paralela e divide as iterações de um loop entre threads, reduzindo o tempo quando as iterações são independentes. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf"
   },
   {
     "id": 35,
     "week": 4,
-    "question": "Associe: 1) OpenMP; 2) CUDA; 3) GPU; 4) Kernel. a) Função executada em paralelo na GPU; b) Diretivas para threads em memória compartilhada; c) Processador massivamente paralelo; d) Plataforma NVIDIA. (Média)",
     "options": [
-      "1-b, 2-d, 3-c, 4-a",
       "1-d, 2-b, 3-a, 4-c",
+      "1-b, 2-d, 3-c, 4-a",
       "1-a, 2-c, 3-b, 4-d",
       "1-c, 2-a, 3-d, 4-b",
       "1-b, 2-a, 3-d, 4-c"
     ],
-    "correct": 0,
-    "justification": "OpenMP usa diretivas; CUDA é a plataforma da NVIDIA; GPU é hardware paralelo; kernel é função executada em muitos threads na GPU. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf"
+    "question": "Associe: 1) OpenMP; 2) CUDA; 3) GPU; 4) Kernel. a) Função executada em paralelo na GPU; b) Diretivas para threads em memória compartilhada; c) Processador massivamente paralelo; d) Plataforma NVIDIA. (Média)",
+    "correct": 1,
+    "justification": "OpenMP usa diretivas; CUDA é a plataforma da NVIDIA; GPU é hardware paralelo; kernel é função executada em muitos threads na GPU. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf",
+    "slideImage": "slides/S4-5.png",
+    "slideTitle": "Resumo da Semana 4 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 36,
     "week": 4,
-    "question": "I) GPUs são boas para tarefas com muito paralelismo de dados. II) CUDA dispensa transferência de dados entre CPU e GPU. III) OpenMP é comum em memória compartilhada. (Média)",
     "options": [
-      "V, V, V",
+      "F, F, V",
       "V, F, V",
       "V, V, F",
       "F, V, V",
-      "F, F, V"
+      "V, V, V"
     ],
-    "correct": 1,
+    "question": "I) GPUs são boas para tarefas com muito paralelismo de dados. II) CUDA dispensa transferência de dados entre CPU e GPU. III) OpenMP é comum em memória compartilhada. (Média)",
+    "correct": 4,
     "justification": "GPUs são eficientes para paralelismo de dados. CUDA geralmente exige gerenciar ou considerar transferências entre memória da CPU e GPU. OpenMP é típico para paralelismo em memória compartilhada. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_texto_base_openmp.pdf"
   },
   {
     "id": 37,
     "week": 4,
-    "question": "Uma limitação comum de programas paralelos é: (Média)",
     "options": [
-      "Overhead de comunicação e sincronização.",
+      "Incompatibilidade com todos os sistemas operacionais.",
       "Impossibilidade de usar qualquer laço.",
       "Obrigação de rodar sem memória.",
       "Ausência de entrada e saída.",
-      "Incompatibilidade com todos os sistemas operacionais."
+      "Overhead de comunicação e sincronização."
     ],
-    "correct": 0,
+    "question": "Uma limitação comum de programas paralelos é: (Média)",
+    "correct": 4,
     "justification": "Paralelizar cria custos adicionais: criar threads, sincronizar, comunicar dados e lidar com dependências. Esses custos podem reduzir ou anular ganhos. - Fonte(s): Semana 4/s4_texto-base_introducao_a_computacao_paralela.pdf"
   },
   {
     "id": 38,
     "week": 4,
-    "question": "Uma aplicação ideal para CUDA tende a ter: (Difícil)",
     "options": [
       "Muitas operações similares sobre grandes volumes de dados independentes.",
       "Uma única operação sequencial com forte dependência entre passos.",
@@ -528,41 +548,44 @@
       "Código impossível de dividir.",
       "Necessidade de apenas um thread."
     ],
+    "question": "Uma aplicação ideal para CUDA tende a ter: (Difícil)",
     "correct": 0,
     "justification": "GPUs brilham quando há paralelismo massivo de dados, com muitos elementos processados por operações semelhantes, como matrizes, imagens, simulações e mineração. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_videoaula10.pdf"
   },
   {
     "id": 39,
     "week": 4,
-    "question": "Em mineração por prova de trabalho, o paralelismo é útil porque: (Difícil)",
     "options": [
-      "Muitas tentativas independentes podem ser testadas simultaneamente.",
-      "Cada tentativa precisa esperar todas as anteriores.",
       "O algoritmo proíbe GPUs.",
+      "Cada tentativa precisa esperar todas as anteriores.",
+      "Muitas tentativas independentes podem ser testadas simultaneamente.",
       "Não há cálculo envolvido.",
       "A rede não valida blocos."
     ],
-    "correct": 0,
-    "justification": "A busca por um hash válido envolve testar muitos valores. Como as tentativas são em grande parte independentes, hardware paralelo pode acelerar a exploração do espaço de busca. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - [blog.nubank.com.br].pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf"
+    "question": "Em mineração por prova de trabalho, o paralelismo é útil porque: (Difícil)",
+    "correct": 2,
+    "justification": "A busca por um hash válido envolve testar muitos valores. Como as tentativas são em grande parte independentes, hardware paralelo pode acelerar a exploração do espaço de busca. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - \\[blog.nubank.com.br].pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf"
   },
   {
     "id": 40,
     "week": 4,
-    "question": "I) OpenMP é mais natural em memória compartilhada. II) CUDA exige pensar na hierarquia de memória da GPU. III) Paralelismo sempre gera speedup linear perfeito. (Difícil)",
     "options": [
-      "V, V, V",
       "V, V, F",
+      "V, V, V",
       "V, F, F",
       "F, V, V",
       "F, F, F"
     ],
-    "correct": 1,
-    "justification": "OpenMP trabalha bem com threads em memória compartilhada; CUDA exige considerar memória global, compartilhada e registradores; speedup linear perfeito é raro por overheads, partes seriais e comunicação. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_texto-base_introducao_a_computacao_paralela.pdf"
+    "question": "I) OpenMP é mais natural em memória compartilhada. II) CUDA exige pensar na hierarquia de memória da GPU. III) Paralelismo sempre gera speedup linear perfeito. (Difícil)",
+    "correct": 0,
+    "justification": "OpenMP trabalha bem com threads em memória compartilhada; CUDA exige considerar memória global, compartilhada e registradores; speedup linear perfeito é raro por overheads, partes seriais e comunicação. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_texto-base_introducao_a_computacao_paralela.pdf",
+    "slideImage": "slides/S4-10.png",
+    "slideTitle": "Resumo da Semana 4 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 41,
     "week": 5,
-    "question": "Mensageria em sistemas distribuídos serve para: (Fácil)",
     "options": [
       "Permitir comunicação assíncrona entre componentes.",
       "Apagar mensagens automaticamente antes de serem lidas.",
@@ -570,83 +593,86 @@
       "Impedir desacoplamento.",
       "Rodar apenas sem rede."
     ],
+    "question": "Mensageria em sistemas distribuídos serve para: (Fácil)",
     "correct": 0,
     "justification": "Mensageria permite que produtores enviem mensagens para filas ou tópicos, e consumidores processem depois, reduzindo acoplamento e aumentando resiliência. - Fonte(s): Semana 5/s5-Por que você deveria utilizar mensageria na sua aplicação - Dinamiz.pdf"
   },
   {
     "id": 42,
     "week": 5,
-    "question": "No padrão publish-subscribe: (Fácil)",
     "options": [
-      "Publicadores enviam eventos para tópicos, e assinantes recebem os eventos de interesse.",
-      "Todos os componentes precisam conhecer diretamente todos os destinatários.",
       "Não existem consumidores.",
+      "Todos os componentes precisam conhecer diretamente todos os destinatários.",
+      "Publicadores enviam eventos para tópicos, e assinantes recebem os eventos de interesse.",
       "Mensagens são sempre processadas por um único servidor local.",
       "O padrão impede escalabilidade."
     ],
-    "correct": 0,
+    "question": "No padrão publish-subscribe: (Fácil)",
+    "correct": 2,
     "justification": "Pub/Sub desacopla produtores e consumidores por meio de tópicos/canais. Quem publica não precisa saber quem receberá; assinantes escolhem os tópicos relevantes. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf"
   },
   {
     "id": 43,
     "week": 5,
-    "question": "Apache Kafka é conhecido como: (Fácil)",
     "options": [
-      "Plataforma distribuída de streaming/eventos baseada em tópicos e logs.",
       "Editor de imagens.",
+      "Plataforma distribuída de streaming/eventos baseada em tópicos e logs.",
       "Sistema operacional móvel.",
       "Linguagem de programação funcional.",
       "Driver de impressora."
     ],
-    "correct": 0,
+    "question": "Apache Kafka é conhecido como: (Fácil)",
+    "correct": 1,
     "justification": "Kafka armazena eventos em tópicos particionados e permite publicação, assinatura, retenção e processamento de fluxos em alta escala. - Fonte(s): Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5-Uma introdução ao Apache Kafka, lições aprendidas em um ambiente.pdf"
   },
   {
     "id": 44,
     "week": 5,
-    "question": "Associe: 1) Produtor; 2) Consumidor; 3) Broker; 4) Tópico. a) Recebe/processa mensagens; b) Envia mensagens; c) Intermediário/servidor; d) Canal lógico de eventos. (Média)",
     "options": [
-      "1-b, 2-a, 3-c, 4-d",
+      "1-b, 2-c, 3-a, 4-d",
       "1-a, 2-b, 3-d, 4-c",
       "1-c, 2-d, 3-a, 4-b",
       "1-d, 2-c, 3-b, 4-a",
-      "1-b, 2-c, 3-a, 4-d"
+      "1-b, 2-a, 3-c, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Produtor; 2) Consumidor; 3) Broker; 4) Tópico. a) Recebe/processa mensagens; b) Envia mensagens; c) Intermediário/servidor; d) Canal lógico de eventos. (Média)",
+    "correct": 4,
     "justification": "Produtores publicam mensagens; consumidores leem; brokers intermedeiam e armazenam; tópicos organizam fluxos de eventos. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf; Semana 5/s5-O que é Apache Kafka.pdf"
   },
   {
     "id": 45,
     "week": 5,
-    "question": "Hadoop é associado principalmente a: (Média)",
     "options": [
-      "Armazenamento e processamento distribuído de grandes volumes de dados.",
+      "Substituição de todos os sistemas de arquivos locais por PDF.",
       "Renderização 3D em navegador.",
       "Mineração exclusiva de criptomoedas.",
-      "Substituição de todos os sistemas de arquivos locais por PDF.",
+      "Armazenamento e processamento distribuído de grandes volumes de dados.",
       "Comunicação Bluetooth."
     ],
-    "correct": 0,
-    "justification": "Hadoop inclui HDFS para armazenamento distribuído e MapReduce/ecossistema para processamento de grandes dados em clusters. - Fonte(s): Semana 5/s5_texto_base_apache_hadoop.pdf"
+    "question": "Hadoop é associado principalmente a: (Média)",
+    "correct": 3,
+    "justification": "Hadoop inclui HDFS para armazenamento distribuído e MapReduce/ecossistema para processamento de grandes dados em clusters. - Fonte(s): Semana 5/s5_texto_base_apache_hadoop.pdf",
+    "slideImage": "slides/S5-5.png",
+    "slideTitle": "Resumo da Semana 5 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 46,
     "week": 5,
-    "question": "Apache Spark diferencia-se por: (Média)",
     "options": [
-      "Processamento distribuído rápido, frequentemente em memória, para batch e streaming.",
       "Ser apenas um editor de texto.",
+      "Processamento distribuído rápido, frequentemente em memória, para batch e streaming.",
       "Exigir que todos os dados caibam em uma planilha local.",
       "Não executar em clusters.",
       "Eliminar completamente programação."
     ],
-    "correct": 0,
+    "question": "Apache Spark diferencia-se por: (Média)",
+    "correct": 1,
     "justification": "Spark é uma engine distribuída para processamento de dados, com APIs de alto nível, execução em memória e suporte a SQL, streaming, machine learning e grafos. - Fonte(s): Semana 5/s5_texto_base_apache_spark.pdf"
   },
   {
     "id": 47,
     "week": 5,
-    "question": "I) IoT pode gerar fluxos contínuos de dados. II) ThingSpeak é usado para coletar/visualizar dados IoT. III) Sistemas de mensageria são inúteis em IoT. (Média)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -654,13 +680,13 @@
       "F, V, F",
       "F, F, F"
     ],
+    "question": "I) IoT pode gerar fluxos contínuos de dados. II) ThingSpeak é usado para coletar/visualizar dados IoT. III) Sistemas de mensageria são inúteis em IoT. (Média)",
     "correct": 1,
     "justification": "Dispositivos IoT geram eventos e leituras continuamente. Plataformas como ThingSpeak ajudam a coletar e visualizar dados. Mensageria é útil para transportar eventos de sensores. - Fonte(s): Semana 5/s5-Learn More - ThingSpeak IoT.pdf"
   },
   {
     "id": 48,
     "week": 5,
-    "question": "Partições em Kafka ajudam porque: (Difícil)",
     "options": [
       "Permitem paralelismo, escalabilidade e distribuição dos dados de um tópico.",
       "Impedem múltiplos consumidores.",
@@ -668,27 +694,27 @@
       "Eliminam necessidade de brokers.",
       "Transformam eventos em arquivos PDF."
     ],
+    "question": "Partições em Kafka ajudam porque: (Difícil)",
     "correct": 0,
     "justification": "Um tópico pode ser dividido em partições distribuídas entre brokers. Isso permite maior vazão, paralelismo de consumo e tolerância a falhas quando combinado com replicação. - Fonte(s): Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5-Uma introdução ao Apache Kafka, lições aprendidas em um ambiente.pdf"
   },
   {
     "id": 49,
     "week": 5,
-    "question": "A rápida aceitação do Pix está relacionada, entre outros fatores, a: (Difícil)",
     "options": [
-      "Infraestrutura digital, disponibilidade, integração bancária e experiência de uso simples.",
-      "Funcionamento apenas em horário bancário.",
       "Ausência de sistemas distribuídos.",
+      "Funcionamento apenas em horário bancário.",
+      "Infraestrutura digital, disponibilidade, integração bancária e experiência de uso simples.",
       "Proibição de APIs.",
       "Processamento manual de todas as transações."
     ],
-    "correct": 0,
+    "question": "A rápida aceitação do Pix está relacionada, entre outros fatores, a: (Difícil)",
+    "correct": 2,
     "justification": "O Pix depende de infraestrutura confiável, interoperabilidade entre instituições, disponibilidade quase contínua, baixa fricção para usuários e integração com sistemas financeiros. - Fonte(s): Semana 5/s5-A magia por trás do Pix - Revista IstoÉ Dinheiro.pdf; Semana 5/s5-Como a tecnologia de ponta contribuiu para a rápida aceitação do Pix.pdf; Semana 5/s5-rh-central-bank-of-brazil-case-study-f26354pr-202012-a4-ptbr.pdf"
   },
   {
     "id": 50,
     "week": 5,
-    "question": "I) Pub/Sub reduz acoplamento temporal e espacial. II) Kafka pode reter eventos para consumo posterior. III) Spark e Hadoop não têm relação com big data. (Difícil)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -696,13 +722,16 @@
       "F, V, V",
       "F, F, F"
     ],
+    "question": "I) Pub/Sub reduz acoplamento temporal e espacial. II) Kafka pode reter eventos para consumo posterior. III) Spark e Hadoop não têm relação com big data. (Difícil)",
     "correct": 1,
-    "justification": "Pub/Sub desacopla produtores e consumidores; Kafka mantém logs/eventos por política de retenção; Hadoop e Spark são tecnologias centrais em big data. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf; Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5_texto_base_apache_hadoop.pdf; Semana 5/s5_texto_base_apache_spark.pdf"
+    "justification": "Pub/Sub desacopla produtores e consumidores; Kafka mantém logs/eventos por política de retenção; Hadoop e Spark são tecnologias centrais em big data. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf; Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5_texto_base_apache_hadoop.pdf; Semana 5/s5_texto_base_apache_spark.pdf",
+    "slideImage": "slides/S5-10.png",
+    "slideTitle": "Resumo da Semana 5 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 51,
     "week": 6,
-    "question": "Teste de carga avalia: (Fácil)",
     "options": [
       "O comportamento do sistema sob uma carga esperada ou planejada.",
       "Apenas a cor da interface.",
@@ -710,41 +739,41 @@
       "O número de arquivos PDF.",
       "A temperatura ambiente."
     ],
+    "question": "Teste de carga avalia: (Fácil)",
     "correct": 0,
     "justification": "Teste de carga mede como o sistema responde quando submetido a volumes previstos de usuários, requisições ou transações. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf; Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
   },
   {
     "id": 52,
     "week": 6,
-    "question": "Teste de estresse busca: (Fácil)",
     "options": [
-      "Identificar limites e comportamento do sistema além da carga normal.",
-      "Garantir que o sistema nunca falhe.",
       "Executar apenas um usuário por vez.",
+      "Garantir que o sistema nunca falhe.",
+      "Identificar limites e comportamento do sistema além da carga normal.",
       "Testar exclusivamente layout.",
       "Medir somente espaço em disco."
     ],
-    "correct": 0,
+    "question": "Teste de estresse busca: (Fácil)",
+    "correct": 2,
     "justification": "Teste de estresse aumenta a carga até ultrapassar condições normais, observando degradação, falhas, recuperação e capacidade limite. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf"
   },
   {
     "id": 53,
     "week": 6,
-    "question": "Apache JMeter é usado para: (Fácil)",
     "options": [
-      "Testes de performance/carga em aplicações e serviços.",
-      "Editar vídeos.",
       "Criar circuitos eletrônicos.",
+      "Editar vídeos.",
+      "Testes de performance/carga em aplicações e serviços.",
       "Desenvolver sistemas operacionais.",
       "Minerar criptomoedas obrigatoriamente."
     ],
-    "correct": 0,
+    "question": "Apache JMeter é usado para: (Fácil)",
+    "correct": 2,
     "justification": "JMeter permite simular usuários, criar planos de teste, enviar requisições HTTP/API e coletar métricas de desempenho. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
   },
   {
     "id": 54,
     "week": 6,
-    "question": "Throughput representa: (Média)",
     "options": [
       "Quantidade de operações/requisições processadas por unidade de tempo.",
       "Tempo que a tela fica azul.",
@@ -752,41 +781,44 @@
       "Número de linhas de código comentadas.",
       "Quantidade de usuários cadastrados historicamente."
     ],
+    "question": "Throughput representa: (Média)",
     "correct": 0,
     "justification": "Throughput mede vazão, como requisições por segundo. É uma métrica essencial para avaliar capacidade de processamento. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula15.pdf"
   },
   {
     "id": 55,
     "week": 6,
-    "question": "Associe: 1) Latência; 2) Tempo de resposta; 3) Throughput; 4) Taxa de erro. a) Falhas por total; b) Operações por tempo; c) Atraso de comunicação/processamento; d) Tempo até concluir requisição. (Média)",
     "options": [
-      "1-c, 2-d, 3-b, 4-a",
+      "1-b, 2-a, 3-d, 4-c",
       "1-a, 2-b, 3-c, 4-d",
       "1-d, 2-c, 3-a, 4-b",
-      "1-b, 2-a, 3-d, 4-c",
+      "1-c, 2-d, 3-b, 4-a",
       "1-c, 2-a, 3-d, 4-b"
     ],
-    "correct": 0,
-    "justification": "Latência é atraso; tempo de resposta inclui o ciclo da requisição; throughput mede vazão; taxa de erro mede proporção de falhas. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula15.pdf"
+    "question": "Associe: 1) Latência; 2) Tempo de resposta; 3) Throughput; 4) Taxa de erro. a) Falhas por total; b) Operações por tempo; c) Atraso de comunicação/processamento; d) Tempo até concluir requisição. (Média)",
+    "correct": 3,
+    "justification": "Latência é atraso; tempo de resposta inclui o ciclo da requisição; throughput mede vazão; taxa de erro mede proporção de falhas. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula15.pdf",
+    "slideImage": "slides/S6-5.png",
+    "slideTitle": "Resumo da Semana 6 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 56,
     "week": 6,
-    "question": "I) Testes devem ter cenário e carga bem definidos. II) Resultados de performance dependem do ambiente. III) Uma única execução sempre prova estabilidade definitiva. (Média)",
     "options": [
       "V, V, V",
-      "V, V, F",
       "V, F, V",
+      "V, V, F",
       "F, V, F",
       "F, F, F"
     ],
-    "correct": 1,
+    "question": "I) Testes devem ter cenário e carga bem definidos. II) Resultados de performance dependem do ambiente. III) Uma única execução sempre prova estabilidade definitiva. (Média)",
+    "correct": 2,
     "justification": "Testes precisam de planejamento, massa de dados, carga e ambiente controlados. Uma única execução não garante estabilidade; é necessário repetir e analisar variação. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf; Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf"
   },
   {
     "id": 57,
     "week": 6,
-    "question": "Um gargalo de desempenho é: (Média)",
     "options": [
       "Um componente que limita a capacidade global do sistema.",
       "Um recurso que sempre sobra.",
@@ -794,13 +826,13 @@
       "Uma métrica sem relação com performance.",
       "Um erro exclusivo de interface."
     ],
+    "question": "Um gargalo de desempenho é: (Média)",
     "correct": 0,
     "justification": "Gargalos podem ocorrer em CPU, memória, disco, rede, banco de dados ou código. O desempenho total fica limitado pelo componente mais restritivo. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula16.pdf"
   },
   {
     "id": 58,
     "week": 6,
-    "question": "Em JMeter, um Thread Group representa: (Difícil)",
     "options": [
       "Conjunto de usuários virtuais, com configuração de quantidade, ramp-up e repetições.",
       "Uma tabela de banco de dados.",
@@ -808,27 +840,27 @@
       "Um plugin gráfico obrigatório.",
       "Uma thread real única e fixa do servidor."
     ],
+    "question": "Em JMeter, um Thread Group representa: (Difícil)",
     "correct": 0,
     "justification": "O Thread Group define quantos usuários virtuais serão simulados, como eles entram no teste e quantas vezes executam o plano. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
   },
   {
     "id": 59,
     "week": 6,
-    "question": "Se o tempo de resposta aumenta muito enquanto o throughput estabiliza, isso pode indicar: (Difícil)",
     "options": [
-      "Saturação/gargalo em algum recurso do sistema.",
+      "Que a rede foi removida.",
       "Melhoria linear perfeita.",
       "Ausência de carga.",
       "Que não há usuários usando o sistema.",
-      "Que a rede foi removida."
+      "Saturação/gargalo em algum recurso do sistema."
     ],
-    "correct": 0,
+    "question": "Se o tempo de resposta aumenta muito enquanto o throughput estabiliza, isso pode indicar: (Difícil)",
+    "correct": 4,
     "justification": "Quando a carga cresce e o sistema não aumenta a vazão, as requisições começam a enfileirar, elevando tempo de resposta. Isso indica saturação de algum recurso. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula17.pdf"
   },
   {
     "id": 60,
     "week": 6,
-    "question": "I) Teste de pico avalia aumentos súbitos de carga. II) Teste de endurance observa comportamento por longo período. III) Teste de performance deve ignorar taxa de erro. (Difícil)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -836,41 +868,44 @@
       "F, V, V",
       "F, F, F"
     ],
+    "question": "I) Teste de pico avalia aumentos súbitos de carga. II) Teste de endurance observa comportamento por longo período. III) Teste de performance deve ignorar taxa de erro. (Difícil)",
     "correct": 1,
-    "justification": "Teste de pico verifica resposta a aumentos repentinos; endurance/soak test observa estabilidade ao longo do tempo; taxa de erro é métrica essencial. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf; Semana 6/s6_videoaula18.pdf"
+    "justification": "Teste de pico verifica resposta a aumentos repentinos; endurance/soak test observa estabilidade ao longo do tempo; taxa de erro é métrica essencial. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf; Semana 6/s6_videoaula18.pdf",
+    "slideImage": "slides/S6-10.png",
+    "slideTitle": "Resumo da Semana 6 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 61,
     "week": 7,
-    "question": "Docker é usado principalmente para: (Fácil)",
     "options": [
-      "Criar e executar aplicações em contêineres.",
+      "Criar hardware físico.",
       "Editar imagens manualmente.",
       "Substituir toda a Internet.",
-      "Criar hardware físico.",
+      "Criar e executar aplicações em contêineres.",
       "Eliminar dependências de software sem empacotá-las."
     ],
-    "correct": 0,
+    "question": "Docker é usado principalmente para: (Fácil)",
+    "correct": 3,
     "justification": "Docker empacota aplicação e dependências em contêineres, facilitando portabilidade, isolamento e implantação consistente. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
   },
   {
     "id": 62,
     "week": 7,
-    "question": "Microserviços são: (Fácil)",
     "options": [
-      "Pequenos serviços independentes que compõem uma aplicação maior.",
+      "Serviços que não se comunicam nunca.",
       "Um único programa monolítico obrigatório.",
       "Arquivos PDF executáveis.",
-      "Serviços que não se comunicam nunca.",
+      "Pequenos serviços independentes que compõem uma aplicação maior.",
       "Apenas scripts sem rede."
     ],
-    "correct": 0,
+    "question": "Microserviços são: (Fácil)",
+    "correct": 3,
     "justification": "Microserviços dividem uma aplicação em serviços menores, independentes, implantáveis separadamente e comunicando-se por APIs/mensagens. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
   },
   {
     "id": 63,
     "week": 7,
-    "question": "OpenShift é: (Fácil)",
     "options": [
       "Plataforma de contêineres baseada em Kubernetes, com recursos corporativos.",
       "Um editor de planilhas.",
@@ -878,27 +913,27 @@
       "Uma linguagem de programação.",
       "Uma placa de rede."
     ],
+    "question": "OpenShift é: (Fácil)",
     "correct": 0,
     "justification": "Red Hat OpenShift é uma plataforma para desenvolver, implantar e operar aplicações em contêineres, construída sobre Kubernetes e adicionando ferramentas de segurança, builds, rotas e gestão. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/s7-Introdução ao Red Hat OpenShift no Azure - Azure Red Hat OpenShift.pdf"
   },
   {
     "id": 64,
     "week": 7,
-    "question": "Associe: 1) Imagem; 2) Contêiner; 3) Pod; 4) Route/Ingress. a) Instância em execução; b) Modelo empacotado; c) Exposição de serviço; d) Unidade básica que agrupa contêineres no Kubernetes. (Média)",
     "options": [
-      "1-b, 2-a, 3-d, 4-c",
-      "1-a, 2-b, 3-c, 4-d",
       "1-c, 2-d, 3-a, 4-b",
+      "1-a, 2-b, 3-c, 4-d",
+      "1-b, 2-a, 3-d, 4-c",
       "1-d, 2-c, 3-b, 4-a",
       "1-b, 2-c, 3-a, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Imagem; 2) Contêiner; 3) Pod; 4) Route/Ingress. a) Instância em execução; b) Modelo empacotado; c) Exposição de serviço; d) Unidade básica que agrupa contêineres no Kubernetes. (Média)",
+    "correct": 2,
     "justification": "Imagem é o pacote; contêiner é sua execução; pod é a unidade Kubernetes que hospeda contêineres; route/ingress expõe serviços para acesso externo. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf; Semana 7/s7-Red Hat OpenShift.pdf"
   },
   {
     "id": 65,
     "week": 7,
-    "question": "Kubernetes/OpenShift ajudam em microserviços porque: (Média)",
     "options": [
       "Automatizam implantação, escalonamento, recuperação e exposição de contêineres.",
       "Proíbem múltiplos serviços.",
@@ -906,13 +941,16 @@
       "Não monitoram estado desejado.",
       "Funcionam apenas sem rede."
     ],
+    "question": "Kubernetes/OpenShift ajudam em microserviços porque: (Média)",
     "correct": 0,
-    "justification": "Orquestradores mantêm o estado desejado, reiniciam contêineres com falha, escalam réplicas e gerenciam serviços e rede. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf"
+    "justification": "Orquestradores mantêm o estado desejado, reiniciam contêineres com falha, escalam réplicas e gerenciam serviços e rede. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf",
+    "slideImage": "slides/S7-5.png",
+    "slideTitle": "Resumo da Semana 7 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 66,
     "week": 7,
-    "question": "I) Contêineres compartilham o kernel do host. II) VMs incluem sistema operacional convidado completo. III) Contêineres e VMs são exatamente iguais. (Média)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -920,55 +958,55 @@
       "F, V, F",
       "F, F, F"
     ],
+    "question": "I) Contêineres compartilham o kernel do host. II) VMs incluem sistema operacional convidado completo. III) Contêineres e VMs são exatamente iguais. (Média)",
     "correct": 1,
     "justification": "Contêineres compartilham o kernel e isolam processos; VMs virtualizam hardware e executam sistemas convidados completos. São tecnologias relacionadas, mas diferentes. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
   },
   {
     "id": 67,
     "week": 7,
-    "question": "Um benefício de usar imagens de contêiner é: (Média)",
     "options": [
-      "Reprodutibilidade do ambiente entre desenvolvimento, teste e produção.",
-      "Garantir que bugs nunca ocorram.",
       "Eliminar necessidade de rede em microserviços.",
+      "Garantir que bugs nunca ocorram.",
+      "Reprodutibilidade do ambiente entre desenvolvimento, teste e produção.",
       "Transformar código em hardware.",
       "Impedir versionamento."
     ],
-    "correct": 0,
+    "question": "Um benefício de usar imagens de contêiner é: (Média)",
+    "correct": 2,
     "justification": "A imagem empacota dependências e configuração, reduzindo diferenças entre ambientes e facilitando implantação consistente. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
   },
   {
     "id": 68,
     "week": 7,
-    "question": "Em OpenShift, um cluster normalmente envolve: (Difícil)",
     "options": [
-      "Nós de controle e nós de trabalho executando cargas em contêineres.",
-      "Um único arquivo de texto sem servidores.",
       "Apenas um navegador web sem backend.",
+      "Um único arquivo de texto sem servidores.",
+      "Nós de controle e nós de trabalho executando cargas em contêineres.",
       "Ausência de rede entre nós.",
       "Proibição de imagens."
     ],
-    "correct": 0,
+    "question": "Em OpenShift, um cluster normalmente envolve: (Difícil)",
+    "correct": 2,
     "justification": "Um cluster Kubernetes/OpenShift possui plano de controle para orquestração e nós de trabalho onde pods/contêineres são executados. - Fonte(s): Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf; Semana 7/s7-Introdução ao Red Hat OpenShift no Azure - Azure Red Hat OpenShift.pdf"
   },
   {
     "id": 69,
     "week": 7,
-    "question": "A relação entre Docker e microserviços é forte porque: (Difícil)",
     "options": [
-      "Contêineres facilitam empacotar, isolar e implantar cada serviço independentemente.",
+      "Docker substitui APIs.",
       "Docker obriga toda aplicação a ser monolítica.",
       "Microserviços não precisam de implantação.",
       "Contêineres impedem escalabilidade horizontal.",
-      "Docker substitui APIs."
+      "Contêineres facilitam empacotar, isolar e implantar cada serviço independentemente."
     ],
-    "correct": 0,
+    "question": "A relação entre Docker e microserviços é forte porque: (Difícil)",
+    "correct": 4,
     "justification": "Cada microserviço pode ser empacotado em sua própria imagem, implantado separadamente, escalado conforme demanda e atualizado com menor impacto no restante do sistema. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
   },
   {
     "id": 70,
     "week": 7,
-    "question": "I) OpenShift adiciona recursos corporativos ao Kubernetes. II) Deployments ajudam a manter réplicas desejadas. III) Orquestração elimina a necessidade de observabilidade. (Difícil)",
     "options": [
       "V, V, V",
       "V, V, F",
@@ -976,7 +1014,11 @@
       "F, V, V",
       "F, F, F"
     ],
+    "question": "I) OpenShift adiciona recursos corporativos ao Kubernetes. II) Deployments ajudam a manter réplicas desejadas. III) Orquestração elimina a necessidade de observabilidade. (Difícil)",
     "correct": 1,
-    "justification": "OpenShift amplia Kubernetes com ferramentas integradas. Deployments/DeploymentConfigs ajudam a manter estado desejado. Observabilidade continua necessária para monitorar saúde, desempenho e falhas. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf"
+    "justification": "OpenShift amplia Kubernetes com ferramentas integradas. Deployments/DeploymentConfigs ajudam a manter estado desejado. Observabilidade continua necessária para monitorar saúde, desempenho e falhas. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf",
+    "slideImage": "slides/S7-10.png",
+    "slideTitle": "Resumo da Semana 7 (Q6 a Q10)",
+    "slidePage": 10
   }
 ]

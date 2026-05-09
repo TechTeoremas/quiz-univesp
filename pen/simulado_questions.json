@@ -2,21 +2,20 @@
   {
     "id": 1,
     "week": 1,
-    "question": "No contexto da administração, planejar significa principalmente: (Fácil)",
     "options": [
-      "Definir objetivos e caminhos para alcançá-los.",
-      "Executar tarefas sem metas previamente estabelecidas.",
       "Evitar análise do ambiente externo.",
+      "Executar tarefas sem metas previamente estabelecidas.",
+      "Definir objetivos e caminhos para alcançá-los.",
       "Substituir decisões por improvisação permanente.",
       "Eliminar controles e indicadores."
     ],
-    "correct": 0,
+    "question": "No contexto da administração, planejar significa principalmente: (Fácil)",
+    "correct": 2,
     "justification": "Planejamento é a função administrativa ligada à definição de objetivos, análise de alternativas e escolha de cursos de ação. Ele orienta decisões futuras e reduz incertezas, conectando recursos disponíveis aos resultados desejados. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1_slides_videoaula1.pdf"
   },
   {
     "id": 2,
     "week": 1,
-    "question": "O planejamento estratégico é mais associado ao nível: (Fácil)",
     "options": [
       "Operacional de rotina diária.",
       "Estratégico, de longo prazo e orientação global da organização.",
@@ -24,13 +23,13 @@
       "Apenas ao atendimento ao cliente.",
       "Somente à manutenção predial."
     ],
+    "question": "O planejamento estratégico é mais associado ao nível: (Fácil)",
     "correct": 1,
     "justification": "O planejamento estratégico define rumos amplos, missão, visão, objetivos e estratégias da organização. Ele orienta decisões de longo prazo e serve de base para planos táticos e operacionais. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/Texto Apoio 1 - Cap 2 - Planejamento Estratégico.pdf"
   },
   {
     "id": 3,
     "week": 1,
-    "question": "Um plano de negócio serve principalmente para: (Fácil)",
     "options": [
       "Descrever a oportunidade, o modelo de negócio, o mercado, a operação e a viabilidade do empreendimento.",
       "Substituir todos os documentos contábeis.",
@@ -38,83 +37,86 @@
       "Impedir análise de clientes e concorrentes.",
       "Eliminar a necessidade de estratégia."
     ],
+    "question": "Um plano de negócio serve principalmente para: (Fácil)",
     "correct": 0,
     "justification": "O plano de negócio organiza informações sobre proposta de valor, mercado, clientes, concorrência, operação, marketing e projeções financeiras. Ele ajuda a avaliar a viabilidade e comunicar o projeto a sócios, investidores ou gestores. - Fonte(s): Semana 1/s1-Texto-base 3 - Plano de Negócio cap3.pdf; Semana 1/s1_slides_videoaula2.pdf"
   },
   {
     "id": 4,
     "week": 1,
-    "question": "Avalie: I) Missão expressa a razão de existir da organização. II) Visão aponta uma condição futura desejada. III) Valores orientam comportamentos e princípios. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, V",
+      "F, F, V",
       "V, F, V",
       "F, V, V",
       "V, V, F",
-      "F, F, V"
+      "V, V, V"
     ],
-    "correct": 0,
+    "question": "Avalie: I) Missão expressa a razão de existir da organização. II) Visão aponta uma condição futura desejada. III) Valores orientam comportamentos e princípios. Assinale a sequência correta. (Média)",
+    "correct": 4,
     "justification": "Missão, visão e valores são elementos clássicos da identidade estratégica. A missão define propósito atual, a visão expressa aspiração futura e os valores orientam decisões e comportamentos. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1-Cap 6 - Intro a Administração - Antonio Cesar.pdf"
   },
   {
     "id": 5,
     "week": 1,
-    "question": "Associe: 1) Missão; 2) Visão; 3) Objetivos; 4) Estratégias. a) Onde se quer chegar; b) Razão de existir; c) Resultados pretendidos; d) Caminhos para competir/agir. (Média)",
     "options": [
-      "1-b, 2-a, 3-c, 4-d",
       "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-a, 3-c, 4-d",
       "1-c, 2-d, 3-a, 4-b",
       "1-d, 2-c, 3-b, 4-a",
       "1-b, 2-c, 3-a, 4-d"
     ],
-    "correct": 0,
-    "justification": "A identidade estratégica parte do propósito organizacional e se desdobra em objetivos e estratégias. Missão responde por que a organização existe; visão indica futuro desejado; objetivos tornam resultados mensuráveis; estratégias indicam meios para alcançá-los. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/Texto Apoio 2 - Cap 2 - Luiz Arnaldo.pdf"
+    "question": "Associe: 1) Missão; 2) Visão; 3) Objetivos; 4) Estratégias. a) Onde se quer chegar; b) Razão de existir; c) Resultados pretendidos; d) Caminhos para competir/agir. (Média)",
+    "correct": 1,
+    "justification": "A identidade estratégica parte do propósito organizacional e se desdobra em objetivos e estratégias. Missão responde por que a organização existe; visão indica futuro desejado; objetivos tornam resultados mensuráveis; estratégias indicam meios para alcançá-los. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/Texto Apoio 2 - Cap 2 - Luiz Arnaldo.pdf",
+    "slideImage": "slides/S1-5.png",
+    "slideTitle": "Resumo da Semana 1 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 6,
     "week": 1,
-    "question": "A análise SWOT/FOFA é usada para: (Média)",
     "options": [
-      "Relacionar forças, fraquezas, oportunidades e ameaças.",
-      "Calcular apenas folha de pagamento.",
       "Evitar qualquer análise ambiental.",
+      "Calcular apenas folha de pagamento.",
+      "Relacionar forças, fraquezas, oportunidades e ameaças.",
       "Substituir a execução do plano.",
       "Medir somente estoque físico."
     ],
-    "correct": 0,
+    "question": "A análise SWOT/FOFA é usada para: (Média)",
+    "correct": 2,
     "justification": "SWOT/FOFA integra análise interna e externa. Forças e fraquezas são internas; oportunidades e ameaças vêm do ambiente externo. A ferramenta ajuda a formular estratégias coerentes com a situação da organização. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1_slides_videoaula1.pdf"
   },
   {
     "id": 7,
     "week": 1,
-    "question": "No processo administrativo, o controle é importante porque: (Média)",
     "options": [
-      "Compara resultados alcançados com objetivos e permite correções.",
+      "Impede uso de indicadores.",
       "Elimina a necessidade de planejamento.",
       "Serve apenas para punir pessoas.",
-      "Impede uso de indicadores.",
+      "Compara resultados alcançados com objetivos e permite correções.",
       "Ocorre antes da definição de metas."
     ],
-    "correct": 0,
+    "question": "No processo administrativo, o controle é importante porque: (Média)",
+    "correct": 3,
     "justification": "Controle fecha o ciclo administrativo: mede desempenho, compara com padrões/metas e orienta ações corretivas. Sem controle, o plano pode se afastar dos objetivos sem que a gestão perceba. - Fonte(s): Semana 1/Cap 6 - Intro a Administração - Antonio Cesar.pdf; Semana 1/s1-Introdução à Administração, 8ª edição-P1.pdf"
   },
   {
     "id": 8,
     "week": 1,
-    "question": "Uma falha comum em planejamento estratégico é: (Difícil)",
     "options": [
-      "Formular objetivos sem diagnóstico ambiental e sem indicadores de acompanhamento.",
+      "Converter estratégias em ações.",
       "Analisar concorrentes e clientes.",
       "Definir missão e visão.",
-      "Converter estratégias em ações.",
+      "Formular objetivos sem diagnóstico ambiental e sem indicadores de acompanhamento.",
       "Monitorar resultados."
     ],
-    "correct": 0,
+    "question": "Uma falha comum em planejamento estratégico é: (Difícil)",
+    "correct": 3,
     "justification": "Estratégias devem nascer de diagnóstico consistente e precisam ser traduzidas em metas e indicadores. Sem diagnóstico, o plano pode ser desconectado da realidade; sem indicadores, não há como acompanhar execução. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1_slides_videoaula2.pdf"
   },
   {
     "id": 9,
     "week": 1,
-    "question": "I) Plano de negócio pode reduzir incertezas. II) Planejamento estratégico dispensa análise externa. III) Objetivos devem preferencialmente orientar ações e avaliação. Assinale a sequência correta. (Difícil)",
     "options": [
       "V, F, V",
       "V, V, V",
@@ -122,27 +124,30 @@
       "V, V, F",
       "F, V, F"
     ],
+    "question": "I) Plano de negócio pode reduzir incertezas. II) Planejamento estratégico dispensa análise externa. III) Objetivos devem preferencialmente orientar ações e avaliação. Assinale a sequência correta. (Difícil)",
     "correct": 0,
     "justification": "O plano de negócio organiza hipóteses e dados, reduzindo incerteza. O planejamento estratégico não dispensa análise externa; pelo contrário, depende dela. Objetivos orientam ação e avaliação de desempenho. - Fonte(s): Semana 1/s1-Texto-base 3 - Plano de Negócio cap3.pdf; Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf"
   },
   {
     "id": 10,
     "week": 1,
-    "question": "A relação correta entre planejamento estratégico e plano de negócio é: (Difícil)",
     "options": [
-      "O planejamento estratégico orienta decisões amplas; o plano de negócio detalha a viabilidade e operação de um empreendimento/projeto.",
+      "O planejamento estratégico trata apenas de compras operacionais.",
       "Ambos são documentos idênticos e sempre substituíveis.",
       "O plano de negócio elimina missão, mercado e finanças.",
-      "O planejamento estratégico trata apenas de compras operacionais.",
+      "O planejamento estratégico orienta decisões amplas; o plano de negócio detalha a viabilidade e operação de um empreendimento/projeto.",
       "Nenhum dos dois considera o ambiente."
     ],
-    "correct": 0,
-    "justification": "O planejamento estratégico define rumos e escolhas organizacionais. O plano de negócio aprofunda uma oportunidade ou empreendimento, descrevendo mercado, operação, marketing e viabilidade econômico-financeira. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1-Texto-base 3 - Plano de Negócio cap3.pdf"
+    "question": "A relação correta entre planejamento estratégico e plano de negócio é: (Difícil)",
+    "correct": 3,
+    "justification": "O planejamento estratégico define rumos e escolhas organizacionais. O plano de negócio aprofunda uma oportunidade ou empreendimento, descrevendo mercado, operação, marketing e viabilidade econômico-financeira. - Fonte(s): Semana 1/s1-Texto Base 1 - Planejamento Estratégico Cap 1.pdf; Semana 1/s1-Texto-base 3 - Plano de Negócio cap3.pdf",
+    "slideImage": "slides/S1-10.png",
+    "slideTitle": "Resumo da Semana 1 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 11,
     "week": 2,
-    "question": "Administração estratégica pode ser entendida como: (Fácil)",
     "options": [
       "Processo de análise, formulação, implementação e controle de estratégias.",
       "Execução de tarefas sem objetivos.",
@@ -150,69 +155,72 @@
       "Um método para evitar decisões de longo prazo.",
       "Um substituto da liderança."
     ],
+    "question": "Administração estratégica pode ser entendida como: (Fácil)",
     "correct": 0,
     "justification": "A administração estratégica organiza o processo pelo qual a organização analisa ambiente, define direção, formula estratégias, implementa ações e acompanha resultados. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula4.pdf"
   },
   {
     "id": 12,
     "week": 2,
-    "question": "A estratégia organizacional busca principalmente: (Fácil)",
     "options": [
-      "Definir como a organização competirá e alcançará seus objetivos.",
-      "Eliminar qualquer necessidade de escolha.",
       "Impedir adaptação ao ambiente.",
+      "Eliminar qualquer necessidade de escolha.",
+      "Definir como a organização competirá e alcançará seus objetivos.",
       "Tratar apenas de folha de pagamento.",
       "Substituir clientes por indicadores internos."
     ],
-    "correct": 0,
+    "question": "A estratégia organizacional busca principalmente: (Fácil)",
+    "correct": 2,
     "justification": "Estratégia envolve escolhas sobre posicionamento, recursos, vantagens, mercados e ações que permitam atingir objetivos em um ambiente competitivo. - Fonte(s): Semana 2/s2-Aprof. Tema - Administração Estratégica planejamento - cap1.pdf; Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf"
   },
   {
     "id": 13,
     "week": 2,
-    "question": "A análise do ambiente externo ajuda a identificar: (Fácil)",
     "options": [
-      "Oportunidades e ameaças.",
+      "Apenas estilo de liderança.",
       "Apenas salários internos.",
       "Somente layout da empresa.",
-      "Apenas estilo de liderança.",
+      "Oportunidades e ameaças.",
       "Nenhum fator estratégico."
     ],
-    "correct": 0,
+    "question": "A análise do ambiente externo ajuda a identificar: (Fácil)",
+    "correct": 3,
     "justification": "O ambiente externo inclui mercado, economia, tecnologia, concorrência, regulação e sociedade. Sua análise permite perceber oportunidades e ameaças que afetam a estratégia. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf"
   },
   {
     "id": 14,
     "week": 2,
-    "question": "Associe: 1) Análise externa; 2) Análise interna; 3) Formulação; 4) Implementação. a) Execução da estratégia; b) Recursos e competências; c) Ambiente e mercado; d) Escolha de caminhos estratégicos. (Média)",
     "options": [
-      "1-c, 2-b, 3-d, 4-a",
       "1-b, 2-c, 3-a, 4-d",
+      "1-c, 2-b, 3-d, 4-a",
       "1-d, 2-a, 3-b, 4-c",
       "1-a, 2-d, 3-c, 4-b",
       "1-c, 2-d, 3-a, 4-b"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Análise externa; 2) Análise interna; 3) Formulação; 4) Implementação. a) Execução da estratégia; b) Recursos e competências; c) Ambiente e mercado; d) Escolha de caminhos estratégicos. (Média)",
+    "correct": 1,
     "justification": "A análise externa observa mercado e ambiente; a análise interna avalia recursos e competências; a formulação escolhe estratégias; a implementação executa decisões. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula4.pdf"
   },
   {
     "id": 15,
     "week": 2,
-    "question": "I) Estratégias precisam ser implementadas para gerar resultados. II) O controle estratégico compara execução e objetivos. III) A formulação estratégica elimina necessidade de recursos. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, F",
-      "V, V, V",
       "F, V, F",
+      "V, V, V",
+      "V, V, F",
       "V, F, V",
       "F, F, V"
     ],
-    "correct": 0,
-    "justification": "Estratégia sem implementação não produz efeitos. O controle monitora resultados e desvios. Formulação não elimina recursos; ela deve considerar recursos disponíveis e necessários. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf"
+    "question": "I) Estratégias precisam ser implementadas para gerar resultados. II) O controle estratégico compara execução e objetivos. III) A formulação estratégica elimina necessidade de recursos. Assinale a sequência correta. (Média)",
+    "correct": 2,
+    "justification": "Estratégia sem implementação não produz efeitos. O controle monitora resultados e desvios. Formulação não elimina recursos; ela deve considerar recursos disponíveis e necessários. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf",
+    "slideImage": "slides/S2-5.png",
+    "slideTitle": "Resumo da Semana 2 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 16,
     "week": 2,
-    "question": "Uma vantagem competitiva ocorre quando a organização: (Média)",
     "options": [
       "Cria valor superior ou opera melhor que concorrentes de forma relevante.",
       "Ignora clientes.",
@@ -220,125 +228,128 @@
       "Copia todos os concorrentes sem adaptação.",
       "Evita qualquer inovação."
     ],
+    "question": "Uma vantagem competitiva ocorre quando a organização: (Média)",
     "correct": 0,
     "justification": "Vantagem competitiva decorre da capacidade de entregar mais valor, custos melhores, diferenciação ou competências que sustentem posição superior perante concorrentes. - Fonte(s): Semana 2/s2-Aprof. Tema - Administração Estratégica planejamento - cap1.pdf; Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf"
   },
   {
     "id": 17,
     "week": 2,
-    "question": "A missão organizacional é importante na administração estratégica porque: (Média)",
     "options": [
-      "Delimita propósito e orienta decisões estratégicas.",
+      "Elimina análise de ambiente.",
       "Substitui todo controle financeiro.",
       "É apenas um slogan sem utilidade.",
-      "Elimina análise de ambiente.",
+      "Delimita propósito e orienta decisões estratégicas.",
       "Impede definição de objetivos."
     ],
-    "correct": 0,
+    "question": "A missão organizacional é importante na administração estratégica porque: (Média)",
+    "correct": 3,
     "justification": "Missão dá sentido à existência da organização e orienta escolhas sobre mercados, clientes, produtos e prioridades. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula4.pdf"
   },
   {
     "id": 18,
     "week": 2,
-    "question": "A coerência estratégica exige que: (Difícil)",
     "options": [
-      "Objetivos, recursos, ambiente, estrutura e ações estejam alinhados.",
+      "Indicadores sejam evitados.",
       "Cada área aja isoladamente.",
       "O ambiente externo seja ignorado.",
       "A estratégia não seja comunicada.",
-      "Indicadores sejam evitados."
+      "Objetivos, recursos, ambiente, estrutura e ações estejam alinhados."
     ],
-    "correct": 0,
+    "question": "A coerência estratégica exige que: (Difícil)",
+    "correct": 4,
     "justification": "Estratégia coerente conecta diagnóstico, escolhas, recursos, capacidades, estrutura organizacional e execução. Desalinhamentos reduzem eficácia e dificultam resultados. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf"
   },
   {
     "id": 19,
     "week": 2,
-    "question": "I) Administração estratégica é processo contínuo. II) Estratégia envolve escolhas e trade-offs. III) Toda estratégia bem formulada se implementa automaticamente. Assinale a sequência correta. (Difícil)",
     "options": [
-      "V, V, F",
       "V, V, V",
+      "V, V, F",
       "V, F, F",
       "F, V, V",
       "F, F, F"
     ],
-    "correct": 0,
+    "question": "I) Administração estratégica é processo contínuo. II) Estratégia envolve escolhas e trade-offs. III) Toda estratégia bem formulada se implementa automaticamente. Assinale a sequência correta. (Difícil)",
+    "correct": 1,
     "justification": "A administração estratégica é contínua porque ambiente e organização mudam. Estratégia exige escolhas e renúncias. Implementação demanda estrutura, liderança, recursos e controle; não ocorre automaticamente. - Fonte(s): Semana 2/s2-Aprof. Tema - Administração Estratégica planejamento - cap1.pdf; Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf"
   },
   {
     "id": 20,
     "week": 2,
-    "question": "Se uma empresa formula estratégia sem considerar capacidades internas, o principal risco é: (Difícil)",
     "options": [
-      "Escolher caminhos inviáveis para seus recursos e competências.",
       "Aumentar automaticamente a vantagem competitiva.",
+      "Escolher caminhos inviáveis para seus recursos e competências.",
       "Eliminar concorrência.",
       "Tornar desnecessário o controle.",
       "Garantir execução perfeita."
     ],
-    "correct": 0,
-    "justification": "Estratégias precisam ser compatíveis com recursos, capacidades e limitações internas. Caso contrário, podem parecer atraentes no papel, mas falhar na implementação. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf"
+    "question": "Se uma empresa formula estratégia sem considerar capacidades internas, o principal risco é: (Difícil)",
+    "correct": 1,
+    "justification": "Estratégias precisam ser compatíveis com recursos, capacidades e limitações internas. Caso contrário, podem parecer atraentes no papel, mas falhar na implementação. - Fonte(s): Semana 2/s2-Texto Base - Fundamentos da administração estratégica cap1e2.pdf; Semana 2/s2_slides_videoaula5.pdf",
+    "slideImage": "slides/S2-10.png",
+    "slideTitle": "Resumo da Semana 2 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 21,
     "week": 3,
-    "question": "A análise do ambiente externo tem como objetivo principal: (Fácil)",
     "options": [
-      "Identificar oportunidades e ameaças que podem afetar a organização.",
-      "Substituir a análise interna.",
       "Ignorar clientes e concorrentes.",
+      "Substituir a análise interna.",
+      "Identificar oportunidades e ameaças que podem afetar a organização.",
       "Medir apenas estoque.",
       "Definir folha de pagamento."
     ],
-    "correct": 0,
+    "question": "A análise do ambiente externo tem como objetivo principal: (Fácil)",
+    "correct": 2,
     "justification": "A análise externa examina forças do mercado, concorrentes, clientes, fornecedores, tecnologia, economia e regulação. Ela permite antecipar mudanças e ajustar a estratégia para aproveitar oportunidades e reduzir riscos. - Fonte(s): Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf; Semana 3/s3_slides_videoaula7.pdf"
   },
   {
     "id": 22,
     "week": 3,
-    "question": "Concorrentes são relevantes para a estratégia porque: (Fácil)",
     "options": [
-      "Influenciam preços, diferenciação, participação de mercado e posicionamento.",
-      "Não afetam decisões organizacionais.",
       "Devem ser sempre ignorados.",
+      "Não afetam decisões organizacionais.",
+      "Influenciam preços, diferenciação, participação de mercado e posicionamento.",
       "Eliminam a necessidade de clientes.",
       "Substituem o planejamento financeiro."
     ],
-    "correct": 0,
+    "question": "Concorrentes são relevantes para a estratégia porque: (Fácil)",
+    "correct": 2,
     "justification": "A análise da concorrência ajuda a entender forças, fraquezas, estratégias, posicionamento e movimentos prováveis dos competidores, permitindo respostas mais eficazes. - Fonte(s): Semana 3/s3-Administração Estratégica de Mercado (Leia o capítulo 5) - David A. Aaker.pdf; Semana 3/s3_slides_videoaula8.pdf"
   },
   {
     "id": 23,
     "week": 3,
-    "question": "O setor de atuação de uma empresa pode ser analisado para entender: (Fácil)",
     "options": [
-      "Estrutura competitiva, atratividade e pressões do mercado.",
+      "Exclusivamente impostos já pagos.",
       "Apenas a cor da marca.",
       "Somente dados internos de RH.",
-      "Exclusivamente impostos já pagos.",
+      "Estrutura competitiva, atratividade e pressões do mercado.",
       "Nenhum fator estratégico."
     ],
-    "correct": 0,
+    "question": "O setor de atuação de uma empresa pode ser analisado para entender: (Fácil)",
+    "correct": 3,
     "justification": "A análise setorial mostra como a competição ocorre, quais forças pressionam lucros e quais fatores tornam um mercado mais ou menos atraente. - Fonte(s): Semana 3/s3-Administração estratégica – Competitividade e globalização – Conceitos cap2 - Michael A. Hitt, Duane Ireland e Robert E. Hoskisson.pdf; Semana 3/s3-Texto Base 2.pdf"
   },
   {
     "id": 24,
     "week": 3,
-    "question": "Associe: 1) Clientes; 2) Concorrentes; 3) Fornecedores; 4) Tecnologia. a) Poder de compra e preferências; b) Rivalidade e posicionamento; c) Insumos e condições de fornecimento; d) Mudanças e inovação. (Média)",
     "options": [
-      "1-a, 2-b, 3-c, 4-d",
+      "1-a, 2-c, 3-b, 4-d",
       "1-b, 2-a, 3-d, 4-c",
       "1-c, 2-d, 3-a, 4-b",
       "1-d, 2-c, 3-b, 4-a",
-      "1-a, 2-c, 3-b, 4-d"
+      "1-a, 2-b, 3-c, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Clientes; 2) Concorrentes; 3) Fornecedores; 4) Tecnologia. a) Poder de compra e preferências; b) Rivalidade e posicionamento; c) Insumos e condições de fornecimento; d) Mudanças e inovação. (Média)",
+    "correct": 4,
     "justification": "Cada elemento externo exerce influência estratégica distinta: clientes determinam valor percebido, concorrentes pressionam posição competitiva, fornecedores afetam custos e tecnologia altera produtos, processos e modelos de negócio. - Fonte(s): Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf; Semana 3/s3_slides_videoaula9.pdf"
   },
   {
     "id": 25,
     "week": 3,
-    "question": "I) Oportunidades pertencem ao ambiente externo. II) Ameaças podem surgir de concorrentes ou mudanças regulatórias. III) A análise externa garante automaticamente sucesso. Assinale a sequência correta. (Média)",
     "options": [
       "V, V, F",
       "V, V, V",
@@ -346,97 +357,103 @@
       "F, V, F",
       "F, F, V"
     ],
+    "question": "I) Oportunidades pertencem ao ambiente externo. II) Ameaças podem surgir de concorrentes ou mudanças regulatórias. III) A análise externa garante automaticamente sucesso. Assinale a sequência correta. (Média)",
     "correct": 0,
-    "justification": "Oportunidades e ameaças vêm do ambiente externo. Porém, analisar não basta: a empresa precisa formular e implementar respostas coerentes. - Fonte(s): Semana 3/s3-Texto Base 1.pdf; Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf"
+    "justification": "Oportunidades e ameaças vêm do ambiente externo. Porém, analisar não basta: a empresa precisa formular e implementar respostas coerentes. - Fonte(s): Semana 3/s3-Texto Base 1.pdf; Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf",
+    "slideImage": "slides/S3-5.png",
+    "slideTitle": "Resumo da Semana 3 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 26,
     "week": 3,
-    "question": "A análise de mercado contribui para o planejamento porque: (Média)",
     "options": [
-      "Ajuda a compreender segmentos, demanda, necessidades e posicionamento.",
       "Substitui a gestão financeira.",
+      "Ajuda a compreender segmentos, demanda, necessidades e posicionamento.",
       "Elimina concorrência.",
       "Impede inovação.",
       "Serve apenas para empresas sem clientes."
     ],
-    "correct": 0,
+    "question": "A análise de mercado contribui para o planejamento porque: (Média)",
+    "correct": 1,
     "justification": "A análise de mercado permite entender clientes, tamanho do mercado, tendências, segmentos e necessidades, orientando propostas de valor e estratégias comerciais. - Fonte(s): Semana 3/s3-Administração Estratégica de Mercado (Leia o capítulo 5) - David A. Aaker.pdf; Semana 3/s3_slides_videoaula8.pdf"
   },
   {
     "id": 27,
     "week": 3,
-    "question": "Globalização afeta a estratégia ao: (Média)",
     "options": [
-      "Ampliar mercados, concorrência, cadeias de suprimentos e riscos internacionais.",
       "Reduzir toda competição a empresas locais.",
+      "Ampliar mercados, concorrência, cadeias de suprimentos e riscos internacionais.",
       "Impedir análise econômica.",
       "Eliminar tecnologia.",
       "Tornar irrelevante a cultura."
     ],
-    "correct": 0,
+    "question": "Globalização afeta a estratégia ao: (Média)",
+    "correct": 1,
     "justification": "A globalização aumenta possibilidades de mercado, mas também eleva rivalidade, dependência de cadeias globais, exposição cambial, diversidade cultural e pressão por inovação. - Fonte(s): Semana 3/s3-Administração estratégica – Competitividade e globalização – Conceitos cap2 - Michael A. Hitt, Duane Ireland e Robert E. Hoskisson.pdf; Semana 3/s3-Apoio 2.pdf"
   },
   {
     "id": 28,
     "week": 3,
-    "question": "Uma empresa que identifica ameaça tecnológica deve prioritariamente: (Difícil)",
     "options": [
-      "Avaliar impacto no modelo de negócio e adaptar capacidades, produtos ou processos.",
+      "Cancelar contato com clientes.",
       "Ignorar a mudança até perder mercado.",
       "Reduzir toda análise estratégica.",
-      "Cancelar contato com clientes.",
+      "Avaliar impacto no modelo de negócio e adaptar capacidades, produtos ou processos.",
       "Manter estratégia imutável por princípio."
     ],
-    "correct": 0,
+    "question": "Uma empresa que identifica ameaça tecnológica deve prioritariamente: (Difícil)",
+    "correct": 3,
     "justification": "Mudanças tecnológicas podem tornar produtos obsoletos, alterar custos ou criar novos modelos de negócio. A resposta estratégica exige diagnóstico e adaptação. - Fonte(s): Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf; Semana 3/s3_slides_videoaula9.pdf"
   },
   {
     "id": 29,
     "week": 3,
-    "question": "A análise externa é insuficiente se não for conectada à análise interna porque: (Difícil)",
     "options": [
-      "A empresa precisa saber se possui recursos e competências para responder ao ambiente.",
-      "O ambiente externo não afeta estratégia.",
       "Capacidades internas são sempre ilimitadas.",
+      "O ambiente externo não afeta estratégia.",
+      "A empresa precisa saber se possui recursos e competências para responder ao ambiente.",
       "Toda oportunidade deve ser perseguida independentemente de recursos.",
       "O mercado sempre executa a estratégia pela empresa."
     ],
-    "correct": 0,
+    "question": "A análise externa é insuficiente se não for conectada à análise interna porque: (Difícil)",
+    "correct": 2,
     "justification": "Uma oportunidade externa só é estrategicamente viável quando a organização tem, ou pode desenvolver, capacidades para explorá-la. Estratégia depende do ajuste entre ambiente e recursos internos. - Fonte(s): Semana 3/s3-Administração estratégica - da competência empreendedora à avaliação do desempenho cap3 Bruno H. R. Fernandes e Luiz H. Berton.pdf; Semana 3/s3-Apoio 1.pdf"
   },
   {
     "id": 30,
     "week": 3,
-    "question": "I) Análise de concorrentes deve considerar ações prováveis. II) Atratividade do setor influencia potencial de lucro. III) Mudanças externas não exigem revisão estratégica. Assinale a sequência correta. (Difícil)",
     "options": [
-      "V, V, F",
-      "V, V, V",
       "V, F, F",
+      "V, V, V",
+      "V, V, F",
       "F, V, V",
       "F, F, F"
     ],
-    "correct": 0,
-    "justification": "Estratégia exige antecipar concorrentes, avaliar atratividade do setor e revisar decisões quando o ambiente muda. Estratégias estáticas podem se tornar inadequadas. - Fonte(s): Semana 3/s3-Administração Estratégica de Mercado (Leia o capítulo 5) - David A. Aaker.pdf; Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf"
+    "question": "I) Análise de concorrentes deve considerar ações prováveis. II) Atratividade do setor influencia potencial de lucro. III) Mudanças externas não exigem revisão estratégica. Assinale a sequência correta. (Difícil)",
+    "correct": 2,
+    "justification": "Estratégia exige antecipar concorrentes, avaliar atratividade do setor e revisar decisões quando o ambiente muda. Estratégias estáticas podem se tornar inadequadas. - Fonte(s): Semana 3/s3-Administração Estratégica de Mercado (Leia o capítulo 5) - David A. Aaker.pdf; Semana 3/s3-Avaliação do ambiente externo de uma empresa cap3 -  John E. Gamble e Arthur A. Thompson Junior.pdf",
+    "slideImage": "slides/S3-10.png",
+    "slideTitle": "Resumo da Semana 3 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 31,
     "week": 4,
-    "question": "A análise interna busca identificar: (Fácil)",
     "options": [
-      "Recursos, capacidades, forças e fraquezas da organização.",
+      "O comportamento de todos os concorrentes.",
       "Apenas fatores climáticos externos.",
       "Somente impostos nacionais.",
-      "O comportamento de todos os concorrentes.",
+      "Recursos, capacidades, forças e fraquezas da organização.",
       "Fatores sem relação com estratégia."
     ],
-    "correct": 0,
+    "question": "A análise interna busca identificar: (Fácil)",
+    "correct": 3,
     "justification": "A análise interna avalia aquilo que a empresa controla ou desenvolve: recursos tangíveis, intangíveis, capacidades, processos, competências e limitações. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf; Semana 4/s4_slides_videoaula9.pdf"
   },
   {
     "id": 32,
     "week": 4,
-    "question": "Recursos intangíveis incluem, por exemplo: (Fácil)",
     "options": [
       "Marca, reputação, conhecimento e cultura organizacional.",
       "Máquinas exclusivamente físicas.",
@@ -444,97 +461,100 @@
       "Terrenos e veículos somente.",
       "Caixa disponível no banco."
     ],
+    "question": "Recursos intangíveis incluem, por exemplo: (Fácil)",
     "correct": 0,
     "justification": "Recursos intangíveis não são físicos, mas podem sustentar diferenciação e vantagem, como reputação, marca, conhecimento, tecnologia, relacionamentos e cultura. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf"
   },
   {
     "id": 33,
     "week": 4,
-    "question": "Vantagem competitiva sustentável depende de: (Fácil)",
     "options": [
-      "Recursos e capacidades difíceis de imitar, substituir ou neutralizar.",
-      "Copiar todos os concorrentes.",
       "Ignorar clientes.",
+      "Copiar todos os concorrentes.",
+      "Recursos e capacidades difíceis de imitar, substituir ou neutralizar.",
       "Evitar aprendizagem.",
       "Abandonar competências centrais."
     ],
-    "correct": 0,
+    "question": "Vantagem competitiva sustentável depende de: (Fácil)",
+    "correct": 2,
     "justification": "Recursos valiosos, raros e difíceis de imitar podem gerar vantagem duradoura, especialmente quando organizados em capacidades e competências superiores. - Fonte(s): Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf; Semana 4/Capítulo 4 - Administração estratégica - Arthur A. Thompson Jr., A. J. Strickland III e John E. Gamble.pdf"
   },
   {
     "id": 34,
     "week": 4,
-    "question": "Associe: 1) Recurso tangível; 2) Recurso intangível; 3) Capacidade; 4) Competência essencial. a) Marca/reputação; b) Ativo físico/financeiro; c) Habilidade de combinar recursos; d) Capacidade central que diferencia a empresa. (Média)",
     "options": [
-      "1-b, 2-a, 3-c, 4-d",
+      "1-b, 2-c, 3-a, 4-d",
       "1-a, 2-b, 3-d, 4-c",
       "1-c, 2-d, 3-a, 4-b",
       "1-d, 2-c, 3-b, 4-a",
-      "1-b, 2-c, 3-a, 4-d"
+      "1-b, 2-a, 3-c, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Recurso tangível; 2) Recurso intangível; 3) Capacidade; 4) Competência essencial. a) Marca/reputação; b) Ativo físico/financeiro; c) Habilidade de combinar recursos; d) Capacidade central que diferencia a empresa. (Média)",
+    "correct": 4,
     "justification": "Recursos são insumos; capacidades são formas de usá-los; competências essenciais são capacidades estratégicas centrais, difíceis de replicar e relevantes para vantagem competitiva. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf; Semana 4/s4_slides_videoaula9.pdf"
   },
   {
     "id": 35,
     "week": 4,
-    "question": "I) Recursos valiosos ajudam a explorar oportunidades. II) Recursos raros podem diferenciar a empresa. III) Recursos facilmente imitáveis sempre sustentam vantagem duradoura. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, F",
+      "F, V, F",
       "V, V, V",
       "V, F, V",
-      "F, V, F",
+      "V, V, F",
       "F, F, V"
     ],
-    "correct": 0,
-    "justification": "Valor e raridade ajudam a criar vantagem, mas a sustentabilidade depende também da dificuldade de imitação e substituição. Recursos fáceis de copiar tendem a perder poder estratégico. - Fonte(s): Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf; Semana 4/Capítulo 4 - Administração estratégica - Arthur A. Thompson Jr., A. J. Strickland III e John E. Gamble.pdf"
+    "question": "I) Recursos valiosos ajudam a explorar oportunidades. II) Recursos raros podem diferenciar a empresa. III) Recursos facilmente imitáveis sempre sustentam vantagem duradoura. Assinale a sequência correta. (Média)",
+    "correct": 3,
+    "justification": "Valor e raridade ajudam a criar vantagem, mas a sustentabilidade depende também da dificuldade de imitação e substituição. Recursos fáceis de copiar tendem a perder poder estratégico. - Fonte(s): Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf; Semana 4/Capítulo 4 - Administração estratégica - Arthur A. Thompson Jr., A. J. Strickland III e John E. Gamble.pdf",
+    "slideImage": "slides/S4-5.png",
+    "slideTitle": "Resumo da Semana 4 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 36,
     "week": 4,
-    "question": "A cadeia de valor ajuda a organização a: (Média)",
     "options": [
-      "Analisar atividades que geram valor e custos ao longo do negócio.",
       "Ignorar processos internos.",
+      "Analisar atividades que geram valor e custos ao longo do negócio.",
       "Substituir toda análise de clientes.",
       "Eliminar fornecedores.",
       "Avaliar apenas folha salarial."
     ],
-    "correct": 0,
+    "question": "A cadeia de valor ajuda a organização a: (Média)",
+    "correct": 1,
     "justification": "A cadeia de valor permite observar atividades primárias e de apoio, identificando fontes de diferenciação, eficiência, custos e vantagem competitiva. - Fonte(s): Semana 4/Capítulo 4 - Administração estratégica - Arthur A. Thompson Jr., A. J. Strickland III e John E. Gamble.pdf; Semana 4/s4_slides_videoaula9.pdf"
   },
   {
     "id": 37,
     "week": 4,
-    "question": "Uma força interna é: (Média)",
     "options": [
-      "Uma capacidade ou recurso que favorece o desempenho da organização.",
       "Uma ameaça regulatória externa.",
+      "Uma capacidade ou recurso que favorece o desempenho da organização.",
       "Um concorrente agressivo.",
       "Uma crise econômica global.",
       "Uma mudança tecnológica fora da empresa."
     ],
-    "correct": 0,
+    "question": "Uma força interna é: (Média)",
+    "correct": 1,
     "justification": "Forças são fatores internos positivos, como marca forte, equipe qualificada, tecnologia proprietária, processos eficientes ou conhecimento acumulado. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf; Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf"
   },
   {
     "id": 38,
     "week": 4,
-    "question": "Uma competência essencial deve ser tratada estrategicamente porque: (Difícil)",
     "options": [
-      "Pode sustentar diferenciação, acesso a mercados e valor percebido pelo cliente.",
+      "Elimina necessidade de adaptação.",
       "Deve ser ocultada de todos os colaboradores.",
       "Sempre nasce de um único ativo financeiro.",
-      "Elimina necessidade de adaptação.",
+      "Pode sustentar diferenciação, acesso a mercados e valor percebido pelo cliente.",
       "Não influencia vantagem competitiva."
     ],
-    "correct": 0,
+    "question": "Uma competência essencial deve ser tratada estrategicamente porque: (Difícil)",
+    "correct": 3,
     "justification": "Competências essenciais combinam recursos e capacidades de forma superior, permitindo entregar valor e diferenciar a empresa em diferentes mercados. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf; Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf"
   },
   {
     "id": 39,
     "week": 4,
-    "question": "I) A análise interna deve dialogar com a análise externa. II) Toda força interna é automaticamente vantagem sustentável. III) Capacidades dependem de coordenação e aprendizagem organizacional. Assinale a sequência correta. (Difícil)",
     "options": [
       "V, F, V",
       "V, V, V",
@@ -542,167 +562,176 @@
       "V, V, F",
       "F, V, F"
     ],
+    "question": "I) A análise interna deve dialogar com a análise externa. II) Toda força interna é automaticamente vantagem sustentável. III) Capacidades dependem de coordenação e aprendizagem organizacional. Assinale a sequência correta. (Difícil)",
     "correct": 0,
     "justification": "Forças internas só geram vantagem sustentável quando são relevantes, raras e difíceis de copiar. Capacidades são construídas por processos, rotinas, coordenação e aprendizagem. - Fonte(s): Semana 4/CAPITULO 3 - Administração estratégica - competitividade e globalização.pdf; Semana 4/Capítulo 4 - Administração estratégica - Arthur A. Thompson Jr., A. J. Strickland III e John E. Gamble.pdf"
   },
   {
     "id": 40,
     "week": 4,
-    "question": "O melhor uso estratégico da análise interna é: (Difícil)",
     "options": [
-      "Identificar como recursos e capacidades podem explorar oportunidades e neutralizar ameaças.",
       "Criar uma lista sem conexão com decisões.",
+      "Identificar como recursos e capacidades podem explorar oportunidades e neutralizar ameaças.",
       "Ignorar fraquezas.",
       "Copiar concorrentes sem avaliar recursos próprios.",
       "Abandonar indicadores."
     ],
-    "correct": 0,
-    "justification": "A análise interna deve orientar decisões: quais forças usar, quais fraquezas corrigir, quais capacidades desenvolver e como alinhar recursos ao ambiente competitivo. - Fonte(s): Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf; Semana 4/s4_slides_videoaula9.pdf"
+    "question": "O melhor uso estratégico da análise interna é: (Difícil)",
+    "correct": 1,
+    "justification": "A análise interna deve orientar decisões: quais forças usar, quais fraquezas corrigir, quais capacidades desenvolver e como alinhar recursos ao ambiente competitivo. - Fonte(s): Semana 4/Fund da administração estratégica - Cap4 - A busca pela vantagem competitiva.pdf; Semana 4/s4_slides_videoaula9.pdf",
+    "slideImage": "slides/S4-10.png",
+    "slideTitle": "Resumo da Semana 4 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 41,
     "week": 5,
-    "question": "Marketing estratégico busca principalmente: (Fácil)",
     "options": [
-      "Entender mercado e clientes para definir valor, posicionamento e ações competitivas.",
       "Fazer apenas propaganda sem análise.",
+      "Entender mercado e clientes para definir valor, posicionamento e ações competitivas.",
       "Ignorar concorrência.",
       "Substituir estratégia empresarial.",
       "Controlar somente estoque."
     ],
-    "correct": 0,
+    "question": "Marketing estratégico busca principalmente: (Fácil)",
+    "correct": 1,
     "justification": "Marketing estratégico conecta análise de mercado, clientes, concorrentes, segmentação, posicionamento e proposta de valor. Ele orienta decisões de produto, preço, praça e promoção de forma alinhada à estratégia. - Fonte(s): Semana 5/s5-cap8 - Aaker.pdf; Semana 5/s5_slides_videoaula11.pdf"
   },
   {
     "id": 42,
     "week": 5,
-    "question": "Segmentação de mercado significa: (Fácil)",
     "options": [
-      "Dividir o mercado em grupos de clientes com características ou necessidades semelhantes.",
-      "Tratar todos os clientes exatamente da mesma forma.",
       "Eliminar pesquisa de mercado.",
+      "Tratar todos os clientes exatamente da mesma forma.",
+      "Dividir o mercado em grupos de clientes com características ou necessidades semelhantes.",
       "Vender sem público-alvo.",
       "Substituir produto por orçamento."
     ],
-    "correct": 0,
+    "question": "Segmentação de mercado significa: (Fácil)",
+    "correct": 2,
     "justification": "Segmentar permite escolher grupos mais atrativos, compreender necessidades específicas e desenvolver estratégias mais eficazes de posicionamento e comunicação. - Fonte(s): Semana 5/s5-cap10 - Aaker.pdf; Semana 5/s5_slides_videoaula11.pdf"
   },
   {
     "id": 43,
     "week": 5,
-    "question": "Posicionamento de mercado refere-se: (Fácil)",
     "options": [
-      "À forma como a marca/produto deseja ser percebida na mente do cliente em relação aos concorrentes.",
+      "À eliminação da diferenciação.",
       "Ao endereço físico da empresa apenas.",
       "Ao número de funcionários.",
       "Ao imposto pago no mês.",
-      "À eliminação da diferenciação."
+      "À forma como a marca/produto deseja ser percebida na mente do cliente em relação aos concorrentes."
     ],
-    "correct": 0,
+    "question": "Posicionamento de mercado refere-se: (Fácil)",
+    "correct": 4,
     "justification": "Posicionamento define a imagem desejada no mercado, destacando atributos, benefícios e diferenças relevantes para o público-alvo. - Fonte(s): Semana 5/s5-cap11 - Aaker.pdf; Semana 5/s5_slides_videoaula12.pdf"
   },
   {
     "id": 44,
     "week": 5,
-    "question": "Associe: 1) Segmentação; 2) Targeting; 3) Posicionamento; 4) Diferenciação. a) Escolha dos segmentos-alvo; b) Divisão do mercado; c) Percepção desejada; d) Criação de atributos distintivos. (Média)",
     "options": [
-      "1-b, 2-a, 3-c, 4-d",
+      "1-d, 2-c, 3-b, 4-a",
       "1-a, 2-b, 3-d, 4-c",
       "1-c, 2-d, 3-a, 4-b",
-      "1-d, 2-c, 3-b, 4-a",
+      "1-b, 2-a, 3-c, 4-d",
       "1-b, 2-c, 3-a, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Segmentação; 2) Targeting; 3) Posicionamento; 4) Diferenciação. a) Escolha dos segmentos-alvo; b) Divisão do mercado; c) Percepção desejada; d) Criação de atributos distintivos. (Média)",
+    "correct": 3,
     "justification": "O processo STP envolve segmentar o mercado, escolher alvos e posicionar a oferta. A diferenciação fornece razões para que o posicionamento seja percebido como único. - Fonte(s): Semana 5/s5-cap10 - Aaker.pdf; Semana 5/s5-cap11 - Aaker.pdf"
   },
   {
     "id": 45,
     "week": 5,
-    "question": "I) Estratégia de marketing deve dialogar com a estratégia do negócio. II) Plano mercadológico pode incluir comunicação, vendas e distribuição. III) Marketing estratégico é apenas criar logotipo. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, F",
-      "V, V, V",
       "V, F, V",
+      "V, V, V",
+      "V, V, F",
       "F, V, F",
       "F, F, V"
     ],
-    "correct": 0,
-    "justification": "Marketing estratégico integra decisões de mercado com objetivos empresariais. Um plano mercadológico trata de comunicação, vendas, canais, distribuição, relacionamento e ações para atingir clientes. - Fonte(s): Semana 5/s5-cap6 - Arnaldo Rosa - Planejamento Estrategico.pdf; Semana 5/s5_slides_videoaula12.pdf"
+    "question": "I) Estratégia de marketing deve dialogar com a estratégia do negócio. II) Plano mercadológico pode incluir comunicação, vendas e distribuição. III) Marketing estratégico é apenas criar logotipo. Assinale a sequência correta. (Média)",
+    "correct": 2,
+    "justification": "Marketing estratégico integra decisões de mercado com objetivos empresariais. Um plano mercadológico trata de comunicação, vendas, canais, distribuição, relacionamento e ações para atingir clientes. - Fonte(s): Semana 5/s5-cap6 - Arnaldo Rosa - Planejamento Estrategico.pdf; Semana 5/s5_slides_videoaula12.pdf",
+    "slideImage": "slides/S5-5.png",
+    "slideTitle": "Resumo da Semana 5 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 46,
     "week": 5,
-    "question": "A matriz BCG é usada para: (Média)",
     "options": [
-      "Analisar portfólio considerando participação relativa de mercado e crescimento do mercado.",
+      "Definir apenas layout de loja.",
       "Calcular férias de funcionários.",
       "Substituir análise financeira detalhada.",
       "Ignorar ciclo de vida do produto.",
-      "Definir apenas layout de loja."
+      "Analisar portfólio considerando participação relativa de mercado e crescimento do mercado."
     ],
-    "correct": 0,
+    "question": "A matriz BCG é usada para: (Média)",
+    "correct": 4,
     "justification": "A BCG classifica unidades/produtos em estrela, vaca leiteira, interrogação e abacaxi/cão, combinando crescimento do mercado e participação relativa, apoiando decisões de investimento. - Fonte(s): Semana 5/s5-Cap5 - Fundamentos da administração estratégica.pdf; Semana 5/s5_slides_videoaula11.pdf"
   },
   {
     "id": 47,
     "week": 5,
-    "question": "O ciclo de vida do produto ajuda a decidir: (Média)",
     "options": [
-      "Estratégias diferentes para introdução, crescimento, maturidade e declínio.",
+      "O número de páginas do plano.",
       "Apenas preço fixo para sempre.",
       "A eliminação de análise de mercado.",
-      "O número de páginas do plano.",
+      "Estratégias diferentes para introdução, crescimento, maturidade e declínio.",
       "A proibição de inovação."
     ],
-    "correct": 0,
+    "question": "O ciclo de vida do produto ajuda a decidir: (Média)",
+    "correct": 3,
     "justification": "Produtos passam por fases com diferentes níveis de vendas, concorrência, investimento e margem. A estratégia deve mudar conforme o estágio do ciclo. - Fonte(s): Semana 5/s5-cap12 - Aaker.pdf; Semana 5/s5_slides_videoaula11.pdf"
   },
   {
     "id": 48,
     "week": 5,
-    "question": "Uma estratégia de diferenciação eficaz exige: (Difícil)",
     "options": [
-      "Atributos valorizados pelo cliente e difíceis de copiar pelos concorrentes.",
+      "Evitar pesquisa de mercado.",
       "Aumentar preço sem entregar valor.",
       "Ignorar percepção do cliente.",
       "Comunicar benefícios irrelevantes.",
-      "Evitar pesquisa de mercado."
+      "Atributos valorizados pelo cliente e difíceis de copiar pelos concorrentes."
     ],
-    "correct": 0,
+    "question": "Uma estratégia de diferenciação eficaz exige: (Difícil)",
+    "correct": 4,
     "justification": "Diferenciação só gera vantagem quando é relevante para o cliente, percebida claramente e protegida contra imitação fácil. Caso contrário, vira apenas discurso promocional. - Fonte(s): Semana 5/s5-cap11 - Aaker.pdf; Semana 5/s5-cap8 - Aaker.pdf"
   },
   {
     "id": 49,
     "week": 5,
-    "question": "I) Portfólio equilibrado pode combinar produtos em diferentes estágios. II) Participação de mercado pode influenciar fluxo de caixa. III) Produtos em declínio nunca exigem decisão estratégica. Assinale a sequência correta. (Difícil)",
     "options": [
-      "V, V, F",
-      "V, V, V",
       "V, F, F",
+      "V, V, V",
+      "V, V, F",
       "F, V, V",
       "F, F, F"
     ],
-    "correct": 0,
+    "question": "I) Portfólio equilibrado pode combinar produtos em diferentes estágios. II) Participação de mercado pode influenciar fluxo de caixa. III) Produtos em declínio nunca exigem decisão estratégica. Assinale a sequência correta. (Difícil)",
+    "correct": 2,
     "justification": "A gestão de portfólio avalia investimento, retorno e ciclo de vida. Produtos maduros podem financiar novos produtos; produtos em declínio exigem decisões como reposicionar, colher ou descontinuar. - Fonte(s): Semana 5/s5-Cap5 - Fundamentos da administração estratégica.pdf; Semana 5/s5-cap12 - Aaker.pdf"
   },
   {
     "id": 50,
     "week": 5,
-    "question": "Um plano mercadológico bem alinhado deve: (Difícil)",
     "options": [
-      "Transformar objetivos estratégicos em ações de mercado, canais, comunicação, vendas e indicadores.",
+      "Ignorar distribuição e vendas.",
       "Ficar separado da estratégia do negócio.",
       "Evitar metas de mercado.",
-      "Ignorar distribuição e vendas.",
+      "Transformar objetivos estratégicos em ações de mercado, canais, comunicação, vendas e indicadores.",
       "Ser apenas uma peça publicitária."
     ],
-    "correct": 0,
-    "justification": "O plano mercadológico operacionaliza a estratégia de mercado: define público, proposta, canais, comunicação, estrutura de vendas, distribuição, orçamento e métricas de acompanhamento. - Fonte(s): Semana 5/s5-cap6 - Arnaldo Rosa - Planejamento Estrategico.pdf; Semana 5/s5_slides_videoaula12.pdf"
+    "question": "Um plano mercadológico bem alinhado deve: (Difícil)",
+    "correct": 3,
+    "justification": "O plano mercadológico operacionaliza a estratégia de mercado: define público, proposta, canais, comunicação, estrutura de vendas, distribuição, orçamento e métricas de acompanhamento. - Fonte(s): Semana 5/s5-cap6 - Arnaldo Rosa - Planejamento Estrategico.pdf; Semana 5/s5_slides_videoaula12.pdf",
+    "slideImage": "slides/S5-10.png",
+    "slideTitle": "Resumo da Semana 5 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 51,
     "week": 6,
-    "question": "Um plano de marketing define principalmente: (Fácil)",
     "options": [
       "Como a empresa levará seus produtos/serviços ao consumidor e comunicará valor.",
       "Apenas a folha de pagamento.",
@@ -710,83 +739,86 @@
       "A eliminação de clientes.",
       "A substituição do planejamento estratégico."
     ],
+    "question": "Um plano de marketing define principalmente: (Fácil)",
     "correct": 0,
     "justification": "O plano de marketing orienta como tornar produtos conhecidos, despertar interesse, comunicar valor, estruturar vendas e definir canais de distribuição. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/s6-Cap1-2-Marketing-Dhurv Grewal.pdf"
   },
   {
     "id": 52,
     "week": 6,
-    "question": "O plano mercadológico está ligado ao planejamento estratégico porque: (Fácil)",
     "options": [
-      "Desdobra objetivos estratégicos em ações de mercado.",
       "Impede definição de estratégia.",
+      "Desdobra objetivos estratégicos em ações de mercado.",
       "Trata apenas de decoração.",
       "Substitui análise financeira.",
       "Elimina concorrentes automaticamente."
     ],
-    "correct": 0,
+    "question": "O plano mercadológico está ligado ao planejamento estratégico porque: (Fácil)",
+    "correct": 1,
     "justification": "O plano mercadológico traduz a estratégia em decisões de produto, mercado, comunicação, vendas, canais e metas, contribuindo para a execução dos objetivos do negócio. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap5-PlanodeNegocios-Arnaldo.pdf"
   },
   {
     "id": 53,
     "week": 6,
-    "question": "A matriz BCG considera duas dimensões principais: (Fácil)",
     "options": [
-      "Crescimento do mercado e participação relativa de mercado.",
       "Salário e férias.",
+      "Crescimento do mercado e participação relativa de mercado.",
       "Cor da embalagem e tamanho do logotipo.",
       "Impostos e aluguel apenas.",
       "Quantidade de reuniões internas."
     ],
-    "correct": 0,
+    "question": "A matriz BCG considera duas dimensões principais: (Fácil)",
+    "correct": 1,
     "justification": "A matriz BCG analisa portfólio a partir do crescimento do mercado e da participação relativa da empresa/produto, orientando investimento e priorização. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap9-AdmEstrategica-Aaker.pdf"
   },
   {
     "id": 54,
     "week": 6,
-    "question": "Associe: 1) Produto; 2) Preço; 3) Praça; 4) Promoção. a) Comunicação; b) Oferta/benefícios; c) Canais/distribuição; d) Valor cobrado. (Média)",
     "options": [
-      "1-b, 2-d, 3-c, 4-a",
+      "1-d, 2-c, 3-a, 4-b",
       "1-a, 2-b, 3-d, 4-c",
       "1-c, 2-a, 3-b, 4-d",
-      "1-d, 2-c, 3-a, 4-b",
+      "1-b, 2-d, 3-c, 4-a",
       "1-b, 2-c, 3-a, 4-d"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Produto; 2) Preço; 3) Praça; 4) Promoção. a) Comunicação; b) Oferta/benefícios; c) Canais/distribuição; d) Valor cobrado. (Média)",
+    "correct": 3,
     "justification": "Os 4Ps representam decisões centrais de marketing: produto entregue, preço cobrado, canais de distribuição e promoção/comunicação com o mercado. - Fonte(s): Semana 6/s6-Cap1-2-Marketing-Dhurv Grewal.pdf; Semana 6/s6_slides_videoaula15.pdf"
   },
   {
     "id": 55,
     "week": 6,
-    "question": "I) O plano de marketing deve considerar concorrência e clientes. II) A análise de portfólio ajuda a decidir investimentos. III) Comunicação de marketing independe do público-alvo. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, F",
-      "V, V, V",
       "V, F, V",
+      "V, V, V",
+      "V, V, F",
       "F, V, F",
       "F, F, V"
     ],
-    "correct": 0,
-    "justification": "Planejamento de marketing exige entender clientes e concorrentes. Portfólio orienta recursos. Comunicação deve ser desenhada conforme público, necessidades e posicionamento. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/s6-Cap1-2-Marketing-Dhurv Grewal.pdf"
+    "question": "I) O plano de marketing deve considerar concorrência e clientes. II) A análise de portfólio ajuda a decidir investimentos. III) Comunicação de marketing independe do público-alvo. Assinale a sequência correta. (Média)",
+    "correct": 2,
+    "justification": "Planejamento de marketing exige entender clientes e concorrentes. Portfólio orienta recursos. Comunicação deve ser desenhada conforme público, necessidades e posicionamento. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/s6-Cap1-2-Marketing-Dhurv Grewal.pdf",
+    "slideImage": "slides/S6-5.png",
+    "slideTitle": "Resumo da Semana 6 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 56,
     "week": 6,
-    "question": "Estrutura de vendas e distribuição é parte do plano de marketing porque: (Média)",
     "options": [
-      "Define como o produto chegará ao consumidor e como será comercializado.",
-      "Substitui a proposta de valor.",
       "Não influencia acesso ao mercado.",
+      "Substitui a proposta de valor.",
+      "Define como o produto chegará ao consumidor e como será comercializado.",
       "Serve apenas para empresas sem produtos.",
       "Elimina canais digitais."
     ],
-    "correct": 0,
+    "question": "Estrutura de vendas e distribuição é parte do plano de marketing porque: (Média)",
+    "correct": 2,
     "justification": "Mesmo uma boa oferta falha se não chega ao cliente. Vendas e distribuição conectam demanda, canais, logística, atendimento e conversão comercial. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap5-PlanodeNegocios-Arnaldo.pdf"
   },
   {
     "id": 57,
     "week": 6,
-    "question": "A análise do ciclo de vida do produto contribui para: (Média)",
     "options": [
       "Ajustar estratégias de marketing conforme introdução, crescimento, maturidade e declínio.",
       "Usar a mesma estratégia para sempre.",
@@ -794,69 +826,72 @@
       "Evitar inovação.",
       "Eliminar pesquisa."
     ],
+    "question": "A análise do ciclo de vida do produto contribui para: (Média)",
     "correct": 0,
     "justification": "Cada fase do ciclo de vida apresenta desafios diferentes em vendas, margem, concorrência e comunicação. Estratégias precisam se adaptar. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap9-AdmEstrategica-Aaker.pdf"
   },
   {
     "id": 58,
     "week": 6,
-    "question": "Ao elaborar um plano mercadológico, uma empresa deve evitar: (Difícil)",
     "options": [
-      "Definir ações sem diagnóstico de clientes, concorrência, portfólio e objetivos.",
+      "Medir resultados.",
       "Estabelecer público-alvo.",
       "Definir canais de distribuição.",
       "Planejar comunicação.",
-      "Medir resultados."
+      "Definir ações sem diagnóstico de clientes, concorrência, portfólio e objetivos."
     ],
-    "correct": 0,
+    "question": "Ao elaborar um plano mercadológico, uma empresa deve evitar: (Difícil)",
+    "correct": 4,
     "justification": "Ações de marketing precisam ser baseadas em diagnóstico. Sem isso, campanhas, canais e preços podem não corresponder ao público ou à estratégia. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/s6-Cap1-2-Marketing-Dhurv Grewal.pdf"
   },
   {
     "id": 59,
     "week": 6,
-    "question": "I) Plano de marketing deve contemplar como tornar produtos conhecidos. II) Deve indicar como despertar necessidade/lembrança da marca. III) Deve ignorar comunicação com consumidores. Assinale a sequência correta. (Difícil)",
     "options": [
-      "V, V, F",
+      "F, V, V",
       "V, V, V",
       "V, F, F",
-      "F, V, V",
+      "V, V, F",
       "F, F, F"
     ],
-    "correct": 0,
+    "question": "I) Plano de marketing deve contemplar como tornar produtos conhecidos. II) Deve indicar como despertar necessidade/lembrança da marca. III) Deve ignorar comunicação com consumidores. Assinale a sequência correta. (Difícil)",
+    "correct": 3,
     "justification": "Os slides destacam que o plano deve tratar de conhecimento do produto, necessidade de compra, lembrança da marca, comunicação, vendas e distribuição. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf"
   },
   {
     "id": 60,
     "week": 6,
-    "question": "A integração entre modelo de negócio, plano estratégico e plano de marketing indica que: (Difícil)",
     "options": [
-      "Marketing deve operacionalizar a proposta de valor dentro da direção estratégica do negócio.",
-      "Marketing atua isolado da estratégia.",
       "O modelo de negócio dispensa clientes.",
+      "Marketing atua isolado da estratégia.",
+      "Marketing deve operacionalizar a proposta de valor dentro da direção estratégica do negócio.",
       "O plano estratégico elimina ações de mercado.",
       "A proposta de valor não influencia comunicação."
     ],
-    "correct": 0,
-    "justification": "O modelo de negócio define como a empresa cria e captura valor; o plano estratégico define direção; o plano de marketing traduz isso em ações para o mercado. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap5-PlanodeNegocios-Arnaldo.pdf"
+    "question": "A integração entre modelo de negócio, plano estratégico e plano de marketing indica que: (Difícil)",
+    "correct": 2,
+    "justification": "O modelo de negócio define como a empresa cria e captura valor; o plano estratégico define direção; o plano de marketing traduz isso em ações para o mercado. - Fonte(s): Semana 6/s6_slides_videoaula15.pdf; Semana 6/S6-Cap5-PlanodeNegocios-Arnaldo.pdf",
+    "slideImage": "slides/S6-10.png",
+    "slideTitle": "Resumo da Semana 6 (Q6 a Q10)",
+    "slidePage": 10
   },
   {
     "id": 61,
     "week": 7,
-    "question": "O orçamento empresarial é principalmente: (Fácil)",
     "options": [
-      "Um instrumento de planejamento e controle financeiro das ações da empresa.",
       "Apenas uma lista de desejos sem números.",
+      "Um instrumento de planejamento e controle financeiro das ações da empresa.",
       "Um documento que elimina estratégia.",
       "Uma peça publicitária.",
       "Um cadastro de clientes."
     ],
-    "correct": 0,
+    "question": "O orçamento empresarial é principalmente: (Fácil)",
+    "correct": 1,
     "justification": "O orçamento traduz planos em números, projetando receitas, custos, despesas, investimentos e resultados. Ele apoia coordenação, alocação de recursos e controle. - Fonte(s): Semana 7/s7-cap3-OrçamentoEmp-Frezatti.pdf; Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf"
   },
   {
     "id": 62,
     "week": 7,
-    "question": "No plano de negócios, a análise financeira serve para: (Fácil)",
     "options": [
       "Avaliar viabilidade, investimentos, custos, receitas e retorno esperado.",
       "Substituir análise de mercado.",
@@ -864,69 +899,72 @@
       "Eliminar orçamento.",
       "Ignorar fluxo de caixa."
     ],
+    "question": "No plano de negócios, a análise financeira serve para: (Fácil)",
     "correct": 0,
     "justification": "A seção financeira do plano de negócios estima necessidades de investimento, receitas, despesas, fluxo de caixa, lucratividade e retorno, permitindo julgar a viabilidade do empreendimento. - Fonte(s): Semana 7/s7-Cap8-Plano Negocios-Biagio.pdf; Semana 7/S7-Cap9-Plano Neg-Biagio.pdf"
   },
   {
     "id": 63,
     "week": 7,
-    "question": "Controle estratégico envolve: (Fácil)",
     "options": [
-      "Acompanhar resultados e corrigir desvios em relação à estratégia.",
-      "Ignorar indicadores.",
       "Executar sem metas.",
+      "Ignorar indicadores.",
+      "Acompanhar resultados e corrigir desvios em relação à estratégia.",
       "Evitar comparação com objetivos.",
       "Trabalhar apenas com intuição."
     ],
-    "correct": 0,
+    "question": "Controle estratégico envolve: (Fácil)",
+    "correct": 2,
     "justification": "Controle estratégico monitora se a organização está caminhando conforme objetivos e planos. Quando há desvios, permite ações corretivas e aprendizado. - Fonte(s): Semana 7/s7-Cap10-FundAdministração-Gamble.pdf; Semana 7/s7-Cap10-PlanejEstrategico-Arnaldo.pdf"
   },
   {
     "id": 64,
     "week": 7,
-    "question": "Associe: 1) Orçamento de vendas; 2) Orçamento de custos/despesas; 3) Fluxo de caixa; 4) Controle orçamentário. a) Entradas e saídas de dinheiro; b) Receitas previstas; c) Gastos planejados; d) Comparação entre previsto e realizado. (Média)",
     "options": [
-      "1-b, 2-c, 3-a, 4-d",
       "1-a, 2-b, 3-d, 4-c",
+      "1-b, 2-c, 3-a, 4-d",
       "1-c, 2-d, 3-b, 4-a",
       "1-d, 2-a, 3-c, 4-b",
       "1-b, 2-a, 3-d, 4-c"
     ],
-    "correct": 0,
+    "question": "Associe: 1) Orçamento de vendas; 2) Orçamento de custos/despesas; 3) Fluxo de caixa; 4) Controle orçamentário. a) Entradas e saídas de dinheiro; b) Receitas previstas; c) Gastos planejados; d) Comparação entre previsto e realizado. (Média)",
+    "correct": 1,
     "justification": "O orçamento organiza previsões de vendas, custos e despesas; o fluxo de caixa projeta entradas e saídas; o controle compara o planejado com o realizado. - Fonte(s): Semana 7/s7-cap3-OrçamentoEmp-Frezatti.pdf; Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf"
   },
   {
     "id": 65,
     "week": 7,
-    "question": "I) Orçamento ajuda a coordenar áreas. II) Controle orçamentário permite identificar desvios. III) Orçamento deve ser totalmente desconectado da estratégia. Assinale a sequência correta. (Média)",
     "options": [
-      "V, V, F",
+      "F, F, V",
       "V, V, V",
       "V, F, V",
       "F, V, F",
-      "F, F, V"
+      "V, V, F"
     ],
-    "correct": 0,
-    "justification": "Orçamento coordena recursos e responsabilidades. O controle identifica diferenças entre previsto e realizado. Ele deve estar ligado à estratégia, não separado dela. - Fonte(s): Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf; Semana 7/s7-Cap10-PlanejEstrategico-Arnaldo.pdf"
+    "question": "I) Orçamento ajuda a coordenar áreas. II) Controle orçamentário permite identificar desvios. III) Orçamento deve ser totalmente desconectado da estratégia. Assinale a sequência correta. (Média)",
+    "correct": 4,
+    "justification": "Orçamento coordena recursos e responsabilidades. O controle identifica diferenças entre previsto e realizado. Ele deve estar ligado à estratégia, não separado dela. - Fonte(s): Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf; Semana 7/s7-Cap10-PlanejEstrategico-Arnaldo.pdf",
+    "slideImage": "slides/S7-5.png",
+    "slideTitle": "Resumo da Semana 7 (Q1 a Q5)",
+    "slidePage": 5
   },
   {
     "id": 66,
     "week": 7,
-    "question": "Indicadores de desempenho são importantes porque: (Média)",
     "options": [
-      "Permitem medir progresso em relação a metas e apoiar decisões.",
-      "Substituem todos os gestores.",
       "Eliminam análise qualitativa.",
+      "Substituem todos os gestores.",
+      "Permitem medir progresso em relação a metas e apoiar decisões.",
       "Devem ser escolhidos sem relação com objetivos.",
       "Impedem aprendizado organizacional."
     ],
-    "correct": 0,
+    "question": "Indicadores de desempenho são importantes porque: (Média)",
+    "correct": 2,
     "justification": "Indicadores tornam objetivos acompanháveis, facilitam controle, comparação, correção de desvios e comunicação de desempenho. - Fonte(s): Semana 7/s7-Cap10-FundAdministração-Gamble.pdf; Semana 7/s7-cap11-PlanejEstrategico-Arnaldo.pdf"
   },
   {
     "id": 67,
     "week": 7,
-    "question": "Um plano de negócios para empresa de desenvolvimento de apps deve considerar: (Média)",
     "options": [
       "Proposta de valor, mercado, equipe, tecnologia, canais, custos, receitas e viabilidade.",
       "Apenas o nome do aplicativo.",
@@ -934,49 +972,53 @@
       "Nenhuma análise financeira.",
       "Ausência de clientes."
     ],
+    "question": "Um plano de negócios para empresa de desenvolvimento de apps deve considerar: (Média)",
     "correct": 0,
     "justification": "Negócios digitais precisam validar problema, público, solução, tecnologia, canais de aquisição, monetização, custos de desenvolvimento/operação e sustentabilidade financeira. - Fonte(s): Semana 7/s7-Empresa Desenv App-Megaleios.pdf; Semana 7/s7-Cap8-Plano Negocios-Biagio.pdf"
   },
   {
     "id": 68,
     "week": 7,
-    "question": "O controle orçamentário é estratégico quando: (Difícil)",
     "options": [
-      "Usa diferenças entre previsto e realizado para corrigir ações e melhorar decisões futuras.",
-      "Serve apenas para registrar gastos passados.",
       "Ignora causas dos desvios.",
+      "Serve apenas para registrar gastos passados.",
+      "Usa diferenças entre previsto e realizado para corrigir ações e melhorar decisões futuras.",
       "Não conversa com metas.",
       "Impede revisão do plano."
     ],
-    "correct": 0,
+    "question": "O controle orçamentário é estratégico quando: (Difícil)",
+    "correct": 2,
     "justification": "O valor estratégico do controle está em aprender com desvios, identificar causas e ajustar decisões. Ele não deve ser só contábil, mas gerencial. - Fonte(s): Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf; Semana 7/s7-Cap10-FundAdministração-Gamble.pdf"
   },
   {
     "id": 69,
     "week": 7,
-    "question": "I) Fluxo de caixa ajuda a prever liquidez. II) Plano financeiro deve considerar investimentos e despesas. III) Lucratividade elimina automaticamente risco de caixa. Assinale a sequência correta. (Difícil)",
     "options": [
-      "V, V, F",
       "V, V, V",
+      "V, V, F",
       "V, F, F",
       "F, V, V",
       "F, F, F"
     ],
-    "correct": 0,
+    "question": "I) Fluxo de caixa ajuda a prever liquidez. II) Plano financeiro deve considerar investimentos e despesas. III) Lucratividade elimina automaticamente risco de caixa. Assinale a sequência correta. (Difícil)",
+    "correct": 1,
     "justification": "Fluxo de caixa mostra entradas e saídas no tempo. Uma empresa pode ser lucrativa no papel e ainda enfrentar problemas de liquidez se recebimentos e pagamentos estiverem desalinhados. - Fonte(s): Semana 7/S7-Cap9-Plano Neg-Biagio.pdf; Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf"
   },
   {
     "id": 70,
     "week": 7,
-    "question": "A integração correta entre estratégia, orçamento e controle é: (Difícil)",
     "options": [
-      "Estratégia define prioridades; orçamento aloca recursos; controle acompanha resultados e corrige desvios.",
-      "Orçamento deve ser feito antes de qualquer objetivo.",
       "Controle elimina necessidade de estratégia.",
+      "Orçamento deve ser feito antes de qualquer objetivo.",
+      "Estratégia define prioridades; orçamento aloca recursos; controle acompanha resultados e corrige desvios.",
       "Estratégia não precisa de recursos.",
       "Orçamento e controle são irrelevantes para execução."
     ],
-    "correct": 0,
-    "justification": "A estratégia precisa ser convertida em recursos, metas e ações. O orçamento viabiliza essa alocação; o controle mede execução e orienta ajustes. - Fonte(s): Semana 7/s7-Cap10-PlanejEstrategico-Arnaldo.pdf; Semana 7/s7-cap11-PlanejEstrategico-Arnaldo.pdf; Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf"
+    "question": "A integração correta entre estratégia, orçamento e controle é: (Difícil)",
+    "correct": 2,
+    "justification": "A estratégia precisa ser convertida em recursos, metas e ações. O orçamento viabiliza essa alocação; o controle mede execução e orienta ajustes. - Fonte(s): Semana 7/s7-Cap10-PlanejEstrategico-Arnaldo.pdf; Semana 7/s7-cap11-PlanejEstrategico-Arnaldo.pdf; Semana 7/S7-OrçamentoEmp - Frezati - Cap5 e 6.pdf",
+    "slideImage": "slides/S7-10.png",
+    "slideTitle": "Resumo da Semana 7 (Q6 a Q10)",
+    "slidePage": 10
   }
 ]

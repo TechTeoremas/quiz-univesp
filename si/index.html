@@ -316,7 +316,7 @@
       `).join("");
 
       const answerHtml = activeQuestions.map((q, idx) => `
-        <li><strong>Questão ${idx + 1}</strong> — ${letters[q.correct]} (${esc(q.slideTitle)})</li>
+        <li><strong>Questão ${idx + 1}</strong> — ${letters[q.correct]}</li>
       `).join("");
 
       win.document.write(`

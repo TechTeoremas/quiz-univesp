@@ -3,1022 +3,695 @@
     "id": 1,
     "week": 1,
     "options": [
-      "Execução de um programa em uma única CPU, sempre uma instrução por vez.",
-      "Uso simultâneo de múltiplos recursos computacionais para resolver um problema.",
-      "Execução de programas sem qualquer comunicação entre tarefas.",
-      "Técnica exclusiva de supercomputadores comerciais.",
-      "Substituição completa da programação sequencial por redes neurais."
+      "Centralização de todos os processos em uma única Unidade Central de Processamento (CPU) para simplificar a manutenção.",
+      "Aumento do número de servidores para lidar com mais solicitações de usuários simultaneamente",
+      "Redução no uso de recursos computacionais para economia de energia durante períodos de baixa demanda",
+      "Divisão de uma tarefa de processamento de dados em sub-tarefas que são executadas em diferentes CPUs simultaneamente.",
+      "Implementação de um novo algoritmo que executa as mesmas tarefas com menos instruções."
     ],
-    "question": "Computação paralela pode ser definida como: (Fácil)",
-    "correct": 1,
-    "justification": "Computação paralela consiste em dividir um problema em partes que possam ser executadas ao mesmo tempo por múltiplos recursos, como vários núcleos, processadores ou computadores conectados em rede. O objetivo principal é reduzir o tempo de execução ou aumentar a capacidade de processamento. - Fonte(s): Semana 1/s1_videoaula1.pdf; Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
+    "question": "Nos sistemas computacionais modernos, a escalabilidade e a capacidade de executar processos em paralelo são fundamentais para atender ao aumento de demanda sem degradar o desempenho. Esses conceitos são imprescindíveis em um mundo onde o volume de dados e o número de usuários podem variar enormemente. Considere um sistema de processamento de dados que utiliza computação paralela para melhorar seu desempenho. Qual dos seguintes cenários exemplifica melhor o aumento da escalabilidade através do uso de computação paralela?",
+    "correct": 3,
+    "justification": "A alternativa descreve o cenário exato da computação paralela, onde uma tarefa principal é quebrada em várias subtarefas menores. Isso permite que múltiplas unidades de processamento trabalhem em conjunto para completar o trabalho de forma mais rápida, o que aumenta diretamente a escalabilidade do sistema. \nFonte Principal: Semana 1 - s1_videoaula1.pdf e Semana 4 - s4_texto-base_introducao_a_computacao_paralela.pdf"
   },
   {
     "id": 2,
-    "week": 1,
+    "week": 3,
     "options": [
-      "Tempo paralelo / tempo serial.",
-      "Número de threads / tempo de comunicação.",
-      "Tempo serial / tempo paralelo.",
-      "Tempo de sincronização / tempo total.",
-      "Eficiência / número de processadores."
+      "Uma rede de comunicação eficiente, com baixa latência e alta largura de banda, e essencial para otimizar o desempenho em clusters de alto desempenho",
+      "A configuração da rede de comunicação é uniforme em todos os tipos de clusters, independentemente de suas aplicações específicas ou requisitos de desempenho.",
+      "A qualidade da rede de comunicação não tem impacto significativo no desempenho de clusters computacionais, pois a computação é primariamente limitada pela capacidade de processamento dos nós.",
+      "A confiabilidade da rede de comunicação é uma preocupação menor em clusters de alta disponibilidade, uma vez que a redundancia de nós compensa quaisquer falhas de rede",
+      "As redes de alta latência são adequadas para aplicações de computação intensiva, pois a sincronização entre nós não é critica para o desempenho do sistema."
     ],
-    "question": "A fórmula básica de speedup é: (Fácil)",
-    "correct": 2,
-    "justification": "Speedup mede o quanto uma execução paralela é mais rápida em relação à execução serial. Se um programa leva 100 segundos serialmente e 25 segundos paralelamente, o speedup é 100/25 = 4. - Fonte(s): Semana 1/s1_videoaula2.pdf"
+    "question": "A rede de comunicação é um componente crítico em clusters computacionais, atuando como a espinha dorsal para a interconexão entre os nós do cluster. Uma rede eficiente permite a rápida troca de dados e mensagens de controle entre os nós, o que é essencial para o desempenho geral do sistema, especialmente em tarefas que requerem intensa comunicação ou sincronização entre os nós Redes de baixa latência e alta largura de banda são preferiveis para suportar aplicações de alto desempenho, enquanto a confiabilidade da rede é fundamental para garantir a continuidade das operações em clusters de alta disponibilidade. Considerando o papel da rede de comunicação em clusters computacionais, assinale a alternativa correta:",
+    "correct": 0,
+    "justification": "A capacidade de transferir rapidamente dados e mensagens de controle entre os nós é essencial. Redes eficientes (baixa latência e alta largura de banda) impactam diretamente a velocidade de conclusão das tarefas computacionais, evitando gargalos em aplicações que exigem intensa comunicação e sincronização. \nFonte Principal: Semana 3 - s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
   },
   {
     "id": 3,
-    "week": 1,
+    "week": 4,
     "options": [
-      "V, V, V",
-      "F, V, F",
-      "V, F, V",
-      "V, V, F",
-      "F, F, V"
+      "I, II e IV, apenas",
+      "II e IV, apenas.",
+      "III, VI e V, apenas",
+      "e V apenas.",
+      "I e III, apenas."
     ],
-    "question": "Avalie: I) Sistemas distribuídos usam computadores interligados por rede. II) Componentes coordenam ações por mensagens. III) Todo sistema distribuído possui relógio global perfeito. (Fácil)",
-    "correct": 3,
-    "justification": "Sistemas distribuídos têm componentes em computadores conectados em rede que se comunicam por troca de mensagens. Uma característica importante é justamente a ausência de um relógio global perfeitamente sincronizado. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
+    "question": "Na construção de sistemas distribuídos, a decisão entre adotar uma abordagem de programação paralela ou concorrente é essencial e tem implicações significativas no design, na eficiência e na escalabilidade do sistema. A programação paralela foca no uso simultâneo de recursos computacionais para acelerar a execução de tarefas, ideal para operações que podem ser divididas em sub operações independentes. Ja a programação concorrente lida com a execução de múltiplas tarefas ao mesmo tempo, em ambientes onde as tarefas podem compartilhar recursos, exigindo gerenciamento cuidadoso de acesso para evitar conflitos e garantir a consistência dos dados. Neste contexto, sobre a programação paralela e concorrente em sistemas distribuídos, observe as afirmativas a seguir: \nI. A programação paralela é sempre a escolha preferencial para sistemas distribuídos, pois maximiza a utilização dos recursos disponíveis. \nII. A programação concorrente é adequada para aplicações em que tarefas interagem com recursos compartilhados, requerendo mecanismos eficazes de sincronização. \nIII. Sistemas construídos com programação paralela não exigem considerações de sincronização, já que as tarefas executadas são completamente independentes IV. A adoção da programação concorrente pode introduzir desafios adicionais em termos de complexidade do código e potenciais condições de corrida que devem ser gerenciadas. \nV. A escolha entre programação paralela e concorrente não tem impacto significativo na escalabilidade do sistema ou na facilidade de manutenção do código .É correto o que se afirma em:",
+    "correct": 1,
+    "justification": "A programação concorrente é adequada para cenários onde múltiplas tarefas acessam e interagem com recursos compartilhados (II), o que exige mecanismos de sincronização. Isso introduz desafios adicionais no desenvolvimento, como a complexidade extra no gerenciamento do código e os perigos das condições de corrida (IV), que devem ser controladas para manter a eficiência e segurança. \nFonte Principal: Semana 4 - s4_texto-base_introducao_a_computacao_paralela.pdf e Semana 2 - s2_revisitando_aula_01_introducao_programacao_concorrente.pdf"
   },
   {
     "id": 4,
-    "week": 1,
+    "week": 6,
     "options": [
-      "Concorrência sempre exige múltiplos processadores; paralelismo nunca exige.",
-      "Concorrência lida com múltiplas atividades em progresso; paralelismo executa atividades simultaneamente para desempenho.",
-      "Concorrência só existe em sistemas distribuídos.",
-      "Paralelismo é apenas alternância de tarefas em uma CPU.",
-      "Não há diferença conceitual entre os termos."
+      "O monitoramento contínuo do sistema computacional permite a detecção precoce de problemas de desempenho, facilitando diagnósticos rápidos e prevenindo Impactos maiores nos usuários finais",
+      "O benefício exclusivo do monitoramento contínuo é a capacidade de prever com precisão as necessidades futuras de capacidade de processamento, eliminando a necessidade de planejamento de capacidade",
+      "A principal vantagem do monitoramento contínuo é a redução de custos com hardware, ao Identificar componentes subutilizados que podem ser removidos sem impacto no desempenho.",
+      "O monitoramento contínuo do desempenho do sistema computacional elimina a necessidade de testes de desempenho regulares, pois mantém o sistema sempre otimizado automaticamente.",
+      "Uma vez configurado, o monitoramento contínuo do desempenho dispensa intervenções humanas, operando de forma completamente autónoma para resolver problemas de desempenho."
     ],
-    "question": "A principal diferença entre concorrência e paralelismo é: (Média)",
-    "correct": 1,
-    "justification": "Concorrência trata da estruturação de um programa com múltiplas atividades que podem progredir de forma intercalada. Paralelismo envolve execução simultânea real, normalmente para reduzir tempo de processamento. - Fonte(s): Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
+    "question": "O monitoramento contínuo do desempenho é uma prática essencial na gestão de sistemas computacionais. Ele não apenas ajuda a detectar e diagnosticar problemas de desempenho em tempo real, mas também fornece dados valiosos para a tomada de decisão sobre melhorias e otimizações futuras. Ferramentas de monitoramento podem rastrear uma ampla variedade de métricas, incluindo utilização de CPU. memoria, largura de banda de rede, e latência de disco, entre outras. Com base na importância do monitoramento contínuo do desempenho em sistemas computacionais, selecione a opção que destaca um benefício dessa prática:",
+    "correct": 0,
+    "justification": "O monitoramento contínuo é uma prática essencial de manutenção proativa. Ele fornece insights e métricas (como uso de CPU e memória) que ajudam a agir sobre gargalos antes que o problema se torne crítico e afete o usuário na ponta da aplicação.\n Fonte Principal: Semana 6 - s6_texto_base_SSC0643_e_SSC5872.pdf"
   },
   {
     "id": 5,
-    "week": 1,
+    "week": 5,
     "options": [
-      "Ao tamanho do trabalho atribuído a cada tarefa antes de sincronizar/comunicar.",
-      "Ao número total de computadores da Internet.",
-      "À velocidade do clock da CPU.",
-      "Ao tipo de linguagem usada.",
-      "Ao tamanho físico do processador."
+      "I,  II e IV, apenas.",
+      "e III, apenas",
+      "I, III e V, apenas",
+      "III e V, apenas",
+      "II e IV, apenas."
     ],
-    "question": "Granularidade em programação paralela refere-se: (Média)",
-    "correct": 0,
-    "justification": "Granularidade indica quão grandes ou pequenas são as partes em que o problema foi dividido. Granularidade fina gera muitas tarefas pequenas e mais comunicação; granularidade grossa gera tarefas maiores e menos sincronização. - Fonte(s): Semana 1/s1_videoaula2.pdf",
-    "slideImage": "slides/S1-5.png",
-    "slideTitle": "Resumo da Semana 1 (Q1 a Q5)",
-    "slidePage": 5
+    "question": "O Apache Spark é um framework de processamento de dados em larga escala que permite análises complexas e processamento de grandes conjuntos de dados de maneira eficiente. Spark oferece APIs em värias linguagens de programação, como Scala, Python e Java.isso o torna especialmente born para tarefas que exigen altos volumes de dados e cálculos intensivos. Neste contexto, sobre o ecossistema do Apache Spark, observe as afirmativas a seguir: \nI. Spark SQL permite a execução de consultas SQL e a leitura de dados de diversas fontes de dados externas \nII. Spark Streaming não pode processar dados em tempo real, somente dados em lote são processados por ele. \nIII. MLib é a biblioteca do Spark dedicada a implementação de algoritmos de machine learning \nIV. GraphX é utilizado exclusivamente para a análise de dados estruturados, não suportando operações sobre grafos. \nV. O ecossistema Spark fornece suporte integrado para análise de dados em batch e em tempo real, machine learning e processamento de grafos \nEstá correto o que se afirma em",
+    "correct": 2,
+    "justification": "No Apache Spark, o Spark SQL permite consultas e leitura de fontes diversas (I). A MLlib é a biblioteca voltada nativamente para algoritmos de machine learning (III). O ecossistema do Spark é robusto porque integra processamento em lote, tempo real, machine learning e análise de grafos nativamente (V). \nFonte Principal: Semana 5 - s5_videoaula13.pdf e s8_material_de_apoio_texto_de_revisao.pdf"
   },
   {
     "id": 6,
-    "week": 1,
+    "week": 2,
     "options": [
-      "1-a, 2-c, 3-b, 4-d",
-      "1-b, 2-a, 3-d, 4-c",
-      "1-d, 2-c, 3-b, 4-a",
-      "1-a, 2-b, 3-c, 4-d",
-      "1-c, 2-d, 3-a, 4-b"
+      "I, II, III, V, apenas",
+      "I, II, V, apenas",
+      "V. apenas",
+      "I, II, apenas",
+      "I, III, IV, apenas"
     ],
-    "question": "Associe: 1) Decomposição; 2) Race condition; 3) Deadlock; 4) Balanceamento de carga. a) Dividir problema; b) Resultado depende da ordem; c) Tarefas bloqueadas; d) Distribuir trabalho adequadamente. (Média)",
-    "correct": 3,
-    "justification": "Decomposição divide o problema em partes; race condition ocorre quando o resultado depende da ordem de execução; deadlock impede progresso por bloqueios mútuos; balanceamento de carga distribui trabalho entre recursos. - Fonte(s): Semana 1/s1_texto_base-introducao_a_programacao_paralela_e_distribuida.pdf"
+    "question": "A tecnologia multicore representa uma evolução significativa na arquitetura de processadores, onde um único chip contém múltiplos núcleos de processamento. Esta configuração permite que o processador execute múltiplas tarefas simultaneamente. Os núcleos podem compartilhar certos recursos, como a cache, enquanto operam de forma independente para processar diferentes tarefas. Leia as seguintes afirmativas sobre processadores multicore: \nI. Processadores multicore contem múltiplos núcleos de processamento em um único chip, permitindo o processamento de múltiplas tarefas simultaneamente. \nII.A principal vantagem dos processadores multicore a redução no consumo de energia e geração de calor, comparado a múltiplos chips de núcleo único. \nIII. Em uma arquitetura multicore, cada núcleo opera de forma completamente independente, sem compartilhar quaisquer recursos com outros núcleos \nIV. O desempenho dos processadores multicore não melhora com a adição de mais núcleos devido ao aumento da complexidade na gestão de tarefas \nV. A arquitetura multicore facilita a computação paralela, que é essencial para aplicações que exigem alta capacidade de processamento, como jogos e aplicações científicas. \nE correto o que se afirma em:",
+    "correct": 1,
+    "justification": "Processadores multicore reúnem múltiplos núcleos físicos no mesmo chip para executar tarefas em paralelo (I). Sua grande vantagem de engenharia é a redução do consumo energético e menor dissipação de calor em relação ao uso de vários chips separados (II). Essa arquitetura é vital para facilitar a computação paralela exigida em simulações e processamentos intensos (V). \nFonte Principal: Semana 2 - s2-Texto Base 1 - Multicore – Definirtec.pdf"
   },
   {
     "id": 7,
-    "week": 1,
+    "week": 7,
     "options": [
-      "Usar sempre o menor número possível de computadores.",
-      "Manter funcionamento adequado quando usuários, carga ou recursos aumentam.",
-      "Impedir a entrada de novos componentes no sistema.",
-      "Eliminar totalmente falhas de rede.",
-      "Centralizar todas as decisões em um único relógio global."
+      "II e III, apenas.",
+      "II, III e V, apenas",
+      "I apenas.",
+      "IV. e V, apenas",
+      "III e IV, apenas"
     ],
-    "question": "Entre os desafios dos sistemas distribuídos, a escalabilidade significa: (Média)",
+    "question": "O Red Hat OpenShift é urna plataforma robusta de aplicações ern nuvem hibrida baseada no Kubernetes, desenhada para facilitar o desenvolvimento e gerenciamento de aplicações, Sua abordagem abrange desde a nuvem pública até configurações on-premise, integrando- se com uma variedade de tecnologias e infraestruturas Leia as seguintes afirmativas relacionadas ao tema \"Red Hat OpenShift e Kubernetes\" e assinale a alternativa correta: \nI. Red Hat OpenShift uma plataforma que não depende de Kubernetes para suas operações principais. \nII. O OpenShift proporciona uma experiência consistente entre diferentes arquiteturas, como nuvem pública, hibrida e on-premise. \nIII. Uma das principais caracteristicas do OpenShift é a capacidade de escolha entre soluções autogerenciadas ou totalmente gerenciadas. \nIV. Kubernetes não suporta a gestão de múltiplas cargas de trabalho e serviços simultaneamente. \nV. A segurança é um dos aspectos criticos na arquitetura do OpenShift, principalmente devido ao volume exponencial de dados processados e armazenados \nÉ correto o que se afirma em:",
     "correct": 1,
-    "justification": "Escalabilidade é a capacidade de o sistema continuar operando bem quando cresce em número de usuários, quantidade de dados, volume de requisições ou número de componentes. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
+    "justification": "O Red Hat OpenShift oferece uma experiência consistente tanto em nuvem pública quanto infraestrutura local (on-premise) (II). Fornece flexibilidade de uso por meio de versões autogerenciadas ou gerenciadas pelo provedor (III). A segurança é um componente crítico dessa arquitetura, especialmente em ambientes híbridos que transitam grandes volumes de dados (V). \nFonte Principal: Semana 7 - s8_material_de_apoio_texto_de_revisao.pdf"
   },
   {
     "id": 8,
-    "week": 1,
+    "week": 4,
     "options": [
-      "Porque impede completamente qualquer comunicação.",
-      "Porque obriga todos os computadores a ficarem desligados.",
-      "Porque dificulta ordenar eventos e coordenar ações com precisão entre máquinas.",
-      "Porque torna desnecessária a passagem de mensagens.",
-      "Porque elimina problemas de concorrência."
+      "I e III, apenas.",
+      "II e IV, apenas",
+      "I, III e IV, apenas.",
+      "I, II, III e IV, apenas",
+      "e V, apenas"
     ],
-    "question": "Por que a ausência de relógio global é um problema importante em sistemas distribuídos? (Difícil)",
+    "question": "O modelo de programação CUDA revolucionou o campo do aprendizado de máquina ao possibilitar a execução de algoritmos complexos de forrna paralela em GPUs. Esta abordagem não apenas acelera significativamente o processamento de dados e o treinamento de modelos, mas também apresenta desafios únicos relacionados à otimização de código, gestão de memória e eficiência computacional. A eficácia do uso de CPUs para aprendizado de máquina depende fortemente da habilidade dos desenvolvedores em aproveitar as características arquitetônicas das GPUs, como a largura de banda da memória elevada e a capacidade de realizar muitas operações de ponto flutuante simultaneamente. Desafios incluem a necessidade de minimizar a latência de acesso à memória, otimizar a paralelização de cálculos e garantir que os dados sejam adequadamente distribuídos entre a memória da GPU para evitar gargalos. Considerando o uso de CUDA para o desenvolvimento de aplicações de aprendizado de máquina em GPUs, observe as afirmativas a seguir \nI. A adaptação de algoritmos de aprendizado de máquina para execução em GPUs usando CUDA pode reduzir drasticamente o tempo necessário para o treinamento de modelos.\n II. Os desenvolvedores não precisam considerar a arquitetura especifica da GPU ao programar com CUDA, pois a API abstrai completamente esses detalhes, otimizando automaticamente o código. \nIII. A otimização da gestão de memória é crítica para evitar gargalos e maximizar o desempenho das aplicações de aprendizado de máquina em GPUs \nIV. A implementação efetiva de aplicações de aprendizado de máquina em CUDA requer conhecimento em técnicas de paralelização que minimizem dependências entre dados. \nV. O modelo de programação CUDA limita a aplicabilidade de GPUs ao aprendizado de máquina, não sendo adequado para outras tarefas de computação científica ou de alto desempenho.Está correto o que se afirma em:",
     "correct": 2,
-    "justification": "Em sistemas distribuídos, cada máquina possui seu próprio relógio, e sincronizá-los perfeitamente é inviável. Isso dificulta saber a ordem exata dos eventos, coordenar operações e detectar atrasos ou falhas. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
+    "justification": "O uso de CUDA (NVIDIA) acelera drasticamente o treinamento de machine learning pela paralelização massiva na GPU (I). Para ter essa eficiência, é crítico gerir bem a memória evitando gargalos na transferência dos dados (III) e dominar técnicas de paralelização para minimizar a dependência e o tempo de ociosidade das threads (IV). Fonte Principal: Semana 4 - s4_texto_base_introducao_a_cuda.pdf"
   },
   {
     "id": 9,
     "week": 1,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
+      "A escolha entre computação paralela e distribuída depende apenas da disponibilidade de hardware, sem considerar o tipo de aplicação ou requisitos de desempenho.",
+      "A computação distribuída é ineficiente para aplicações de grande escala devido à sua complexidade e aos desafios de sincronização de dados.",
+      "A computação paralela é ideal para todas as aplicações, pois sempre oferece o melhor desempenho devido ao uso intensivo de múltiplos processadores.",
+      "A computação distribuída não é adequada para processamento de dados em tempo real devido à latência introduzida pela rede.",
+      "A computação paralela é menos escalável, tornando-a menos adequada para aplicações que exigem o processamento de grandes volumes de dados distribuídos geograficamente."
     ],
-    "question": "I) Falhas independentes significam que um nó pode falhar sem todos falharem. II) Transparência busca ocultar complexidades do sistema. III) Heterogeneidade significa que todos os componentes são idênticos. (Difícil)",
-    "correct": 1,
-    "justification": "Falhas independentes são típicas de sistemas distribuídos. Transparência procura esconder detalhes como localização, migração ou replicação. Heterogeneidade significa diversidade de hardware, software, redes e linguagens, não identidade. - Fonte(s): Semana 1/Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius - cap 1.pdf"
+    "question": "A escolha entre computação paralela e distribuída depende de vários fatores, incluindo o tipo de tarefa a ser realizada, o ambiente de hardware disponível e os objetivos específicos de desempenho e escalabilidade. Enquanto a computação paralela utiliza múltiplos processadores ou núcleos dentro de um único sistema para realizar cálculos simultâneos, aumentando a eficiência de processamento de tarefas complexas, a computação distribuída interliga vários nós de processamento, possivelmente espalhados geograficamente, para trabalhar em conjunto em uma tarefa, oferecendo melhor escalabilidade e flexibilidade, mas também introduzindo desafios adicionais como a latência de rede e a necessidade de sincronização de dados. Considerando as características da computação paralela e distribuída, qual das seguintes afirmações reflete a aplicabilidade destes modelos de computação?",
+    "correct": 4,
+    "justification": "A computação paralela geralmente ocorre dentro de um mesmo hardware ou ambiente de máquinas fortemente acopladas. Quando o desafio envolve escala geográfica massiva e grandes volumes de dados esparsos, a computação distribuída em nós torna-se o modelo adequado, justificando os limites da abordagem puramente paralela em cenários físicos extensos.\nFonte Principal: Semana 1 - s1_videoaula1.pdf e Semana 4 - s4_texto-base_introducao_a_computacao_paralela.pdf"
   },
   {
     "id": 10,
-    "week": 1,
+    "week": 5,
     "options": [
-      "Mostra se o speedup obtido é proporcional ao número de recursos usados.",
-      "Mede apenas o consumo de memória RAM.",
-      "É sempre igual a 100% em programas paralelos.",
-      "Ignora comunicação e sincronização.",
-      "Só se aplica a sistemas sem threads."
+      "O Spark Streaming é uma extensão do core Spark que permite o processamento de fluxos contínuos de dados.",
+      "A principal abstração do Spark é o DataFrame, que não permite operações complexas de transformação e análise de dados.",
+      "O Apache Spark não suporta operações em memória, dependendo exclusivamente de operações em disco para o processamento de dados.",
+      "O Spark utiliza o modelo MapReduce como única forma de processamento de dados, similar ao Hadoop.",
+      "O Spark é exclusivamente uma ferramenta de processamento de dados offline, não sendo adequado para aplicações que requerem respostas em tempo real."
     ],
-    "question": "A eficiência paralela é importante porque: (Difícil)",
+    "question": "O Apache Spark é uma poderosa plataforma de computação em cluster que proporciona um processamento de dados extremamente rápido e eficiente. Utilizado amplamente em análises de big data, o Spark permite o processamento de grandes conjuntos de dados de forma distribuída, oferecendo também uma interface para programação de clusters com tolerância a falhas e recuperação de dados. Seu modelo de execução baseia-se no conceito de RDD (Resilient Distributed Datasets), que são coleções imutáveis de objetos distribuídos pelo sistema de computação. Este conceito é central para entender como o Spark realiza operações paralelas em grandes volumes de dados. Com base nos conceitos apresentados sobre o Apache Spark, identifique qual das seguintes afirmações é verdadeira em relação à arquitetura e funcionalidade do Spark:",
     "correct": 0,
-    "justification": "A eficiência relaciona o speedup ao número de processadores/cores utilizados. Ela indica se os recursos adicionais estão sendo bem aproveitados ou se comunicação, sincronização e desequilíbrio estão reduzindo o ganho. - Fonte(s): Semana 1/s1_videoaula2.pdf",
-    "slideImage": "slides/S1-10.png",
-    "slideTitle": "Resumo da Semana 1 (Q6 a Q10)",
-    "slidePage": 10
+    "justification": "Diferente do modelo puramente estático ou offline, o Apache Spark suporta demandas de processamento dinâmico. O componente Spark Streaming é a tecnologia dedicada e construída (via micro-batches) para processar e analisar dados ininterruptos em tempo real. \nFonte Principal: Semana 5 - s5_videoaula13.pdf e s8_material_de_apoio_texto_de_revisao.pdf"
   },
   {
     "id": 11,
-    "week": 2,
+    "week": 6,
     "options": [
-      "Um cluster de computadores independentes.",
-      "Um chip físico com mais de um núcleo de processamento.",
-      "Um sistema operacional distribuído.",
-      "Uma rede de sensores sem CPU.",
-      "Uma técnica exclusiva de armazenamento."
+      "Medição da temperatura ambiente do data center como um indicador direto do desempenho computacional do sistema.",
+      "Alteração da cor e do tema visual do sistema operacional para observar mudanças na velocidade de resposta do sistema.",
+      "Utilização de benchmarks específicos da indústria, que simulam cargas de trabalho reais e medem a capacidade de processamento e resposta do sistema.",
+      "Contagem manual do número de cabos conectados ao servidor para estimar a largura de banda da rede e sua influência no desempenho do sistema.",
+      "Redesenhar a interface do usuário para reduzir o número de cliques necessários para completar uma tarefa, como um método para medir a eficiência do processamento."
     ],
-    "question": "Um processador multicore é: (Fácil)",
-    "correct": 1,
-    "justification": "Multicore significa que um único processador físico contém vários núcleos capazes de executar tarefas simultaneamente, aumentando a capacidade de processamento. - Fonte(s): Semana 2/s2-Texto Base 1 - Multicore – Definirtec.pdf"
+    "question": "Medir o desempenho de sistemas computacionais é uma prática essencial que permite aos desenvolvedores e administradores de sistemas entender e otimizar o uso dos recursos de hardware e software. Há diversos métodos e ferramentas disponíveis para esta finalidade, incluindo monitoramento em tempo real, análise de logs e testes de carga. Cada um desses métodos pode fornecer insights valiosos sobre diferentes aspectos do desempenho, como a eficiência do processamento, a capacidade de resposta e a estabilidade do sistema sob carga. Com base nos métodos de medição de desempenho em sistemas computacionais, selecione a opção que identifica corretamente uma ferramenta ou método comum para essa finalidade.",
+    "correct": 2,
+    "justification": "Benchmarks consistem em métodos científicos e controlados para testar computadores. Eles geram cargas pesadas padronizadas que permitem extrair indicadores numéricos de desempenho (capacidade de CPU, taxa de resposta), sendo a forma correta e amplamente utilizada no mercado corporativo para medir a eficiência real de hardware e software.\n Fonte Principal: Semana 6 - s6_texto_base_SSC0643_e_SSC5872.pd"
   },
   {
     "id": 12,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Permitem organizar múltiplas atividades dentro de um processo.",
-      "Eliminam a necessidade de sistema operacional.",
-      "Impedem qualquer bloqueio de E/S.",
-      "Nunca compartilham memória.",
-      "Só funcionam em clusters."
+      "Um desafio específico é a necessidade de reavaliar e fortalecer as estratégias de segurança para proteger dados e aplicações em um ambiente mais aberto e distribuído como o da Cloud Computing.",
+      "A escalabilidade das aplicações, na Cloud Computing, torna-se um desafio menor, pois os provedores de serviços em nuvem garantem automaticamente a escalabilidade ilimitada de todos os sistemas.",
+      "A gestão de recursos em ambientes de Cloud Computing possui uma complexidade menor e desafiadora do que no Grid Computing, devido à abstração completa da infraestrutura física.",
+      "A migração para a Cloud Computing elimina todos os desafios de segurança enfrentados pelo Grid Computing, graças às infraestruturas modernas e seguras oferecidas pelos provedores de nuvem.",
+      "A transição para a Cloud Computing não apresenta desafios significativos em termos de gestão de recursos, pois os modelos de consumo baseados em uso simplificam."
     ],
-    "question": "Threads são úteis principalmente porque: (Fácil)",
+    "question": "A migração de sistemas tradicionais de Grid Computing para ambientes de Cloud Computing representa uma transição significativa na forma como os recursos computacionais são gerenciados e utilizados. Essa mudança traz consigo uma série de desafios relacionados à segurança dos dados, à escalabilidade das aplicações e à eficiência na gestão de recursos. No Grid Computing, o foco está na colaboração e no compartilhamento de recursos entre várias organizações com objetivos específicos de pesquisa ou projeto. Já na Cloud Computing, a ênfase recai sobre a provisão flexível de recursos como serviços, o que exige uma reavaliação das estratégias de segurança, adaptações para garantir a escalabilidade e uma gestão de recursos mais dinâmica para atender às demandas variáveis dos usuários. Considerando os desafios na migração de sistemas de Grid Computing para ambientes de Cloud Computing, sobre um desafio específico dessa transição, assinale a alternativa correta:",
     "correct": 0,
-    "justification": "Threads permitem que uma aplicação tenha múltiplos fluxos de execução, como interface, cálculo e entrada/saída, muitas vezes compartilhando o mesmo espaço de endereçamento. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf"
+    "justification": ""
   },
   {
     "id": 13,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Múltiplas instruções, múltiplos dados.",
-      "Uma instrução, múltiplos dados.",
-      "Múltiplas instruções, um dado.",
-      "Uma instrução, um dado.",
-      "Sem instruções e sem dados."
+      "Apenas I, II e IV estão corretas",
+      "Apenas II e IV estão corretas",
+      "Apenas I, III e IV estão corretas",
+      "Apenas I, II e III estão corretas",
+      "Apenas II e III estão corretas"
     ],
-    "question": "Na classificação de Flynn, SISD significa: (Fácil)",
-    "correct": 3,
-    "justification": "SISD representa a arquitetura sequencial clássica: um fluxo de instruções operando sobre um fluxo de dados. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf"
+    "question": "Sabemos que a transparência é um conceito-chave da computação distribuída, e que há vantagens e desvantagens da utilização da computação distribuída. Analise as afirmações a seguir e depois escolha a alternativa correta: \nI. aproveitamento do paralelismo para acelerar a execução de uma aplicação/programa. \nII. erros em aplicações distribuídas são menores que em aplicações paralelas. \nIII. extensibilidade é uma vantagem que permite que a aplicação/sistema cresça gradativamente. \nIV. uma desvantagem é a dependência da rede utilizada.",
+    "correct": 2,
+    "justification": "Material Base: Videoaula 1 - Computação Paralela e Distribuída - Slides: 8 – 12. Justificativa sobre todas as alternativas (corretas e incorretas) Aproveitar o paralelismo é uma das funções da computação paralela, o que permite acelerar a execução de aplicações em ambientes com memória compartilhada. Erros de aplicações paralelas ou distribuídas podem ser tão pequenos e grandes em qualquer situação e depende também do programador, dos recursos disponíveis ou da ausência deles quando solicitados."
   },
   {
     "id": 14,
-    "week": 2,
+    "week": 1,
     "options": [
-      "1-c, 2-d, 3-a, 4-b",
-      "1-b, 2-a, 3-d, 4-c",
-      "1-d, 2-c, 3-b, 4-a",
-      "1-a, 2-c, 3-b, 4-d",
-      "1-a, 2-b, 3-c, 4-d"
+      "a UMA possui um barramento de interconexão entre os SMPs.",
+      "o tipo UMA é comum em SMPs.",
+      "na UMA a coerência de cache é feita em software.",
+      "na UMA o tempo de acesso é diferente para toda memória.",
+      "na NUMA o tempo de acesso à memória não varia."
     ],
-    "question": "Associe: 1) SISD; 2) SIMD; 3) MISD; 4) MIMD. a) Uma instrução/um dado; b) Uma instrução/múltiplos dados; c) Múltiplas instruções/um dado; d) Múltiplas instruções/múltiplos dados. (Média)",
-    "correct": 4,
-    "justification": "Flynn classifica arquiteturas pelo número de fluxos de instruções e dados. SIMD é comum em vetorização; MIMD é comum em multiprocessadores e clusters. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula3.pdf"
+    "question": "Considerando as diferenças entre as arquiteturas de memória NUMA e UMA é correto afirmar que:",
+    "correct": 1,
+    "justification": "Material Base: Videoaula 03 - Paralelismo, Concorrência e Escalabilidade - Slides: 4-7. Justificativa sobre todas as alternativas (corretas e incorretas) Na UMA a coerência em cache é feita em hardware e o tempo de acesso é igual para toda a memória. Na NUMA o tempo de acesso à memória varia dependendo se ela pode ser acessada localmente ou em um processador remoto. O barramento de interconexão está presente na NUMA, o que a torna comum em SMPs."
   },
   {
     "id": 15,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Todos os processadores acessam a memória com tempo uniforme.",
-      "Cada processador só acessa memória local.",
-      "Não existe espaço de endereçamento comum.",
-      "A comunicação ocorre apenas por mensagens de rede.",
-      "Não há caches."
+      "switch.",
+      "placa de rede.",
+      "roteador.",
+      "host.",
+      "antena."
     ],
-    "question": "Em memória compartilhada UMA: (Média)",
+    "question": "Um componente que é fundamental na interconexão dos hosts clientes que fazem parte de um cluster (seja de alto desempenho, alta disponibilidade ou de balanceamento de carga) junto ao servidor frontend é o:",
     "correct": 0,
-    "justification": "UMA significa Uniform Memory Access. Os processadores compartilham um espaço de memória e o tempo de acesso é uniforme, exigindo mecanismos de coerência de cache. - Fonte(s): Semana 2/s2-SO Modernos 4 ed 364-366.pdf",
-    "slideImage": "slides/S2-5.png",
-    "slideTitle": "Resumo da Semana 2 (Q1 a Q5)",
-    "slidePage": 5
+    "justification": "Material Base: Texto-base 4 - Aspectos Técnicos Envolvidos na Construção de um Cluster Beowulf - Ataualpa Albert Carmo Braga - p. 2 (401) Objetivo de Aprendizado: IDENTIFICAR E COMPREENDER A FUNÇÃO DO SWITCH NA CONSTRUÇÃO DE CLUSTERS COMPUTACIONAIS Conteúdo Específico: INFRAESTRUTURA PARA COMPUTAÇÃO PARALELA E DISTRIBUÍDA Justificativa sobre todas as alternativas (corretas e incorretas) O switch é um elemento de interconexão entre os componentes do cluster (frontend, nós de processamento, usuários, etc). Ele atua na camada 3 da pilha TCP/IP."
   },
   {
     "id": 16,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Apenas quando o computador reinicia.",
-      "Com alta frequência, até entre instruções.",
-      "Somente quando há falha permanente.",
-      "Nunca alterna threads.",
-      "Somente em sistemas sem cache."
+      "requisição-resposta.",
+      "p2p.",
+      "fork-join.",
+      "cliente-servidor.",
+      "publish-subscribe."
     ],
-    "question": "Multithreading de granularidade fina alterna threads: (Média)",
-    "correct": 1,
-    "justification": "Na granularidade fina, a troca entre threads é frequente para tentar esconder latências. Na granularidade grossa, a troca ocorre em eventos mais caros, como falhas de cache. - Fonte(s): Semana 2/s2-Texto Base 2 - paralelismo_no_nivel_de_threads.pdf"
+    "question": "Trata-se de uma forma de configurar e executar programas em paralelo de modo que a execução das tarefas concorrentes juntam-se (join) em um ponto subsequente, que a partir deste ponto a execução passa a ser sequencial, sendo utilizado no padrão OpenMP. Assinale a alternativa cujo conceito está posto acima:",
+    "correct": 2,
+    "justification": "Material Base: Videoaula 09 - Frameworks para Computação Paralela - OpenMP - Slides: 10 Objetivo de Aprendizado: IDENTIFICAR O PADRÃO FORK-JOIN NO CONTEXTO DE DESENVOLVIMENTO DE SOLUÇÕES PARALELAS Conteúdo Específico: FRAMEWORKS PARA COMPUTAÇÃO PARALELA Justificativa sobre todas as alternativas (corretas e incorretas) Publish-subscribe é um padrão de mensagem em que os emissores de mensagens, não programam as mensagens para serem enviadas diretamente a destinatário. O modelo cliente - servidor é uma estrutura de aplicação distribuída que distribui as tarefas e cargas de trabalho entre os fornecedores de um recurso. P2P é uma arquitetura de redes de computadores em que cada um dos nós da rede funciona tanto como cliente quanto como servidor. Requisições e respostas são utilizadas para trocar dados entre aplicações distribuídas, com as aplicações Web por exemplo."
   },
   {
     "id": 17,
-    "week": 2,
+    "week": 1,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, V",
-      "F, V, F",
-      "F, F, V"
+      "Apenas II e III estão corretas",
+      "Apenas I e II estão corretas",
+      "Apenas I e III estão corretas",
+      "Apenas I e IV estão corretas",
+      "Apenas II e IV estão corretas"
     ],
-    "question": "I) Threads de um mesmo processo podem compartilhar memória. II) Processos normalmente têm espaços de endereçamento separados. III) Compartilhamento elimina todos os problemas de sincronização. (Média)",
-    "correct": 1,
-    "justification": "Threads podem compartilhar dados, o que facilita comunicação interna, mas também cria riscos de corrida e exige sincronização. Processos são mais isolados por padrão. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf"
+    "question": "O Apache Hadoop é considerado uma ferramenta importante para o processamento de alta demanda de dados. Entre os benefícios de utilizá-lo, pode-se destacar: \nI. Código aberto: todo projeto de software livre de sucesso tem por trás uma comunidade ativa. \nII. Único nó mestre: a arquitetura do Hadoop tradicionalmente utiliza várias máquinas para o processamento e armazenamento dos dados tendo como vantagem a utilização de apenas um nó mestre. \nIII. Simplicidade: Hadoop retira do desenvolvedor a responsabilidade de gerenciar questões relativas à computação paralela, tais como tolerância a falhas, escalonamento e balanceamento de carga. \nIV. Processamento de arquivos pequenos: trabalho pequeno é tarefa para ser executada com base em um arcabouço com foco em larga escala.",
+    "correct": 2,
+    "justification": "Material Base: Apache Hadoop: conceitos teóricos e práticos, evolução e novas possibilidades - Pag: 8 - 9 Objetivo de Aprendizado: COMPREENDER AS VANTAGENS E DESVATAGENS DO USO DO HADOOP Conteúdo Específico: FERRAMENTAS PARA PROCESSAMENTO DE DADOS EM LARGA ESCALA Justificativa sobre todas as alternativas (corretas e incorretas) Processamento de arquivos pequenos: trabalho pequeno não é tarefa para ser executada com base em um arcabouço com foco na escalabilidade. A utilização de um único nó mestre é uma desvantagem da arquitetura do Hadoop."
   },
   {
     "id": 18,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Caches diferentes podem conter cópias do mesmo dado compartilhado.",
-      "Ela substitui a memória principal.",
-      "Ela elimina a necessidade de barramento.",
-      "Ela impede execução paralela.",
-      "Ela transforma MIMD em SISD."
+      "Apenas I e IV estão corretas.",
+      "Apenas I e III estão corretas.",
+      "Apenas II e IV estão corretas.",
+      "Apenas II e III estão corretas.",
+      "Apenas I e II estão corretas."
     ],
-    "question": "A coerência de cache é necessária em multiprocessadores porque: (Difícil)",
-    "correct": 0,
-    "justification": "Quando múltiplos processadores possuem caches, um mesmo dado pode estar copiado em vários lugares. Se um processador altera o dado, os outros precisam ver uma versão coerente, por atualização ou invalidação. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula4.pdf"
+    "question": "A avaliação de desempenho de um sistema computacional envolve, dentre outros aspectos: \nI. Determinar se um sistema está off-line. \nII. Determinar a eficiência com a qual um sistema atinge seus objetivos. \nIII. Determinar a eficiência com a qual um sistema atinge as necessidades e expectativas de seus usuários. \nIV. Buscar uma métrica que indique apenas a qualidade de um serviço prestado.",
+    "correct": 3,
+    "justification": "Material Base: SC0643 e SSC5872 Avaliação de Desempenho de Sistemas Computacionais - Pag: 19 Objetivo de Aprendizado: COMPREENDER O QUE É AVALIAR UM SISTEMA COMPUTACIONAL OU NÃO Conteúdo Específico: AVALIAÇÃO DE DESEMPENHO, CARGA DE TRABALHO EM APLICAÇÕES E FERRAMENTAS DE TESTE Justificativa sobre todas as alternativas (corretas e incorretas) A métrica pode indicar não somente a qualidade de um serviço prestado mas outros atributos como a quantidade do serviço prestado. Em geral, para indicar se um sistema está on-line ou off-line, utiliza-se ferramentas de monitoramento. Faz sentido, portanto, avaliar a ferramenta de monitoramento para indicar se o sistema está ou não on-line."
   },
   {
     "id": 19,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Substituir completamente sistemas operacionais.",
-      "Executar um único programa sem dados.",
-      "Sistemas onde cada processador executa instruções completamente diferentes sem relação.",
-      "Eliminar paralelismo de dados.",
-      "Aplicar a mesma operação sobre muitos dados, como vetores ou matrizes."
+      "race conditions, deadlock, locking",
+      "deadlock, locking, balanceamento",
+      "balanceamento, locking, decomposição",
+      "locking, balanceamento, deadlock",
+      "decomposição, balanceamento, deadlock"
     ],
-    "question": "SIMD é especialmente adequado para: (Difícil)",
-    "correct": 4,
-    "justification": "SIMD executa uma mesma instrução sobre múltiplos dados, sendo útil em processamento vetorial, imagens, matrizes e GPUs. - Fonte(s): Semana 2/s2_revisitando_aula_01_introducao_programacao_concorrente.pdf; Semana 2/s2_videoaula4.pdf"
+    "question": "Analise as afirmações a seguir e identifique o que preenche corretamente as lacunas em relação aos desafios relacionados ao desenvolvimento de programas paralelos. A situação em que a memória compartilhada deve ser bloqueada para evitar conflitos que possam provocar resultados inconsistentes denomina-se ______. É o caso em que é necessário realizar a distribuição de tarefas entre threads ou processadores em nós distintos que se comunicam via rede de computadores. Esta técnica chama-se ______. Para evitar ______ o programador deve evitar criar dependências que possam bloquear a execução do programa.",
+    "correct": 3,
+    "justification": "Texto-base: Introdução à programação paralela e distribuída - Suzana de Siqueira Santos - p. 5 Objetivo de Aprendizado: RELACIONAR OS PRINCIPAIS DESAFIOS ASSOCIADOS AO ESCOPO DE DESENVOLVER PROGRAMAS PARALELOS E A DIFICULDADE SE COMPARADA AO DESENVOLVIMENTO DE PROGRAMAS SEQUENCIAS QUE DIFICULTAM A ESCALABILIDADE DA SOLUÇÃO Conteúdo Específico: INTRODUÇÃO À COMPUTAÇÃO PARALELA E DISTRIBUÍDA Justificativa sobre todas as alternativas (corretas e incorretas) Decomposição: é preciso projetar o código de forma que possamos dividir uma determinada tarefa em subtarefas a serem executadas em paralelo. Race conditions: há casos em que a ordem em que cada expressão é avaliada e/ou a ordem de comunicação pode afetar o resultado do programa paralelo."
   },
   {
     "id": 20,
-    "week": 2,
+    "week": 1,
     "options": [
-      "Conversão automática para computação em nuvem.",
-      "Impossibilidade de usar processadores multicore.",
-      "Ausência de qualquer paralelismo.",
-      "Redução obrigatória do número de instruções.",
-      "Condições de corrida e inconsistência de dados."
+      "oc login -u admin",
+      "oc -u system:admin",
+      "oc login system:admin",
+      "oc login -u system=admin",
+      "oc login -u system:admin"
     ],
-    "question": "O maior risco de usar threads com memória compartilhada sem controle é: (Difícil)",
+    "question": "Quando o OpenShift é inicializado, a mensagem de boas-vindas indica um comando para realizar o login como administrador. Esse comando é melhor descrito em:",
     "correct": 4,
-    "justification": "Quando threads acessam e alteram os mesmos dados simultaneamente sem sincronização, a ordem das operações pode produzir resultados incorretos ou imprevisíveis. - Fonte(s): Semana 2/S2-Sistemas Op Mod- 3ª Ed- 325-331.pdf; Semana 2/s2-SO Modernos 4 ed- 67-73.pdf",
-    "slideImage": "slides/S2-10.png",
-    "slideTitle": "Resumo da Semana 2 (Q6 a Q10)",
-    "slidePage": 10
+    "justification": "Material Base: Videoaula 20 - Criação de um Cluster com OpenShift - Slides: 8 Objetivo de Aprendizado: SABER COMO É O COMANDO USADO PARA LOGAR NO OPENSHIFT COMO ADMINISTRADOR. Conteúdo Específico: OPENSHIFT - INTRODUÇÃO, ARQUITETURA E DEPLOY DE APLICAÇÕES Justificativa sobre todas as alternativas (corretas e incorretas) Pela estrutura do OpenShitft, os parâmetros necessários para realizar o login como adminstrador são os descritos na alternativa \"oc login -u system:admin\". O restante das alternativas não possuem todos os requisitos necessários para o funcionamento adequado do comando de login como admin."
   },
   {
     "id": 21,
-    "week": 3,
+    "week": 2,
     "options": [
-      "Um grupo de computadores interligados que trabalham como recurso computacional conjunto.",
-      "Um único processador com vários registradores.",
-      "Uma linguagem de programação paralela.",
-      "Um tipo de arquivo compactado.",
-      "Um protocolo exclusivo de e-mail."
+      "Apenas I e III estão corretas",
+      "Apenas III e IV estão corretas",
+      "Apenas I, II e IV estão corretas",
+      "Apenas I, II e III estão corretas",
+      "Apenas I e II estão corretas"
     ],
-    "question": "Um cluster computacional é: (Fácil)",
-    "correct": 0,
-    "justification": "Clusters conectam computadores, geralmente por rede local, para executar tarefas de alto desempenho, alta disponibilidade ou balanceamento de carga. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
+    "question": "Considere as afirmações a seguir que relacionam vantagens e desvantagens de arquiteturas de memória compartilhada e de memória distribuída. Em seguida, assinale a alternativa correta:\nI. Uma vantagem da memória distribuída é o acesso rápido à memória do próprio processador.\nII. Uma desvantagem da memória compartilhada é a falta de escalabilidade.\nIII. Na memória compartilhada a memória é escalável com o número de processadores.\nIV. Semáforo é um mecanismo usado para controlar o acesso à memória distribuída.",
+    "correct": 4,
+    "justification": "Na arquitetura de memória distribuída, cada processador tem acesso direto e muito rápido à sua própria memória local (I). Por outro lado, o grande problema da memória compartilhada é a falta de escalabilidade (II), pois à medida que se adicionam novos processadores, o barramento único de comunicação com a memória cria um gargalo. A afirmação III inverte os conceitos (a distribuída que é escalável), e a IV erra ao dizer que semáforos controlam a distribuída (eles são para concorrência em memória compartilhada). \nFonte Principal: Semana 2 - s2_videoaula3.pdf / s4_texto-base_introducao_a_computacao_paralela.pdf"
   },
   {
     "id": 22,
     "week": 3,
     "options": [
-      "Proibir programação paralela.",
-      "Usar apenas supercomputadores proprietários caríssimos.",
-      "Usar PCs comuns, Linux e rede para obter alto desempenho com baixo custo.",
-      "Ser uma tecnologia exclusiva de celulares.",
-      "Eliminar a necessidade de hardware."
+      "Um cluster básico deve ser constituído por hosts, uma rede de comunicação e uma arquitetura dessa rede de comunicação.",
+      "O conceito de interoperabilidade de um cluster está relacionado à resistência a falhas de hardware, software e fornecimento de energia.",
+      "O objetivo principal de um cluster computacional é manter os serviços em operação apenas quando for solicitado.",
+      "Balanceamento de carga é a técnica utilizada para que vários provedores de serviços possam atender a um único cliente ao mesmo tempo.",
+      "Alta disponibilidade é a técnica utilizada para distribuir carga de trabalho de maneira uniforme entre dois ou mais hosts de um cluster."
     ],
-    "question": "Um cluster Beowulf ficou conhecido por: (Fácil)",
-    "correct": 2,
-    "justification": "O cluster Beowulf popularizou a ideia de construir alto desempenho usando componentes de mercado, software livre e bibliotecas de passagem de mensagens. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
+    "question": "Clusters equivalem a uma combinação de dispositivos computacionais interligados por uma rede de comunicação que envolve software e hardware, utilizados para permitir alta disponibilidade de recursos computacionais, o que acarreta melhorar a confiabilidade da solução. O uso de clusters permite muito mais recursos computacionais do que apenas um computador trabalhando isolado.\nCom relação aos clusters em sistemas paralelos, assinale a alternativa correta.",
+    "correct": 0,
+    "justification": "Um cluster é fundamentalmente um conjunto de nós (hosts ou processadores) interligados por uma rede de comunicação estruturada, atuando em conjunto. As outras alternativas erram ao misturar os conceitos de técnicas específicas de cluster: balanceamento de carga serve para distribuir uniformemente o tráfego e requisições, enquanto a alta disponibilidade é desenhada para manter os serviços rodando em caso de falhas de hardware ou software. \nFonte Principal: Semana 3 - s3_videoaula6.pdf / s3_texto_base_cluster_computacao_de_alto_desempenho.pdf"
   },
   {
     "id": 23,
-    "week": 3,
+    "week": 4,
     "options": [
-      "Proibição de escalabilidade.",
-      "Uso obrigatório de um único computador local.",
-      "Ausência total de virtualização.",
-      "Oferta de recursos computacionais sob demanda pela rede.",
-      "Execução sem servidores físicos."
+      "III e IV, apenas.",
+      "I, II e III, apenas.",
+      "I e II, apenas.",
+      "I, II e IV, apenas.",
+      "II e IV, apenas."
     ],
-    "question": "Computação em nuvem caracteriza-se principalmente por: (Fácil)",
-    "correct": 3,
-    "justification": "A nuvem fornece recursos como processamento, armazenamento, bancos de dados e plataformas via rede, com elasticidade, provisionamento sob demanda e pagamento conforme uso. - Fonte(s): Semana 3/s3_texto_base_computacao_em_nuvem.pdf"
+    "question": "MPI é uma biblioteca do tipo message passing (passagem de mensagens), que é um conjunto de processos que possui acesso à memória local, desenvolvida para ambientes de memória distribuída, máquinas massivamente paralelas, Networks of Workstations (NOWs) e redes heterogêneas. A biblioteca MPI é de rotina e fornece funcionalidade básica para que os processos se comuniquem, em que, no paralelismo explícito, o programador é responsável pela distribuição. Com relação à introdução à computação paralela com OpenMPI, avalie as afirmativas a seguir.\nI. Implementações proprietárias e públicas, portabilidade e compatibilidade com diversos hardwares são algumas vantagens do OpenMPI.\nII. O conceito de thread safety se caracteriza por usar uma comunicação ponto a ponto com modos de comunicação do tipo standard, synchronous, ready e buffered.\nIII. Cada parte de um programa \"quebrado\" é denominado \"rank\", em que os ranks podem ser executados em uma única máquina ou em várias.\nIV. O controle de execução depende da criação do sistema e a comunicação entre os hosts pode ser o gargalo da solução. Ambos são vantagens consideradas da biblioteca OpenMPI.\nÉ correto o que se afirma em:",
+    "correct": 2,
+    "justification": "O OpenMPI traz como vantagem a compatibilidade, portabilidade e existência de implementações públicas e proprietárias (I). Ele também faz uso correto do thread safety e modos de comunicação padrão e síncronos para a segurança na concorrência (II). A afirmativa III erra na nomenclatura da arquitetura (chamando de \"rank\" processos individuais), e a IV comete o erro lógico de elencar fatores como \"dependência do sistema\" e \"gargalo de rede\" como se fossem vantagens da biblioteca, quando na verdade são desvantagens/desafios inerentes ao modelo. \nFonte Principal: Semana 4 - s4_videoaula10.pdf / s4_texto-base_introducao_a_computacao_paralela.pdf"
   },
   {
     "id": 24,
-    "week": 3,
+    "week": 6,
     "options": [
-      "1-d, 2-a, 3-c, 4-b",
-      "1-a, 2-d, 3-b, 4-c",
-      "1-c, 2-b, 3-a, 4-d",
-      "1-b, 2-c, 3-d, 4-a",
-      "1-d, 2-c, 3-a, 4-b"
+      "WordPress, que, embora seja um sistema de gerenciamento de conteúdo, pode ser adaptado com plugins específicos para simular condições de carga elevada em testes preliminares em ambientes controlados.",
+      "Photoshop, frequentemente, empregado no pré-processamento de imagens para web, cujo desempenho otimizado pode influenciar indiretamente os resultados durante os testes de carga ao reduzir o tempo de carregamento das páginas.",
+      "JMeter é uma ferramenta de código aberto para avaliação de desempenho de serviços web, pois permite simular múltiplos usuários acessando simultaneamente uma aplicação, testando a capacidade do sistema.",
+      "AutoCAD, que é primariamente um software de design e modelagem 3D, mas pode ser utilizado para visualizar o impacto da carga de infraestrutura em simulações de ambientes virtuais complexos.",
+      "Excel, que, apesar de não ser uma ferramenta de teste de carga direta, é comumente usado para o planejamento e a análise de resultados de testes de carga por meio da gestão de dados e simulação de cenários de usuário."
     ],
-    "question": "Associe: 1) Cluster; 2) Grid; 3) Nuvem; 4) Beowulf. a) Recursos heterogêneos e distribuídos entre organizações; b) PCs comuns em rede para HPC; c) Recursos sob demanda; d) Máquinas próximas cooperando como sistema. (Média)",
-    "correct": 0,
-    "justification": "Clusters costumam reunir máquinas próximas; grids agregam recursos heterogêneos geograficamente distribuídos; nuvem oferece recursos sob demanda; Beowulf é cluster de baixo custo com PCs comuns. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_grades_computacionais.pdf; Semana 3/s3_texto_base_computacao_em_nuvem.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
+    "question": "Teste de carga em aplicações web é um processo crítico para garantir que um sistema possa lidar com volumes de acesso previstos e além, mantendo a performance e a estabilidade desejadas. Essa prática envolve simular um grande número de usuários acessando a aplicação simultaneamente, para avaliar como o sistema se comporta sob condições de estresse. Os testes podem identificar gargalos de desempenho, problemas de escalabilidade e limitações de infraestrutura, permitindo que as equipes de desenvolvimento e operações façam ajustes antes que a aplicação seja colocada em produção ou atinja picos de demanda reais. Considerando as ferramentas disponíveis para teste de carga em aplicações web, selecione a opção que corretamente identifica uma dessas ferramentas.",
+    "correct": 2,
+    "justification": "O Apache JMeter é um framework projetado exclusivamente para submeter aplicações, APIs e redes a cargas de estresse rigorosas. Ele forja múltiplos usuários acessando os recursos ao mesmo tempo para avaliar estabilidade e tempo de resposta. As alternativas restantes listam softwares (Photoshop, AutoCAD, Excel, WordPress) com finalidades totalmente diferentes, como edição gráfica ou gestão de conteúdo. Fonte Principal: Semana 6 - s8_material_de_apoio_texto_de_revisao.pdf"
   },
   {
     "id": 25,
-    "week": 3,
+    "week": 7,
     "options": [
-      "Substituem o hardware de rede.",
-      "Permitem comunicação por passagem de mensagens entre processos/nós.",
-      "Criam automaticamente qualquer algoritmo paralelo.",
-      "Eliminam latência de comunicação.",
-      "Impedem uso de Linux."
+      "I e II, apenas.",
+      "I e IV, apenas.",
+      "I, II e IV, apenas.",
+      "II, III e V, apenas.",
+      "I, II, IV e V, apenas."
     ],
-    "question": "Em clusters, bibliotecas como MPI são importantes porque: (Média)",
-    "correct": 1,
-    "justification": "Em memória distribuída, os nós não compartilham memória diretamente. MPI permite enviar e receber mensagens para coordenar partes do cálculo. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf; Semana 3/s3_videoaula5.pdf",
-    "slideImage": "slides/S3-5.png",
-    "slideTitle": "Resumo da Semana 3 (Q1 a Q5)",
-    "slidePage": 5
+    "question": "O Red Hat OpenShift oferece uma plataforma poderosa para o deploy e gerenciamento de aplicações em ambientes de nuvem híbrida. Dominar o processo de criação de um projeto no OpenShift é fundamental para aproveitar eficientemente todas as funcionalidades que essa plataforma oferece. Este processo inclui várias etapas, desde a configuração inicial até o deploy final da aplicação. Leia as seguintes afirmativas relacionadas ao processo de criação e deploy de um projeto no Red Hat OpenShift e assinale a alternativa correta:\nI. A primeira etapa no OpenShift para criar um projeto é configurar o ambiente de desenvolvimento, incluindo as ferramentas e recursos necessários.\nII. Depois de configurar o ambiente, o próximo passo é definir um pipeline de CI/CD que integrará o código-fonte às instâncias de teste e produção automaticamente.\nIII. O OpenShift não permite o uso de containers durante o processo de desenvolvimento e deploy de projetos.\nIV. Uma vez que o projeto está configurado, o próximo passo é realizar o deploy do aplicativo no ambiente de produção.\nV. É essencial configurar monitoramento e alertas pós-deploy para garantir a operação contínua e a detecção de problemas.\nAssinale a alternativa que contém as afirmativas corretas:",
+    "correct": 4,
+    "justification": "Um projeto profissional ponta-a-ponta no OpenShift envolve parametrizar o ambiente (I), criar uma esteira CI/CD para automatizar atualizações (II), lançar a aplicação no ar (IV) e garantir que monitoramento e métricas estejam operando para prever quedas (V). A alternativa III está completamente errada, pois a infraestrutura do OpenShift funciona gerenciando e orquestrando nativamente contêineres e imagens de software. \nFonte Principal: Semana 7 - s7_videoaula19.pdf e s7_videoaula21.pdf"
   },
   {
     "id": 26,
-    "week": 3,
+    "week": 4,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, V",
-      "F, V, F",
-      "F, F, F"
+      "I, IV, apenas.",
+      "I, III, V, apenas.",
+      "III, V, apenas.",
+      "I, II, apenas.",
+      "I, II, IV, apenas."
     ],
-    "question": "I) Clusters podem melhorar desempenho. II) Clusters exigem interconexão entre nós. III) Em clusters, comunicação nunca tem custo. (Média)",
+    "question": "MIMD (Multiple Instruction, Multiple Data) é uma arquitetura de computador paralelo que permite que cada processador execute diferentes fluxos de instruções em diferentes conjuntos de dados. A execução em MIMD pode ser síncrona, onde os processadores são rigidamente coordenados, ou assíncrona, permitindo uma maior independência entre as tarefas executadas.\nLeia as seguintes afirmativas sobre MIMD (Multiple Instruction, Multiple Data):\nI. MIMD permite que cada processador opere independentemente, executando diferentes instruções em diferentes conjuntos de dados, o que é ideal para aplicações que requerem diversos tipos de processamento simultâneo.\nII. Devido à sua capacidade de executar múltiplas instruções sobre múltiplos dados, os sistemas MIMD são principalmente utilizados em aplicações que não exigem comunicação ou sincronização entre processos.\nIII. A natureza flexível da arquitetura MIMD faz dela a mais adequada para ambientes de computação paralela, como processamento de transações em tempo real e simulações científicas.\nIV. Embora poderosos, os sistemas MIMD não são adequados para aplicações que envolvem grandes volumes de dados devido à complexidade de gerenciar múltiplos fluxos de dados.\nV. MIMD é o tipo mais comum de computador paralelo devido à sua adaptabilidade e eficácia em lidar com uma ampla gama de tarefas computacionais.\nÉ correto o que se afirma em:",
     "correct": 1,
-    "justification": "Clusters podem acelerar aplicações, mas dependem de rede/interconexão. A comunicação tem custo e pode limitar desempenho, especialmente em aplicações com muita troca de dados. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_videoaula5.pdf"
+    "justification": "Baseado na Taxonomia de Flynn, a arquitetura MIMD (Multiple Instruction, Multiple Data) é a mais popular (V) nos modernos processadores multinúcleo e supercomputadores. Ela permite que diferentes núcleos calculem processos distintos operando sobre dados diferentes (I), ofertando a flexibilidade necessária para rodar aplicações críticas de simulação ou ambientes paralelos pesados (III). A afirmativa II erra porque muitos sistemas MIMD exigem alta comunicação e sincronização (ex: MPI) para evitar conflito de dados. Fonte Principal: Semana 4 - s4_texto-base_introducao_a_computacao_paralela.pdf / s1_videoaula2.pdf"
   },
   {
     "id": 27,
     "week": 3,
     "options": [
-      "Integrar recursos distribuídos e heterogêneos para resolver grandes problemas.",
-      "Substituir todos os computadores por um único chip.",
-      "Exigir que todos os recursos pertençam à mesma sala.",
-      "Eliminar autenticação e políticas de uso.",
-      "Impedir cooperação entre instituições."
+      "V- F – V -  F- Fc)",
+      "V - F – V – V - V",
+      "V – V – V – V - Fd)",
+      "F – F – V -  F - Fe)",
+      "V - V – V -  F – V"
     ],
-    "question": "A principal vantagem da computação em grade é: (Média)",
-    "correct": 0,
-    "justification": "Grades computacionais permitem compartilhar recursos de diferentes locais e instituições, coordenando processamento e dados para tarefas científicas ou intensivas. - Fonte(s): Semana 3/s3_texto_base_grades_computacionais.pdf"
+    "question": "(CEBRASPE e QUADRIX-2022) Julgue os  itens com Verdadeiro ou Falso:\nI - Ao se incluir um novo computador em um cluster escalável, o balanceamento de carga deve incluir automaticamente esse computador no agendamento de aplicações entre os computadores disponíveis.\nII - Os mainframes são considerados computadores de grande porte utilizados para o gerenciamento de dados em escala empresarial.\nIII - Para que a elasticidade da computação em nuvem seja plenamente funcional, a aplicação e a infraestrutura devem ser construídas com base em uma arquitetura adequada e escalável.\nIV- Computação em nuvem é uma plataforma ou estilo de computação que permite acesso remoto a recursos compartilhados de forma dinâmica e escalável, geralmente via Internet. \nV- A computação em nuvem oferece uma infraestrutura elástica e escalável para os sistemas que são executados em seus ambientes, sem necessidade de customizações.",
+    "correct": 1,
+    "justification": "Em infraestruturas elásticas, clusters gerenciam novos recursos na carga (V). Mainframes processam volumes empresariais centralizados massivos (V). A nuvem depende de escalabilidade na fundação arquitetural (V) e proporciona acesso remoto dinâmico via rede (V). O item 5 é o único Falso, pois a migração para a nuvem muitas vezes demanda profundas customizações do ambiente operacional para se alinhar adequadamente ao modelo de consumo as-a-Service.\n Fonte Principal: Semana 3 - s3_texto_base_computacao_em_nuvem.pdf"
   },
   {
     "id": 28,
     "week": 3,
     "options": [
-      "O sistema não usa mensagens.",
-      "A rede substitui completamente os processadores.",
-      "A comunicação entre nós pode limitar o ganho paralelo.",
-      "O desempenho independe da interconexão.",
-      "A rede impede balanceamento de carga."
+      "DaaS, FaaS e BaaS.",
+      "SaaS, IaaS e PaaS.",
+      "IaaS, BaaS e SaaS.",
+      "PaaS, FaaS e DaaS.",
+      "SaaS, FaaS e BaaS."
     ],
-    "question": "Em um cluster Beowulf, a escolha da rede é crítica porque: (Difícil)",
-    "correct": 2,
-    "justification": "Em aplicações paralelas distribuídas, parte do tempo é gasto comunicando dados. Redes lentas ou congestionadas aumentam latência e reduzem eficiência. - Fonte(s): Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf"
+    "question": "(COTEC-2023) A computação em nuvem é o fornecimento de serviços de computação, incluindo servidores, armazenamento, bancos de dados, rede, software, análise e inteligência pela internet (“a nuvem”), para oferecer inovações mais rápidas, recursos flexíveis e economias de escala. Quais são as três principais categorias de serviços de computação em nuvem? Assinale a alternativa CORRETA.",
+    "correct": 1,
+    "justification": "O mercado global e a arquitetura técnica de Cloud Computing são estruturados em três grandes pilares de serviços computacionais: IaaS (Infraestrutura física virtualizada, como servidores e redes), PaaS (Plataforma para desenvolvedores criarem suas soluções) e SaaS (Software completo hospedado entregue direto ao usuário final). \nFonte Principal: Semana 3 - s3_videoaula8.pdf e s3_texto_base_computacao_em_nuvem.pdf"
   },
   {
     "id": 29,
-    "week": 3,
+    "week": 1,
     "options": [
-      "Cluster não pode executar tarefas paralelas.",
-      "Nuvem nunca usa servidores físicos.",
-      "Cluster costuma ser infraestrutura controlada/local; nuvem oferece recursos abstratos e elásticos como serviço.",
-      "Nuvem não permite escalabilidade.",
-      "Cluster sempre é mundial e heterogêneo."
+      "A transparência de acesso oculta diferenças na apresentação de dados e no modo de acesso a um recurso.",
+      "A transparência de replicação oculta que um recurso pode ser movido para outro computador quando em uso.",
+      "A transparência de migração oculta que um recurso pode ser compartilhado por diversos usuários, ao mesmo tempo.",
+      "A transparência de relocação está presente no sistema quando a falha e a recuperação de um recurso são feitas de forma imperceptível ao seu usuário.",
+      "A transparência de localização permite que um recurso possa ser movido de uma localização para outra."
     ],
-    "question": "Uma diferença central entre cluster e nuvem é: (Difícil)",
-    "correct": 2,
-    "justification": "Embora ambos usem múltiplos recursos, clusters são frequentemente ambientes dedicados. A nuvem abstrai infraestrutura e oferece elasticidade, provisionamento rápido e modelos de serviço. - Fonte(s): Semana 3/s3_texto_base_cluster_computacao_de_alto_desempenho.pdf; Semana 3/s3_texto_base_computacao_em_nuvem.pdf"
+    "question": "(FUNIVERSA-2010) Sistemas distribuídos são aqueles dispostos em computadores distintos e autônomos, que trabalham juntos para dar a impressão de ser um único sistema, com acesso local a seus usuários. Uma característica importante nesses sistemas é a transparência. Acerca das formas de transparência de um sistema distribuído, assinale a alternativa correta.",
+    "correct": 0,
+    "justification": "Na ciência de Sistemas Distribuídos, a transparência de acesso garante que dois sistemas com formatos de dados ou arquiteturas locais distintas consigam se comunicar de forma idêntica e imperceptível. As demais alternativas confundem os conceitos: ocultar movimentação de um dado é \"transparência de migração\"; e ocultar falhas é a \"transparência de falhas/tolerância\". \nFonte Principal: Semana 1 - s1-Aprof 1 - Livro Sistemas Distribuidos Conceitos e Projetos Colourius"
   },
   {
     "id": 30,
-    "week": 3,
+    "week": 2,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
+      "O processamento distribuído consiste em dividir uma tarefa em suas partes independentes e na execução simultânea de cada uma dessas partes em diferentes processadores.",
+      "A principal característica do processamento paralelo é possibilitar o particionamento das atividades e dos dados associados de acordo com a localização geográfica das aplicações, mantendo-se, ao mesmo tempo, a integração dos diversos componentes.",
+      "O seguinte trecho de instruções exibe dependência de controle, indicando potencial atraso no pipeline.\n1. LOAD F0,0 (R1)   // carrega 0(R1) em F0\n2. ADD F4,F0,F2    // soma F4 e F0 em F2\n3. STORE 0(R1),F4   // armazena F4 em 0(R1)",
+      "Um trecho de código em que duas instruções escrevem no mesmo registrador ou posição de memória não implica uma dependência de saída, pois esse procedimento corresponde a um hazard RAW (read after write).",
+      "Uma antidependência entre as instruções i e j, que corresponde a um hazard WAR (write after read), ocorre se a instrução i lê um valor de um registrador ou posição de memória e a instrução j escreve nesse mesmo registrador ou posição de memória."
     ],
-    "question": "I) Virtualização favorece consolidação e elasticidade na nuvem. II) Grid envolve coordenação entre domínios administrativos. III) Cluster Beowulf depende apenas de software, sem hardware de rede. (Difícil)",
-    "correct": 1,
-    "justification": "Virtualização permite criar recursos flexíveis; grids cruzam domínios administrativos; Beowulf precisa de hardware real, inclusive computadores e rede. - Fonte(s): Semana 3/s3_texto_base_computacao_em_nuvem.pdf; Semana 3/s3_texto_base_grades_computacionais.pdf; Semana 3/s3_texto_base_aspectos_tecnicos_envolvidos_na_construcao_de_um_cluster.pdf",
-    "slideImage": "slides/S3-10.png",
-    "slideTitle": "Resumo da Semana 3 (Q6 a Q10)",
-    "slidePage": 10
+    "question": "(CEBRASPE 2010) Acerca de processamento paralelo e distribuído, assinale a opção correta.",
+    "correct": 4,
+    "justification": "Na execução de instruções e pipelining (processamento em nível de threads), os \"hazards\" de dados ameaçam a integridade da computação paralela. O conflito WAR (Write After Read - Antidependência) ocorre de forma exata quando uma instrução posterior 'j' modifica ou tenta sobrescrever o valor de um registrador antes que a instrução original 'i' tenha finalizado completamente a leitura daquele mesmo espaço de memória, gerando uma inconsistência grave no cálculo. \nFonte Principal: Semana 2 - s2-Texto Base 2 - paralelismo_no_nivel_de_threads.pdf"
   },
   {
     "id": 31,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Programação paralela em memória compartilhada por diretivas.",
-      "Compactar arquivos PDF.",
-      "Criar bancos de dados relacionais.",
-      "Enviar mensagens entre empresas.",
-      "Substituir placas de vídeo."
+      "Os nós de um sistema distribuído são iguais.",
+      "O conceito de compartilhamento de recursos é aplicável nesse contexto, sendo que a seguinte desvantagem surge: se vários nós estão interconectados, é altamente provável que um nó fique sem recursos para ser executado.",
+      "Um sistema distribuído pode realizar o processamento de um único processo de forma paralela, porém a perda de desempenho para realizar a distribuição do código via rede entre os processadores é tão alta que essa abordagem é pouco utilizada.",
+      "Quando um nó do sistema falha, outros nós podem assumir a tarefa dele, garantindo que o processo em execução não seja abortado. Uma desvantagem dessa abordagem é que, com a queda de um nó, aumenta-se a carga sobre o resto do sistema.",
+      "Um fenômeno comum em sistemas distribuídos, conhecido como starvation, consiste na garantia de que nenhum processo ficará sem recursos eternamente, garantindo distribuição justa de recursos."
     ],
-    "question": "OpenMP é usado principalmente para: (Fácil)",
-    "correct": 0,
-    "justification": "OpenMP permite paralelizar programas, especialmente em C/C++ e Fortran, usando diretivas para distribuir trabalho entre threads em sistemas de memória compartilhada. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf"
+    "question": "(IADES-2018) Um sistema distribuído é um conjunto de nós fracamente acoplados interconectados por uma rede de comunicação.SILBERSCHATZ, A.; GALVIN, P. B.; GREG, G. Fundamentos de sistemas operacionais. 9. ed. Rio de Janeiro: LTC, 2015.\nEm relação ao tema do texto, assinale a alternativa correta.",
+    "correct": 3,
+    "justification": "Em um sistema distribuído, a tolerância a falhas e a alta disponibilidade permitem que o trabalho de um nó que caiu seja redirecionado para os demais. O efeito colateral natural disso é que a carga de processamento será redistribuída entre os nós restantes, aumentando o estresse sobre eles. \nFonte/Referência: Conceitos Fundamentais de Sistemas Distribuídos e Tolerância a Falhas."
   },
   {
     "id": 32,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Programação paralela em GPUs NVIDIA.",
-      "Programação exclusiva para impressoras.",
-      "Armazenamento em fita magnética.",
-      "Sistemas sem paralelismo.",
-      "Protocolos bancários."
+      "I, apenas.",
+      "I e II, apenas.",
+      "III, apenas.",
+      "II e III, apenas."
     ],
-    "question": "CUDA está associado principalmente a: (Fácil)",
-    "correct": 0,
-    "justification": "CUDA é uma plataforma/modelo de programação da NVIDIA para executar computação paralela em GPUs, explorando milhares de threads leves. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf"
+    "question": "(UFMT-2017) A respeito de multithreading no chip da CPU, analise as afirmativas.\nI - O multithreading permite que a CPU gerencie múltiplas threads de controle ao mesmo tempo, em uma tentativa de mascarar as protelações que ocorrem devido a cache misses nas caches L1 e L2.\n II - A implementação de multithreading usada nos processadores da Intel recebeu o nome de HyperThreading. \nIII - O multithreading de granulação fina troca threads apenas quando há uma protelação, sendo potencialmente mais eficiente do que o de granularidade grossa.\nEstá correto o que se afirma em:",
+    "correct": 1,
+    "justification": "I (Correta): O multithreading em hardware ajuda a manter a CPU ocupada realizando o trabalho de outra thread enquanto uma thread aguarda dados lentos da memória (cache miss).\nII (Correta): HyperThreading é a marca comercial da tecnologia SMT (Simultaneous Multithreading) da Intel.\nIII (Incorreta): O multithreading de granulação fina (fine-grained) troca de threads a cada ciclo de clock, não esperando necessariamente uma protelação ocorrer. Quem espera uma protelação (como um cache miss) para trocar de contexto é a granulação grossa (coarse-grained). Fonte/Referência: Arquitetura de Computadores (Multithreading e Paralelismo)."
   },
   {
     "id": 33,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Evitar completamente gasto de energia.",
-      "Imprimir dinheiro físico.",
-      "Criar arquivos PDF.",
-      "Desligar todos os computadores da rede.",
-      "Realizar cálculos computacionais para validar blocos/transações em certos mecanismos de consenso."
+      "SISD não explora paralelismo.",
+      "Uma Graphic Processing Unit (GPU) é um exemplo de SIMD.",
+      "A arquitetura MISD é a mais comum dentre as arquiteturas definidas pela taxonomia de Flynn.",
+      "MIMD permite que múltiplos processadores executem instruções sobre dados diferentes.",
+      "Arquiteturas MISD e MIMD permitem múltiplas linhas de processamento."
     ],
-    "question": "Mineração de criptomoedas envolve: (Fácil)",
-    "correct": 4,
-    "justification": "Em sistemas como prova de trabalho, mineradores executam cálculos para encontrar soluções válidas, contribuindo para validação e segurança da rede, recebendo recompensas quando bem-sucedidos. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - \\[blog.nubank.com.br].pdf"
+    "question": "(INPE-2014) A taxonomia de Flynn define quatro categorias de arquiteturas de computadores: SISD, SIMD, MISD e MIMD. Anote a resposta INCORRETA:",
+    "correct": 2,
+    "justification": "Na taxonomia de Flynn (SISD, SIMD, MISD, MIMD), a arquitetura MISD (Múltiplas Instruções, Único Dado) é teórica e extremamente rara na prática, sendo utilizada quase exclusivamente em sistemas ultrasseguros de tolerância a falhas (ex: computadores de controle de voo espacial). As mais comuns hoje são SIMD (GPUs, Vetores) e MIMD (Processadores Multi-core). \nFonte/Referência: Taxonomia de Flynn."
   },
   {
     "id": 34,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Distribuir iterações de um laço entre múltiplas threads.",
-      "Apagar todos os arquivos temporários.",
-      "Converter código C em Java.",
-      "Impedir execução simultânea.",
-      "Criar uma GPU virtual."
+      "o multiprocessamento simétrico (SMP – SymetricMultiprocessor) é realizado por múltiplos processadores que usam memória distribuída.",
+      "os clusters são computadores que não compartilham memória e se comunicam através de uma rede de interconexão ou conexão dedicada.",
+      "um sistema SMP possui maior escalabilidade incremental e absoluta do que um cluster.",
+      "a desvantagem do cluster em relação ao SMP é a baixa disponibilidade."
     ],
-    "question": "Em OpenMP, a diretiva parallel for serve para: (Média)",
-    "correct": 0,
-    "justification": "A diretiva parallel for cria uma região paralela e divide as iterações de um loop entre threads, reduzindo o tempo quando as iterações são independentes. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf"
+    "question": "(MPE-2012) Uma classificação introduzida por Flynn é ainda a maneira mais utilizada para categorizar sistemas computacionais, a saber: SISD, SIMD, MISD e MIMD (MultipleInstruction, Multiple Data). Com relação à capacidade de processamento paralelo desta última categoria, é correto afirmar que",
+    "correct": 1,
+    "justification": "Um sistema em cluster é o exemplo clássico de arquitetura de memória distribuída. Cada nó (computador) do cluster tem sua própria memória RAM independente e as mensagens/dados são trocadas entre eles através de uma rede de comunicação. \nFonte/Referência: Arquiteturas MIMD de Memória Distribuída (Clusters)."
   },
   {
     "id": 35,
-    "week": 4,
+    "week": 1,
     "options": [
-      "1-d, 2-b, 3-a, 4-c",
-      "1-b, 2-d, 3-c, 4-a",
-      "1-a, 2-c, 3-b, 4-d",
-      "1-c, 2-a, 3-d, 4-b",
-      "1-b, 2-a, 3-d, 4-c"
+      "V - V - V - F.",
+      "V - V - F - V.",
+      "F - F - V - V.",
+      "V - F - V - F.",
+      "F - F - F - V."
     ],
-    "question": "Associe: 1) OpenMP; 2) CUDA; 3) GPU; 4) Kernel. a) Função executada em paralelo na GPU; b) Diretivas para threads em memória compartilhada; c) Processador massivamente paralelo; d) Plataforma NVIDIA. (Média)",
-    "correct": 1,
-    "justification": "OpenMP usa diretivas; CUDA é a plataforma da NVIDIA; GPU é hardware paralelo; kernel é função executada em muitos threads na GPU. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf",
-    "slideImage": "slides/S4-5.png",
-    "slideTitle": "Resumo da Semana 4 (Q1 a Q5)",
-    "slidePage": 5
+    "question": "UFSM(2022) - Em relação à arquitetura de Von Neumann, assinale V (verdadeiro) ou F (falso) em cada afirmativa a seguir.\nI. É composta por Entrada de Dados, Unidade Central de Processamento (UCP), Memória e Saída de Dados.\nII. Quanto a dados e instruções, é do tipo SISD.\nIII. A UCP realiza o ciclo de busca-e-execução de instruções, base do funcionamento do computador.\nIV. Usa barramentos separados para memória de dados e memória de instruções.\nA sequência correta é:",
+    "correct": 0,
+    "justification": "A arquitetura de Von Neumann caracteriza-se por ter uma única memória que armazena tanto dados quanto instruções, compartilhando o mesmo barramento. Portanto, a afirmativa IV é Falsa (ter barramentos e memórias separadas para dados e instruções é a característica da arquitetura de Harvard). As afirmativas I, II e III definem perfeitamente Von Neumann.\n Fonte/Referência: Arquitetura de Von Neumann e Harvard."
   },
   {
     "id": 36,
-    "week": 4,
+    "week": 1,
     "options": [
-      "F, F, V",
-      "V, F, V",
-      "V, V, F",
-      "F, V, V",
-      "V, V, V"
+      "MIMD e SIMD.",
+      "MIMD e MISD.",
+      "SIMD e MIMD.",
+      "SIMD e MISD.",
+      "MIMD e SISD."
     ],
-    "question": "I) GPUs são boas para tarefas com muito paralelismo de dados. II) CUDA dispensa transferência de dados entre CPU e GPU. III) OpenMP é comum em memória compartilhada. (Média)",
-    "correct": 4,
-    "justification": "GPUs são eficientes para paralelismo de dados. CUDA geralmente exige gerenciar ou considerar transferências entre memória da CPU e GPU. OpenMP é típico para paralelismo em memória compartilhada. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_texto_base_openmp.pdf"
+    "question": "(UFRN-2019) - A taxonomia de Flynn classifica os diversos sistemas de computação em quatro tipos. A arquitetura clássica de Von Newman pode ser considerada como sendo do tipo SISD, pois possui um único fluxo de instrução e um único fluxo de dados. Arquiteturas modernas apresentam múltiplos núcleos de processamento funcionando em paralelo. Internamente, esses núcleos possuem unidades funcionais vetoriais que podem processar mais de um dado por instrução. Sobre esses múltiplos núcleos de processamento e sobre as unidades funcionais vetoriais, é correto afirmar que equivalem, respectivamente, às classificações",
+    "correct": 0,
+    "justification": "* Múltiplos núcleos processando instruções diferentes sobre dados diferentes se enquadram em MIMD (Multiple Instruction, Multiple Data).\nUnidades funcionais vetoriais executam a mesma instrução matemática sobre um grande vetor de dados de uma só vez, caracterizando SIMD (Single Instruction, Multiple Data). \nFonte/Referência: Taxonomia de Flynn e Arquitetura Vetorial."
   },
   {
     "id": 37,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Incompatibilidade com todos os sistemas operacionais.",
-      "Impossibilidade de usar qualquer laço.",
-      "Obrigação de rodar sem memória.",
-      "Ausência de entrada e saída.",
-      "Overhead de comunicação e sincronização."
+      "variáveis declaradas antes de uma região paralela têm escopo compartilhado dentro da região.",
+      "variáveis listadas na cláusula reduction têm escopo compartilhado dentro do bloco da redução.",
+      "variáveis declaradas antes de uma região paralela têm escopo privado dentro da região.",
+      "variáveis com escopo firstprivate oferecem melhor desempenho porque evitam cópia de dados."
     ],
-    "question": "Uma limitação comum de programas paralelos é: (Média)",
-    "correct": 4,
-    "justification": "Paralelizar cria custos adicionais: criar threads, sincronizar, comunicar dados e lidar com dependências. Esses custos podem reduzir ou anular ganhos. - Fonte(s): Semana 4/s4_texto-base_introducao_a_computacao_paralela.pdf"
+    "question": "(UFRN – 2019) OpenMP é um padrão para programação em memória compartilhada que oferece a facilidade de paralelização de códigos sequenciais com a inclusão de poucas linhas de código. Diferentemente do modelo sequencial de programação, o escopo de variáveis em OpenMP refere-se às threads que podem acessá-las, e não ao bloco de código em que foram definidas. Sobre o escopo de variáveis em OpenMP, é correto afirmar:",
+    "correct": 0,
+    "justification": "Pelo padrão da API OpenMP, as variáveis criadas globalmente ou declaradas antes da diretiva #pragma omp parallel assumem o atributo default de shared (compartilhadas) por todas as threads recém-criadas, a menos que o desenvolvedor altere isso explicitamente nas cláusulas. \nFonte/Referência: Paradigma de Memória Compartilhada e API OpenMP."
   },
   {
     "id": 38,
-    "week": 4,
+    "week": 1,
     "options": [
-      "Muitas operações similares sobre grandes volumes de dados independentes.",
-      "Uma única operação sequencial com forte dependência entre passos.",
-      "Pouquíssimos dados e muitas chamadas bloqueantes de E/S.",
-      "Código impossível de dividir.",
-      "Necessidade de apenas um thread."
+      "a diretiva taskwait suspende a execução das tarefas filhas diretas.",
+      "não podem ter sua execução postergada no momento de sua criação.",
+      "possuem seu próprio código, ambiente de dados e variáveis de controle",
+      "a cláusula untied permite que as tarefas criadas sejam executadas fora de ordem."
     ],
-    "question": "Uma aplicação ideal para CUDA tende a ter: (Difícil)",
+    "question": "(UFRN-2019) Com o mecanismo de tarefas, ou tasks, o OpenMP permite que diversos tipos de computação não regular possam ser paralelizados. Sobre tarefas em OpenMP, é correto afirmar:",
     "correct": 0,
-    "justification": "GPUs brilham quando há paralelismo massivo de dados, com muitos elementos processados por operações semelhantes, como matrizes, imagens, simulações e mineração. - Fonte(s): Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_videoaula10.pdf"
+    "justification": "O #pragma omp taskwait atua como um ponto de sincronização (barreira) estrito. A thread que encontra essa diretiva bloqueia e aguarda até que todas as tasks (tarefas) geradas por ela no escopo atual tenham sido concluídas. \nFonte/Referência: Especificação do OpenMP (Tasking)."
   },
   {
     "id": 39,
-    "week": 4,
+    "week": 1,
     "options": [
-      "O algoritmo proíbe GPUs.",
-      "Cada tentativa precisa esperar todas as anteriores.",
-      "Muitas tentativas independentes podem ser testadas simultaneamente.",
-      "Não há cálculo envolvido.",
-      "A rede não valida blocos."
+      "OpenMP oferece várias opções de controle de paralelismo, permitindo que os desenvolvedores ajustem o comportamento do programa de acordo com suas necessidades. Isso inclui a possibilidade de definir o número de threads a serem usados, controlar a divisão do trabalho entre os threads e sincronizar a execução paralela.",
+      "OpenMP é uma biblioteca que permite a execução de threads em espaços de memória separados, enquanto processos são executados em um espaço de memória compartilhado. Threads são um recurso do ambiente operacional, e a CPU normalmente possui operações que tornam os threads eficientes.",
+      "OpenMP é sinônimo de threads e pode ser usado indistintamente. Ambos referem-se à execução de código em um computador.",
+      "OpenMP é uma abstração teórica sem aplicação prática, enquanto threads são unidades de execução de código em um computador.",
+      "OpenMP é uma biblioteca que oferece várias opções de controle de paralelismo, mas não permite ajustar o número de threads ou sincronizar a execução paralela."
     ],
-    "question": "Em mineração por prova de trabalho, o paralelismo é útil porque: (Difícil)",
-    "correct": 2,
-    "justification": "A busca por um hash válido envolve testar muitos valores. Como as tentativas são em grande parte independentes, hardware paralelo pode acelerar a exploração do espaço de busca. - Fonte(s): Semana 4/s4-Mineração de criptomoedas_ guia simples e rápido - Blog Nubank_ - \\[blog.nubank.com.br].pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf"
+    "question": "(FGV-2024) OpenMP (Open Multi-Processing) é uma API (Interface de Programação de Aplicações) de programação para a criação de aplicações paralelas em sistemas com múltiplos processadores ou núcleos de processamento.Assinale a opção que descreve corretamente o OpenMP e suas características.",
+    "correct": 0,
+    "justification": "OpenMP é uma API flexível baseada em diretivas de compilação (pragmas). O desenvolvedor tem controle total sobre o número de threads (omp_set_num_threads), o tipo de escalonamento dos dados (schedule), variáveis privadas e sincronização (barrier, critical). \nFonte/Referência: API OpenMP."
   },
   {
     "id": 40,
-    "week": 4,
+    "week": 1,
     "options": [
-      "V, V, F",
-      "V, V, V",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
+      "considerar todas as variáveis do bloco de código como sendo do tipo firstprivate.",
+      "considerar todas as variáveis do bloco de código como sendo do tipo lastprivate.",
+      "restringir o bloco de código para que apenas uma thread o execute por vez.",
+      "restringir o bloco de código para que todas as threads comecem a execução ao mesmo tempo.",
+      "utilizar a cláusula reduction no bloco de código."
     ],
-    "question": "I) OpenMP é mais natural em memória compartilhada. II) CUDA exige pensar na hierarquia de memória da GPU. III) Paralelismo sempre gera speedup linear perfeito. (Difícil)",
-    "correct": 0,
-    "justification": "OpenMP trabalha bem com threads em memória compartilhada; CUDA exige considerar memória global, compartilhada e registradores; speedup linear perfeito é raro por overheads, partes seriais e comunicação. - Fonte(s): Semana 4/s4_texto_base_openmp.pdf; Semana 4/s4_texto_base_introducao_a_cuda.pdf; Semana 4/s4_texto-base_introducao_a_computacao_paralela.pdf",
-    "slideImage": "slides/S4-10.png",
-    "slideTitle": "Resumo da Semana 4 (Q6 a Q10)",
-    "slidePage": 10
+    "question": "(VUNESP-2024) Um dos principais recursos do OpenMP são as diretivas de compilação. A diretiva:  “#pragma  omp  critical” tem como função :",
+    "correct": 2,
+    "justification": "A diretiva critical no OpenMP define uma seção crítica. Se trata de um mecanismo de exclusão mútua em que apenas uma thread pode adentrar e executar aquele bloco de código específico simultaneamente, impedindo corrupção de dados e condição de corrida (race condition). \nFonte/Referência: Sincronização em OpenMP."
   },
   {
     "id": 41,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Permitir comunicação assíncrona entre componentes.",
-      "Apagar mensagens automaticamente antes de serem lidas.",
-      "Substituir todos os bancos de dados.",
-      "Impedir desacoplamento.",
-      "Rodar apenas sem rede."
+      "CUDA é uma linguagem de programação de alto nível que simplifica o desenvolvimento de software para GPUs, mas não oferece suporte para paralelismo.",
+      "A programação com CUDA requer o uso exclusivo de CPUs devido à sua arquitetura específica.",
+      "A programação com CUDA envolve a escrita de kernels, que são funções executadas em paralelo por múltiplos threads em uma GPU.",
+      "CUDA é uma linguagem proprietária desenvolvida apenas pela AMD para suas GPUs.",
+      "A programação com CUDA é restrita a aplicativos de processamento de texto e imagem e não pode ser utilizada para cálculos científicos ou de alto desempenho."
     ],
-    "question": "Mensageria em sistemas distribuídos serve para: (Fácil)",
-    "correct": 0,
-    "justification": "Mensageria permite que produtores enviem mensagens para filas ou tópicos, e consumidores processem depois, reduzindo acoplamento e aumentando resiliência. - Fonte(s): Semana 5/s5-Por que você deveria utilizar mensageria na sua aplicação - Dinamiz.pdf"
+    "question": "(FGV-2024)CUDA é uma arquitetura de computação paralela desenvolvida pela NVIDIA. Nesse contexto, assinale a opção que apresenta uma característica importante da programação com CUDA.",
+    "correct": 2,
+    "justification": "Na arquitetura CUDA da NVIDIA, o código que roda na GPU é chamado de kernel. Quando um kernel é chamado, ele é executado por milhares de threads paralelamente na estrutura interna da placa de vídeo.\n Fonte/Referência: Plataforma e Programação CUDA (NVIDIA)."
   },
   {
     "id": 42,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Não existem consumidores.",
-      "Todos os componentes precisam conhecer diretamente todos os destinatários.",
-      "Publicadores enviam eventos para tópicos, e assinantes recebem os eventos de interesse.",
-      "Mensagens são sempre processadas por um único servidor local.",
-      "O padrão impede escalabilidade."
+      "CUDA e MPI são linguagens de programação concorrentes, cada uma projetada para tarefas específicas de processamento paralelo em GPUs e CPUs, respectivamente.",
+      "CUDA e MPI são ambas linguagens de programação para programação paralela, mas CUDA é específica para programação em GPUs, enquanto MPI é utilizada para comunicação entre processos em sistemas distribuídos.",
+      "CUDA e MPI são bibliotecas de comunicação, cada uma projetada para permitir a troca de dados entre processos em sistemas distribuídos, como clusters de computadores.",
+      "CUDA e MPI são abordagens alternativas para a programação paralela em CPUs, com CUDA focada em processamento gráfico e MPI em processamento de dados.",
+      "CUDA e MPI são tecnologias complementares, onde CUDA é utilizada para processamento paralelo em GPUs e MPI é utilizada para comunicação entre processos em sistemas distribuídos."
     ],
-    "question": "No padrão publish-subscribe: (Fácil)",
-    "correct": 2,
-    "justification": "Pub/Sub desacopla produtores e consumidores por meio de tópicos/canais. Quem publica não precisa saber quem receberá; assinantes escolhem os tópicos relevantes. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf"
+    "question": "(FGV-2024)CUDA e MPI são duas tecnologias amplamente utilizadas em Computação de Alto Desempenho. Assinale a alternativa que apresenta a principal diferença entre CUDA e MPI:",
+    "correct": 1,
+    "justification": "* CUDA atua em hardware de memória muito unida e paralela (dentro da GPU).\nMPI (Message Passing Interface) é o padrão de software de comunicação projetado especificamente para que processos em máquinas separadas (memória distribuída, como clusters) consigam trocar informações. Fonte/Referência: Programação CUDA e MPI."
   },
   {
     "id": 43,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Editor de imagens.",
-      "Plataforma distribuída de streaming/eventos baseada em tópicos e logs.",
-      "Sistema operacional móvel.",
-      "Linguagem de programação funcional.",
-      "Driver de impressora."
+      "Todas estão corretas.",
+      "Todas estão incorretas.",
+      "Apenas I está correta.",
+      "Apenas I e II estão corretas.",
+      "Apenas III e IV estão corretas."
     ],
-    "question": "Apache Kafka é conhecido como: (Fácil)",
-    "correct": 1,
-    "justification": "Kafka armazena eventos em tópicos particionados e permite publicação, assinatura, retenção e processamento de fluxos em alta escala. - Fonte(s): Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5-Uma introdução ao Apache Kafka, lições aprendidas em um ambiente.pdf"
+    "question": "(FUNDATEC-2022) Sobre Apache Spark, analise as assertivas abaixo e assinale a alternativa correta.\nI. De forma geral, o Spark é uma engine rápida, escrita em Scala, para processamento de grandes volumes de dados em um cluster de computadores.\nII. Scala é uma linguagem funcional que roda na JVM.\nIII. O Spark, assim como o Hadoop, também foi pensado para ser escalável.\nIV. Umas das grandes vantagens do Spark em relação ao Hadoop são as High Level API’s de programação. Enquanto que o Hadoop é nativamente apenas Java, no Spark, temos a disposição API ’s em Scala, Java e Python.",
+    "correct": 0,
+    "justification": "O Apache Spark é um motor super-rápido feito originalmente em Scala (I e II), criado justamente para superar as limitações do Hadoop trazendo processamento massivo em memória (in-memory) com suporte para alta escalabilidade (III). Além disso, ele possui APIs alto nível de sintaxe amigável para Python (PySpark), Java, Scala e R (IV).\n Fonte/Referência: Ecossistema Apache Spark."
   },
   {
     "id": 44,
-    "week": 5,
+    "week": 1,
     "options": [
-      "1-b, 2-c, 3-a, 4-d",
-      "1-a, 2-b, 3-d, 4-c",
-      "1-c, 2-d, 3-a, 4-b",
-      "1-d, 2-c, 3-b, 4-a",
-      "1-b, 2-a, 3-c, 4-d"
+      "a principal vantagem do Hadoop é processar a carga de trabalho em lotes, permitindo lidar com dados em streaming e interativos.",
+      "baseia-se em uma arquitetura de computação distribuída e utiliza o Hadoop Distributed File System para armazenamento de dados e Map Reduce para processamento paralelo.",
+      "a principal vantagem do Hadoop é processar a carga de trabalho em lotes, permitindo lidar com dados em streaming e interativos, usando Resilient Distributed Datasets na memória RAM.",
+      "baseia-se em uma arquitetura de computação distribuída e utiliza o Hadoop Distributed File System para armazenamento de dados e Resilient Distributed Datasets para processamento paralelo.",
+      "a principal vantagem do Hadoop está na utilização da arquitetura Kappa, tornando-o, desta forma, mais eficiente que o Apache Spark, no processamento de dados streaming."
     ],
-    "question": "Associe: 1) Produtor; 2) Consumidor; 3) Broker; 4) Tópico. a) Recebe/processa mensagens; b) Envia mensagens; c) Intermediário/servidor; d) Canal lógico de eventos. (Média)",
-    "correct": 4,
-    "justification": "Produtores publicam mensagens; consumidores leem; brokers intermedeiam e armazenam; tópicos organizam fluxos de eventos. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf; Semana 5/s5-O que é Apache Kafka.pdf"
+    "question": "(IFPE – 2025) A área do Big Data destaca muitas oportunidades potenciais ao revisitar os conjuntos de dados coletados ou arquivados, tendo em vista o desenvolvimento de vários frameworks como Hadoop e Apache Spark. A respeito do Hadoop, é correto afirmar que:",
+    "correct": 1,
+    "justification": "Estes são os dois pilares clássicos do Hadoop V1 e V2. O HDFS cuida de fragmentar e armazenar o \"Big Data\" de forma redundante nos nós do cluster, enquanto o MapReduce cuida do processamento em lotes (Batch) dividindo as queries de forma paralela. Fonte/Referência: Ecossistema Apache Hadoop."
   },
   {
     "id": 45,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Substituição de todos os sistemas de arquivos locais por PDF.",
-      "Renderização 3D em navegador.",
-      "Mineração exclusiva de criptomoedas.",
-      "Armazenamento e processamento distribuído de grandes volumes de dados.",
-      "Comunicação Bluetooth."
+      "I, apenas.",
+      "II, apenas.",
+      "III, apenas.",
+      "I e III, apenas.",
+      "II e III, apenas."
     ],
-    "question": "Hadoop é associado principalmente a: (Média)",
+    "question": "(FGV – 2024) Testes de carga são fundamentais para definir a capacidade e garantir o desempenho esperado de um sistema.\nSobre a ferramenta Apache JMeter, analise as afirmativas a seguir:\nI. Samplers no JMeter são responsáveis por enviar requisições para os servidores, e cada tipo de Sampler é projetado para testar um protocolo ou serviço específico.\nII. Os usuários virtuais de um Thread Group são iniciados simultaneamente, e o JMeter utiliza Timers para adicionar atrasos nas suas requisições, simulando o comportamento realista dos usuários.\nIII. Assertions são usadas no JMeter para verificar se as respostas dos servidores atendem aos critérios esperados, como conteúdo, tempo de resposta e código de status.\nEstá correto o que se afirma em:",
     "correct": 3,
-    "justification": "Hadoop inclui HDFS para armazenamento distribuído e MapReduce/ecossistema para processamento de grandes dados em clusters. - Fonte(s): Semana 5/s5_texto_base_apache_hadoop.pdf",
-    "slideImage": "slides/S5-5.png",
-    "slideTitle": "Resumo da Semana 5 (Q1 a Q5)",
-    "slidePage": 5
+    "justification": "* I (Correta): Samplers definem e realizam a requisição (HTTP, FTP, JDBC, etc).\nII (Incorreta/Pegadinha): Os usuários não são iniciados necessariamente de forma simultânea e repentina. O JMeter utiliza o atributo Ramp-up Period para injetar os usuários de forma progressiva no sistema.\nIII (Correta): As Assertions são literalmente as regras de validação do seu teste de estresse (se retornou Erro 500 ou sucesso 200). Fonte/Referência: Testes de Desempenho com Apache JMeter."
   },
   {
     "id": 46,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Ser apenas um editor de texto.",
-      "Processamento distribuído rápido, frequentemente em memória, para batch e streaming.",
-      "Exigir que todos os dados caibam em uma planilha local.",
-      "Não executar em clusters.",
-      "Eliminar completamente programação."
+      "Platform Group - Controllers - Hears - Dispensers",
+      "Thread Group - Controllers - Listeners - Timers",
+      "Platform Group - Sensors - Hears - Timers",
+      "Thread Group - Sensors - Listeners - Dispensers"
     ],
-    "question": "Apache Spark diferencia-se por: (Média)",
+    "question": "(EMBASA – 2017) Para qualquer teste que venha a ser feito utilizando o JMeter, é necessário criar um Test Plan incluindo os elementos do teste. Alguns desses elementos podem ser:",
     "correct": 1,
-    "justification": "Spark é uma engine distribuída para processamento de dados, com APIs de alto nível, execução em memória e suporte a SQL, streaming, machine learning e grafos. - Fonte(s): Semana 5/s5_texto_base_apache_spark.pdf"
+    "justification": "O ecossistema do JMeter baseia-se em grupos de usuários simulados (Thread Group), controladores lógicos e requisições (Controllers/Samplers), escutas para visualização dos gráficos/logs (Listeners) e regras de tempo/atraso (Timers). Fonte/Referência: Estrutura de Test Plan no JMeter."
   },
   {
     "id": 47,
-    "week": 5,
+    "week": 1,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, V",
-      "F, V, F",
-      "F, F, F"
+      "F – F – F -  V",
+      "V – F – V - F",
+      "V – V – V - V",
+      "F – V – F – F",
+      "V – V – F - V"
     ],
-    "question": "I) IoT pode gerar fluxos contínuos de dados. II) ThingSpeak é usado para coletar/visualizar dados IoT. III) Sistemas de mensageria são inúteis em IoT. (Média)",
-    "correct": 1,
-    "justification": "Dispositivos IoT geram eventos e leituras continuamente. Plataformas como ThingSpeak ajudam a coletar e visualizar dados. Mensageria é útil para transportar eventos de sensores. - Fonte(s): Semana 5/s5-Learn More - ThingSpeak IoT.pdf"
+    "question": "(CEBRASPE – 2013) Julgue as afirmações como Verdadeira ou Falsa:\nI. O método setUp() é utilizado para sinalizar o início do processo de teste, ao passo que o método tearDown() sinaliza o final desse processo, desfazendo o que o setUp() fez.\nII. Jmeter é uma ferramenta de automação de teste de código aberto capaz de executar testes de desempenho, carga e estresse em servidores web e bancos de dados.\nIII. O JUnit é um framework que permite realizar testes unitários de códigos Java, herdando algumas características da própria linguagem. Na versão 4.11, ele permite, entre outros recursos, mudar a ordem de testes, criar testes parametrizados, executar testes de exceção e testes temporizados por meio da palavra-chave timeout.\nIV - No Openshift, o uso de ImageStream para gerenciar imagens de contêineres é essencial para garantir atualizações automáticas de deployments quando novas versões de uma imagem são construídas, mesmo em ambientes com múltiplos namespaces ou clusters.",
+    "correct": 2,
+    "justification": ""
   },
   {
     "id": 48,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Permitem paralelismo, escalabilidade e distribuição dos dados de um tópico.",
-      "Impedem múltiplos consumidores.",
-      "Apagam automaticamente todos os eventos.",
-      "Eliminam necessidade de brokers.",
-      "Transformam eventos em arquivos PDF."
+      "pod.",
+      "build.",
+      "secret.",
+      "registry.",
+      "master."
     ],
-    "question": "Partições em Kafka ajudam porque: (Difícil)",
-    "correct": 0,
-    "justification": "Um tópico pode ser dividido em partições distribuídas entre brokers. Isso permite maior vazão, paralelismo de consumo e tolerância a falhas quando combinado com replicação. - Fonte(s): Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5-Uma introdução ao Apache Kafka, lições aprendidas em um ambiente.pdf"
+    "question": "(TJPA-2020) O Openshift provê recursos a partir do kubernets, sendo capaz de executar e disponibilizar aplicações a partir de contêineres. As imagens dos contêineres no Openshift podem ser armazenadas no componente denominado",
+    "correct": 3,
+    "justification": "As imagens dos contêineres (sejam de Docker ou de outras runtimes OCI) são salvas, hospedadas e distribuídas através de um Container Registry (Registro de Contêiner). O OpenShift possui seu próprio registro integrado para facilitar os builds locais. Fonte/Referência: Arquitetura de Contêineres e OpenShift."
   },
   {
     "id": 49,
-    "week": 5,
+    "week": 1,
     "options": [
-      "Ausência de sistemas distribuídos.",
-      "Funcionamento apenas em horário bancário.",
-      "Infraestrutura digital, disponibilidade, integração bancária e experiência de uso simples.",
-      "Proibição de APIs.",
-      "Processamento manual de todas as transações."
+      "usar apenas Docker para criar, implantar e gerenciar os contêineres, pois ele já suporta balanceamento de carga nativamente.",
+      "utilizar Kubernetes para gerenciar o cluster de contêineres e orquestrar os serviços, garantindo escalabilidade e balanceamento de carga.",
+      "implantar a aplicação em OpenShift, que oferece uma plataforma completa, baseada em Kubernetes, para orquestração de contêineres com funcionalidades adicionais.",
+      "configurar manualmente scripts de balanceamento de carga para gerenciar os contêineres Docker, garantindo a escalabilidade da aplicação.",
+      "implantar a aplicação em Docker e configurar o OpenShift para executar diretamente os contêineres Docker, sem a necessidade de um runtime de contêiner adicional."
     ],
-    "question": "A rápida aceitação do Pix está relacionada, entre outros fatores, a: (Difícil)",
+    "question": "(CESGRANRIO – 2025) Uma equipe de desenvolvimento está planejando implantar uma aplicação em contêineres com altas disponibilidade e escalabilidade. A equipe decide, inicialmente, usar Docker para criar os contêineres e precisa definir qual ferramenta de orquestração usarão para gerenciar automaticamente o escalonamento e o balanceamento de carga entre os contêineres. Além disso, a solução deve oferecer integração com uma plataforma que facilite a gestão do ciclo de vida da aplicação em ambientes híbridos. Para esse caso, a abordagem mais apropriada é a de:",
     "correct": 2,
-    "justification": "O Pix depende de infraestrutura confiável, interoperabilidade entre instituições, disponibilidade quase contínua, baixa fricção para usuários e integração com sistemas financeiros. - Fonte(s): Semana 5/s5-A magia por trás do Pix - Revista IstoÉ Dinheiro.pdf; Semana 5/s5-Como a tecnologia de ponta contribuiu para a rápida aceitação do Pix.pdf; Semana 5/s5-rh-central-bank-of-brazil-case-study-f26354pr-202012-a4-ptbr.pdf"
+    "justification": "O Docker sozinho cria contêineres, mas é muito fraco nativamente para grandes orquestrações entre múltiplos nós. O OpenShift (criado em cima do Kubernetes pela Red Hat) é exatamente a plataforma de nível empresarial (enterprise) para resolver o ciclo de vida completo em nuvem híbrida (orquestração, auto-scaling, balanceamento embutido e monitoramento). Fonte/Referência: Orquestração de Contêineres (Kubernetes vs OpenShift)."
   },
   {
     "id": 50,
-    "week": 5,
+    "week": 1,
     "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
+      "Todas as afirmativas estão corretas.",
+      "Somente as afirmativas I, II e III estão corretas.",
+      "Nenhuma afirmativa está correta.",
+      "Somente as afirmativas II, III estão corretas.",
+      "Somente as afirmativas I, II e V estão corretas."
     ],
-    "question": "I) Pub/Sub reduz acoplamento temporal e espacial. II) Kafka pode reter eventos para consumo posterior. III) Spark e Hadoop não têm relação com big data. (Difícil)",
-    "correct": 1,
-    "justification": "Pub/Sub desacopla produtores e consumidores; Kafka mantém logs/eventos por política de retenção; Hadoop e Spark são tecnologias centrais em big data. - Fonte(s): Semana 5/s5-Padrão de Publisher-Subscriber - Azure Architecture Center - Microsoft.pdf; Semana 5/s5-O que é Apache Kafka.pdf; Semana 5/s5_texto_base_apache_hadoop.pdf; Semana 5/s5_texto_base_apache_spark.pdf",
-    "slideImage": "slides/S5-10.png",
-    "slideTitle": "Resumo da Semana 5 (Q6 a Q10)",
-    "slidePage": 10
-  },
-  {
-    "id": 51,
-    "week": 6,
-    "options": [
-      "O comportamento do sistema sob uma carga esperada ou planejada.",
-      "Apenas a cor da interface.",
-      "A qualidade gramatical do código.",
-      "O número de arquivos PDF.",
-      "A temperatura ambiente."
-    ],
-    "question": "Teste de carga avalia: (Fácil)",
-    "correct": 0,
-    "justification": "Teste de carga mede como o sistema responde quando submetido a volumes previstos de usuários, requisições ou transações. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf; Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
-  },
-  {
-    "id": 52,
-    "week": 6,
-    "options": [
-      "Executar apenas um usuário por vez.",
-      "Garantir que o sistema nunca falhe.",
-      "Identificar limites e comportamento do sistema além da carga normal.",
-      "Testar exclusivamente layout.",
-      "Medir somente espaço em disco."
-    ],
-    "question": "Teste de estresse busca: (Fácil)",
-    "correct": 2,
-    "justification": "Teste de estresse aumenta a carga até ultrapassar condições normais, observando degradação, falhas, recuperação e capacidade limite. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf"
-  },
-  {
-    "id": 53,
-    "week": 6,
-    "options": [
-      "Criar circuitos eletrônicos.",
-      "Editar vídeos.",
-      "Testes de performance/carga em aplicações e serviços.",
-      "Desenvolver sistemas operacionais.",
-      "Minerar criptomoedas obrigatoriamente."
-    ],
-    "question": "Apache JMeter é usado para: (Fácil)",
-    "correct": 2,
-    "justification": "JMeter permite simular usuários, criar planos de teste, enviar requisições HTTP/API e coletar métricas de desempenho. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
-  },
-  {
-    "id": 54,
-    "week": 6,
-    "options": [
-      "Quantidade de operações/requisições processadas por unidade de tempo.",
-      "Tempo que a tela fica azul.",
-      "Tamanho da fonte da aplicação.",
-      "Número de linhas de código comentadas.",
-      "Quantidade de usuários cadastrados historicamente."
-    ],
-    "question": "Throughput representa: (Média)",
-    "correct": 0,
-    "justification": "Throughput mede vazão, como requisições por segundo. É uma métrica essencial para avaliar capacidade de processamento. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula15.pdf"
-  },
-  {
-    "id": 55,
-    "week": 6,
-    "options": [
-      "1-b, 2-a, 3-d, 4-c",
-      "1-a, 2-b, 3-c, 4-d",
-      "1-d, 2-c, 3-a, 4-b",
-      "1-c, 2-d, 3-b, 4-a",
-      "1-c, 2-a, 3-d, 4-b"
-    ],
-    "question": "Associe: 1) Latência; 2) Tempo de resposta; 3) Throughput; 4) Taxa de erro. a) Falhas por total; b) Operações por tempo; c) Atraso de comunicação/processamento; d) Tempo até concluir requisição. (Média)",
+    "question": "Analise as afirmativas sobre containers Docker e assinale a alternativa correta.I. Container é considerado um tipo de paravirtualização.\nII. Containers Docker são instâncias de imagens Docker.\nIII. Um container Docker pode ser transformado em uma imagem Docker.\nIV. Cada imagem Docker possibilita a criação de um container, exclusivamente.\nV. Os containers publicam as portas definidas pelas instruções EXPOSE, presentes no Dockerfile.",
     "correct": 3,
-    "justification": "Latência é atraso; tempo de resposta inclui o ciclo da requisição; throughput mede vazão; taxa de erro mede proporção de falhas. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula15.pdf",
-    "slideImage": "slides/S6-5.png",
-    "slideTitle": "Resumo da Semana 6 (Q1 a Q5)",
-    "slidePage": 5
-  },
-  {
-    "id": 56,
-    "week": 6,
-    "options": [
-      "V, V, V",
-      "V, F, V",
-      "V, V, F",
-      "F, V, F",
-      "F, F, F"
-    ],
-    "question": "I) Testes devem ter cenário e carga bem definidos. II) Resultados de performance dependem do ambiente. III) Uma única execução sempre prova estabilidade definitiva. (Média)",
-    "correct": 2,
-    "justification": "Testes precisam de planejamento, massa de dados, carga e ambiente controlados. Uma única execução não garante estabilidade; é necessário repetir e analisar variação. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf; Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf"
-  },
-  {
-    "id": 57,
-    "week": 6,
-    "options": [
-      "Um componente que limita a capacidade global do sistema.",
-      "Um recurso que sempre sobra.",
-      "Um tipo de arquivo.",
-      "Uma métrica sem relação com performance.",
-      "Um erro exclusivo de interface."
-    ],
-    "question": "Um gargalo de desempenho é: (Média)",
-    "correct": 0,
-    "justification": "Gargalos podem ocorrer em CPU, memória, disco, rede, banco de dados ou código. O desempenho total fica limitado pelo componente mais restritivo. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula16.pdf"
-  },
-  {
-    "id": 58,
-    "week": 6,
-    "options": [
-      "Conjunto de usuários virtuais, com configuração de quantidade, ramp-up e repetições.",
-      "Uma tabela de banco de dados.",
-      "Um arquivo de log do sistema operacional.",
-      "Um plugin gráfico obrigatório.",
-      "Uma thread real única e fixa do servidor."
-    ],
-    "question": "Em JMeter, um Thread Group representa: (Difícil)",
-    "correct": 0,
-    "justification": "O Thread Group define quantos usuários virtuais serão simulados, como eles entram no teste e quantas vezes executam o plano. - Fonte(s): Semana 6/s6-Teste de performance com JMeter - DevMedia.pdf"
-  },
-  {
-    "id": 59,
-    "week": 6,
-    "options": [
-      "Que a rede foi removida.",
-      "Melhoria linear perfeita.",
-      "Ausência de carga.",
-      "Que não há usuários usando o sistema.",
-      "Saturação/gargalo em algum recurso do sistema."
-    ],
-    "question": "Se o tempo de resposta aumenta muito enquanto o throughput estabiliza, isso pode indicar: (Difícil)",
-    "correct": 4,
-    "justification": "Quando a carga cresce e o sistema não aumenta a vazão, as requisições começam a enfileirar, elevando tempo de resposta. Isso indica saturação de algum recurso. - Fonte(s): Semana 6/s6_texto_base_SSC0643_e_SSC5872.pdf; Semana 6/s6_videoaula17.pdf"
-  },
-  {
-    "id": 60,
-    "week": 6,
-    "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
-    ],
-    "question": "I) Teste de pico avalia aumentos súbitos de carga. II) Teste de endurance observa comportamento por longo período. III) Teste de performance deve ignorar taxa de erro. (Difícil)",
-    "correct": 1,
-    "justification": "Teste de pico verifica resposta a aumentos repentinos; endurance/soak test observa estabilidade ao longo do tempo; taxa de erro é métrica essencial. - Fonte(s): Semana 6/s6-Testes de estresse e carga_ conheça os tipos e ferramentas - Prime.pdf; Semana 6/s6_videoaula18.pdf",
-    "slideImage": "slides/S6-10.png",
-    "slideTitle": "Resumo da Semana 6 (Q6 a Q10)",
-    "slidePage": 10
-  },
-  {
-    "id": 61,
-    "week": 7,
-    "options": [
-      "Criar hardware físico.",
-      "Editar imagens manualmente.",
-      "Substituir toda a Internet.",
-      "Criar e executar aplicações em contêineres.",
-      "Eliminar dependências de software sem empacotá-las."
-    ],
-    "question": "Docker é usado principalmente para: (Fácil)",
-    "correct": 3,
-    "justification": "Docker empacota aplicação e dependências em contêineres, facilitando portabilidade, isolamento e implantação consistente. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
-  },
-  {
-    "id": 62,
-    "week": 7,
-    "options": [
-      "Serviços que não se comunicam nunca.",
-      "Um único programa monolítico obrigatório.",
-      "Arquivos PDF executáveis.",
-      "Pequenos serviços independentes que compõem uma aplicação maior.",
-      "Apenas scripts sem rede."
-    ],
-    "question": "Microserviços são: (Fácil)",
-    "correct": 3,
-    "justification": "Microserviços dividem uma aplicação em serviços menores, independentes, implantáveis separadamente e comunicando-se por APIs/mensagens. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
-  },
-  {
-    "id": 63,
-    "week": 7,
-    "options": [
-      "Plataforma de contêineres baseada em Kubernetes, com recursos corporativos.",
-      "Um editor de planilhas.",
-      "Um banco de dados relacional obrigatório.",
-      "Uma linguagem de programação.",
-      "Uma placa de rede."
-    ],
-    "question": "OpenShift é: (Fácil)",
-    "correct": 0,
-    "justification": "Red Hat OpenShift é uma plataforma para desenvolver, implantar e operar aplicações em contêineres, construída sobre Kubernetes e adicionando ferramentas de segurança, builds, rotas e gestão. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/s7-Introdução ao Red Hat OpenShift no Azure - Azure Red Hat OpenShift.pdf"
-  },
-  {
-    "id": 64,
-    "week": 7,
-    "options": [
-      "1-c, 2-d, 3-a, 4-b",
-      "1-a, 2-b, 3-c, 4-d",
-      "1-b, 2-a, 3-d, 4-c",
-      "1-d, 2-c, 3-b, 4-a",
-      "1-b, 2-c, 3-a, 4-d"
-    ],
-    "question": "Associe: 1) Imagem; 2) Contêiner; 3) Pod; 4) Route/Ingress. a) Instância em execução; b) Modelo empacotado; c) Exposição de serviço; d) Unidade básica que agrupa contêineres no Kubernetes. (Média)",
-    "correct": 2,
-    "justification": "Imagem é o pacote; contêiner é sua execução; pod é a unidade Kubernetes que hospeda contêineres; route/ingress expõe serviços para acesso externo. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf; Semana 7/s7-Red Hat OpenShift.pdf"
-  },
-  {
-    "id": 65,
-    "week": 7,
-    "options": [
-      "Automatizam implantação, escalonamento, recuperação e exposição de contêineres.",
-      "Proíbem múltiplos serviços.",
-      "Exigem implantação manual em cada máquina.",
-      "Não monitoram estado desejado.",
-      "Funcionam apenas sem rede."
-    ],
-    "question": "Kubernetes/OpenShift ajudam em microserviços porque: (Média)",
-    "correct": 0,
-    "justification": "Orquestradores mantêm o estado desejado, reiniciam contêineres com falha, escalam réplicas e gerenciam serviços e rede. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf",
-    "slideImage": "slides/S7-5.png",
-    "slideTitle": "Resumo da Semana 7 (Q1 a Q5)",
-    "slidePage": 5
-  },
-  {
-    "id": 66,
-    "week": 7,
-    "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, V",
-      "F, V, F",
-      "F, F, F"
-    ],
-    "question": "I) Contêineres compartilham o kernel do host. II) VMs incluem sistema operacional convidado completo. III) Contêineres e VMs são exatamente iguais. (Média)",
-    "correct": 1,
-    "justification": "Contêineres compartilham o kernel e isolam processos; VMs virtualizam hardware e executam sistemas convidados completos. São tecnologias relacionadas, mas diferentes. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
-  },
-  {
-    "id": 67,
-    "week": 7,
-    "options": [
-      "Eliminar necessidade de rede em microserviços.",
-      "Garantir que bugs nunca ocorram.",
-      "Reprodutibilidade do ambiente entre desenvolvimento, teste e produção.",
-      "Transformar código em hardware.",
-      "Impedir versionamento."
-    ],
-    "question": "Um benefício de usar imagens de contêiner é: (Média)",
-    "correct": 2,
-    "justification": "A imagem empacota dependências e configuração, reduzindo diferenças entre ambientes e facilitando implantação consistente. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
-  },
-  {
-    "id": 68,
-    "week": 7,
-    "options": [
-      "Apenas um navegador web sem backend.",
-      "Um único arquivo de texto sem servidores.",
-      "Nós de controle e nós de trabalho executando cargas em contêineres.",
-      "Ausência de rede entre nós.",
-      "Proibição de imagens."
-    ],
-    "question": "Em OpenShift, um cluster normalmente envolve: (Difícil)",
-    "correct": 2,
-    "justification": "Um cluster Kubernetes/OpenShift possui plano de controle para orquestração e nós de trabalho onde pods/contêineres são executados. - Fonte(s): Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf; Semana 7/s7-Introdução ao Red Hat OpenShift no Azure - Azure Red Hat OpenShift.pdf"
-  },
-  {
-    "id": 69,
-    "week": 7,
-    "options": [
-      "Docker substitui APIs.",
-      "Docker obriga toda aplicação a ser monolítica.",
-      "Microserviços não precisam de implantação.",
-      "Contêineres impedem escalabilidade horizontal.",
-      "Contêineres facilitam empacotar, isolar e implantar cada serviço independentemente."
-    ],
-    "question": "A relação entre Docker e microserviços é forte porque: (Difícil)",
-    "correct": 4,
-    "justification": "Cada microserviço pode ser empacotado em sua própria imagem, implantado separadamente, escalado conforme demanda e atualizado com menor impacto no restante do sistema. - Fonte(s): Semana 7/s7_revisitando_conhecimentos_docker_e_sua_relacao_com_microservicos.pdf"
-  },
-  {
-    "id": 70,
-    "week": 7,
-    "options": [
-      "V, V, V",
-      "V, V, F",
-      "V, F, F",
-      "F, V, V",
-      "F, F, F"
-    ],
-    "question": "I) OpenShift adiciona recursos corporativos ao Kubernetes. II) Deployments ajudam a manter réplicas desejadas. III) Orquestração elimina a necessidade de observabilidade. (Difícil)",
-    "correct": 1,
-    "justification": "OpenShift amplia Kubernetes com ferramentas integradas. Deployments/DeploymentConfigs ajudam a manter estado desejado. Observabilidade continua necessária para monitorar saúde, desempenho e falhas. - Fonte(s): Semana 7/s7-Red Hat OpenShift.pdf; Semana 7/S7-Red Hat OpenShift 4_ O que há de novo e como criar cluster.pdf",
-    "slideImage": "slides/S7-10.png",
-    "slideTitle": "Resumo da Semana 7 (Q6 a Q10)",
-    "slidePage": 10
+    "justification": "I. Falsa. O material de revisão afirma claramente que o Docker utiliza \"virtualização de nível de sistema operacional\" para entregar o software, e não o modelo de paravirtualização.\nII. Verdadeira. A arquitetura do Docker baseia-se no fato de que os containers são ambientes isolados de execução criados a partir das imagens (pacotes de software com as dependências). Logo, os containers operam como instâncias ativas dessas imagens.\nIII. Verdadeira. O material explica o conceito por trás do comando commit (citado na instrução RUN do Dockerfile), que permite que alterações feitas em uma camada de um container em execução sejam salvas (\"comitadas\"), transformando esse estado em uma nova imagem.\nIV. Falsa. Uma das principais propostas do Docker é ser uma solução \"escalável\". Isso significa que a partir de uma única imagem base, você pode subir múltiplos containers simultaneamente (escala horizontal) dependendo da demanda.\nV. Falsa. O arquivo que detalha os comandos do Dockerfile explica explicitamente que a instrução EXPOSE apenas \"Informa qual porta o container está ouvindo\". Ela atua como uma documentação/metadado e não publica ou mapeia a porta automaticamente para o host (isso deve ser feito no momento da execução)."
   }
 ]
